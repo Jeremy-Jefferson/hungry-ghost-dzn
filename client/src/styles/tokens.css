@@ -1,0 +1,20 @@
+:root {
+  --bg: #0b0b0b;
+  --fg: #ffffff;
+  --muted: rgba(255, 255, 255, 0.72);
+  --cyan: #6fe7e0;
+  --magenta: #e1066d;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.12);
+
+  --radius: 18px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+}
