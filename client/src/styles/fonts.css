@@ -1,0 +1,91 @@
+/* Brandon Grotesque — self-hosted (WOFF2) */
+
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_thin_italic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_light_italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_regular_italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_medium_italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_bold_italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BrandonGrotesque";
+  src: url("/fonts/Brandon_Grotesque_black_italic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}

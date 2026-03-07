@@ -1,9 +1,11 @@
 import dotenv from "dotenv";
 dotenv.config();
 
+process.env.NODE_ENV = process.env.NODE_ENV || "development";
+
 import express from "express";
 import cors from "cors";
-import workRoutes from "./routes/work.routes.js";
+import contactRoutes from "./routes/contact.routes.js";
 
 const app = express();
 
@@ -37,14 +39,16 @@ app.get("/api/health", (req, res) => {
    API Routes
 ---------------------------- */
 
-app.use("/api", workRoutes);
+app.use("/api", contactRoutes);
 
 /* ---------------------------
    404 Handler (API Only)
 ---------------------------- */
 
 app.use("/api/*", (req, res) => {
+    res.setHeader("Content-Type", "application/json");
     res.status(404).json({
+        success: false,
         error: "API route not found"
     });
 });
@@ -54,9 +58,9 @@ app.use("/api/*", (req, res) => {
 ---------------------------- */
 
 app.use((err, req, res, next) => {
-    console.error("🔥 Server Error:", err);
-
+    res.setHeader("Content-Type", "application/json");
     res.status(err.status || 500).json({
+        success: false,
         error: err.message || "Internal Server Error"
     });
 });
