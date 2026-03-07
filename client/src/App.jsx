@@ -1,52 +1,71 @@
 import { Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
 
 import Navbar from "./components/layout/Navbar.jsx";
 import Footer from "./components/layout/Footer.jsx";
 
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Contact from "./pages/Contact.jsx";
-import Services from "./pages/Services.jsx";
-import Process from "./pages/Process.jsx";
-import NotFound from "./pages/NotFound.jsx";
+/* Lazy load pages for better performance */
+const Home = lazy(() => import("./pages/Home.jsx"));
+const About = lazy(() => import("./pages/About.jsx"));
+const Contact = lazy(() => import("./pages/Contact.jsx"));
+const Services = lazy(() => import("./pages/Services.jsx"));
+const Process = lazy(() => import("./pages/Process.jsx"));
+const NotFound = lazy(() => import("./pages/NotFound.jsx"));
 
 /* Work Section */
-import WorkLayout from "./pages/Work/WorkLayout.jsx";
-import WorkIndex from "./pages/Work/WorkIndex.jsx";
-import BrandDesign from "./pages/Work/BrandDesign.jsx";
-import GraphicDesign from "./pages/Work/GraphicDesign.jsx";
-import WebDesign from "./pages/Work/WebDesign.jsx";
-import CaseStudy from "./pages/Work/CaseStudy.jsx";
+const WorkLayout = lazy(() => import("./pages/Work/WorkLayout.jsx"));
+const WorkIndex = lazy(() => import("./pages/Work/WorkIndex.jsx"));
+const BrandDesign = lazy(() => import("./pages/Work/BrandDesign.jsx"));
+const GraphicDesign = lazy(() => import("./pages/Work/GraphicDesign.jsx"));
+const WebDesign = lazy(() => import("./pages/Work/WebDesign.jsx"));
+const CaseStudy = lazy(() => import("./pages/Work/CaseStudy.jsx"));
+
+/* Loading fallback component */
+function PageLoader() {
+    return (
+        <div style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            minHeight: '50vh',
+            color: 'var(--color-text-muted)'
+        }}>
+            Loading...
+        </div>
+    );
+}
 
 export default function App() {
   return (
     <div className="site-shell">
       <Navbar />
 
-      <Routes>
-        {/* Home */}
-        <Route path="/" element={<Home />} />
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          {/* Home */}
+          <Route path="/" element={<Home />} />
 
-        {/* Work — category listing pages */}
-        <Route path="/work" element={<WorkLayout />}>
-          <Route index element={<WorkIndex />} />
-          <Route path="brand-design" element={<BrandDesign />} />
-          <Route path="graphic-design" element={<GraphicDesign />} />
-          <Route path="web-design" element={<WebDesign />} />
-        </Route>
+          {/* Work — category listing pages */}
+          <Route path="/work" element={<WorkLayout />}>
+            <Route index element={<WorkIndex />} />
+            <Route path="brand-design" element={<BrandDesign />} />
+            <Route path="graphic-design" element={<GraphicDesign />} />
+            <Route path="web-design" element={<WebDesign />} />
+          </Route>
 
-        {/* Case Study — standalone (no WorkLayout header) */}
-        <Route path="/work/:category/:slug" element={<CaseStudy />} />
+          {/* Case Study — standalone (no WorkLayout header) */}
+          <Route path="/work/:category/:slug" element={<CaseStudy />} />
 
-        {/* Standalone Pages */}
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/process" element={<Process />} />
-        <Route path="/contact" element={<Contact />} />
+          {/* Standalone Pages */}
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/process" element={<Process />} />
+          <Route path="/contact" element={<Contact />} />
 
-        {/* 404 */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          {/* 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
 
       <Footer />
     </div>

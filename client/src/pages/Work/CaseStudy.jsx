@@ -92,6 +92,8 @@ export default function CaseStudy() {
                                 <img
                                     src={item.cover}
                                     alt={item.title}
+                                    loading="lazy"
+                                    decoding="async"
                                     style={{
                                         display: "block",
                                         width: item.category === "brand-design" ? "auto" : "100%",
