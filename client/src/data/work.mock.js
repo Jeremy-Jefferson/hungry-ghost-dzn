@@ -333,31 +333,35 @@ export const work = [
     =============================== */
 
     {
-        slug: "space-motion-graphic",
-        title: "Space Motion Smoke Shop Menu",
-        category: "graphic-design",
-        year: 2025,
-        featured: false,
+    slug: "space-motion-graphic",
+    title: "Space Motion Smoke Shop Menu",
+    category: "graphic-design",
+    year: 2025,
+    featured: false,
 
-        summary:
-            "Looping space-themed motion graphic.",
+    summary:
+        "Animated space-themed menu built as a lightweight looping motion graphic for digital displays and social media.",
 
-        tags: ["Motion", "GIF", "Experimental"],
+    tags: ["Motion", "GIF", "Experimental"],
 
-        cover: "/images/work/GRAPHICS/space.gif",
+    cover: "/images/work/GRAPHICS/Space.webp",
 
-        content: {
-            role: "Motion Graphic",
-            overview:
-                "A lightweight animated loop built for social and web.",
-            challenge:
-                "Balance file size and visual quality.",
-            solution:
-                "Optimized frame count and contrast for smaller displays.",
-            outcome:
-                "A punchy loop ideal for feeds and hero slots.",
-        },
+    content: {
+        role: "Motion Graphic",
+
+        overview:
+            "A looping animated menu designed for a smoke shop’s digital display. The piece combines cosmic visuals with bold pricing tables to create a striking, easily readable menu that feels dynamic rather than static.",
+
+        challenge:
+            "Create motion that feels visually rich while keeping the file lightweight enough for fast loading on social feeds and in-store screens.",
+
+        solution:
+            "Used a controlled frame loop, high-contrast typography, and layered space textures to maintain visual impact while optimizing the animation for efficient playback.",
+
+        outcome:
+            "A vibrant animated menu that captures attention instantly and works seamlessly across social media, web embeds, and in-store digital displays.",
     },
+},
 
 
     {
