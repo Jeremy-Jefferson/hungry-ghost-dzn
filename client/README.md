@@ -1,9 +1,3 @@
-Lord MÜGEN, a strong README can absolutely elevate a repo. Recruiters, collaborators, and clients will often scan it before even opening the code. The key is making it **clear, professional, visually structured, and confident**—almost like a mini-landing page for the project.
-
-Below is a **full README you can drop straight into `README.md`**. It’s written to present both the **project (the site)** and the **studio (Hungry Ghost DZN)** while also highlighting your **React + frontend engineering skills**.
-
----
-
 # Hungry Ghost DZN — Studio Website
 
 Hungry Ghost DZN is a design and development studio focused on **intentional brand systems, striking visuals, and high-impact websites built for performance**.
