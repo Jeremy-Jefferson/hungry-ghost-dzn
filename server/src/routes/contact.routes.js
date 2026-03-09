@@ -63,6 +63,23 @@ router.post("/contact", async (req, res) => {
             });
         }
 
+        // Validate field lengths to prevent abuse
+        if (name.length > 100 || email.length > 254 || message.length > 5000) {
+            return res.status(400).json({
+                success: false,
+                error: "Field length exceeds maximum allowed"
+            });
+        }
+
+        // Validate service is one of allowed values
+        const allowedServices = ["", "brand-design", "graphic-design", "web-design"];
+        if (service && !allowedServices.includes(service)) {
+            return res.status(400).json({
+                success: false,
+                error: "Invalid service selection"
+            });
+        }
+
         // Validate email format
         if (!isValidEmail(email)) {
             return res.status(400).json({

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/LOGO.png";
+import { useTheme } from "../../hooks/useTheme.jsx";
 
 const linkClass = ({ isActive }) =>
     `nav__link ${isActive ? "is-active" : ""}`;
@@ -36,6 +37,8 @@ export default function Navbar() {
 
     const close = () => setMenuOpen(false);
 
+    const { theme, toggleTheme } = useTheme();
+
     return (
         <>
             <header className={`nav ${scrolled ? "scrolled" : ""}`}>
@@ -67,6 +70,14 @@ export default function Navbar() {
                         <NavLink to="/about" className={linkClass}>About</NavLink>
                         <NavLink to="/process" className={linkClass}>Process</NavLink>
                         <NavLink to="/contact" className={linkClass}>Book / Contact</NavLink>
+                        <button
+                            className="nav__themeToggle"
+                            onClick={toggleTheme}
+                            aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+                            title={theme === "light" ? "Dark mode" : "Light mode"}
+                        >
+                            {theme === "light" ? "🌙" : "☀️"}
+                        </button>
                     </nav>
 
                     {/* Hamburger — mobile only */}
@@ -112,6 +123,16 @@ export default function Navbar() {
                         <NavLink to="/about" className={mobileLinkClass}>About</NavLink>
                         <NavLink to="/process" className={mobileLinkClass}>Process</NavLink>
                         <NavLink to="/contact" className={mobileLinkClass}>Book / Contact</NavLink>
+
+                        <div className="nav__mobileDivider" />
+
+                        <button
+                            className="nav__themeToggle nav__mobileLink"
+                            onClick={() => { toggleTheme(); close(); }}
+                            style={{ background: "none", border: "none", cursor: "pointer", textAlign: "left" }}
+                        >
+                            {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+                        </button>
                     </nav>
                 </div>
             )}

@@ -1,11 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 
 import Navbar from "./components/layout/Navbar.jsx";
 import Footer from "./components/layout/Footer.jsx";
 import { SkeletonHero } from "./components/ui/Skeleton.jsx";
 import ScrollToTop from "./components/ui/ScrollToTop.jsx";
 import PageTransition from "./components/ui/PageTransition.jsx";
+import SEO from "./components/ui/SEO.jsx";
+import ErrorBoundary from "./components/ui/ErrorBoundary.jsx";
 
 /* Lazy load pages for better performance */
 const Home = lazy(() => import("./pages/Home.jsx"));
@@ -34,14 +36,17 @@ function PageLoader() {
 
 export default function App() {
   return (
-    <div className="site-shell">
-      <ScrollToTop />
-      <Navbar />
+    <ErrorBoundary>
+      <SEO />
+      <a href="#main-content" className="skip-link">Skip to main content</a>
+      <div className="site-shell">
+        <ScrollToTop />
+        <Navbar />
 
-      <Suspense fallback={<PageLoader />}>
-        <PageTransition>
-          <main id="main-content">
-            <Routes>
+        <Suspense fallback={<PageLoader />}>
+          <PageTransition>
+            <main id="main-content" tabIndex="-1">
+              <Routes>
             {/* Home */}
             <Route path="/" element={<Home />} />
 
@@ -66,10 +71,11 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
           </main>
-        </PageTransition>
-      </Suspense>
+          </PageTransition>
+        </Suspense>
+      </div>
 
       <Footer />
-    </div>
+    </ErrorBoundary>
   );
 }

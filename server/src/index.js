@@ -10,6 +10,39 @@ import contactRoutes from "./routes/contact.routes.js";
 const app = express();
 
 /* ---------------------------
+   Security Headers
+---------------------------- */
+
+app.use((req, res, next) => {
+    // Content Security Policy
+    res.setHeader("Content-Security-Policy", 
+        "default-src 'self'; " +
+        "script-src 'self' 'unsafe-inline'; " +
+        "style-src 'self' 'unsafe-inline'; " +
+        "img-src 'self' data: https:; " +
+        "font-src 'self'; " +
+        "connect-src 'self' https:;"
+    );
+    
+    // X-Content-Type-Options
+    res.setHeader("X-Content-Type-Options", "nosniff");
+    
+    // X-Frame-Options
+    res.setHeader("X-Frame-Options", "DENY");
+    
+    // X-XSS-Protection (legacy but still useful)
+    res.setHeader("X-XSS-Protection", "1; mode=block");
+    
+    // Referrer Policy
+    res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+    
+    // Permissions Policy
+    res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+    
+    next();
+});
+
+/* ---------------------------
    Core Middleware
 ---------------------------- */
 

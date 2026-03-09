@@ -2,8 +2,94 @@
 @import "./tokens.css";
 
 /* ========================================
+   ACCESSIBILITY - SKIP LINK & FOCUS STYLES
+======================================== */
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent-primary);
+  color: var(--color-bg);
+  padding: 12px 24px;
+  z-index: 9999;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+  outline: 2px solid var(--color-accent-secondary);
+  outline-offset: 2px;
+}
+
+/* Visible focus styles for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+/* Remove default focus for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Ensure main content is focusable after skip link */
+#main-content:focus {
+  outline: none;
+}
+
+/* Theme toggle button */
+.nav__themeToggle {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease, transform 0.2s ease;
+  margin-left: 8px;
+}
+
+.nav__themeToggle:hover {
+  background: var(--color-surface-3);
+  transform: scale(1.1);
+}
+
+.nav__themeToggle:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+/* ========================================
    ANIMATIONS / ENTRY EFFECTS
 ======================================== */
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .workCard,
+  .home-section,
+  .page-section,
+  .hero__copy,
+  .hero__media {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
 
 @keyframes fadeSlideUp {
   from {
