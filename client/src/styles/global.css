@@ -363,6 +363,24 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--brand-magenta);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.accent-label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-magenta), transparent);
+  opacity: 0.6;
+  transition: width 0.2s ease, opacity 0.2s ease;
+}
+
+.accent-label:hover::before {
+  width: 32px;
+  opacity: 1;
 }
 
 .page-hero + .accent-label {
@@ -512,6 +530,38 @@ a:hover {
     var(--color-accent-secondary),
     transparent 55%
   );
+}
+
+.btn--punch:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--brand-magenta), transparent 60%);
+}
+
+/* Button ripple effect */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+}
+
+.btn:active::after {
+  width: 200%;
+  height: 200%;
+  opacity: 1;
+  transition: width 0s, height 0s, opacity 0s;
 }
 
 /* ========================================
@@ -924,6 +974,12 @@ a:hover {
   font-size: 14px;
   color: var(--color-accent-primary);
   opacity: 0.8;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.workCard:hover .workCard__live-badge {
+  opacity: 1;
+  transform: translate(2px, -2px);
 }
 
 .workCard__summary {
@@ -1970,6 +2026,37 @@ textarea.contact__input {
   color: var(--brand-teal);
   opacity: 0.9;
   text-shadow: 0 0 20px color-mix(in srgb, var(--brand-teal), transparent 50%);
+}
+
+/*PAGE TRANSITION*/
+.page-transition {
+  animation: pageEnter 0.3s ease forwards;
+}
+
+.page-transition--exit {
+  animation: pageExit 0.2s ease forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
 }
 
 /*PAGE SHELL*/

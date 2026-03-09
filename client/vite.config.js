@@ -6,6 +6,12 @@ export default defineConfig({
   plugins: [
     react(),
   ],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/test/setup.js',
+    include: ['src/**/*.{test,spec}.{js,jsx}'],
+  },
   server: {
     proxy: {
       '/api': {

@@ -4,6 +4,8 @@ import { lazy, Suspense } from "react";
 import Navbar from "./components/layout/Navbar.jsx";
 import Footer from "./components/layout/Footer.jsx";
 import { SkeletonHero } from "./components/ui/Skeleton.jsx";
+import ScrollToTop from "./components/ui/ScrollToTop.jsx";
+import PageTransition from "./components/ui/PageTransition.jsx";
 
 /* Lazy load pages for better performance */
 const Home = lazy(() => import("./pages/Home.jsx"));
@@ -33,11 +35,13 @@ function PageLoader() {
 export default function App() {
   return (
     <div className="site-shell">
+      <ScrollToTop />
       <Navbar />
 
       <Suspense fallback={<PageLoader />}>
-        <main id="main-content">
-          <Routes>
+        <PageTransition>
+          <main id="main-content">
+            <Routes>
             {/* Home */}
             <Route path="/" element={<Home />} />
 
@@ -61,7 +65,8 @@ export default function App() {
             {/* 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </main>
+          </main>
+        </PageTransition>
       </Suspense>
 
       <Footer />
