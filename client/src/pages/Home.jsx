@@ -43,7 +43,14 @@ export default function Home() {
                     </div>
 
                     <div className="hero__media">
-                        <img src={hero} alt="Hungry Ghost hero graphic" />
+                        <img 
+                            src={hero} 
+                            alt="Hungry Ghost hero graphic" 
+                            loading="eager"
+                            decoding="async"
+                            width="480"
+                            height="480"
+                        />
                     </div>
                 </div>
             </section>

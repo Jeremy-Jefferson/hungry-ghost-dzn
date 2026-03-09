@@ -16,6 +16,9 @@ export default function WorkCard({ item }) {
                         alt={item.title}
                         className="workCard__img"
                         loading="lazy"
+                        decoding="async"
+                        width="400"
+                        height="250"
                     />
                 ) : (
                     <div className="workCard__img-placeholder" />

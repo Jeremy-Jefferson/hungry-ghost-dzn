@@ -428,7 +428,7 @@ export const work = [
 
     {
         slug: "ashton-character-illustration",
-        title: "Ashton Character Illustration",
+        title: "Character & Companion Illustration",
         category: "graphic-design",
         year: 2023,
         featured: false,
