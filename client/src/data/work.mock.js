@@ -45,7 +45,7 @@ export const work = [
         slug: "portfolio-showcase",
         title: "Portfolio Showcase",
         category: "web-design",
-        year: 2025,
+        year: 2023,
         featured: false,
 
         summary:
@@ -74,7 +74,7 @@ export const work = [
         slug: "sapphire-site-concept",
         title: "Sapphire Developments — Web Concept",
         category: "web-design",
-        year: 2025,
+        year: 2023,
         featured: false,
 
         summary:
@@ -103,7 +103,7 @@ export const work = [
         slug: "dictionary-ui",
         title: "Dictionary UI Micro-App",
         category: "web-design",
-        year: 2025,
+        year: 2023,
         featured: false,
 
         summary:
@@ -132,7 +132,7 @@ export const work = [
         slug: "storefront-ui",
         title: "Storefront UI Kit",
         category: "web-design",
-        year: 2025,
+        year: 2022,
         featured: false,
 
         summary:
@@ -208,7 +208,7 @@ export const work = [
         slug: "eb-cmd-branding",
         title: "E&B Correa Mobile Detailing Identity",
         category: "brand-design",
-        year: 2025,
+        year: 2023,
         featured: false,
         summary: "Automotive service emblem featuring a custom illustrated Cadillac silhouette.",
         tags: ["Automotive Branding", "Illustrative Logo", "Service Identity"],
@@ -229,7 +229,7 @@ export const work = [
         slug: "infinitely-fw-branding",
         title: "Infinite Floating World Identity",
         category: "brand-design",
-        year: 2025,
+        year: 2024,
         featured: true,
         summary: "Symbolic emblem built from recursive geometry representing the Infinite Floating World.",
         tags: ["Symbol Design", "Visual Identity", "Sigil Design"],
@@ -290,7 +290,7 @@ export const work = [
         slug: "lv1-logo",
         title: "Liquorville Hookah Identity",
         category: "brand-design",
-        year: 2025,
+        year: 2023,
         summary: "Illustrative lounge emblem built around a central hookah symbol and ornamental hospitality typography.",
         tags: ["Hospitality Branding", "Illustrative Logo", "Emblem Design"],
         cover: "/images/work/BRANDING/LV1.png",
@@ -334,7 +334,7 @@ export const work = [
 
     {
     slug: "space-motion-graphic",
-    title: "Space Motion Smoke Shop Menu",
+    title: "Cosmic Motion Menu — Little York Smoke Shop",
     category: "graphic-design",
     year: 2025,
     featured: false,
@@ -342,7 +342,7 @@ export const work = [
     summary:
         "Animated space-themed menu built as a lightweight looping motion graphic for digital displays and social media.",
 
-    tags: ["Motion", "GIF", "Experimental"],
+    tags: ["Motion Design", "Digital Menu", "Loop Animation"],
 
     cover: "/images/work/GRAPHICS/Space.webp",
 

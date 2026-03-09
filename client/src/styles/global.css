@@ -413,7 +413,7 @@ a {
 
 .workGrid {
   display: grid;
-  gap: var(--space-5);
+  gap: var(--space-6);
 }
 
 @media (min-width: 720px) {
@@ -505,11 +505,15 @@ a {
   font-family: var(--font-display);
   font-weight: 900;
   letter-spacing: -0.01em;
-  font-size: 18px;
+  font-size: 20px;
 
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.workCard__meta .small {
+  opacity: 0.65;
 }
 
 .workCard__live-badge {
@@ -1441,4 +1445,43 @@ textarea.contact__input {
     linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 120px 120px;
+}
+
+/* ==============================
+   NEXT PROJECT PREVIEW
+================================ */
+.next-project {
+  display: grid;
+  grid-template-columns: 0.45fr 1fr;
+  gap: var(--space-7);
+  align-items: center;
+  transition: transform 0.25s ease;
+}
+
+.next-project:hover {
+  transform: translateY(-4px);
+}
+
+.next-project img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.35s ease;
+  border-radius: var(--radius-lg);
+}
+
+.next-project:hover img {
+  transform: scale(1.03);
+}
+
+/* ==============================
+   WORK CARD CATEGORY LABEL
+================================ */
+.workCard__category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6fe7e0;
+  margin-bottom: var(--space-1);
+  display: block;
 }

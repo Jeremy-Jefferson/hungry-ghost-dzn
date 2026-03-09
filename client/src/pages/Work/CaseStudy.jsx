@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { getWorkBySlug } from "../../data/work.js";
+import { getWorkBySlug, getAllWork } from "../../data/work.js";
 import { usePageTitle } from "../../hooks/usePageTitle.js";
 
 export default function CaseStudy() {
@@ -130,9 +130,110 @@ export default function CaseStudy() {
                             <Link className="btn" to={backPath}>← Back to {categoryLabel}</Link>
                         </div>
 
+                        {/* Next Project Preview */}
+                        <NextProjectPreview currentSlug={slug} />
+
                     </div>
                 </div>
             </section>
         </main>
+    );
+}
+
+// Next Project Preview Component
+function NextProjectPreview({ currentSlug }) {
+    const allWork = getAllWork();
+    const currentIndex = allWork.findIndex((p) => p.slug === currentSlug);
+    const nextIndex = (currentIndex + 1) % allWork.length;
+    const nextProject = allWork[nextIndex];
+    
+    const nextCategoryLabel = nextProject.category.replace(/-/g, " ");
+    
+    return (
+        <div style={{ 
+            marginTop: "var(--space-9)",
+            paddingTop: "var(--space-7)",
+            borderTop: "1px solid var(--color-border)"
+        }}>
+            <span 
+                className="small" 
+                style={{ 
+                    color: "var(--color-text-muted)", 
+                    textTransform: "uppercase",
+                    letterSpacing: "0.1em",
+                    display: "block",
+                    marginBottom: "var(--space-4)"
+                }}
+            >
+                Next Project
+            </span>
+            
+            <Link 
+                to={`/work/${nextProject.category}/${nextProject.slug}`}
+                className="next-project"
+                style={{
+                    textDecoration: "none",
+                    color: "inherit"
+                }}
+            >
+                {/* Preview Image - Left */}
+                <div 
+                    style={{
+                        position: "relative",
+                        overflow: "hidden",
+                        borderRadius: "var(--radius-lg)"
+                    }}
+                >
+                    <img 
+                        src={nextProject.cover} 
+                        alt={nextProject.title}
+                    />
+                </div>
+                
+                {/* Text Block - Right */}
+                <div>
+                    <h3 
+                        className="h2" 
+                        style={{
+                            marginBottom: "var(--space-2)"
+                        }}
+                    >
+                        {nextProject.title}
+                    </h3>
+                    <p 
+                        className="small" 
+                        style={{ 
+                            color: "var(--color-text-muted)",
+                            textTransform: "capitalize",
+                            marginBottom: "var(--space-4)"
+                        }}
+                    >
+                        {nextCategoryLabel}{nextProject.year && ` — ${nextProject.year}`}
+                    </p>
+                    {nextProject.summary && (
+                        <p style={{
+                            color: "var(--color-text)",
+                            marginBottom: "var(--space-4)",
+                            lineHeight: "1.6"
+                        }}>
+                            {nextProject.summary}
+                        </p>
+                    )}
+                    <span 
+                        style={{
+                            color: "#6fe7e0",
+                            fontWeight: "600",
+                            fontSize: "0.875rem",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "var(--space-2)"
+                        }}
+                    >
+                        View Case Study 
+                        <span style={{ transition: "transform 0.2s ease" }}>→</span>
+                    </span>
+                </div>
+            </Link>
+        </div>
     );
 }

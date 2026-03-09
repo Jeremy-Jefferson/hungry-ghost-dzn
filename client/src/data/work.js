@@ -25,3 +25,7 @@ export function getWorkByCategory(categoryKey) {
 export function getWorkBySlug(slug) {
     return work.find((p) => p.slug === slug);
 }
+
+export function getAllWork() {
+    return work;
+}

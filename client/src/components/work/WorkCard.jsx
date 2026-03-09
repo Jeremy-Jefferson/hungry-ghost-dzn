@@ -24,6 +24,9 @@ export default function WorkCard({ item }) {
 
             <div className="workCard__top">
                 <div className="workCard__meta">
+                    <span className="workCard__category">
+                        {item.category.replace(/-/g, " ")}
+                    </span>
                     <div className="workCard__title">
                         {item.title}
                         {item.liveUrl && (
@@ -34,12 +37,12 @@ export default function WorkCard({ item }) {
                 </div>
             </div>
 
-            {item.summary ? <p className="workCard__summary">{item.summary}</p> : null}
+            {/* Summary removed - view in case study */}
 
             {!!item.tags?.length && (
                 <div className="workCard__tags">
                     {item.tags.slice(0, 4).map((t) => (
-                        <span className="tag" key={t}>
+                        <span className="tag tag--teal" key={t}>
                             {t}
                         </span>
                     ))}
