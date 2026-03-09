@@ -37,8 +37,8 @@ export default function Home() {
                         </p>
 
                         <div className="hero__cta">
-                            <Link to="/work" className="btn btn--primary">Start a Project</Link>
-                            <Link to="/contact" className="btn">View Work</Link>
+                            <Link to="/contact" className="btn btn--primary">Start a Project</Link>
+                            <Link to="/work" className="btn">View Work</Link>
                         </div>
                     </div>
 

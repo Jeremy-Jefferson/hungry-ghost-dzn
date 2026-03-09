@@ -10,6 +10,7 @@ const mobileLinkClass = ({ isActive }) =>
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
 
     // Close mobile menu on route change
@@ -24,11 +25,20 @@ export default function Navbar() {
         return () => { document.body.style.overflow = ""; };
     }, [menuOpen]);
 
+    // Add scrolled class on scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     const close = () => setMenuOpen(false);
 
     return (
         <>
-            <header className="nav">
+            <header className={`nav ${scrolled ? "scrolled" : ""}`}>
                 <div className="container nav__inner">
                     <Link to="/" className="nav__brand" aria-label="Hungry Ghost DZN">
                         <img src={logo} alt="Hungry Ghost DZN" className="nav__logo" />
