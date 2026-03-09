@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 
 import Navbar from "./components/layout/Navbar.jsx";
 import Footer from "./components/layout/Footer.jsx";
+import { SkeletonHero } from "./components/ui/Skeleton.jsx";
 
 /* Lazy load pages for better performance */
 const Home = lazy(() => import("./pages/Home.jsx"));
@@ -23,14 +24,8 @@ const CaseStudy = lazy(() => import("./pages/Work/CaseStudy.jsx"));
 /* Loading fallback component */
 function PageLoader() {
     return (
-        <div style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            justifyContent: 'center', 
-            minHeight: '50vh',
-            color: 'var(--color-text-muted)'
-        }}>
-            Loading...
+        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+            <SkeletonHero />
         </div>
     );
 }
@@ -41,30 +36,32 @@ export default function App() {
       <Navbar />
 
       <Suspense fallback={<PageLoader />}>
-        <Routes>
-          {/* Home */}
-          <Route path="/" element={<Home />} />
+        <main id="main-content">
+          <Routes>
+            {/* Home */}
+            <Route path="/" element={<Home />} />
 
-          {/* Work — category listing pages */}
-          <Route path="/work" element={<WorkLayout />}>
-            <Route index element={<WorkIndex />} />
-            <Route path="brand-design" element={<BrandDesign />} />
-            <Route path="graphic-design" element={<GraphicDesign />} />
-            <Route path="web-design" element={<WebDesign />} />
-          </Route>
+            {/* Work — category listing pages */}
+            <Route path="/work" element={<WorkLayout />}>
+              <Route index element={<WorkIndex />} />
+              <Route path="brand-design" element={<BrandDesign />} />
+              <Route path="graphic-design" element={<GraphicDesign />} />
+              <Route path="web-design" element={<WebDesign />} />
+            </Route>
 
-          {/* Case Study — standalone (no WorkLayout header) */}
-          <Route path="/work/:category/:slug" element={<CaseStudy />} />
+            {/* Case Study — standalone (no WorkLayout header) */}
+            <Route path="/work/:category/:slug" element={<CaseStudy />} />
 
-          {/* Standalone Pages */}
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/process" element={<Process />} />
-          <Route path="/contact" element={<Contact />} />
+            {/* Standalone Pages */}
+            <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/process" element={<Process />} />
+            <Route path="/contact" element={<Contact />} />
 
-          {/* 404 */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            {/* 404 */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
       </Suspense>
 
       <Footer />
