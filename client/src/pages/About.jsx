@@ -1,5 +1,17 @@
 import { Link } from "react-router-dom";
+import hero from "../assets/images/HERO.webp";
 import { usePageTitle } from "../hooks/usePageTitle.js";
+
+const capabilities = [
+    "Brand Identity Systems",
+    "Visual Design",
+    "Logo Design",
+    "Web Design & Development",
+    "UI/UX Design",
+    "Print & Collateral",
+    "Illustration",
+    "Art Direction",
+];
 
 const values = [
   {
@@ -20,18 +32,30 @@ export default function About() {
   usePageTitle("About");
 
   return (
-    <main style={{ flex: 1 }}>
+    <>
       <section className="page-section about-page">
         <div className="container stack">
-          {/* Hero */}
-          <div className="page-hero">
-            <span className="accent-label">About the Studio</span>
-            <h1 className="h1">We’re Hungry Ghost DZN.</h1>
-            <p className="page-lead">
-              Hungry Ghost DZN is a design and development studio focused on
-              building intentional brand systems, striking visuals, and
-              high-impact websites.
-            </p>
+          {/* Hero with image */}
+          <div className="about-hero">
+            <div className="about-hero__content">
+              <span className="accent-label">About the Studio</span>
+              <h1 className="h1">We are Hungry Ghost DZN.</h1>
+              <p className="page-lead">
+                Hungry Ghost DZN is a design and development studio focused on
+                building intentional brand systems, striking visuals, and
+                high-impact websites.
+              </p>
+            </div>
+            <div className="about-hero__media">
+              <img
+                src={hero}
+                alt="Hungry Ghost DZN studio graphic"
+                loading="eager"
+                decoding="async"
+                width="400"
+                height="400"
+              />
+            </div>
           </div>
 
           {/* Our Approach */}
@@ -41,7 +65,7 @@ export default function About() {
           <div className="about__copy">
             <p>
               Hungry Ghost DZN approaches every project with the belief that
-              strong design is not decoration — it’s structure. Typography,
+              strong design is not decoration — it is structure. Typography,
               layout, hierarchy, and visual language work together to create
               systems that communicate clearly and scale across mediums.
             </p>
@@ -66,6 +90,21 @@ export default function About() {
             </p>
           </div>
 
+          {/* Capabilities */}
+          <div className="stack">
+            <span className="accent-label">What We Do</span>
+            <div className="about__capabilities">
+              {capabilities.map((cap) => (
+                <span key={cap} className="about__capability">
+                  {cap}
+                </span>
+              ))}
+            </div>
+            <Link to="/services" className="btn btn--outline" style={{ alignSelf: 'flex-start', marginTop: '8px' }}>
+              View All Services
+            </Link>
+          </div>
+
           {/* Divider */}
           <div className="page-divider" />
 
@@ -82,6 +121,35 @@ export default function About() {
             </div>
           </div>
 
+          {/* Process Teaser */}
+          <div className="card about__process-teaser">
+            <div className="about__process-content">
+              <span className="accent-label">How We Work</span>
+              <h2 className="h2" style={{ marginTop: '8px' }}>The Process</h2>
+              <p className="small" style={{ marginTop: '12px', maxWidth: '400px' }}>
+                Every project moves through four focused phases — Discovery, Strategy, Design, and Delivery.
+                Clear thinking, intentional decisions, no guesswork.
+              </p>
+              <Link to="/process" className="btn btn--outline" style={{ marginTop: '20px' }}>
+                Learn About Our Process
+              </Link>
+            </div>
+            <div className="about__process-steps">
+              <div className="about__process-step">
+                <span>01</span> Discovery
+              </div>
+              <div className="about__process-step">
+                <span>02</span> Strategy
+              </div>
+              <div className="about__process-step">
+                <span>03</span> Design
+              </div>
+              <div className="about__process-step">
+                <span>04</span> Deliver
+              </div>
+            </div>
+          </div>
+
           {/* CTA */}
           <div className="card about__cta">
             <div>
@@ -89,7 +157,7 @@ export default function About() {
                 Ready to build something?
               </p>
               <p className="small" style={{ marginTop: "8px" }}>
-                Let’s create work that looks sharp, communicates clearly, and
+                Let us create work that looks sharp, communicates clearly, and
                 performs.
               </p>
             </div>
@@ -104,6 +172,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }

@@ -6,10 +6,10 @@ export default function WorkLayout() {
     return (
         <main>
             {/* Optional shared header for all /work pages */}
-            <section style={{ padding: "64px 0" }}>
+            <section style={{ padding: "80px 0 48px" }}>
                 <div className="container stack">
                     <h1 className="h1">Work</h1>
-                    <p className="small">
+                    <p className="page-lead" style={{ maxWidth: "520px" }}>
                         A curated selection of brand identities, visual systems, and digital work.
                     </p>
                 </div>

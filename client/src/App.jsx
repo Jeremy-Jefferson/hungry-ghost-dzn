@@ -45,7 +45,7 @@ export default function App() {
 
         <Suspense fallback={<PageLoader />}>
           <PageTransition>
-            <main id="main-content" tabIndex="-1">
+            <main id="main-content" className="page-main" tabIndex="-1">
               <Routes>
             {/* Home */}
             <Route path="/" element={<Home />} />

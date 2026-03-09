@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import hero from "../assets/images/HERO.png";
+import hero from "../assets/images/HERO.webp";
 import { work } from "../data/work.mock.js";
 import { WORK_CATEGORIES } from "../data/work.js";
 import WorkCard from "../components/work/WorkCard.jsx";
@@ -16,8 +16,7 @@ export default function Home() {
     usePageTitle(null); // "Hungry Ghost DZN"
 
     return (
-        <main style={{ flex: 1 }}>
-
+        <>
             {/* ── Hero ── */}
             <section className="hero">
                 <div className="container hero__inner">
@@ -122,6 +121,6 @@ export default function Home() {
                 </div>
             </section>
 
-        </main>
+        </>
     );
 }

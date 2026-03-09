@@ -1,4 +1,4 @@
-/* 
+/*
   HUNGRY GHOST DZN — Work Mock Data
   Category keys:
     - brand-design
@@ -29,6 +29,7 @@ export const work = [
 
         content: {
             role: "Brand Direction, UI/UX, Front-End Development",
+            client: "Hungry Ghost DZN",
             overview:
                 "Hungry Ghost DZN was built as a modular brand system and performance-first marketing site designed to scale with services, case studies, and client acquisition goals.",
             challenge:
@@ -175,6 +176,7 @@ export const work = [
 
         content: {
             role: "Web Design / UI Design",
+            client: "Little York Smoke Shop",
 
             overview:
                 "A promotional website created for Little York Smoke Shop to give customers a clear, visually engaging introduction to the brand, its offerings, and in-store promotions. The site was designed to reinforce the shop’s identity while helping visitors quickly understand what the business offers before visiting in person.",
@@ -215,6 +217,7 @@ export const work = [
         cover: "/images/work/BRANDING/E&B CMD.png",
         content: {
             role: "Logo & Visual Identity",
+            client: "E&B Correa Mobile Detailing",
 
             overview: "E&B Correa Mobile Detailing is an automotive detailing service focused on convenience and premium vehicle care. The identity centers on a bold emblem designed to communicate professionalism, trust, and automotive expertise.",
 
@@ -252,10 +255,11 @@ export const work = [
         category: "brand-design",
         year: 2025,
         summary: "Bold dispensary emblem combining retail badge structure with clean cannabis iconography.",
-        tags: ["Brand Identity", "Retail Branding", "Emblem Design,"],
+        tags: ["Brand Identity", "Retail Branding", "Emblem Design"],
         cover: "/images/work/BRANDING/LYLOGO.jpg",
         content: {
             role: "Logo & Visual Identity",
+            client: "Little York Smoke Shop",
 
             overview: "Little York Smoke Shop is a cannabis retailer positioned as clean, modern, and approachable. The identity centers on a bold circular emblem designed for strong visibility in storefront signage, packaging, and promotional materials.",
 
@@ -380,6 +384,7 @@ export const work = [
 
         content: {
             role: "Environmental Graphic Design",
+            client: "L.A.R.N. Smoke Shop",
 
             overview:
                 "A large-format storefront window wrap concept created for L.A.R.N. Smoke Shop. The design transforms the shop’s exterior windows into a high-impact promotional surface, communicating product offerings, daily deals, and brand identity to pedestrians and passing traffic.",

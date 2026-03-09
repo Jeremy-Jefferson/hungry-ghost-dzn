@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import logo from "../../assets/images/LOGO.png";
+import logo from "../../assets/images/LOGO.webp";
 import { useTheme } from "../../hooks/useTheme.jsx";
 
 const linkClass = ({ isActive }) =>
@@ -12,12 +12,15 @@ const mobileLinkClass = ({ isActive }) =>
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const dropdownRef = useRef(null);
     const location = useLocation();
 
     // Close mobile menu on route change
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         setMenuOpen(false);
+        setDropdownOpen(false);
     }, [location.pathname]);
 
     // Prevent body scroll when mobile menu is open
@@ -33,6 +36,17 @@ export default function Navbar() {
         };
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setDropdownOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
     const close = () => setMenuOpen(false);
@@ -51,17 +65,40 @@ export default function Navbar() {
                     <nav className="nav__links" aria-label="Primary navigation">
                         <NavLink to="/" end className={linkClass}>Home</NavLink>
 
-                        <div className="nav__dropdown">
-                            <NavLink to="/work" className={linkClass}>Work</NavLink>
-                            <div className="nav__dropdownMenu card">
+                        <div
+                            className="nav__dropdown"
+                            ref={dropdownRef}
+                            onMouseEnter={() => setDropdownOpen(true)}
+                            onMouseLeave={() => setDropdownOpen(false)}
+                        >
+                            <NavLink
+                                to="/work"
+                                className={linkClass}
+                                onClick={(e) => {
+                                    if (location.pathname.startsWith('/work')) {
+                                        e.preventDefault();
+                                    }
+                                }}
+                            >
+                                Work
+                                <span className={`nav__dropdownArrow ${dropdownOpen ? "open" : ""}`}>▾</span>
+                            </NavLink>
+                            <div className={`nav__dropdownMenu card ${dropdownOpen ? "open" : ""}`}>
                                 <NavLink to="/work/brand-design" className="nav__sublink">
+                                    <span className="nav__sublink-icon">◆</span>
                                     Brand Design
                                 </NavLink>
                                 <NavLink to="/work/graphic-design" className="nav__sublink">
+                                    <span className="nav__sublink-icon">◆</span>
                                     Graphic Design
                                 </NavLink>
                                 <NavLink to="/work/web-design" className="nav__sublink">
+                                    <span className="nav__sublink-icon">◆</span>
                                     Web Design
+                                </NavLink>
+                                <div className="nav__dropdownDivider" />
+                                <NavLink to="/work" className="nav__sublink nav__sublink--all">
+                                    View All Work →
                                 </NavLink>
                             </div>
                         </div>
@@ -82,60 +119,77 @@ export default function Navbar() {
 
                     {/* Hamburger — mobile only */}
                     <button
-                        className="nav__hamburger"
+                        className={`nav__hamburger ${menuOpen ? "open" : ""}`}
                         aria-label={menuOpen ? "Close menu" : "Open menu"}
                         aria-expanded={menuOpen}
                         onClick={() => setMenuOpen((o) => !o)}
                     >
-                        {menuOpen ? "✕" : "☰"}
+                        <span className="nav__hamburger-line" />
+                        <span className="nav__hamburger-line" />
+                        <span className="nav__hamburger-line" />
                     </button>
                 </div>
             </header>
 
             {/* Mobile overlay */}
-            {menuOpen && (
-                <div className="nav__mobileOverlay" onClick={close}>
-                    <nav
-                        className="nav__mobileMenu card"
-                        onClick={(e) => e.stopPropagation()}
-                        aria-label="Mobile navigation"
-                    >
-                        <NavLink to="/" end className={mobileLinkClass}>Home</NavLink>
+            <div className={`nav__mobileOverlay ${menuOpen ? "open" : ""}`} onClick={close}>
+                <nav
+                    className="nav__mobileMenu card"
+                    onClick={(e) => e.stopPropagation()}
+                    aria-label="Mobile navigation"
+                >
+                    <div className="nav__mobileHeader">
+                        <Link to="/" onClick={close}>
+                            <img src={logo} alt="Hungry Ghost DZN" className="nav__mobileLogo" />
+                        </Link>
+                        <button
+                            className="nav__mobileClose"
+                            onClick={close}
+                            aria-label="Close menu"
+                        >
+                            ✕
+                        </button>
+                    </div>
+
+                    <div className="nav__mobileLinks">
+                        <NavLink to="/" end className={mobileLinkClass} onClick={close}>Home</NavLink>
 
                         <div className="nav__mobileDivider" />
 
-                        <NavLink to="/work" end className={mobileLinkClass}>Work</NavLink>
-                        <div className="nav__mobileSub">
-                            <NavLink to="/work/brand-design" className={mobileLinkClass}>
+                        <div className="nav__mobileSection">
+                            <span className="nav__mobileSectionTitle">Work</span>
+                            <NavLink to="/work" end className={mobileLinkClass} onClick={close}>
+                                All Projects
+                            </NavLink>
+                            <NavLink to="/work/brand-design" className={mobileLinkClass} onClick={close}>
                                 Brand Design
                             </NavLink>
-                            <NavLink to="/work/graphic-design" className={mobileLinkClass}>
+                            <NavLink to="/work/graphic-design" className={mobileLinkClass} onClick={close}>
                                 Graphic Design
                             </NavLink>
-                            <NavLink to="/work/web-design" className={mobileLinkClass}>
+                            <NavLink to="/work/web-design" className={mobileLinkClass} onClick={close}>
                                 Web Design
                             </NavLink>
                         </div>
 
                         <div className="nav__mobileDivider" />
 
-                        <NavLink to="/services" className={mobileLinkClass}>Services</NavLink>
-                        <NavLink to="/about" className={mobileLinkClass}>About</NavLink>
-                        <NavLink to="/process" className={mobileLinkClass}>Process</NavLink>
-                        <NavLink to="/contact" className={mobileLinkClass}>Book / Contact</NavLink>
+                        <NavLink to="/services" className={mobileLinkClass} onClick={close}>Services</NavLink>
+                        <NavLink to="/about" className={mobileLinkClass} onClick={close}>About</NavLink>
+                        <NavLink to="/process" className={mobileLinkClass} onClick={close}>Process</NavLink>
+                        <NavLink to="/contact" className={mobileLinkClass} onClick={close}>Book / Contact</NavLink>
+                    </div>
 
-                        <div className="nav__mobileDivider" />
-
+                    <div className="nav__mobileFooter">
                         <button
-                            className="nav__themeToggle nav__mobileLink"
-                            onClick={() => { toggleTheme(); close(); }}
-                            style={{ background: "none", border: "none", cursor: "pointer", textAlign: "left" }}
+                            className="nav__themeToggleMobile"
+                            onClick={() => { toggleTheme(); }}
                         >
-                            {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+                            {theme === "light" ? "🌙 Switch to Dark Mode" : "☀️ Switch to Light Mode"}
                         </button>
-                    </nav>
-                </div>
-            )}
+                    </div>
+                </nav>
+            </div>
         </>
     );
 }

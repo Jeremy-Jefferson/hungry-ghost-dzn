@@ -5,9 +5,9 @@ export default function GraphicDesign() {
     const items = getWorkByCategory("graphic-design");
 
     return (
-        <section style={{ padding: "0 0 64px" }}>
+        <section style={{ padding: "0 0 80px" }}>
             <div className="container stack">
-                <h2 className="h2">Graphic Design</h2>
+                <h2 className="h2" style={{ marginBottom: "var(--space-5)" }}>Graphic Design</h2>
                 <WorkGrid items={items} />
             </div>
         </section>

@@ -3,7 +3,7 @@ import { WORK_CATEGORIES, getWorkByCategory } from "../../data/work.js";
 
 export default function WorkIndex() {
     return (
-        <section style={{ padding: "0 0 64px" }}>
+        <section style={{ padding: "0 0 80px" }}>
             <div className="container stack">
                 <div className="workCats">
                     {WORK_CATEGORIES.map((cat) => {

@@ -53,13 +53,19 @@ export default function CaseStudy() {
                             </div>
                         )}
 
-                        {/* Meta bar */}
+                        {/* Meta bar - Enhanced with client info */}
                         {item.content && (
                             <div className="cs-meta card">
                                 <div className="cs-meta__item">
                                     <span className="cs-meta__label">Role</span>
                                     <span className="cs-meta__value">{item.content.role}</span>
                                 </div>
+                                {item.content.client && (
+                                    <div className="cs-meta__item">
+                                        <span className="cs-meta__label">Client</span>
+                                        <span className="cs-meta__value">{item.content.client}</span>
+                                    </div>
+                                )}
                                 {item.year && (
                                     <div className="cs-meta__item">
                                         <span className="cs-meta__label">Year</span>
@@ -70,17 +76,29 @@ export default function CaseStudy() {
                                     <span className="cs-meta__label">Category</span>
                                     <span className="cs-meta__value" style={{ textTransform: "capitalize" }}>{categoryLabel}</span>
                                 </div>
+                                {item.liveUrl && (
+                                    <div className="cs-meta__item cs-meta__item--action">
+                                        <a
+                                            href={item.liveUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="cs-live-link"
+                                        >
+                                            Visit Live Site ↗
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         )}
 
-                        {/* Optimized image container */}
+                        {/* Main cover image */}
                         {item.cover && (
                             <div
-                                className="card"
+                                className="card cs-hero-image"
                                 style={{
                                     padding: item.category === "brand-design" ? "var(--space-8)" : "0",
                                     background: item.category === "brand-design" ? "#050505" : "var(--color-card)",
-                                    maxWidth: "900px",
+                                    maxWidth: "1000px",
                                     width: "100%",
                                     overflow: "hidden",
                                     display: "flex",
@@ -98,11 +116,30 @@ export default function CaseStudy() {
                                         display: "block",
                                         width: item.category === "brand-design" ? "auto" : "100%",
                                         maxWidth: item.category === "brand-design" ? "80%" : "none",
-                                        maxHeight: item.category === "brand-design" ? "400px" : "none",
+                                        maxHeight: item.category === "brand-design" ? "500px" : "none",
                                         height: "auto",
                                         borderRadius: item.category === "brand-design" ? "0" : "var(--radius-lg)"
                                     }}
                                 />
+                            </div>
+                        )}
+
+                        {/* Gallery - Additional project images */}
+                        {item.gallery && item.gallery.length > 0 && (
+                            <div className="cs-gallery">
+                                <h3 className="cs-gallery__title">Project Gallery</h3>
+                                <div className="cs-gallery__grid">
+                                    {item.gallery.map((img, index) => (
+                                        <div key={index} className="cs-gallery__item">
+                                            <img
+                                                src={img}
+                                                alt={`${item.title} - Image ${index + 1}`}
+                                                loading="lazy"
+                                                decoding="async"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         )}
 
@@ -122,6 +159,18 @@ export default function CaseStudy() {
                                             <p className="small">{item.content[key]}</p>
                                         </div>
                                     ))}
+                            </div>
+                        )}
+
+                        {/* Services / Deliverables */}
+                        {item.content?.services && item.content.services.length > 0 && (
+                            <div className="cs-services">
+                                <h3 className="cs-services__title">Deliverables</h3>
+                                <ul className="cs-services__list">
+                                    {item.content.services.map((service, idx) => (
+                                        <li key={idx}>{service}</li>
+                                    ))}
+                                </ul>
                             </div>
                         )}
 
@@ -146,19 +195,19 @@ function NextProjectPreview({ currentSlug }) {
     const currentIndex = allWork.findIndex((p) => p.slug === currentSlug);
     const nextIndex = (currentIndex + 1) % allWork.length;
     const nextProject = allWork[nextIndex];
-    
+
     const nextCategoryLabel = nextProject.category.replace(/-/g, " ");
-    
+
     return (
-        <div style={{ 
+        <div style={{
             marginTop: "var(--space-9)",
             paddingTop: "var(--space-7)",
             borderTop: "1px solid var(--color-border)"
         }}>
-            <span 
-                className="small" 
-                style={{ 
-                    color: "var(--color-text-muted)", 
+            <span
+                className="small"
+                style={{
+                    color: "var(--color-text-muted)",
                     textTransform: "uppercase",
                     letterSpacing: "0.1em",
                     display: "block",
@@ -167,8 +216,8 @@ function NextProjectPreview({ currentSlug }) {
             >
                 Next Project
             </span>
-            
-            <Link 
+
+            <Link
                 to={`/work/${nextProject.category}/${nextProject.slug}`}
                 className="next-project"
                 style={{
@@ -177,32 +226,32 @@ function NextProjectPreview({ currentSlug }) {
                 }}
             >
                 {/* Preview Image - Left */}
-                <div 
+                <div
                     style={{
                         position: "relative",
                         overflow: "hidden",
                         borderRadius: "var(--radius-lg)"
                     }}
                 >
-                    <img 
-                        src={nextProject.cover} 
+                    <img
+                        src={nextProject.cover}
                         alt={nextProject.title}
                     />
                 </div>
-                
+
                 {/* Text Block - Right */}
                 <div>
-                    <h3 
-                        className="h2" 
+                    <h3
+                        className="h2"
                         style={{
                             marginBottom: "var(--space-2)"
                         }}
                     >
                         {nextProject.title}
                     </h3>
-                    <p 
-                        className="small" 
-                        style={{ 
+                    <p
+                        className="small"
+                        style={{
                             color: "var(--color-text-muted)",
                             textTransform: "capitalize",
                             marginBottom: "var(--space-4)"
@@ -219,7 +268,7 @@ function NextProjectPreview({ currentSlug }) {
                             {nextProject.summary}
                         </p>
                     )}
-                    <span 
+                    <span
                         style={{
                             color: "#6fe7e0",
                             fontWeight: "600",
@@ -229,7 +278,7 @@ function NextProjectPreview({ currentSlug }) {
                             gap: "var(--space-2)"
                         }}
                     >
-                        View Case Study 
+                        View Case Study
                         <span style={{ transition: "transform 0.2s ease" }}>→</span>
                     </span>
                 </div>
