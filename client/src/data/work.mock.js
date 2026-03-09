@@ -214,7 +214,7 @@ export const work = [
         featured: false,
         summary: "Automotive service emblem featuring a custom illustrated Cadillac silhouette.",
         tags: ["Automotive Branding", "Illustrative Logo", "Service Identity"],
-        cover: "/images/work/BRANDING/E&B CMD.png",
+        cover: "/images/work/BRANDING/E&B CMD.webp",
         content: {
             role: "Logo & Visual Identity",
             client: "E&B Correa Mobile Detailing",
@@ -236,7 +236,7 @@ export const work = [
         featured: true,
         summary: "Symbolic emblem built from recursive geometry representing the Infinite Floating World.",
         tags: ["Symbol Design", "Visual Identity", "Sigil Design"],
-        cover: "/images/work/BRANDING/InfinitelyFW.jpg",
+        cover: "/images/work/BRANDING/InfinitelyFW.webp",
         content: {
             role: "Creator, Visual Identity",
 
@@ -256,7 +256,7 @@ export const work = [
         year: 2025,
         summary: "Bold dispensary emblem combining retail badge structure with clean cannabis iconography.",
         tags: ["Brand Identity", "Retail Branding", "Emblem Design"],
-        cover: "/images/work/BRANDING/LYLOGO.jpg",
+        cover: "/images/work/BRANDING/LYLOGO.webp",
         content: {
             role: "Logo & Visual Identity",
             client: "Little York Smoke Shop",
@@ -277,7 +277,7 @@ export const work = [
         year: 2025,
         summary: "Modernized corporate seal combining infinity motifs with clean technology-driven typography.",
         tags: ["Brand Identity", "Seal Design", "Corporate Branding"],
-        cover: "/images/work/BRANDING/NEO Seal.png",
+        cover: "/images/work/BRANDING/NEO Seal.webp",
         content: {
             role: "Logo & Visual Identity",
 
@@ -297,7 +297,7 @@ export const work = [
         year: 2023,
         summary: "Illustrative lounge emblem built around a central hookah symbol and ornamental hospitality typography.",
         tags: ["Hospitality Branding", "Illustrative Logo", "Emblem Design"],
-        cover: "/images/work/BRANDING/LV1.png",
+        cover: "/images/work/BRANDING/LV1.webp",
         content: {
             role: "Logo & Visual Identity",
 
@@ -318,7 +318,7 @@ export const work = [
         year: 2016,
         summary: "Architectural S&B monogram constructed within a circular emblem for a creative design studio.",
         tags: ["Logo Design", "Monogram", "Agency Branding"],
-        cover: "/images/work/BRANDING/S&B.png",
+        cover: "/images/work/BRANDING/S&B.webp",
         content: {
             role: "Logo & Identity",
 
@@ -380,7 +380,7 @@ export const work = [
 
         tags: ["Environmental Design", "Large Format Print", "Storefront Graphics"],
 
-        cover: "/images/work/GRAPHICS/window wrap example.png",
+        cover: "/images/work/GRAPHICS/window wrap example.webp",
 
         content: {
             role: "Environmental Graphic Design",
@@ -412,7 +412,7 @@ export const work = [
 
         tags: ["Environmental Design", "Large Format Print", "Storefront Graphics"],
 
-        cover: "/images/work/GRAPHICS/WindowWrappp.jpg",
+        cover: "/images/work/GRAPHICS/WindowWrappp.webp",
 
         content: {
             role: "Environmental Graphic Design",
@@ -443,7 +443,7 @@ export const work = [
 
         tags: ["Vector Illustration", "Character Design", "Client Work"],
 
-        cover: "/images/work/GRAPHICS/DressyAshton.jpg",
+        cover: "/images/work/GRAPHICS/DressyAshton.webp",
 
         content: {
             role: "Vector Illustration / Graphic Design",
@@ -474,7 +474,7 @@ export const work = [
 
         tags: ["Mascot", "Vector Illustration", "Brand Emblem", "Client Work"],
 
-        cover: "/images/work/GRAPHICS/Mascot.jpg",
+        cover: "/images/work/GRAPHICS/Mascot.webp",
 
         content: {
             role: "Vector Illustration / Graphic Design",
@@ -505,7 +505,7 @@ export const work = [
 
         tags: ["Mascot", "Illustration", "Packaging", "Brand Character"],
 
-        cover: "/images/work/GRAPHICS/Somethin Good logo.jpg",
+        cover: "/images/work/GRAPHICS/Somethin Good logo.webp",
 
         content: {
             role: "Illustration / Graphic Design",

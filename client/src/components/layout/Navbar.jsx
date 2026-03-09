@@ -9,34 +9,19 @@ const linkClass = ({ isActive }) =>
 const mobileLinkClass = ({ isActive }) =>
     `nav__mobileLink ${isActive ? "is-active" : ""}`;
 
-export default function Navbar() {
+// The actual navbar implementation. It will be re-mounted on route changes,
+// resetting its internal state (e.g., menuOpen, dropdownOpen).
+function NavbarImpl({ scrolled }) {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
     const location = useLocation();
-
-    // Close mobile menu on route change
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => {
-        setMenuOpen(false);
-        setDropdownOpen(false);
-    }, [location.pathname]);
 
     // Prevent body scroll when mobile menu is open
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : "";
         return () => { document.body.style.overflow = ""; };
     }, [menuOpen]);
-
-    // Add scrolled class on scroll
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
-        };
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     // Close dropdown when clicking outside
     useEffect(() => {
@@ -192,4 +177,22 @@ export default function Navbar() {
             </div>
         </>
     );
+}
+
+// This shell component manages state that persists across route changes (e.g., scroll position).
+// It passes a `key` to the implementation component to force a re-mount on navigation.
+export default function Navbar() {
+    const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
+
+    // Add scrolled class on scroll. This state persists across route changes.
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    return <NavbarImpl scrolled={scrolled} key={location.pathname} />;
 }

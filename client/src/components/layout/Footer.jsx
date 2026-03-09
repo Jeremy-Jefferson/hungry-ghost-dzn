@@ -125,8 +125,8 @@ export default function Footer() {
                     <div className="footer__col">
                         <span className="footer__col-title">Get in Touch</span>
                         <div className="footer__contact">
-                            <a href="mailto:hello@hungryghostdzn.com" className="footer__contactLink">
-                                hello@hungryghostdzn.com
+                            <a href="mailto:therealhungryghost@gmail.com" className="footer__contactLink">
+                                therealhungryghost@gmail.com
                             </a>
                             <p className="footer__availability">
                                 <span className="footer__status-dot" />

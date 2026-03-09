@@ -64,8 +64,7 @@ export default function Contact() {
   }
 
   return (
-    <>
-      <section className="page-section">
+    <section className="page-section">
         <div className="container stack">
           <section className="contact__intro">
             <div className="contact__intro-copy">
@@ -168,6 +167,7 @@ export default function Contact() {
                   placeholder="What are you working on? Goals, timeline, budget…"
                   value={form.message}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -189,7 +189,6 @@ export default function Contact() {
             </form>
           )}
         </div>
-      </section>
-    </main>
+    </section>
   );
 }
