@@ -85,7 +85,7 @@ export default function Footer() {
                     {/* Brand col */}
                     <div className="footer__brand">
                         <Link to="/" aria-label="Hungry Ghost DZN" className="footer__brandLink">
-                            <img src={logo} alt="Hungry Ghost DZN" className="footer__logo" />
+                            <img src={logo} alt="Hungry Ghost DZN - Home" className="footer__logo" />
                         </Link>
                         <p className="footer__tagline">
                             Brand systems, graphic design, and high-impact websites built for performance.

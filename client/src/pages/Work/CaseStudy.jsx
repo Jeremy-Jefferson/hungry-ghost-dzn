@@ -109,7 +109,7 @@ export default function CaseStudy() {
                             >
                                 <img
                                     src={item.cover}
-                                    alt={item.title}
+                                    alt={`Cover design for ${item.title}`}
                                     loading="lazy"
                                     decoding="async"
                                     style={{
@@ -192,9 +192,20 @@ export default function CaseStudy() {
 // Next Project Preview Component
 function NextProjectPreview({ currentSlug }) {
     const allWork = getAllWork();
+    
+    // Return null if no work exists
+    if (!allWork || allWork.length === 0) {
+        return null;
+    }
+    
     const currentIndex = allWork.findIndex((p) => p.slug === currentSlug);
     const nextIndex = (currentIndex + 1) % allWork.length;
     const nextProject = allWork[nextIndex];
+
+    // Guard against undefined nextProject
+    if (!nextProject) {
+        return null;
+    }
 
     const nextCategoryLabel = nextProject.category.replace(/-/g, " ");
 

@@ -12,192 +12,206 @@ export const work = [
     =============================== */
 
     {
-        slug: "hungry-ghost-dzn-site",
-        title: "Hungry Ghost DZN",
-        category: "web-design",
-        year: 2026,
-        featured: true,
+    slug: "hungry-ghost-dzn-site",
+    title: "Hungry Ghost DZN",
+    category: "web-design",
+    year: 2026,
+    featured: true,
 
-        summary:
-            "Studio brand system and high-impact portfolio built with React + Vite.",
+    summary:
+        "Studio brand system and high-impact portfolio built with React + Vite.",
 
-        tags: ["React", "Vite", "Design System", "Brand Strategy"],
+    tags: ["React", "Vite", "Design System", "Brand Strategy"],
 
-        cover: "/images/work/WEB/HGDZN.webp",
+    cover: "/images/work/WEB/HGDZN.webp",
 
-        /*liveUrl: "https://jeremy-jefferson-portfolio.vercel.app",*/
+    /*liveUrl: "https://jeremy-jefferson-portfolio.vercel.app",*/
 
-        content: {
-            role: "Brand Direction, UI/UX, Front-End Development",
-            client: "Hungry Ghost DZN",
-            overview:
-                "Hungry Ghost DZN was built as a modular brand system and performance-first marketing site designed to scale with services, case studies, and client acquisition goals.",
-            challenge:
-                "Create a visual identity and web presence that feels aggressive, precise, and premium without sacrificing clarity and usability.",
-            solution:
-                "Built a scalable token-based design system, structured layout architecture, and modular component grid for long-term expansion.",
-            outcome:
-                "A studio-ready foundation capable of supporting service expansion, case studies, and monetization.",
-        },
+    content: {
+        role: "Brand Direction, UI/UX, Front-End Development",
+        client: "Hungry Ghost DZN",
+        overview:
+            "Hungry Ghost DZN was created as the digital foundation for a design studio focused on intentional brand systems and high-impact websites. The site needed to function as both a brand statement and a scalable portfolio platform — one capable of showcasing services, case studies, and future growth without feeling generic or templated.",
+
+        challenge:
+            "The core challenge was building a site that felt sharp, aggressive, and premium while still maintaining strong usability, clear hierarchy, and a polished user experience. It needed enough visual personality to stand apart from typical portfolio sites, but enough restraint and structure to remain credible, readable, and conversion-focused.",
+
+        solution:
+            "I designed and developed the site as a modular system using React and Vite, with reusable layout patterns, scalable content structure, and a token-based visual foundation for consistency across typography, spacing, color, and component behavior. Every section was built to support clarity, flexibility, and future expansion, allowing the platform to grow into a more complete studio website without requiring a full redesign.",
+
+        outcome:
+            "The final result is a strong studio-ready web presence that balances visual impact with usability and structure. It establishes a clear brand point of view, creates a foundation for future case studies and service pages, and positions Hungry Ghost DZN as a serious creative practice rather than just a personal portfolio."
     },
+},
 
+   {
+    slug: "portfolio-showcase",
+    title: "Developer Portfolio Platform",
+    category: "web-design",
+    year: 2023,
+    featured: false,
+
+    summary:
+        "Personal developer portfolio designed for clear project presentation and fast navigation.",
+
+    tags: ["React", "Portfolio Site", "Responsive UI"],
+
+    cover: "/images/work/WEB/Portfolio.webp",
+
+    liveUrl: "https://jeremy-jefferson-portfolio.vercel.app",
+
+    content: {
+        role: "UI/UX Design, Front-End Development",
+
+        overview:
+            "This project is a personal developer portfolio built to present projects, experience, and contact information in a clear and approachable way. The interface prioritizes readability, quick navigation, and visual hierarchy so visitors can easily explore work samples and understand the developer’s skill set.",
+
+        challenge:
+            "Portfolio websites often become cluttered or overly decorative, which can make it harder for hiring managers or collaborators to quickly understand a developer’s work. The challenge was designing a layout that feels visually engaging while remaining clean, structured, and easy to scan.",
+
+        solution:
+            "The interface uses a simple responsive layout with strong typographic hierarchy and clear section separation to guide users through projects, background information, and contact details. Consistent spacing, restrained color usage, and predictable navigation patterns keep the experience focused on the work itself rather than visual distractions.",
+
+        outcome:
+            "The final result is a clear and functional developer portfolio that showcases projects while maintaining a smooth browsing experience across devices. The layout can easily expand to support additional projects and case studies while keeping the structure simple and readable."
+    },
+},
 
     {
-        slug: "portfolio-showcase",
-        title: "Portfolio Showcase",
-        category: "web-design",
-        year: 2023,
-        featured: false,
+    slug: "sapphire-site-concept",
+    title: "Sapphire Developments — Web Concept",
+    category: "web-design",
+    year: 2023,
+    featured: false,
 
-        summary:
-            "Clean, image-forward portfolio layout with high-contrast typography.",
+    summary:
+        "Luxury real estate browsing concept designed for discovering high-end homes and vacation properties.",
 
-        tags: ["UI Design", "Responsive", "Grid System"],
+    tags: ["Concept", "Luxury Real Estate", "UI Design"],
 
-        cover: "/images/work/WEB/Portfolio.webp",
+    cover: "/images/work/WEB/SAPPHIRE.webp",
 
-        liveUrl: "https://jeremy-jefferson-portfolio.vercel.app",
+    /*liveUrl: "https://jeremy-jefferson-portfolio.vercel.app",*/
 
-        content: {
-            role: "UI/UX, Front-End",
-            overview:
-                "A modular gallery-driven layout designed for clarity and fast scanning across devices.",
-            challenge:
-                "Balance visual impact with speed and readability.",
-            solution:
-                "Optimized imagery, clear typographic rhythm, and accessible color contrast.",
-            outcome:
-                "An elegant showcase pattern adaptable to case studies and galleries.",
-        },
+    content: {
+        role: "UI/UX Design",
+        overview:
+            "Sapphire Developments is a luxury real estate web concept created to explore how high-end properties could be discovered, browsed, and evaluated online. The interface focuses on showcasing expansive homes and vacation properties across multiple locations while maintaining a sense of elegance, clarity, and trust.",
+
+        challenge:
+            "Luxury real estate platforms must balance aspirational presentation with usability. The challenge was designing a browsing experience that feels premium and immersive without overwhelming users with information or sacrificing navigational clarity.",
+
+        solution:
+            "The concept emphasizes strong visual hierarchy, large property imagery, and deliberate spacing to give listings room to breathe. A restrained deep-blue palette reinforces a sense of trust and stability, while bold typographic structure helps users quickly scan locations, property highlights, and listing details.",
+
+        outcome:
+            "The result is a refined interface concept for a luxury property discovery platform. The design demonstrates how clear hierarchy, spacious layouts, and strong imagery can support both exploration and credibility for high-value real estate listings."
     },
+},
 
     {
-        slug: "sapphire-site-concept",
-        title: "Sapphire Developments — Web Concept",
-        category: "web-design",
-        year: 2023,
-        featured: false,
+    slug: "dictionary-ui",
+    title: "Dictionary UI Micro-App",
+    category: "web-design",
+    year: 2023,
+    featured: false,
 
-        summary:
-            "Authoritative site concept with sharp hierarchy and trust-focused visuals.",
+    summary:
+        "React-powered dictionary micro-app with real-time word search and clean reading-focused UI.",
 
-        tags: ["Concept", "Corporate", "UI Design"],
+    tags: ["React", "Micro-App", "UI Design"],
 
-        cover: "/images/work/WEB/SAPPHIRE.webp",
+    cover: "/images/work/WEB/Dictionary.webp",
 
-        /*liveUrl: "https://jeremy-jefferson-portfolio.vercel.app",*/
+    liveUrl: "https://dictionary-react-app-rho.vercel.app/",
 
-        content: {
-            role: "UI Design",
-            overview:
-                "A corporate web direction leveraging deep blue accents, clear spacing, and decisive headings.",
-            challenge:
-                "Convey stability and premium positioning without clutter.",
-            solution:
-                "Structured section rhythm, restrained color, and confident typographic scale.",
-            outcome:
-                "A credible, conversion-ready foundation for a property developer site.",
-        },
+    content: {
+        role: "UI/UX Design, Front-End Development",
+        overview:
+            "This project explores a lightweight dictionary interface built with React, designed for fast word lookups and distraction-free reading. The goal was to create a compact application where users can quickly search for any term and immediately view definitions in a clean, structured layout.",
+
+        challenge:
+            "Dictionary interfaces often present dense linguistic information that can feel overwhelming. The challenge was designing a UI that keeps the interaction simple while presenting definitions, meanings, and related information in a way that remains easy to scan and visually organized.",
+
+        solution:
+            "The application was built as a small React micro-app with a responsive search interface and dynamic word lookup functionality. Results are displayed using clear typographic hierarchy, grouped content blocks, and accessible color contrast to make definitions easy to read and navigate. Keyboard-friendly input flows allow users to quickly search and iterate through terms without unnecessary interaction steps.",
+
+        outcome:
+            "The final result is a fast, minimal dictionary interface that demonstrates how thoughtful UI structure and lightweight React architecture can turn a simple lookup task into a smooth and efficient experience."
     },
-
+},
     {
-        slug: "dictionary-ui",
-        title: "Dictionary UI Micro-App",
-        category: "web-design",
-        year: 2023,
-        featured: false,
+    slug: "storefront-ui",
+    title: "Stone & Brier General Store",
+    category: "web-design",
+    year: 2022,
+    featured: false,
 
-        summary:
-            "Lightweight dictionary interface focused on clarity and speed.",
+    summary:
+        "Full-stack eCommerce storefront with product catalog, authentication, and Stripe checkout.",
 
-        tags: ["Micro-app", "UI", "Accessibility"],
+    tags: ["React", "PostgreSQL", "Stripe", "eCommerce"],
 
-        cover: "/images/work/WEB/Dictionary.webp",
+    cover: "/images/work/WEB/STORE.webp",
 
-        liveUrl: "https://dictionary-react-app-rho.vercel.app/",
+    liveUrl: "https://stone-and-brier-general-store.vercel.app/Home",
 
-        content: {
-            role: "UI/UX",
-            overview:
-                "A compact interface for quick lookups with clean type, dark mode, and keyboard-friendly flows.",
-            challenge:
-                "Keep interactions minimal while surfacing meaning, usage, and variations.",
-            solution:
-                "Focused content grouping, semantic markup, and keyboard-first controls.",
-            outcome:
-                "Faster scanning and lower interaction cost for common tasks.",
-        },
+    content: {
+        role: "UI/UX Design, Front-End Development",
+        overview:
+            "Stone & Brier General Store is a full-stack eCommerce application built as a capstone project at Fullstack Academy. The platform allows users to browse a categorized product catalog, create accounts, manage shopping carts, and complete purchases through a Stripe-powered checkout flow.",
+
+        challenge:
+            "Design and build an eCommerce experience that balances product discovery, clear navigation, and secure purchasing flows. The interface needed to handle catalog browsing, authentication, and checkout while remaining visually cohesive and easy to navigate.",
+
+        solution:
+            "The application uses a PostgreSQL database with an Amazon-style product categorization system to organize items and support scalable catalog browsing. The front-end interface was designed with a restrained green color system to create visual consistency across navigation, product cards, and calls to action. User authentication enables account creation and login, while Stripe integration powers the checkout and payment flow.",
+
+        outcome:
+            "The final product demonstrates a complete eCommerce workflow, from browsing and product discovery to account management and payment processing. The project highlights both UI design decisions and the integration of real-world commerce functionality within a full-stack application."
     },
+},
 
-    {
-        slug: "storefront-ui",
-        title: "Storefront UI Kit",
-        category: "web-design",
-        year: 2022,
-        featured: false,
+{
+    slug: "little-york-smoke-shop-site",
+    title: "Little York Smoke Shop Website",
+    category: "web-design",
+    year: 2025,
+    featured: false,
 
-        summary:
-            "Composable eCommerce components for quick storefront spins.",
+    summary:
+        "Promotional storefront website designed to highlight deals, product categories, and store information for a local smoke shop.",
 
-        tags: ["Design System", "eCommerce", "Components"],
+    tags: ["Web Design", "UI Design", "Local Business", "Client Work"],
 
-        cover: "/images/work/WEB/STORE.webp",
+    cover: "/images/work/WEB/little-york-site.webp",
 
-        liveUrl: "https://stone-and-brier-general-store.vercel.app/Home",
+    liveUrl: "https://littleyorksmokeshop.com",
 
-        content: {
-            role: "Design System, UI",
-            overview:
-                "Reusable product cards, grids, and CTAs tuned for conversion and speed.",
-            challenge:
-                "Ship pages quickly without sacrificing brand and usability.",
-            solution:
-                "A constrained set of tokens, responsive grids, and high-contrast CTAs.",
-            outcome:
-                "Faster go-to-market with consistent visuals and performance.",
-        },
+    content: {
+        role: "Web Design / UI Design",
+        client: "Little York Smoke Shop",
+
+        overview:
+            "This website was created to give Little York Smoke Shop a clear and engaging digital presence that reflects the energy of the physical store. The goal was to introduce the brand online while making it easy for customers to quickly see promotions, product categories, and location information before visiting.",
+
+        challenge:
+            "Local retail sites need to communicate value quickly. The challenge was designing a bold, eye-catching interface that captures the shop’s personality while keeping the layout simple enough for customers to immediately find deals, products, and store details.",
+
+        solution:
+            "The site uses a bold, image-forward layout with strong typography and brand-led visuals to reinforce the shop’s identity. Promotional messaging is prioritized near the top of the page to highlight key deals, while clearly defined sections guide visitors through product categories, current specials, and store information.",
+
+        outcome:
+            "The final site gives the shop a stronger online presence while acting as a digital storefront for new and returning customers. Visitors can quickly understand what the shop offers, see current deals, and find the store’s location and hours with minimal friction.",
+
+        services: [
+            "Web Design",
+            "UI Design",
+            "Brand Integration",
+            "Promotional Layout"
+        ],
     },
-
-    {
-        slug: "little-york-smoke-shop-site",
-        title: "Little York Smoke Shop Website",
-        category: "web-design",
-        year: 2025,
-        featured: false,
-
-        summary:
-            "Promotional website designed to showcase products, deals, and brand identity for Little York Smoke Shop.",
-
-        tags: ["Web Design", "UI Design", "Brand Integration", "Client Work"],
-
-        cover: "/images/work/WEB/little-york-site.webp",
-
-        liveUrl: "https://littleyorksmokeshop.com",
-
-        content: {
-            role: "Web Design / UI Design",
-            client: "Little York Smoke Shop",
-
-            overview:
-                "A promotional website created for Little York Smoke Shop to give customers a clear, visually engaging introduction to the brand, its offerings, and in-store promotions. The site was designed to reinforce the shop’s identity while helping visitors quickly understand what the business offers before visiting in person.",
-
-            challenge:
-                "Design a website that felt visually bold and on-brand while keeping the experience simple, readable, and easy to scan for product categories, promotions, and store information.",
-
-            solution:
-                "Developed a bold, image-driven layout using cannabis leaf textures, strong typography, and brand-led visuals to reinforce the shop’s identity. Clear hierarchy, oversized headings, and focused promotional messaging were used to make key information easy to find at a glance.",
-
-            outcome:
-                "The final site gives Little York Smoke Shop a stronger digital presence, helping communicate brand personality, highlight promotions, and provide customers with a quick overview of the store before they visit.",
-
-            services: [
-                "Web Design",
-                "UI Design",
-                "Brand Integration",
-                "Promotional Layout"
-            ],
-        },
-    },
+},
 
 
     /* ===============================

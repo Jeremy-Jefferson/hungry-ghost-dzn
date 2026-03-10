@@ -14,7 +14,7 @@ export default function WorkCard({ item }) {
                 {item.cover ? (
                     <img
                         src={item.cover}
-                        alt={item.title}
+                        alt={`Cover image for ${item.title}`}
                         className="workCard__img"
                         loading="lazy"
                         decoding="async"

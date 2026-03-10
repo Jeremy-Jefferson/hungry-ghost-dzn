@@ -92,9 +92,10 @@ export default function SEO({
       <meta property="twitter:site" content={DEFAULT_SEO.twitterHandle} />
 
       {/* JSON-LD Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
     </>
   );
 }

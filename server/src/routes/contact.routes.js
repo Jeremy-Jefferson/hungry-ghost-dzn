@@ -3,6 +3,43 @@ import nodemailer from "nodemailer";
 
 const router = express.Router();
 
+// Simple in-memory rate limiter (5 requests per IP per minute)
+const rateLimitMap = new Map();
+const RATE_LIMIT = 5;
+const RATE_WINDOW_MS = 60 * 1000; // 1 minute
+
+const checkRateLimit = (ip) => {
+    const now = Date.now();
+    const record = rateLimitMap.get(ip);
+    
+    if (!record) {
+        rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW_MS });
+        return true;
+    }
+    
+    if (now > record.resetTime) {
+        rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW_MS });
+        return true;
+    }
+    
+    if (record.count >= RATE_LIMIT) {
+        return false;
+    }
+    
+    record.count++;
+    return true;
+};
+
+// Cleanup old entries periodically
+setInterval(() => {
+    const now = Date.now();
+    for (const [ip, record] of rateLimitMap.entries()) {
+        if (now > record.resetTime) {
+            rateLimitMap.delete(ip);
+        }
+    }
+}, RATE_WINDOW_MS);
+
 // In a production environment, create a real transporter that sends emails.
 const createProdTransporter = () => {
     return nodemailer.createTransport({
@@ -46,6 +83,15 @@ const isValidEmail = (email) => {
 ---------------------------- */
 
 router.post("/contact", async (req, res) => {
+    // Rate limiting check
+    const clientIp = req.ip || req.connection.remoteAddress || 'unknown';
+    if (!checkRateLimit(clientIp)) {
+        return res.status(429).json({
+            success: false,
+            error: "Too many requests. Please try again later."
+        });
+    }
+
     // Use real transporter if SMTP credentials are configured, otherwise use mock
     const hasSmtpCredentials = process.env.SMTP_USER && process.env.SMTP_PASS;
     const transporter = hasSmtpCredentials

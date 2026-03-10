@@ -4,6 +4,7 @@ import { work } from "../data/work.mock.js";
 import { WORK_CATEGORIES } from "../data/work.js";
 import WorkCard from "../components/work/WorkCard.jsx";
 import { usePageTitle } from "../hooks/usePageTitle.js";
+import { useParallax } from "../hooks/useParallax.js";
 
 const featuredWork = work.filter((w) => w.featured).sort((a, b) => {
     // Put Hungry Ghost DZN site first
@@ -14,11 +15,12 @@ const featuredWork = work.filter((w) => w.featured).sort((a, b) => {
 
 export default function Home() {
     usePageTitle(null); // "Hungry Ghost DZN"
+    const parallaxRef = useParallax({ tealSpeed: 0.3, magentaSpeed: 0.15 });
 
     return (
         <>
             {/* ── Hero ── */}
-            <section className="hero">
+            <section className="hero" ref={parallaxRef}>
                 <div className="container hero__inner">
                     <div className="hero__copy stack">
                         <h1 className="h1">
