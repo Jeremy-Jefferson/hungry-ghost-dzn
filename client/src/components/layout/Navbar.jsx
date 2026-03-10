@@ -55,6 +55,7 @@ function NavbarImpl({ scrolled }) {
                             ref={dropdownRef}
                             onMouseEnter={() => setDropdownOpen(true)}
                             onMouseLeave={() => setDropdownOpen(false)}
+                            onFocus={() => setDropdownOpen(true)}
                         >
                             <NavLink
                                 to="/work"
@@ -64,6 +65,14 @@ function NavbarImpl({ scrolled }) {
                                         e.preventDefault();
                                     }
                                 }}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        setDropdownOpen((prev) => !prev);
+                                    }
+                                }}
+                                aria-expanded={dropdownOpen}
+                                aria-haspopup="true"
                             >
                                 Work
                                 <span className={`nav__dropdownArrow ${dropdownOpen ? "open" : ""}`}>▾</span>

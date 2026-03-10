@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ui/ScrollToTop.jsx";
 import PageTransition from "./components/ui/PageTransition.jsx";
 import SEO from "./components/ui/SEO.jsx";
 import ErrorBoundary from "./components/ui/ErrorBoundary.jsx";
+import Analytics from "./components/ui/Analytics.jsx";
 
 /* Lazy load pages for better performance */
 const Home = lazy(() => import("./pages/Home.jsx"));
@@ -37,6 +38,7 @@ function PageLoader() {
 export default function App() {
   return (
     <ErrorBoundary>
+      <Analytics />
       <SEO />
       <a href="#main-content" className="skip-link">Skip to main content</a>
       <div className="site-shell">

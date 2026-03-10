@@ -23,7 +23,7 @@ export const work = [
 
         tags: ["React", "Vite", "Design System", "Brand Strategy"],
 
-        cover: "/images/work/WEB/HGDZN.png",
+        cover: "/images/work/WEB/HGDZN.webp",
 
         /*liveUrl: "https://jeremy-jefferson-portfolio.vercel.app",*/
 
@@ -54,7 +54,7 @@ export const work = [
 
         tags: ["UI Design", "Responsive", "Grid System"],
 
-        cover: "/images/work/WEB/Portfolio.jpg",
+        cover: "/images/work/WEB/Portfolio.webp",
 
         liveUrl: "https://jeremy-jefferson-portfolio.vercel.app",
 
@@ -83,7 +83,7 @@ export const work = [
 
         tags: ["Concept", "Corporate", "UI Design"],
 
-        cover: "/images/work/WEB/SAPPHIRE.png",
+        cover: "/images/work/WEB/SAPPHIRE.webp",
 
         /*liveUrl: "https://jeremy-jefferson-portfolio.vercel.app",*/
 
@@ -112,7 +112,7 @@ export const work = [
 
         tags: ["Micro-app", "UI", "Accessibility"],
 
-        cover: "/images/work/WEB/Dictionary.png",
+        cover: "/images/work/WEB/Dictionary.webp",
 
         liveUrl: "https://dictionary-react-app-rho.vercel.app/",
 
@@ -141,7 +141,7 @@ export const work = [
 
         tags: ["Design System", "eCommerce", "Components"],
 
-        cover: "/images/work/WEB/STORE.png",
+        cover: "/images/work/WEB/STORE.webp",
 
         liveUrl: "https://stone-and-brier-general-store.vercel.app/Home",
 
@@ -170,7 +170,7 @@ export const work = [
 
         tags: ["Web Design", "UI Design", "Brand Integration", "Client Work"],
 
-        cover: "/images/work/WEB/little-york-site.png",
+        cover: "/images/work/WEB/little-york-site.webp",
 
         liveUrl: "https://littleyorksmokeshop.com",
 

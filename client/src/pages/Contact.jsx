@@ -116,6 +116,7 @@ export default function Contact() {
                     value={form.name}
                     onChange={handleChange}
                     autoComplete="name"
+                    aria-describedby={error ? "contact-error" : undefined}
                   />
                 </div>
 
@@ -133,6 +134,7 @@ export default function Contact() {
                     value={form.email}
                     onChange={handleChange}
                     autoComplete="email"
+                    aria-describedby={error ? "contact-error" : undefined}
                   />
                 </div>
               </div>
@@ -168,11 +170,12 @@ export default function Contact() {
                   value={form.message}
                   onChange={handleChange}
                   required
+                  aria-describedby={error ? "contact-error" : undefined}
                 />
               </div>
 
               {error ? (
-                <p className="contact__error small" role="alert">
+                <p className="contact__error small" id="contact-error" role="alert">
                   {error}
                 </p>
               ) : null}
