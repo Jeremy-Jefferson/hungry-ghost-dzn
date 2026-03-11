@@ -5,7 +5,7 @@ const steps = [
     {
         num: "01",
         title: "Discovery",
-        body: "Every project begins with clarity. We examine your business, audience, and goals to define what the brand or website actually needs to accomplish. This phase clarifies priorities, removes assumptions, and establishes a clear direction before any design work begins.",
+        body: "Every project begins with clarity. We examine your business, audience, and goals to define what the brand or product actually needs to accomplish. This phase clarifies priorities, removes assumptions, and establishes a clear direction before any design work begins.",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8" />
@@ -16,7 +16,7 @@ const steps = [
     {
         num: "02",
         title: "Strategy",
-        body: "Position before pixels. We define the visual direction, messaging priorities, and structural approach for the project. By understanding the competitive landscape and the role your brand needs to play within it, every design decision starts with purpose.",
+        body: "Position before pixels. We define the visual direction, messaging priorities, and structural approach for the project. By understanding the competitive landscape and the role your brand needs to play within it, every design decision is made with purpose.",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <polygon points="12 2 2 7 12 12 22 7 12 2" />
@@ -66,6 +66,14 @@ export default function Process() {
                             Good design starts with clear thinking. Every project moves
                             through four focused phases that remove guesswork, clarify
                             decisions, and keep the work intentional from start to finish.
+                        </p>
+                        <p className="body-text">
+                            While the details vary between brand, UI/UX, and development
+                            projects, every engagement follows the same four core phases.
+                        </p>
+                        <p className="body-text">
+                            This process has been used across brand identity projects,
+                            product interfaces, and custom front-end builds.
                         </p>
                     </div>
 

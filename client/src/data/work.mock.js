@@ -434,9 +434,12 @@ export const work = [
         category: "brand-systems",
         year: 2025,
         featured: true,
+
         summary:
-            "Complete brand system spanning logo identity, storefront graphics, and digital brand integration.",
+            "Complete retail brand system spanning logo identity, storefront graphics, and digital brand integration.",
+
         tags: ["Brand System", "Environmental Design", "Retail Branding", "Brand Strategy"],
+
         cover: "/images/work/BRANDING/LYLOGO.webp",
         liveUrl: "https://littleyorksmokeshop.com",
 
@@ -445,21 +448,18 @@ export const work = [
             client: "Little York Smoke Shop",
 
             overview:
-                "Little York Smoke Shop needed a brand identity that could unify the business across physical and digital touchpoints. The project centered on building a cohesive retail brand system that would work on storefront signage, promotional surfaces, and future web applications while remaining bold, clean, and easy to recognize.",
-
-            problem:
-                "The business needed a recognizable visual identity that could stand out in a competitive retail environment while feeling legitimate, modern, and approachable. The brand needed to work across large-scale storefront graphics, smaller branded materials, and digital touchpoints without becoming visually inconsistent.",
+                "Little York Smoke Shop needed a brand identity capable of unifying the business across physical and digital touchpoints. The project focused on building a cohesive retail brand system that performs across storefront signage, promotional surfaces, and digital platforms while remaining bold, clean, and immediately recognizable.",
 
             challenge:
-                "Design a flexible retail identity system that performs at multiple scales. The mark needed to read clearly from a distance on storefront signage, remain recognizable in digital use, and support promotional applications like a large-format window wrap without becoming visually inconsistent.",
+                "Design a flexible retail identity system that performs at multiple scales. The mark needed to read clearly from a distance on storefront signage, remain recognizable in digital use, and support promotional applications like large-format window graphics without becoming visually inconsistent.",
 
             solution:
-                "The system was built around a circular emblem with strong outer typography, radiating internal geometry, and a central cannabis leaf icon that anchors the mark. Supporting environmental graphics extended the identity into the storefront using a modular layout approach that distributed promotional messaging across multiple window panes while keeping the brand visually unified.",
+                "The system was built around a circular emblem with strong outer typography, radiating internal geometry, and a central cannabis leaf icon that anchors the mark. Supporting environmental graphics extended the identity into the storefront through a modular layout that distributes promotional messaging across multiple window panes while maintaining visual consistency.",
 
             outcome:
-                "The final system gives Little York Smoke Shop a cohesive brand presence across identity, environmental graphics, and future digital use. The logo creates instant recognition, the storefront graphics increase street visibility, and the brand now feels unified across customer-facing touchpoints.",
+                "The final system gives Little York Smoke Shop a cohesive brand presence across identity, environmental graphics, and digital touchpoints. The logo delivers instant recognition, the storefront graphics increase street visibility, and the brand now feels unified across customer-facing experiences.",
 
-            processSteps: ["Research", "Strategy", "Identity Design", "Application", "Refinement"],
+            processSteps: ["Strategy", "Identity Design", "Application", "Refinement"],
 
             deliverables: [
                 "Logo Identity",
@@ -473,7 +473,7 @@ export const work = [
                 logo: {
                     title: "Logo Identity",
                     description:
-                        "Bold dispensary emblem combining retail badge structure with clean cannabis iconography. The circular form creates a strong storefront-ready silhouette, while the inner sunburst geometry adds energy and focus around the central symbol.",
+                        "Bold dispensary emblem combining retail badge structure with clean cannabis iconography. The circular form creates a strong storefront-ready silhouette while the inner sunburst geometry focuses attention around the central symbol.",
                     colors: [
                         { name: "Deep Indigo", value: "#2A2F6C" },
                         { name: "Vibrant Green", value: "#1ED760" },
@@ -495,14 +495,14 @@ export const work = [
                         title: "Window Wrap",
                         type: "Environmental Graphics",
                         description:
-                            "Large-format storefront graphics designed to communicate promotions, product categories, and brand identity to passing foot and vehicle traffic. The layout uses modular information blocks and layered textures to create both clarity and visual impact.",
+                            "Large-format storefront graphics designed to communicate promotions, product categories, and brand identity to passing foot and vehicle traffic. The layout uses modular information blocks and layered textures to balance clarity with visual impact.",
                         cover: "/images/work/BRANDING/WindowWrappp.webp"
                     },
                     {
                         title: "Space Motion Menu",
                         type: "Digital Menu",
                         description:
-                            "Animated digital menu system featuring motion graphics and dynamic content display for in-store customer experience.",
+                            "Animated digital menu system featuring motion graphics and dynamic content display designed to support the in-store customer experience.",
                         cover: "/images/work/BRANDING/Space.webp"
                     }
                 ]
@@ -529,33 +529,41 @@ export const work = [
 
     {
         slug: "eb-cmd-branding",
-        title: "E&B Correa Mobile Detailing",
+        title: "E&B Correa Mobile Detailing Identity",
         category: "brand-systems",
         year: 2023,
         featured: false,
-        summary: "Automotive service emblem featuring a custom illustrated Cadillac silhouette.",
-        tags: ["Automotive Branding", "Illustrative Logo", "Service Identity"],
+
+        summary:
+            "Custom emblem identity for a mobile automotive detailing service built around a hand-illustrated Cadillac SUV.",
+
+        tags: ["Automotive Branding", "Illustrated Logo", "Service Identity"],
+
         cover: "/images/work/BRANDING/E&B CMD.webp",
+
         content: {
             role: "Logo & Visual Identity",
             client: "E&B Correa Mobile Detailing",
 
-            problem: "E&B Correa Mobile Detailing needed a distinctive brand identity that communicated automotive expertise and premium service. The challenge was creating a logo that stood apart from generic car icons while remaining professional.",
+            overview:
+                "E&B Correa Mobile Detailing is a mobile automotive service specializing in professional vehicle detailing. The project focused on developing a distinctive emblem-style identity that could communicate reliability, precision, and automotive expertise while remaining recognizable across vehicles, uniforms, and digital platforms.",
 
-            overview: "E&B Correa Mobile Detailing is an automotive detailing service focused on convenience and premium vehicle care. The identity centers on a bold emblem designed to communicate professionalism, trust, and automotive expertise.",
+            challenge:
+                "Develop a distinctive identity that communicates automotive detailing while avoiding the generic car silhouettes and clip-art style graphics commonly used throughout the industry.",
 
-            challenge: "Create a distinctive logo that clearly communicates automotive detailing while standing apart from the generic car icons commonly used in the industry.",
+            solution:
+                "The identity centers on a custom illustrated Cadillac SUV silhouette drawn from scratch and placed within a structured triangular badge. The emblem format creates a strong, recognizable mark suited for vehicle graphics and uniforms. Clean typography and a restrained teal accent palette reinforce themes of precision, cleanliness, and premium service.",
 
-            solution: "The mark features a custom illustrated Cadillac SUV silhouette drawn from scratch, placed within a strong triangular badge structure. Clean typography and a teal accent palette reinforce the themes of precision, cleanliness, and premium service.",
-
-            outcome: "The final emblem works effectively across service vehicles, uniforms, and digital platforms, giving the business a recognizable and professional automotive brand mark.",
+            outcome:
+                "The final emblem provides a recognizable brand mark that translates well across service vehicles, uniforms, and digital platforms, giving the business a clear and professional visual identity.",
 
             processSteps: ["Research", "Concept", "Design", "Delivery"],
 
             brandSystem: {
                 logo: {
                     title: "Logo Identity",
-                    description: "Custom illustrated Cadillac SUV silhouette in triangular badge structure.",
+                    description:
+                        "Custom illustrated Cadillac SUV silhouette framed within a triangular badge emblem.",
                     colors: [
                         { name: "Black", value: "#1A1A1A" },
                         { name: "Teal", value: "#00897B" },
@@ -565,13 +573,14 @@ export const work = [
                 },
                 typography: {
                     title: "Typography",
-                    description: "Bold sans-serif for authority and clarity.",
-                    headings: "Brandon Grotesque Bold",
-                    body: "Brandon Grotesque Regular"
+                    description:
+                        "Classic Roman-style serif used for the primary wordmark, reinforcing a premium automotive aesthetic and strong badge-style identity.",
+                    headings: "Cinzel Bold",
+                    body: "Cinzel Regular"
                 }
             },
 
-            techStack: ["Figma", "Illustrator"],
+            techStack: ["Illustrator", "Photoshop"],
 
             gallery: ["/images/work/BRANDING/E&B CMD.webp"],
 
@@ -585,28 +594,32 @@ export const work = [
         category: "brand-systems",
         year: 2024,
         featured: true,
-        summary: "Symbolic emblem built from recursive geometry representing the Infinite Floating World.",
-        tags: ["Symbol Design", "Visual Identity", "Sigil Design"],
+        summary:
+            "Symbolic emblem built from recursive geometry to express infinity, depth, and layered identity.",
+        tags: ["Symbol Design", "Visual Identity", "Emblem Design"],
         cover: "/images/work/BRANDING/InfinitelyFW.webp",
         content: {
             role: "Creator, Visual Identity",
 
-            problem: "Infinite Floating World needed a symbolic emblem that could represent a creative moniker across multiple platforms and future projects. The challenge was creating something that conveyed infinity and depth without literal symbolism.",
+            overview:
+                "Infinite Floating World (Mugen ni Ukiyo) is the creative moniker for a body of illustration, painting, and narrative worldbuilding work. The identity is anchored by a symbolic emblem designed to express the idea of an infinite, layered universe through structure rather than literal imagery.",
 
-            overview: "Infinite Floating World (Mugen ni Ukiyo) is the creative moniker under which illustration, painting, and narrative worldbuilding projects are produced. The identity is anchored by a symbolic emblem that reflects the concept of an infinite, layered universe.",
+            challenge:
+                "Develop a visual symbol that conveys infinity, recursion, and dimensional depth without relying on obvious infinity motifs, cliché metaphors, or literal symbolism.",
 
-            challenge: "Develop a visual symbol that conveys infinity, recursion, and dimensional depth without relying on obvious infinity motifs or literal symbolism.",
+            solution:
+                "The mark was built from interlocking geometric forms arranged in recursive layers to suggest both expansion and compression at once. The result is a symbol with a strong central pull that functions more like an emblem or sigil than a conventional logo.",
 
-            solution: "The mark was constructed using interlocking geometric forms that rotate outward while simultaneously collapsing inward through recursive layers. The resulting structure creates the impression of an infinite center, functioning more like a sigil or emblem than a traditional logo.",
-
-            outcome: "The final mark operates as a central symbol for the Infinite Floating World identity, appearing across artwork signatures, digital platforms, and future narrative projects connected to the broader universe.",
+            outcome:
+                "The final mark serves as a central identifier for Infinite Floating World, providing a recognizable symbol that can extend across artwork signatures, digital platforms, and future creative applications tied to the broader identity.",
 
             processSteps: ["Concept", "Geometry", "Refine"],
 
             brandSystem: {
                 logo: {
                     title: "Symbolic Emblem",
-                    description: "Recursive geometric interlocking forms creating infinite center.",
+                    description:
+                        "Interlocking geometric forms arranged in recursive layers to create the impression of an infinite center.",
                     colors: [
                         { name: "Black", value: "#000000" },
                         { name: "White", value: "#FFFFFF" },
@@ -616,7 +629,7 @@ export const work = [
                 }
             },
 
-            techStack: ["Figma", "Illustrator"],
+            techStack: ["Illustrator", "Photoshop"],
 
             gallery: ["/images/work/BRANDING/InfinitelyFW.webp"],
 
@@ -629,44 +642,51 @@ export const work = [
         title: "NEO Unlimited",
         category: "brand-systems",
         year: 2025,
-        summary: "Modernized corporate seal combining infinity motifs with clean technology-driven typography.",
+        summary:
+            "Modernized corporate seal combining infinity motifs with clean contemporary typography.",
         tags: ["Brand Identity", "Seal Design", "Corporate Branding"],
         cover: "/images/work/BRANDING/NEO Seal.webp",
+
         content: {
             role: "Logo & Visual Identity",
             client: "NEO Unlimited",
 
-            problem: "NEO Unlimited, a consulting agency focused on strategic growth, needed a brand identity that conveyed credibility and authority while avoiding dated corporate aesthetics.",
+            overview:
+                "NEO Unlimited is a consulting agency focused on strategic growth and business development. The identity centers on a modernized corporate seal designed to communicate credibility, structure, and forward momentum.",
 
-            overview: "NEO Unlimited is a consulting agency focused on strategic growth and business development. The brand identity centers on a modernized corporate seal designed to convey credibility, structure, and forward momentum.",
+            challenge:
+                "Develop a mark that feels authoritative and professional while avoiding the dated visual language often associated with traditional corporate seals.",
 
-            challenge: "Develop a mark that feels authoritative and professional while avoiding the dated aesthetic commonly associated with traditional seals.",
+            solution:
+                "The identity uses a circular seal structure paired with repeating infinity motifs along the outer ring to suggest continuity and unlimited potential. At the center, the NEO wordmark introduces a clean contemporary typographic structure, balancing institutional form with modern clarity.",
 
-            solution: "The design uses a circular seal format paired with repeating infinity motifs along the border to symbolize continuity and unlimited potential. The central NEO wordmark introduces a clean, contemporary typographic structure, balancing institutional form with modern clarity.",
-
-            outcome: "The final mark functions as a strong corporate identifier across digital platforms, documentation, and brand materials while maintaining a recognizable and authoritative presence.",
+            outcome:
+                "The final mark functions as a clear corporate identifier across digital platforms, documentation, and brand materials while maintaining a recognizable and authoritative presence.",
 
             processSteps: ["Research", "Concept", "Design", "Delivery"],
 
             brandSystem: {
                 logo: {
                     title: "Corporate Seal",
-                    description: "Modernized seal with infinity motifs and clean typography.",
+                    description:
+                        "Modernized corporate seal featuring infinity motifs and clean contemporary typography.",
                     colors: [
                         { name: "Black", value: "#1A1A1A" },
                         { name: "White", value: "#FFFFFF" }
                     ],
                     cover: "/images/work/BRANDING/NEO Seal.webp"
                 },
+
                 typography: {
                     title: "Typography",
-                    description: "Clean, contemporary typography for modern authority.",
-                    headings: "Brandon Grotesque Bold",
-                    body: "Brandon Grotesque Regular"
+                    description:
+                        "Extended geometric sans-serif used for the NEO wordmark, reinforcing a modern technical aesthetic and strong institutional clarity.",
+                    headings: "Eurostile Extended Bold",
+                    body: "Eurostile Extended"
                 }
             },
 
-            techStack: ["Figma", "Illustrator"],
+            techStack: ["Illustrator", "Photoshop"],
 
             gallery: ["/images/work/BRANDING/NEO Seal.webp"],
 
@@ -679,38 +699,51 @@ export const work = [
         title: "Liquorville Hookah",
         category: "brand-systems",
         year: 2023,
-        summary: "Illustrative lounge emblem built around a central hookah symbol and ornamental hospitality typography.",
+        summary:
+            "Illustrative lounge emblem built around a central hookah symbol and ornamental hospitality lettering.",
         tags: ["Hospitality Branding", "Illustrative Logo", "Emblem Design"],
         cover: "/images/work/BRANDING/LV1.webp",
+
         content: {
             role: "Logo & Visual Identity",
             client: "Liquorville Hookah",
 
-            problem: "Liquorville Hookah needed a memorable lounge brand identity that communicated nightlife, social atmosphere, and premium hookah experiences without becoming visually cluttered.",
+            overview:
+                "Liquorville Hookah is a lounge concept centered around nightlife, social atmosphere, and premium hookah experiences. The identity is built around an emblem-style logo that combines illustrative detail and expressive typography to create a distinctive hospitality brand.",
 
-            overview: "Liquorville Hookah is a lounge concept centered around nightlife, social atmosphere, and premium hookah experiences. The identity focuses on an emblem-style logo that blends illustration and typography to create a memorable lounge brand.",
+            challenge:
+                "Design a logo that clearly communicates hookah culture while maintaining a polished and inviting lounge aesthetic. The mark needed to feel expressive and detailed without becoming visually cluttered.",
 
-            challenge: "Design a logo that clearly communicates hookah culture while maintaining a polished and inviting lounge aesthetic. The mark needed to feel detailed and expressive without becoming visually cluttered.",
+            solution:
+                "The logo centers on a stylized hookah illustration framed within a circular emblem structure. Decorative linework and ornamental accents reinforce the relaxed lounge atmosphere, while the custom Liquorville wordmark introduces personality and movement. A compact Hookah label anchors the composition, balancing expressive illustration with clear readability.",
 
-            solution: "The logo centers on a stylized hookah illustration framed within a circular emblem. Decorative linework and ornamental accents reinforce the relaxed lounge atmosphere, while the custom Liquorville wordmark introduces personality and movement.",
-
-            outcome: "The final mark functions as a versatile hospitality emblem that works across signage, menus, merchandise, and digital platforms while maintaining strong visual character.",
+            outcome:
+                "The final mark functions as a versatile hospitality emblem suitable for signage, menus, merchandise, and digital platforms while maintaining a strong and recognizable visual identity.",
 
             processSteps: ["Concept", "Illustration", "Type", "Refine"],
 
             brandSystem: {
                 logo: {
                     title: "Lounge Emblem",
-                    description: "Stylized hookah illustration in circular emblem with ornamental typography.",
+                    description:
+                        "Stylized hookah illustration framed within a circular emblem supported by ornamental hospitality lettering.",
                     colors: [
                         { name: "Black", value: "#1A1A1A" },
-                        { name: "Purple", value: "#6B4C9A" },
+                        { name: "White", value: "#FFFFFF" }
                     ],
                     cover: "/images/work/BRANDING/LV1.webp"
+                },
+
+                typography: {
+                    title: "Typography",
+                    description:
+                        "Custom display lettering brings personality and movement to the primary Liquorville wordmark, while a bold condensed sans-serif anchors the secondary Hookah label with clarity and contrast.",
+                    headings: "Custom Display Lettering",
+                    body: "Bold Condensed Sans-Serif"
                 }
             },
 
-            techStack: ["Figma", "Illustrator"],
+            techStack: ["Illustrator", "Photoshop"],
 
             gallery: ["/images/work/BRANDING/LV1.webp"],
 
@@ -723,38 +756,50 @@ export const work = [
         title: "Stone & Brier",
         category: "brand-systems",
         year: 2016,
-        summary: "Architectural S&B monogram constructed within a circular emblem for a creative design studio.",
+        summary:
+            "Architectural S&B monogram built within a circular emblem for a structured studio identity.",
         tags: ["Logo Design", "Monogram", "Agency Branding"],
         cover: "/images/work/BRANDING/S&B.webp",
+
         content: {
             role: "Logo & Identity",
             client: "Stone & Brier",
 
-            problem: "Stone & Brier, a creative design studio, needed a monogram that communicated stability, craftsmanship, and architectural precision while remaining bold and recognizable.",
+            overview:
+                "Stone & Brier is a creative design studio defined by precision, structure, and disciplined visual thinking. The identity centers on a custom S&B monogram built within a circular emblem, giving the mark a strong and compact presence.",
 
-            overview: "Stone & Brier is a creative design studio built around precision, structure, and disciplined visual thinking. The identity centers on a custom S&B monogram contained within a circular emblem, giving the mark a strong, emblematic presence.",
+            challenge:
+                "Design a monogram that communicates stability and craftsmanship while remaining bold and immediately recognizable. The mark needed to feel architectural, balanced, and distinctive without becoming overly intricate.",
 
-            challenge: "Design a monogram that communicates stability and craftsmanship while remaining bold and immediately recognizable. The mark needed to feel architectural and balanced without becoming overly intricate.",
+            solution:
+                "The monogram was built using angular geometry and radial symmetry, merging the S and B into a unified symbol anchored by a triangular core. The circular enclosure reinforces the sense of structure while allowing the mark to function as a compact emblem across digital and physical applications.",
 
-            solution: "The monogram was constructed using angular geometry and radial symmetry, merging the S and B into a unified symbol anchored by a triangular core. The circular enclosure reinforces the sense of structure while allowing the mark to function as a compact emblem across applications.",
-
-            outcome: "The final mark reads clearly at small sizes while maintaining strong visual impact at large scale, functioning equally well as a digital icon, stamp, or brand insignia across the studio's identity system.",
+            outcome:
+                "The final mark reads clearly at small sizes while maintaining strong visual impact at larger scale, functioning effectively as a digital icon, stamp, and core insignia across the studio’s identity system.",
 
             processSteps: ["Concept", "Geometry", "Refine"],
 
             brandSystem: {
                 logo: {
                     title: "Monogram",
-                    description: "Architectural S&B monogram in circular emblem with triangular core.",
+                    description:
+                        "Custom S&B monogram built within a circular emblem and anchored by a triangular core.",
                     colors: [
                         { name: "Black", value: "#1A1A1A" },
                         { name: "White", value: "#FFFFFF" }
                     ],
                     cover: "/images/work/BRANDING/S&B.webp"
+                },
+                typography: {
+                    title: "Typography",
+                    description:
+                        "Bold sans-serif typography supports the monogram with clean legibility and a straightforward studio character.",
+                    headings: "Bold Geometric Sans-Serif",
+                    body: "Geometric Sans-Serif"
                 }
             },
 
-            techStack: ["Illustrator", "Figma"],
+            techStack: ["Illustrator", "Photoshop"],
 
             gallery: ["/images/work/BRANDING/S&B.webp"],
 

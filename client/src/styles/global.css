@@ -542,6 +542,14 @@ a:hover {
   opacity: 0.5;
 }
 
+.body-text {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 680px;
+}
+
 .accent-label {
   font-size: 15px;
   font-weight: 700;
@@ -885,7 +893,7 @@ a:hover {
 }
 
 .view-all-link:hover {
-  color: var(--color-accent-teal) !important;
+  color: var(--brand-teal) !important;
 }
 
 .view-all-link span {
@@ -1665,6 +1673,12 @@ a:hover {
 
 .cs-header {
   gap: var(--space-3);
+  max-width: 800px;
+}
+
+.cs-header .page-lead {
+  max-width: 100%;
+  line-height: 1.5;
 }
 
 .cs-meta {
@@ -1714,6 +1728,11 @@ a:hover {
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
+  align-content: start;
+}
+
+.cs-section:first-child {
+  min-height: 180px;
 }
 
 .cs-section:hover {
@@ -2745,6 +2764,11 @@ textarea.contact__input {
   align-items: center;
   gap: var(--space-3);
   flex-wrap: wrap;
+}
+
+.contact__response-note {
+  margin: var(--space-3) 0 0;
+  color: var(--color-text-muted);
 }
 
 .contact__error {

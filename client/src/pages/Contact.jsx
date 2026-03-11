@@ -78,7 +78,7 @@ export default function Contact() {
               <span className="accent-label">Let's Talk</span>
               <h1 className="h1">Start a Project</h1>
               <p className="page-lead">
-                Tell us what you're building — we'll help make it great.
+                Tell us what you're building — we'll help shape it into something sharp.
               </p>
             </div>
 
@@ -88,7 +88,7 @@ export default function Contact() {
               <ul className="contact__next-list">
                 <li>We'll review your project details</li>
                 <li>You'll hear back within 24–48 hours</li>
-                <li>If it's a good fit, we'll schedule a discovery call</li>
+                <li>If it's a good fit, we'll schedule a discovery call to discuss next steps.</li>
               </ul>
             </aside>
           </section>
@@ -157,9 +157,11 @@ export default function Contact() {
                   onChange={handleChange}
                 >
                   <option value="">Select a service…</option>
-                  <option value="brand-systems">Brand Systems</option>
+                  <option value="brand-system-identity">Brand System / Identity</option>
                   <option value="ui-ux-design">UI/UX Design</option>
                   <option value="web-development">Web Development</option>
+                  <option value="brand-website">Brand + Website</option>
+                  <option value="not-sure">Not sure yet</option>
                 </select>
               </div>
 
@@ -172,7 +174,7 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows={6}
-                  placeholder="What are you working on? Goals, timeline, budget…"
+                  placeholder="Tell us about your project, goals, timeline, or any challenges you're trying to solve."
                   value={form.message}
                   onChange={handleChange}
                   required
@@ -192,9 +194,12 @@ export default function Contact() {
                   className="btn btn--primary"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Project Details"}
+                  {isSubmitting ? "Sending..." : "Start the Conversation"}
                 </button>
               </div>
+              <p className="contact__response-note small">
+                You'll hear back within 24–48 hours.
+              </p>
             </form>
           )}
         </div>

@@ -167,8 +167,8 @@ export default function CaseStudy() {
                                                 <span key={idx}>
                                                     <span style={{
                                                         padding: "var(--space-2) var(--space-3)",
-                                                        background: idx === 0 ? "var(--color-accent-teal)" : "var(--color-card)",
-                                                        color: idx === 0 ? "var(--color-bg)" : "var(--color-text)",
+                                                        background: "var(--color-card)",
+                                                        color: "var(--color-text)",
                                                         borderRadius: "var(--radius-md)",
                                                         fontSize: "var(--text-sm)",
                                                         fontWeight: "var(--font-bold)"
@@ -181,14 +181,6 @@ export default function CaseStudy() {
                                                 </span>
                                             ))}
                                         </div>
-                                    </div>
-                                )}
-
-                                {/* The Problem Section */}
-                                {item.content.problem && (
-                                    <div className="cs-section">
-                                        <h2 className="cs-section__title">The Problem</h2>
-                                        <p className="small">{item.content.problem}</p>
                                     </div>
                                 )}
 
@@ -540,13 +532,13 @@ export default function CaseStudy() {
                             </div>
                         )}
 
-                        {/* Tech Stack Section - Developer Credibility */}
+                        {/* Tools Section - For Brand Projects / Tech Stack - For Web Projects */}
                         {item.content?.techStack && item.content.techStack.length > 0 && (
                             <div className="cs-tech-stack" style={{ marginTop: "var(--space-6)" }}>
                                 <h3 className="cs-section__title" style={{ 
                                     fontSize: "var(--text-xl)",
                                     marginBottom: "var(--space-4)"
-                                }}>Tech Stack</h3>
+                                }}>{item.category === "brand-systems" ? "Tools" : "Tech Stack"}</h3>
                                 <div style={{ display: "flex", gap: "var(--space-3)", flexWrap: "wrap" }}>
                                     {item.content.techStack.map((tech, idx) => (
                                         <span 
