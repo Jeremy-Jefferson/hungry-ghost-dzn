@@ -2,19 +2,14 @@ import { work } from "./work.mock";
 
 export const WORK_CATEGORIES = [
     {
-        key: "brand-design",
-        title: "Brand Design",
-        blurb: "Identity systems, logos, and visual foundations designed to scale with the business. Each brand is built as a cohesive system — establishing typography, color, hierarchy, and visual language that remain clear and consistent across every touchpoint.",
+        key: "brand-systems",
+        title: "Brand Systems",
+        blurb: "Complete identity systems built for recognition, consistency, and long-term growth. Each brand is developed as a cohesive system — establishing typography, color, hierarchy, and visual language that remain clear and consistent across every touchpoint.",
     },
     {
-        key: "graphic-design",
-        title: "Graphic Design",
-        blurb: "Posters, merchandise, layouts, and illustration-driven visuals built with strong composition and intentional typography. Each piece is designed to stand on its own while reinforcing the larger brand system.",
-    },
-    {
-        key: "web-design",
-        title: "Web Design",
-        blurb: "High-impact websites designed for clarity, usability, and performance. Every site combines sharp visual design with thoughtful structure so visitors understand the message quickly and know exactly where to go next.",
+        key: "ui-ux-web-dev",
+        title: "UI/UX Design & Web Development",
+        blurb: "High-impact websites and digital products designed and built for clarity, usability, and performance. Every project combines sharp visual design with thoughtful development so visitors understand the message quickly and know exactly where to go next.",
     },
 ];
 

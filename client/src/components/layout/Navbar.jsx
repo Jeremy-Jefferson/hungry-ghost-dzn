@@ -151,8 +151,8 @@ function NavbarImpl({ scrolled }) {
         <>
             <header className={`nav ${scrolled ? "scrolled" : ""}`}>
                 <div className="container nav__inner">
-                    <Link to="/" className="nav__brand" aria-label="Hungry Ghost DZN">
-                        <img src={logo} alt="Hungry Ghost DZN" className="nav__logo" />
+                    <Link to="/" className="nav__brand" aria-label="Hungry Ghost DEV">
+                        <img src={logo} alt="Hungry Ghost DEV" className="nav__logo" />
                     </Link>
 
                     {/* Desktop nav */}
@@ -187,17 +187,13 @@ function NavbarImpl({ scrolled }) {
                                 <span className={`nav__dropdownArrow ${dropdownOpen ? "open" : ""}`}>▾</span>
                             </NavLink>
                             <div className={`nav__dropdownMenu card ${dropdownOpen ? "open" : ""}`}>
-                                <NavLink to="/work/brand-design" className="nav__sublink">
+                                <NavLink to="/work/brand-systems" className="nav__sublink">
                                     <span className="nav__sublink-icon">◆</span>
-                                    Brand Design
+                                    Brand Systems
                                 </NavLink>
-                                <NavLink to="/work/graphic-design" className="nav__sublink">
+                                <NavLink to="/work/ui-ux-web-dev" className="nav__sublink">
                                     <span className="nav__sublink-icon">◆</span>
-                                    Graphic Design
-                                </NavLink>
-                                <NavLink to="/work/web-design" className="nav__sublink">
-                                    <span className="nav__sublink-icon">◆</span>
-                                    Web Design
+                                    UI/UX & Web Dev
                                 </NavLink>
                                 <div className="nav__dropdownDivider" />
                                 <NavLink to="/work" className="nav__sublink nav__sublink--all">
@@ -257,7 +253,7 @@ function NavbarImpl({ scrolled }) {
                 >
                     <div className="nav__mobileHeader">
                         <Link to="/" onClick={close}>
-                            <img src={logo} alt="Hungry Ghost DZN" className="nav__mobileLogo" />
+                            <img src={logo} alt="Hungry Ghost DEV" className="nav__mobileLogo" />
                         </Link>
                         <button
                             className="nav__mobileClose"
@@ -278,14 +274,11 @@ function NavbarImpl({ scrolled }) {
                             <NavLink to="/work" end className={mobileLinkClass} onClick={close}>
                                 All Projects
                             </NavLink>
-                            <NavLink to="/work/brand-design" className={mobileLinkClass} onClick={close}>
-                                Brand Design
+                            <NavLink to="/work/brand-systems" className={mobileLinkClass} onClick={close}>
+                                Brand Systems
                             </NavLink>
-                            <NavLink to="/work/graphic-design" className={mobileLinkClass} onClick={close}>
-                                Graphic Design
-                            </NavLink>
-                            <NavLink to="/work/web-design" className={mobileLinkClass} onClick={close}>
-                                Web Design
+                            <NavLink to="/work/ui-ux-web-dev" className={mobileLinkClass} onClick={close}>
+                                UI/UX & Web Dev
                             </NavLink>
                         </div>
 

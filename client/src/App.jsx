@@ -22,7 +22,6 @@ const NotFound = lazy(() => import("./pages/NotFound.jsx"));
 const WorkLayout = lazy(() => import("./pages/Work/WorkLayout.jsx"));
 const WorkIndex = lazy(() => import("./pages/Work/WorkIndex.jsx"));
 const BrandDesign = lazy(() => import("./pages/Work/BrandDesign.jsx"));
-const GraphicDesign = lazy(() => import("./pages/Work/GraphicDesign.jsx"));
 const WebDesign = lazy(() => import("./pages/Work/WebDesign.jsx"));
 const CaseStudy = lazy(() => import("./pages/Work/CaseStudy.jsx"));
 
@@ -55,9 +54,8 @@ export default function App() {
             {/* Work — category listing pages */}
             <Route path="/work" element={<WorkLayout />}>
               <Route index element={<WorkIndex />} />
-              <Route path="brand-design" element={<BrandDesign />} />
-              <Route path="graphic-design" element={<GraphicDesign />} />
-              <Route path="web-design" element={<WebDesign />} />
+              <Route path="brand-systems" element={<BrandDesign />} />
+              <Route path="ui-ux-web-dev" element={<WebDesign />} />
             </Route>
 
             {/* Case Study — standalone (no WorkLayout header) */}

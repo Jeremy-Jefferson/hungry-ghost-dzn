@@ -14,7 +14,7 @@ const featuredWork = work.filter((w) => w.featured).sort((a, b) => {
 });
 
 export default function Home() {
-    usePageTitle(null); // "Hungry Ghost DZN"
+    usePageTitle(null); // "Hungry Ghost DEV"
     const parallaxRef = useParallax({ tealSpeed: 0.3, magentaSpeed: 0.15 });
 
     return (
@@ -26,14 +26,14 @@ export default function Home() {
                         <h1 className="h1">
                             Bold brands,
                             <br />
-                            Sharp visuals,
+                            Sharp websites,
                             <br />
-                            and websites that work.
+                            and development that delivers.
                         </h1>
 
                         <p className="hero__lead">
-                            Hungry Ghost DZN creates intentional brand systems,
-                            striking visuals, and high-impact websites where clarity,
+                            Hungry Ghost DEV creates intentional brand systems,
+                            high-impact websites, and premium UI/UX experiences where clarity,
                             usability, and performance matter.
                         </p>
 
@@ -68,7 +68,7 @@ export default function Home() {
                         <Link to="/work" className="btn">View all work →</Link>
                     </div>
                     <div className="workGrid">
-                        {featuredWork.map((item) => (
+                        {featuredWork.slice(0, 3).map((item) => (
                             <WorkCard key={item.slug} item={item} />
                         ))}
                     </div>
@@ -81,7 +81,7 @@ export default function Home() {
                     <div className="home-section__header">
                         <div className="home-section__title">
                             <span className="accent-label">What We Do</span>
-                            <h2 className="h2">Three disciplines, one studio</h2>
+                            <h2 className="h2">Two disciplines, one studio</h2>
                         </div>
                         <Link to="/services" className="btn">All services →</Link>
                     </div>

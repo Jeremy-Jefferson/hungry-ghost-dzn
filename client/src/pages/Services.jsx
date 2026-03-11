@@ -18,37 +18,36 @@ const services = [
             "Logo suite & brand marks",
             "Color palette & typography system",
             "Brand guidelines document",
-            "Business card & stationery design",
-            "Social media brand assets",
+            "Visual identity systems",
+            "Brand strategy & positioning",
         ],
         workLink: "/work/brand-design",
         workLabel: "View Brand Work",
     },
     {
-        title: "Graphic Design",
+        title: "UI/UX Design",
         accent: "magenta",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 19l7-7 3 3-7 7-3-3z" />
-                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-                <path d="M2 2l7.586 7.586" />
-                <circle cx="11" cy="11" r="2" />
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <line x1="3" y1="9" x2="21" y2="9" />
+                <line x1="9" y1="21" x2="9" y2="9" />
             </svg>
         ),
         description:
-            "Striking visual design for print, digital, and apparel — made to stop the scroll, carry the message, and elevate the brand.",
+            "User-centered interfaces designed for clarity, engagement, and conversion. Every pixel serves a purpose.",
         includes: [
-            "Poster & print design",
-            "Apparel & merch graphics",
-            "Social media content design",
-            "Illustration & iconography",
-            "Event & promotional collateral",
+            "User research & personas",
+            "Wireframes & prototypes",
+            "High-fidelity UI designs",
+            "Design systems & components",
+            "Usability testing & iteration",
         ],
-        workLink: "/work/graphic-design",
-        workLabel: "View Graphic Work",
+        workLink: "/work/web-design",
+        workLabel: "View UI/UX Work",
     },
     {
-        title: "Web Design",
+        title: "Web Development",
         accent: "teal",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -58,16 +57,16 @@ const services = [
             </svg>
         ),
         description:
-            "Custom websites that balance visual impact with real usability — designed to look sharp, load fast, and convert with intent.",
+            "Custom websites built with modern frameworks for speed, scalability, and exceptional user experiences.",
         includes: [
-            "Landing pages & marketing sites",
-            "Portfolio & studio websites",
-            "Custom React / Vite builds",
-            "Design system implementation",
-            "Performance & UX optimization",
+            "React / Next.js development",
+            "Custom WordPress builds",
+            "E-commerce solutions",
+            "Performance optimization",
+            "CMS integration & training",
         ],
         workLink: "/work/web-design",
-        workLabel: "View Web Work",
+        workLabel: "View Dev Work",
     },
 ];
 
@@ -83,7 +82,7 @@ export default function Services() {
                         <span className="accent-label">What We Do</span>
                         <h1 className="h1">Services</h1>
                         <p className="page-lead">
-                            Three focused disciplines. One sharp, cohesive brand presence.
+                            Two focused disciplines. One sharp, cohesive brand presence.
                         </p>
                     </div>
 
@@ -159,7 +158,7 @@ export default function Services() {
                     <div className="services__cta-card card">
                         <h2 className="h2">Ready to build something sharp?</h2>
                         <p className="services__cta-text">
-                            Whether you need a complete brand overhaul or a single standout piece, let's talk.
+                            Whether you need a complete brand overhaul or a standout website, let's talk.
                         </p>
                         <Link to="/contact" className="btn btn--primary btn--large">
                             Start a Conversation

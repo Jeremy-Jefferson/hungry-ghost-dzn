@@ -199,6 +199,56 @@
   border-radius: var(--radius-lg);
 }
 
+/* Skeleton pulse animation for variety */
+@keyframes skeletonPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skeleton--pulse {
+  animation: skeletonPulse 2s ease-in-out infinite;
+}
+
+/* ========================================
+   SCROLL REVEAL ANIMATION
+   Adds subtle fade-in on scroll for sections
+   ======================================== */
+
+@keyframes scrollReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Only apply on pages with the reveal class */
+.reveal {
+  opacity: 0;
+  animation: scrollReveal 0.6s ease forwards;
+}
+
+.reveal--delay-1 { animation-delay: 0.1s; }
+.reveal--delay-2 { animation-delay: 0.2s; }
+.reveal--delay-3 { animation-delay: 0.3s; }
+.reveal--delay-4 { animation-delay: 0.4s; }
+
+/* Reduced motion - show immediately */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
+
 .skeleton--text {
   height: 16px;
   border-radius: 4px;
@@ -617,7 +667,25 @@ a:hover {
   transition:
     transform 0.12s ease,
     border-color 0.12s ease,
-    box-shadow 0.12s ease;
+    box-shadow 0.12s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Button focus ring animation */
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+  animation: buttonFocusPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonFocusPulse {
+  0%, 100% {
+    outline-color: var(--color-accent-primary);
+  }
+  50% {
+    outline-color: var(--brand-magenta);
+  }
 }
 
 .btn:hover {
@@ -653,10 +721,11 @@ a:hover {
 .btn:focus-visible {
   outline: 2px solid var(--color-accent-primary);
   outline-offset: 2px;
+  animation: buttonFocusPulse 2s ease-in-out infinite;
 }
 
 .btn:active {
-  transform: translateY(0px);
+  transform: translateY(1px) scale(0.98);
 }
 
 .btn--primary {
@@ -761,6 +830,7 @@ a:hover {
     transparent 40%
   );
   color: var(--color-accent-primary);
+  transform: translateY(-1px);
 }
 
 .tag--teal {
@@ -873,6 +943,10 @@ a:hover {
 .nav__link:hover {
   color: var(--color-accent-primary);
   transform: translateY(-2px);
+}
+
+.nav__link:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .nav__link.is-active {
@@ -997,11 +1071,15 @@ a:hover {
   cursor: pointer;
   padding: 8px;
   border-radius: var(--radius-sm);
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .nav__hamburger:hover {
   background: var(--color-surface-2);
+}
+
+.nav__hamburger:active {
+  transform: scale(0.95);
 }
 
 .nav__hamburger-line {
@@ -1150,6 +1228,14 @@ a:hover {
   margin-top: var(--space-5);
 }
 
+.hero__cta .btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero__cta .btn:hover {
+  transform: translateY(-3px);
+}
+
 .hero__media img {
   width: 100%;
   max-width: 560px;
@@ -1159,6 +1245,12 @@ a:hover {
   position: relative;
   z-index: 1;
   border-radius: var(--radius-lg);
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.hero__media img:hover {
+  transform: scale(1.02) translateY(-4px);
+  filter: drop-shadow(0 0 40px var(--brand-teal));
 }
 
 /* ========================================
@@ -1730,6 +1822,12 @@ a:hover {
   flex-wrap: wrap;
   gap: var(--space-5);
   padding: var(--space-6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
 
 /* Hero with image */
@@ -1760,6 +1858,12 @@ a:hover {
   height: auto;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-hero__media img:hover {
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px color-mix(in srgb, var(--brand-teal), transparent 40%);
 }
 
 /* Capabilities */
@@ -1782,6 +1886,7 @@ a:hover {
 .about__capability:hover {
   border-color: var(--brand-teal);
   color: var(--brand-teal);
+  transform: translateY(-2px);
 }
 
 /* Process Teaser */
@@ -1789,6 +1894,12 @@ a:hover {
   display: grid;
   gap: var(--space-6);
   padding: var(--space-6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about__process-teaser:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 768px) {
@@ -1901,12 +2012,17 @@ a:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+.services__card:hover .services__icon {
+  transform: scale(1.1);
+}
+
 .services__icon {
   width: 48px;
   height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease;
 }
 
 .services__icon svg {
@@ -2202,6 +2318,13 @@ a:hover {
   background: var(--color-surface-2);
   border-radius: var(--radius-md);
   color: var(--color-accent-primary);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.process__step:hover .process__step-icon {
+  transform: scale(1.1);
+  background: var(--color-accent-primary);
+  color: var(--color-bg);
 }
 
 .process__step-icon svg {
@@ -2273,6 +2396,12 @@ a:hover {
   line-height: 0.9;
   min-width: 84px;
   flex-shrink: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.process__step:hover .process__num {
+  opacity: 0.4;
+  transform: scale(1.05);
 }
 
 .process__step .stack {
@@ -2416,6 +2545,7 @@ a:hover {
 .contact__label {
   margin: 0;
   color: var(--color-text-subtle);
+  transition: color 0.2s ease;
 }
 
 .contact__input {
@@ -2450,10 +2580,16 @@ a:hover {
     0 0 0 3px color-mix(in srgb, var(--brand-teal), transparent 80%),
     0 4px 16px rgba(0, 0, 0, 0.2);
   background: color-mix(in srgb, var(--color-surface-2), var(--brand-teal) 3%);
+  transform: translateY(-1px);
 }
 
 .contact__input::placeholder {
   color: var(--color-text-subtle);
+}
+
+/* Input focus-within for form field containers */
+.contact__field:focus-within .contact__label {
+  color: var(--brand-teal);
 }
 
 textarea.contact__input {
@@ -2594,11 +2730,15 @@ textarea.contact__input {
   font-size: 20px;
   cursor: pointer;
   color: var(--color-text);
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .nav__mobileClose:hover {
   background: var(--color-surface-3);
+}
+
+.nav__mobileClose:active {
+  transform: scale(0.95);
 }
 
 .nav__mobileLinks {
@@ -3013,6 +3153,12 @@ textarea.contact__input {
 .footer__legal-link {
   font-size: 14px;
   color: var(--color-text-subtle);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer__legal-link:hover {
+  color: var(--brand-teal);
+  transform: translateY(-1px);
 }
 
 .brand-stamp {

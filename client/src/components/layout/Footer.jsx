@@ -10,9 +10,8 @@ const NAV_LINKS = [
 ];
 
 const WORK_LINKS = [
-    { label: "Brand Design", to: "/work/brand-design" },
-    { label: "Graphic Design", to: "/work/graphic-design" },
-    { label: "Web Design", to: "/work/web-design" },
+    { label: "Brand Systems", to: "/work/brand-systems" },
+    { label: "UI/UX & Web Dev", to: "/work/ui-ux-web-dev" },
     { label: "All Work", to: "/work" },
 ];
 
@@ -84,11 +83,11 @@ export default function Footer() {
 
                     {/* Brand col */}
                     <div className="footer__brand">
-                        <Link to="/" aria-label="Hungry Ghost DZN" className="footer__brandLink">
-                            <img src={logo} alt="Hungry Ghost DZN - Home" className="footer__logo" />
+                        <Link to="/" aria-label="Hungry Ghost DEV" className="footer__brandLink">
+                            <img src={logo} alt="Hungry Ghost DEV - Home" className="footer__logo" />
                         </Link>
                         <p className="footer__tagline">
-                            Brand systems, graphic design, and high-impact websites built for performance.
+                            Brand systems and high-impact websites built for performance.
                         </p>
                         <div className="footer__cta">
                             <Link to="/contact" className="btn btn--primary">
@@ -154,7 +153,7 @@ export default function Footer() {
                 {/* Bottom bar */}
                 <div className="footer__bottom">
                     <span className="footer__copy">
-                        © {currentYear} Hungry Ghost DZN. All rights reserved.
+                        © {currentYear} Hungry Ghost DEV. All rights reserved.
                     </span>
 
                     <div className="footer__legal">

@@ -2,13 +2,13 @@ import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
 
 const DEFAULT_SEO = {
-  title: "Hungry Ghost DZN | Brand, Web & Graphic Design Studio",
+  title: "Hungry Ghost DEV | UI/UX & Web Development Studio",
   description:
-    "Hungry Ghost DZN creates intentional brand systems, striking visuals, and high-impact websites where clarity, usability, and performance matter.",
+    "Hungry Ghost DEV creates intentional brand systems, high-impact websites, and premium UI/UX experiences where clarity, usability, and performance matter.",
   image: "/images/og-default.png",
-  url: "https://hungryghostdzn.com",
-  siteName: "Hungry Ghost DZN",
-  twitterHandle: "@hungryghostdzn",
+  url: "https://hungryghost.dev",
+  siteName: "Hungry Ghost DEV",
+  twitterHandle: "@hungryghostdev",
 };
 
 export default function SEO({
@@ -25,7 +25,7 @@ export default function SEO({
     : `${DEFAULT_SEO.url}${location.pathname}`;
 
   const pageTitle = title
-    ? `${title} | Hungry Ghost DZN`
+    ? `${title} | Hungry Ghost DEV`
     : DEFAULT_SEO.title;
 
   const ogImage = image
@@ -37,7 +37,7 @@ export default function SEO({
     () => ({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      name: "Hungry Ghost DZN",
+      name: "Hungry Ghost DEV",
       description: DEFAULT_SEO.description,
       url: DEFAULT_SEO.url,
       image: `${DEFAULT_SEO.url}/images/logo.png`,
@@ -56,10 +56,9 @@ export default function SEO({
       },
       serviceType: [
         "Brand Design",
-        "Graphic Design",
-        "Web Design",
-        "Logo Design",
+        "UI/UX Design",
         "Web Development",
+        "Logo Design",
       ],
     }),
     []
@@ -71,7 +70,7 @@ export default function SEO({
       <title>{pageTitle}</title>
       <meta name="title" content={pageTitle} />
       <meta name="description" content={description || DEFAULT_SEO.description} />
-      <meta name="author" content="Hungry Ghost DZN" />
+      <meta name="author" content="Hungry Ghost DEV" />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={fullUrl} />
 
