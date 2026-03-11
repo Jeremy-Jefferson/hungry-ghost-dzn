@@ -5,112 +5,53 @@ export default function BrandDesign() {
     const items = getWorkByCategory("brand-systems");
 
     return (
-        <section style={{ padding: "0 0 80px" }}>
+        <section style={{ padding: "0 0 120px" }}>
             <div className="container stack">
-                <div className="page-hero" style={{ marginBottom: "var(--space-6)" }}>
-                    <span className="accent-label">What We Create</span>
+                <div className="page-hero" style={{ marginBottom: "var(--space-7)" }}>
+                    <span className="accent-label">Brand Systems</span>
                     <h1 className="h1" style={{ marginBottom: "var(--space-4)" }}>Brand Design</h1>
-                    <p className="page-lead" style={{ maxWidth: "640px" }}>
-                        Great brands work across every touchpoint — from logos to websites to physical spaces. 
-                        See how we build complete brand systems that scale.
+                    <p className="page-lead" style={{ maxWidth: "560px" }}>
+                        We build complete brand systems that scale across every touchpoint — from logos to websites to physical spaces.
                     </p>
                 </div>
 
-                {/* Brand Process Overview */}
-                <div className="brand-process-overview" style={{ marginBottom: "var(--space-7)" }}>
-                    <div className="card" style={{ padding: "var(--space-5)", background: "var(--color-surface)" }}>
-                        <h3 className="h3" style={{ marginBottom: "var(--space-4)" }}>The Brand Design Process</h3>
-                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "var(--space-4)" }}>
-                            <div>
-                                <div style={{ 
-                                    fontSize: "var(--text-sm)", 
-                                    fontWeight: "var(--font-bold)",
-                                    color: "var(--color-accent-teal)",
-                                    marginBottom: "var(--space-2)"
-                                }}>PHASE 01</div>
-                                <h4 className="h4">Discovery</h4>
-                                <p className="small" style={{ color: "var(--color-text-muted)" }}>
-                                    Understanding your business, audience, and competitive landscape.
-                                </p>
-                            </div>
-                            <div>
-                                <div style={{ 
-                                    fontSize: "var(--text-sm)", 
-                                    fontWeight: "var(--font-bold)",
-                                    color: "var(--color-accent-teal)",
-                                    marginBottom: "var(--space-2)"
-                                }}>PHASE 02</div>
-                                <h4 className="h4">Strategy</h4>
-                                <p className="small" style={{ color: "var(--color-text-muted)" }}>
-                                    Defining brand positioning, messaging, and visual direction.
-                                </p>
-                            </div>
-                            <div>
-                                <div style={{ 
-                                    fontSize: "var(--text-sm)", 
-                                    fontWeight: "var(--font-bold)",
-                                    color: "var(--color-accent-teal)",
-                                    marginBottom: "var(--space-2)"
-                                }}>PHASE 03</div>
-                                <h4 className="h4">Design</h4>
-                                <p className="small" style={{ color: "var(--color-text-muted)" }}>
-                                    Creating logos, collateral, and digital assets that bring the brand to life.
-                                </p>
-                            </div>
-                            <div>
-                                <div style={{ 
-                                    fontSize: "var(--text-sm)", 
-                                    fontWeight: "var(--font-bold)",
-                                    color: "var(--color-accent-teal)",
-                                    marginBottom: "var(--space-2)"
-                                }}>PHASE 04</div>
-                                <h4 className="h4">Delivery</h4>
-                                <p className="small" style={{ color: "var(--color-text-muted)" }}>
-                                    Organizing files, creating guidelines, and ensuring consistency.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 {/* Featured: Full Brand Package Example */}
-                <div className="featured-brand-package" style={{ marginBottom: "var(--space-7)" }}>
-                    <div className="card" style={{ padding: "var(--space-5)", background: "var(--color-surface)", borderLeft: "4px solid var(--color-accent-teal)" }}>
+                <div className="featured-brand-package" style={{ marginBottom: "var(--space-8)" }}>
+                    <div 
+                        className="card" 
+                        style={{ 
+                            padding: "var(--space-6)", 
+                            background: "var(--color-surface)", 
+                            borderLeft: "4px solid var(--color-accent-teal)"
+                        }}
+                    >
                         <span className="accent-label" style={{ marginBottom: "var(--space-3)", display: "block" }}>Featured Project</span>
                         <h3 className="h2" style={{ marginBottom: "var(--space-3)" }}>Little York Smoke Shop</h3>
-                        <p className="small" style={{ marginBottom: "var(--space-4)", maxWidth: "640px" }}>
-                            Complete brand system + website development — showing how brand design spans across physical and digital touchpoints as one cohesive story.
+                        <p className="small" style={{ marginBottom: "var(--space-4)", maxWidth: "560px" }}>
+                            Complete brand system and digital presence — showing how identity design extends across logos, storefront graphics, and the website.
                         </p>
                         
-                        {/* Process Flow - Visual Stepper */}
-                        <div style={{ 
-                            display: "flex", 
-                            alignItems: "center", 
-                            gap: "var(--space-3)", 
-                            marginBottom: "var(--space-5)",
-                            flexWrap: "wrap"
-                        }}>
-                            <span className="tag tag--teal">Brand Identity</span>
-                            <span style={{ color: "var(--color-text-muted)" }}>→</span>
-                            <span className="tag">Environmental Graphics</span>
-                            <span style={{ color: "var(--color-text-muted)" }}>→</span>
-                            <span className="tag">UX Design</span>
-                            <span style={{ color: "var(--color-text-muted)" }}>→</span>
-                            <span className="tag tag--magenta">Web Development</span>
-                        </div>
-
                         {/* Related Assets Grid - Now showing the complete system */}
                         <div style={{ 
                             display: "grid", 
                             gridTemplateColumns: "repeat(3, 1fr)", 
-                            gap: "var(--space-3)",
-                            marginBottom: "var(--space-4)"
+                            gap: "var(--space-4)",
+                            marginBottom: "var(--space-5)"
                         }}>
                             <div style={{ position: "relative" }}>
                                 <img 
                                     src="/images/work/BRANDING/LYLOGO.webp" 
                                     alt="Logo Identity"
-                                    style={{ width: "100%", height: "120px", objectFit: "cover", borderRadius: "var(--radius-md)" }}
+                                    style={{ 
+                                        width: "100%", 
+                                        height: "160px", 
+                                        objectFit: "contain", 
+                                        borderRadius: "var(--radius-md)",
+                                        background: "var(--color-surface-2)",
+                                        padding: "var(--space-3)",
+                                        transition: "transform .35s ease"
+                                    }}
+                                    className="featured-image"
                                 />
                                 <div style={{ 
                                     position: "absolute", 
@@ -127,7 +68,14 @@ export default function BrandDesign() {
                                 <img 
                                     src="/images/work/BRANDING/WindowWrappp.webp" 
                                     alt="Window Wrap"
-                                    style={{ width: "100%", height: "120px", objectFit: "cover", borderRadius: "var(--radius-md)" }}
+                                    style={{ 
+                                        width: "100%", 
+                                        height: "160px", 
+                                        objectFit: "cover", 
+                                        borderRadius: "var(--radius-md)",
+                                        transition: "transform .35s ease"
+                                    }}
+                                    className="featured-image"
                                 />
                                 <div style={{ 
                                     position: "absolute", 
@@ -144,7 +92,14 @@ export default function BrandDesign() {
                                 <img 
                                     src="/images/work/WEB/little-york-site.webp" 
                                     alt="Website"
-                                    style={{ width: "100%", height: "120px", objectFit: "cover", borderRadius: "var(--radius-md)" }}
+                                    style={{ 
+                                        width: "100%", 
+                                        height: "160px", 
+                                        objectFit: "cover", 
+                                        borderRadius: "var(--radius-md)",
+                                        transition: "transform .35s ease"
+                                    }}
+                                    className="featured-image"
                                 />
                                 <div style={{ 
                                     position: "absolute", 
@@ -165,7 +120,7 @@ export default function BrandDesign() {
                     </div>
                 </div>
 
-                <h2 className="h2" style={{ marginBottom: "var(--space-5)" }}>Brand Projects</h2>
+                <h2 className="h2" style={{ marginBottom: "var(--space-6)" }}>Brand Projects</h2>
 
                 {/* Projects Grid - Enhanced */}
                 <div 
@@ -173,14 +128,14 @@ export default function BrandDesign() {
                     style={{ 
                         display: "grid",
                         gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-                        gap: "var(--space-5)"
+                        gap: "var(--space-6)"
                     }}
                 >
                     {items.filter(item => item.slug !== "little-york-smoke-shop").map((item) => (
                         <Link 
                             key={item.slug} 
                             to={`/work/${item.category}/${item.slug}`}
-                            className="card"
+                            className="card workCard"
                             style={{ 
                                 textDecoration: "none", 
                                 color: "inherit",
@@ -188,7 +143,7 @@ export default function BrandDesign() {
                                 overflow: "hidden",
                                 display: "flex",
                                 flexDirection: "column",
-                                transition: "transform 0.3s ease, box-shadow 0.3s ease"
+                                transition: "transform .35s ease, box-shadow .35s ease"
                             }}
                         >
                             {/* Image */}
@@ -206,18 +161,18 @@ export default function BrandDesign() {
                                         height: "100%", 
                                         objectFit: item.category === "brand-systems" ? "contain" : "cover",
                                         padding: item.category === "brand-systems" ? "var(--space-4)" : 0,
-                                        transition: "transform 0.4s ease"
+                                        transition: "transform .35s ease"
                                     }}
                                 />
                             </div>
                             
                             {/* Content */}
                             <div style={{ 
-                                padding: "var(--space-4)",
+                                padding: "var(--space-5)",
                                 flex: 1,
                                 display: "flex",
                                 flexDirection: "column",
-                                gap: "var(--space-2)"
+                                gap: "var(--space-3)"
                             }}>
                                 {/* Year and Tags */}
                                 <div style={{ 
@@ -227,7 +182,7 @@ export default function BrandDesign() {
                                 }}>
                                     <span className="tag tag--teal">{item.year}</span>
                                     {item.content?.techStack && item.content.techStack.length > 0 && (
-                                        <span className="tag" style={{ fontSize: "10px" }}>
+                                        <span className="tag tag--design">
                                             {item.content.techStack[0]}
                                         </span>
                                     )}
@@ -252,7 +207,8 @@ export default function BrandDesign() {
                                         style={{ 
                                             color: "var(--color-text-muted)",
                                             margin: 0,
-                                            flex: 1
+                                            flex: 1,
+                                            lineHeight: "1.6"
                                         }}
                                     >
                                         {item.summary}
@@ -279,14 +235,14 @@ export default function BrandDesign() {
 
                 {/* CTA */}
                 <div className="card" style={{ 
-                    padding: "var(--space-6)", 
-                    marginTop: "var(--space-6)",
+                    padding: "var(--space-7)", 
+                    marginTop: "var(--space-8)",
                     textAlign: "center",
                     background: "var(--color-surface)"
                 }}>
                     <h3 className="h3" style={{ marginBottom: "var(--space-3)" }}>Need a brand?</h3>
-                    <p className="small" style={{ marginBottom: "var(--space-4)", maxWidth: "500px", margin: "0 auto var(--space-4)" }}>
-                        Let's build a complete brand system that works across every touchpoint.
+                    <p className="small" style={{ marginBottom: "var(--space-5)", maxWidth: "480px", margin: "0 auto var(--space-5)" }}>
+                        Let's build a brand system that works across every touchpoint.
                     </p>
                     <Link to="/contact" className="btn btn--primary">Start a Project</Link>
                 </div>

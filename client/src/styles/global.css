@@ -858,6 +858,74 @@ a:hover {
   color: var(--color-accent-secondary);
 }
 
+/* Tag variants for skills identification */
+.tag--dev {
+  border-color: color-mix(
+    in srgb,
+    var(--color-accent-primary),
+    transparent 55%
+  );
+  color: var(--color-accent-primary);
+}
+
+.tag--design {
+  border-color: var(--color-border-subtle);
+  color: var(--color-text-muted);
+  background: transparent;
+}
+
+/* ========================================
+   VIEW ALL LINK HOVER
+======================================== */
+
+.view-all-link {
+  transition: color 0.25s ease, transform 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.view-all-link:hover {
+  color: var(--color-accent-teal) !important;
+}
+
+.view-all-link span {
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.view-all-link:hover span {
+  transform: translateX(4px);
+}
+
+/* ========================================
+   CARD HOVER INTERACTIONS
+======================================== */
+
+.workCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+}
+
+.workCard img {
+  transition: transform .35s ease;
+}
+
+.workCard:hover img {
+  transform: scale(1.03);
+  filter: contrast(1.05) brightness(1.05);
+}
+
+/* ========================================
+   FEATURED IMAGE HOVER
+======================================== */
+
+.featured-image {
+  transition: transform .35s ease;
+}
+
+.featured-image:hover {
+  transform: scale(1.05);
+}
+
 /* ========================================
    NAVBAR
 ======================================== */

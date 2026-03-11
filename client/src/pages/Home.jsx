@@ -7,9 +7,12 @@ import { usePageTitle } from "../hooks/usePageTitle.js";
 import { useParallax } from "../hooks/useParallax.js";
 
 const featuredWork = work.filter((w) => w.featured).sort((a, b) => {
-    // Put Hungry Ghost DZN site first
+    // Put Hungry Ghost DZN site first, then alternate between brand and web
     if (a.slug === "hungry-ghost-dzn-site") return -1;
     if (b.slug === "hungry-ghost-dzn-site") return 1;
+    // Then show one of each category for variety
+    if (a.category === "brand-systems" && b.category === "ui-ux-web-dev") return -1;
+    if (a.category === "ui-ux-web-dev" && b.category === "brand-systems") return 1;
     return 0;
 });
 
@@ -26,9 +29,7 @@ export default function Home() {
                         <h1 className="h1">Bold brands.<br />Sharp websites.<br />Development that performs.</h1>
 
                         <p className="hero__lead">
-                            Hungry Ghost DEV creates intentional brand systems,
-                            high-impact websites, and premium UI/UX experiences where clarity,
-                            usability, and performance matter.
+                            Hungry Ghost DEV builds brand systems and high-performance websites designed for clarity, usability, and real-world impact.
                         </p>
 
                         <div className="hero__cta">
@@ -57,7 +58,7 @@ export default function Home() {
                         <div className="home-section__title">
                             <span className="accent-label">Selected Work</span>
                             <h2 className="h2">What we've built</h2>
-                            <p>Selected work across branding, digital, and environmental design.</p>
+                            <p>Selected projects across brand systems, UI/UX design, and web development.</p>
                         </div>
                         <Link to="/work" className="btn">View all work →</Link>
                     </div>
@@ -75,7 +76,7 @@ export default function Home() {
                     <div className="home-section__header">
                         <div className="home-section__title">
                             <span className="accent-label">What We Do</span>
-                            <h2 className="h2">Two disciplines, one studio</h2>
+                            <h2 className="h2">Brand systems and websites built to perform.</h2>
                         </div>
                         <Link to="/services" className="btn">All services →</Link>
                     </div>

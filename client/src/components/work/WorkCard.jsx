@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
 
 export default function WorkCard({ item }) {
+    // Determine tag variant based on category
+    const isDevCategory = item.category === "ui-ux-web-dev";
+    const tagClass = isDevCategory ? "tag tag--dev" : "tag tag--design";
+    
     // Always link to case study page for consistent navigation
     const caseStudyUrl = `/work/${item.category}/${item.slug}`;
 
     return (
         <Link
             to={caseStudyUrl}
-            className="workCard card workCard--branding"
+            className="workCard card"
             aria-label={`View ${item.title} case study`}
         >
             <div className="workCard__img-container">
@@ -34,7 +38,7 @@ export default function WorkCard({ item }) {
                     <div className="workCard__title">
                         {item.title}
                     </div>
-                    {item.year ? <div className="small">{item.year}</div> : null}
+                    {item.year ? <div className="small" style={{ opacity: 0.5, fontSize: "14px" }}>{item.year}</div> : null}
                 </div>
             </div>
 
@@ -52,7 +56,7 @@ export default function WorkCard({ item }) {
                 {!!item.tags?.length && (
                     <div className="workCard__tags">
                         {item.tags.slice(0, 3).map((t) => (
-                            <span className="tag tag--teal" key={t}>
+                            <span className={tagClass} key={t}>
                                 {t}
                             </span>
                         ))}

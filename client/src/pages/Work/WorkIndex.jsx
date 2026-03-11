@@ -7,13 +7,13 @@ export default function WorkIndex() {
     const webProjects = getWorkByCategory("ui-ux-web-dev");
 
     return (
-        <section style={{ padding: "0 0 80px" }}>
+        <section style={{ padding: "0 0 120px" }}>
             <div className="container stack">
-                <div className="page-hero">
+                <div className="page-hero" style={{ marginBottom: "var(--space-6)" }}>
                     <span className="accent-label">Our Work</span>
                     <h1 className="h1">Selected Projects</h1>
                     <p className="page-lead">
-                        Selected projects across brand systems, UI/UX design, and web development.
+                        Selected projects across brand systems, UI/UX design, and high-performance web development.
                     </p>
                 </div>
 
@@ -23,13 +23,17 @@ export default function WorkIndex() {
                         display: "flex", 
                         alignItems: "baseline", 
                         justifyContent: "space-between",
-                        marginBottom: "var(--space-5)",
+                        marginBottom: "var(--space-6)",
                         borderBottom: "1px solid var(--color-border)",
-                        paddingBottom: "var(--space-4)"
+                        paddingBottom: "var(--space-5)"
                     }}>
                         <h2 className="h2" style={{ margin: 0 }}>Brand Systems</h2>
-                        <Link to="/work/brand-systems" className="small" style={{ color: "var(--color-accent-teal)" }}>
-                            View All →
+                        <Link 
+                            to="/work/brand-systems" 
+                            className="view-all-link"
+                            style={{ color: "var(--color-text-muted)", textDecoration: "none", fontSize: "var(--text-sm)" }}
+                        >
+                            View All <span style={{ color: "var(--color-accent-teal)" }}>→</span>
                         </Link>
                     </div>
                     <div className="workGrid">
@@ -40,18 +44,22 @@ export default function WorkIndex() {
                 </div>
 
                 {/* UI/UX & Web Development Section */}
-                <div className="work-section">
+                <div className="work-section" style={{ marginBottom: "var(--space-9)" }}>
                     <div className="work-section__header" style={{ 
                         display: "flex", 
                         alignItems: "baseline", 
                         justifyContent: "space-between",
-                        marginBottom: "var(--space-5)",
+                        marginBottom: "var(--space-6)",
                         borderBottom: "1px solid var(--color-border)",
-                        paddingBottom: "var(--space-4)"
+                        paddingBottom: "var(--space-5)"
                     }}>
                         <h2 className="h2" style={{ margin: 0 }}>UI/UX Design & Web Development</h2>
-                        <Link to="/work/ui-ux-web-dev" className="small" style={{ color: "var(--color-accent-teal)" }}>
-                            View All →
+                        <Link 
+                            to="/work/ui-ux-web-dev" 
+                            className="view-all-link"
+                            style={{ color: "var(--color-text-muted)", textDecoration: "none", fontSize: "var(--text-sm)" }}
+                        >
+                            View All <span style={{ color: "var(--color-accent-teal)" }}>→</span>
                         </Link>
                     </div>
                     <div className="workGrid">
