@@ -30,7 +30,7 @@ export default function Analytics() {
       <script
         async
         defer
-        data-domain="hungryghostdzn.com"
+        data-domain="hungryghostdev.com"
         src={ANALYTICS_URL}
       />
       <script>

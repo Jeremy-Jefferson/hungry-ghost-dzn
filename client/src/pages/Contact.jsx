@@ -78,8 +78,7 @@ export default function Contact() {
               <span className="accent-label">Let's Talk</span>
               <h1 className="h1">Start a Project</h1>
               <p className="page-lead">
-                Tell us what you're building. We'll tell you how to make it
-                great.
+                Tell us what you're building — we'll help make it great.
               </p>
             </div>
 
@@ -88,7 +87,7 @@ export default function Contact() {
               <h2 className="h2">Here's how it works.</h2>
               <ul className="contact__next-list">
                 <li>We'll review your project details</li>
-                <li>You'll receive a response within 24–48 hours</li>
+                <li>You'll hear back within 24–48 hours</li>
                 <li>If it's a good fit, we'll schedule a discovery call</li>
               </ul>
             </aside>

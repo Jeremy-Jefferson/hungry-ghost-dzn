@@ -11,7 +11,7 @@ describe("SEO Component", () => {
   it("renders default title", () => {
     renderWithRouter(<SEO />);
     const title = document.title;
-    expect(title).toContain("Hungry Ghost DZN");
+    expect(title).toContain("Hungry Ghost DEV");
   });
 
   it("renders custom title when provided", () => {
@@ -60,6 +60,6 @@ describe("SEO Component", () => {
     
     const structuredData = JSON.parse(jsonLd.textContent);
     expect(structuredData["@type"]).toBe("LocalBusiness");
-    expect(structuredData.name).toBe("Hungry Ghost DZN");
+    expect(structuredData.name).toBe("Hungry Ghost DEV");
   });
 });

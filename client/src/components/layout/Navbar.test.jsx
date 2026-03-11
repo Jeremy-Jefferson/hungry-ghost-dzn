@@ -19,7 +19,7 @@ describe('Navbar', () => {
 
   it('renders the logo', () => {
     renderWithRouter(<Navbar />);
-    const logo = screen.getByAltText('Hungry Ghost DZN');
+    const logo = screen.getByAltText('Hungry Ghost DEV');
     expect(logo).toBeInTheDocument();
   });
 

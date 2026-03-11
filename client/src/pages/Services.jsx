@@ -13,7 +13,7 @@ const services = [
             </svg>
         ),
         description:
-            "Distinct identity systems built for recognition, consistency, and long-term growth — from full brand creation to strategic visual overhauls.",
+            "Identity systems built for recognition, consistency, and long-term growth.",
         includes: [
             "Logo suite & brand marks",
             "Color palette & typography system",
@@ -57,10 +57,10 @@ const services = [
             </svg>
         ),
         description:
-            "Custom websites built with modern frameworks for speed, scalability, and exceptional user experiences.",
+            "Modern websites engineered for speed, scalability, and exceptional user experience.",
         includes: [
             "React / Next.js development",
-            "Custom WordPress builds",
+            "Custom CMS builds",
             "E-commerce solutions",
             "Performance optimization",
             "CMS integration & training",
@@ -82,7 +82,7 @@ export default function Services() {
                         <span className="accent-label">What We Do</span>
                         <h1 className="h1">Services</h1>
                         <p className="page-lead">
-                            Two focused disciplines. One sharp, cohesive brand presence.
+                            Two focused disciplines. One cohesive digital presence.
                         </p>
                     </div>
 

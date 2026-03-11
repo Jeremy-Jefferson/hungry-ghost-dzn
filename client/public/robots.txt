@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://hungryghostdzn.com/sitemap.xml
+Sitemap: https://hungryghostdev.com/sitemap.xml

@@ -23,13 +23,7 @@ export default function Home() {
             <section className="hero" ref={parallaxRef}>
                 <div className="container hero__inner">
                     <div className="hero__copy stack">
-                        <h1 className="h1">
-                            Bold brands,
-                            <br />
-                            Sharp websites,
-                            <br />
-                            and development that delivers.
-                        </h1>
+                        <h1 className="h1">Bold brands.<br />Sharp websites.<br />Development that performs.</h1>
 
                         <p className="hero__lead">
                             Hungry Ghost DEV creates intentional brand systems,

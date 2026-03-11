@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const STUDIO = "Hungry Ghost DZN";
+const STUDIO = "Hungry Ghost DEV";
 
 /**
  * Sets document.title for the current page.

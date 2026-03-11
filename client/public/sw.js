@@ -1,4 +1,4 @@
-// Service Worker for Hungry Ghost DZN
+// Service Worker for Hungry Ghost DEV
 // Provides offline support and caching for improved performance
 
 const CACHE_NAME = 'hungry-ghost-v1';

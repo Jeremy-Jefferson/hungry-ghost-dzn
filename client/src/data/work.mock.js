@@ -508,7 +508,7 @@ export const work = [
                 ]
             },
 
-            techStack: ["Figma", "Illustrator", "Photoshop"],
+            techStack: ["Illustrator", "Photoshop", "Figma"],
 
             gallery: [
                 "/images/work/BRANDING/LYLOGO.webp",
@@ -609,7 +609,8 @@ export const work = [
                     description: "Recursive geometric interlocking forms creating infinite center.",
                     colors: [
                         { name: "Black", value: "#000000" },
-                        { name: "White", value: "#FFFFFF" }
+                        { name: "White", value: "#FFFFFF" },
+                        { name: "Red", value: "#DC143C" }
                     ],
                     cover: "/images/work/BRANDING/InfinitelyFW.webp"
                 }
@@ -653,7 +654,6 @@ export const work = [
                     description: "Modernized seal with infinity motifs and clean typography.",
                     colors: [
                         { name: "Black", value: "#1A1A1A" },
-                        { name: "Purple", value: "#6B4C9A" },
                         { name: "White", value: "#FFFFFF" }
                     ],
                     cover: "/images/work/BRANDING/NEO Seal.webp"
@@ -705,7 +705,6 @@ export const work = [
                     colors: [
                         { name: "Black", value: "#1A1A1A" },
                         { name: "Purple", value: "#6B4C9A" },
-                        { name: "Gold", value: "#FFD700" }
                     ],
                     cover: "/images/work/BRANDING/LV1.webp"
                 }

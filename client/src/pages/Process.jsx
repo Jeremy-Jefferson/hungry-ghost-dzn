@@ -5,7 +5,7 @@ const steps = [
     {
         num: "01",
         title: "Discovery",
-        body: "Every project begins with understanding. We examine your business, audience, and goals to define what the brand or website actually needs to accomplish. This phase clarifies priorities, removes assumptions, and establishes a clear direction before any design work begins.",
+        body: "Every project begins with clarity. We examine your business, audience, and goals to define what the brand or website actually needs to accomplish. This phase clarifies priorities, removes assumptions, and establishes a clear direction before any design work begins.",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8" />

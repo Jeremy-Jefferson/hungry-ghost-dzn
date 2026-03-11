@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     sitemap({
-      hostname: 'https://hungryghostdzn.com',
+      hostname: 'https://hungryghostdev.com',
       generateRobotsTxt: true,
     }),
     VitePWA({

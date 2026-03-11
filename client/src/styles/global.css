@@ -82,6 +82,11 @@
     scroll-behavior: auto !important;
   }
 
+  .hero__media img {
+    animation: none !important;
+    filter: drop-shadow(0 0 30px var(--brand-teal));
+  }
+
   .workCard,
   .home-section,
   .page-section,
@@ -541,7 +546,7 @@ a:hover {
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--brand-magenta);
   display: inline-flex;
   align-items: center;
@@ -620,6 +625,7 @@ a:hover {
   margin: 0;
   color: var(--brand-white);
   text-shadow: 0 0 40px color-mix(in srgb, var(--brand-teal), transparent 70%);
+  white-space: nowrap;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1213,6 +1219,19 @@ a:hover {
   }
 }
 
+/* Ghost breathing glow animation */
+@keyframes ghostGlow {
+  0% {
+    filter: drop-shadow(0 0 20px color-mix(in srgb, var(--brand-teal), transparent 75%));
+  }
+  50% {
+    filter: drop-shadow(0 0 35px color-mix(in srgb, var(--brand-teal), transparent 55%));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px color-mix(in srgb, var(--brand-teal), transparent 75%));
+  }
+}
+
 .hero__lead {
   font-size: 22px;
   color: var(--color-text-muted);
@@ -1246,6 +1265,7 @@ a:hover {
   z-index: 1;
   border-radius: var(--radius-lg);
   transition: transform 0.4s ease, filter 0.3s ease;
+  animation: ghostGlow 6s ease-in-out infinite;
 }
 
 .hero__media img:hover {
@@ -1280,6 +1300,7 @@ a:hover {
   padding: var(--space-5);
   border-radius: var(--radius-xl);
   grid-template-rows: auto auto 1fr auto;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 
   transition:
     transform 0.25s ease,
@@ -1326,11 +1347,12 @@ a:hover {
   object-fit: cover;
   padding: 10px;
 
-  transition: transform 0.45s ease;
+  transition: transform 0.45s ease, filter 0.45s ease;
 }
 
 .workCard:hover .workCard__img {
-  transform: scale(1.035);
+  transform: scale(1.03);
+  filter: brightness(1.04);
 }
 
 .workCard__img-placeholder {
@@ -1341,7 +1363,7 @@ a:hover {
 
 /* Dark padded background for branding logos & graphics */
 .workCard--branding .workCard__img-container {
-  background: #050505;
+  background: var(--color-surface-2);
   padding: var(--space-3);
   aspect-ratio: 1;
 }
@@ -1354,19 +1376,19 @@ a:hover {
 
 .workCard:hover {
   outline: 1px solid
-    color-mix(in srgb, var(--color-accent-primary), transparent 70%);
-  transform: translateY(-6px) scale(1.02);
+    color-mix(in srgb, var(--color-accent-primary), transparent 65%);
+  transform: translateY(-6px);
 
   border-color: color-mix(
     in srgb,
     var(--color-accent-primary),
-    transparent 55%
+    transparent 65%
   );
 
   box-shadow:
-    0 18px 38px rgba(0, 0, 0, 0.55),
-    0 8px 18px rgba(0, 0, 0, 0.35),
-    0 0 30px color-mix(in srgb, var(--color-accent-primary), transparent 85%);
+    0 0 0 1px rgba(111, 231, 224, 0.32),
+    0 18px 40px rgba(0, 0, 0, 0.42),
+    0 0 34px rgba(111, 231, 224, 0.12);
 }
 
 .workCard__title {
@@ -1378,6 +1400,12 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 6px;
+
+  transition: color 0.28s ease;
+}
+
+.workCard:hover .workCard__title {
+  color: var(--brand-teal);
 }
 
 .workCard__meta .small {
@@ -1425,15 +1453,16 @@ a:hover {
   font-size: 13px;
   font-weight: 600;
   color: var(--color-accent-primary);
-  transition: gap 0.2s ease;
+  transition: gap 0.28s ease, color 0.28s ease;
 }
 
 .workCard__cta-arrow {
-  transition: transform 0.2s ease;
+  transition: transform 0.28s ease;
 }
 
 .workCard:hover .workCard__cta {
   gap: var(--space-3);
+  color: var(--brand-teal);
 }
 
 .workCard:hover .workCard__cta-arrow {
@@ -1773,9 +1802,50 @@ a:hover {
 
 .about__copy p {
   color: var(--color-text-muted);
-  line-height: 1.75;
+  line-height: 1.65;
   margin: 0;
   font-size: 20px;
+}
+
+.about__principles {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 800px) {
+  .about__principles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.about__principle-card {
+  padding: var(--space-5);
+  display: grid;
+  gap: var(--space-3);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.about__principle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+  border-color: color-mix(
+    in srgb,
+    var(--color-accent-primary),
+    transparent 60%
+  );
+}
+
+.about__principle-card .h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.about__principle-card .small {
+  margin: 0;
+  color: var(--color-text-muted);
 }
 
 .about__values {
@@ -1794,16 +1864,14 @@ a:hover {
   display: grid;
   gap: var(--space-3);
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
 }
 
 .about__value-card:hover {
   transform: translateY(-4px);
-  box-shadow:
-    0 12px 28px rgba(0, 0, 0, 0.35),
-    0 0 20px color-mix(in srgb, var(--brand-teal), transparent 90%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   border-color: color-mix(
     in srgb,
     var(--color-accent-primary),
@@ -1821,7 +1889,7 @@ a:hover {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--space-5);
-  padding: var(--space-6);
+  padding: var(--space-5) var(--space-6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1856,14 +1924,11 @@ a:hover {
 .about-hero__media img {
   max-width: 100%;
   height: auto;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .about-hero__media img:hover {
   transform: scale(1.02) translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px color-mix(in srgb, var(--brand-teal), transparent 40%);
 }
 
 /* Capabilities */
@@ -1998,7 +2063,7 @@ a:hover {
 }
 
 .services__card {
-  padding: var(--space-6);
+  padding: var(--space-7);
   display: grid;
   gap: var(--space-4);
   align-content: start;
@@ -2008,7 +2073,7 @@ a:hover {
 }
 
 .services__card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
@@ -2052,7 +2117,7 @@ a:hover {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: var(--space-2);
+  gap: 10px;
 }
 
 .services__item {
@@ -2227,7 +2292,7 @@ a:hover {
 .services__teaser-steps {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-3);
+  gap: var(--space-5);
 }
 
 .services__teaser-step {
@@ -2247,6 +2312,7 @@ a:hover {
   font-weight: 700;
   color: var(--color-accent-primary);
   font-size: 14px;
+  opacity: 0.8;
 }
 
 .btn--large {
@@ -2368,7 +2434,7 @@ a:hover {
 }
 
 .process__step:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow:
     0 12px 28px rgba(0, 0, 0, 0.35),
     0 0 20px color-mix(in srgb, var(--brand-teal), transparent 90%);
@@ -2389,10 +2455,10 @@ a:hover {
 
 .process__num {
   font-family: var(--font-display);
-  font-weight: 900;
-  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 600;
+  font-size: 52px;
   color: var(--color-accent-primary);
-  opacity: 0.22;
+  opacity: 0.25;
   line-height: 0.9;
   min-width: 84px;
   flex-shrink: 0;
@@ -2490,6 +2556,7 @@ a:hover {
 @media (min-width: 980px) {
   .contact__intro {
     grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+    align-items: center;
   }
 }
 
@@ -2524,6 +2591,12 @@ a:hover {
   padding: var(--space-6);
   display: grid;
   gap: var(--space-5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact__form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
 }
 
 .contact__row {
@@ -2576,11 +2649,8 @@ a:hover {
 .contact__input:focus {
   outline: none;
   border-color: var(--brand-teal);
-  box-shadow:
-    0 0 0 3px color-mix(in srgb, var(--brand-teal), transparent 80%),
-    0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 2px rgba(111, 231, 224, 0.25);
   background: color-mix(in srgb, var(--color-surface-2), var(--brand-teal) 3%);
-  transform: translateY(-1px);
 }
 
 .contact__input::placeholder {
@@ -2854,7 +2924,7 @@ textarea.contact__input {
 }
 
 .home-service-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   border-color: color-mix(
     in srgb,
     var(--color-accent-primary),
@@ -2905,21 +2975,21 @@ textarea.contact__input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 300px;
+  width: 700px;
+  height: 350px;
   background: radial-gradient(
     ellipse,
-    color-mix(in srgb, var(--brand-teal), transparent 88%) 0%,
+    color-mix(in srgb, var(--brand-teal), transparent 80%) 0%,
     transparent 70%
   );
-  filter: blur(40px);
+  filter: blur(50px);
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.45;
 }
 
 .home-cta__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: var(--space-7);
   flex-wrap: wrap;

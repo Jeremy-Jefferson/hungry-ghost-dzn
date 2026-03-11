@@ -2,15 +2,19 @@ import { Link } from "react-router-dom";
 import hero from "../assets/images/HERO.webp";
 import { usePageTitle } from "../hooks/usePageTitle.js";
 
-const capabilities = [
-    "Brand Identity Systems",
-    "Visual Design",
-    "Logo Design",
-    "Web Design & Development",
-    "UI/UX Design",
-    "Print & Collateral",
-    "Illustration",
-    "Art Direction",
+const principles = [
+  {
+    title: "Clarity over noise",
+    body: "We remove the unnecessary to reveal what matters.",
+  },
+  {
+    title: "Systems over one-offs",
+    body: "Every element is built to scale across mediums.",
+  },
+  {
+    title: "Performance over vanity",
+    body: "Design should clarify, guide, and deliver impact.",
+  },
 ];
 
 const values = [
@@ -39,17 +43,16 @@ export default function About() {
           <div className="about-hero">
             <div className="about-hero__content">
               <span className="accent-label">About the Studio</span>
-              <h1 className="h1">We are Hungry Ghost DZN.</h1>
+              <h1 className="h1">We are Hungry Ghost DEV.</h1>
               <p className="page-lead">
-                Hungry Ghost DZN is a design and development studio focused on
-                building intentional brand systems, striking visuals, and
-                high-impact websites.
+                A design and development studio focused on intentional brand systems,
+                sharp visuals, and high-impact websites.
               </p>
             </div>
             <div className="about-hero__media">
               <img
                 src={hero}
-                alt="Hungry Ghost DZN studio graphic"
+                alt="Hungry Ghost DEV studio graphic"
                 loading="eager"
                 decoding="async"
                 width="400"
@@ -58,51 +61,22 @@ export default function About() {
             </div>
           </div>
 
-          {/* Our Approach */}
+          {/* Our Approach - restructured as intro + principles */}
           <span className="accent-label">Our Approach</span>
 
-          {/* Body copy */}
-          <div className="about__copy">
-            <p>
-              Hungry Ghost DZN approaches every project with the belief that
-              strong design is not decoration — it is structure. Typography,
-              layout, hierarchy, and visual language work together to create
-              systems that communicate clearly and scale across mediums.
-            </p>
-
-            <p>
-              Rather than chasing trends or surface aesthetics, the studio
-              focuses on clarity, composition, and purposeful design decisions.
-              Every project is built to be visually sharp, strategically
-              grounded, and consistent wherever the brand appears.
-            </p>
-
-            <p>
-              From identity systems and graphic design to modern web
-              experiences, the goal is simple: create work that looks powerful,
-              communicates effectively, and performs reliably.
-            </p>
-
-            <p>
-              Hungry Ghost DZN combines design thinking, illustration, and
-              frontend development to produce work that is both visually
-              compelling and technically sound.
+          <div className="about__copy" style={{ maxWidth: '720px' }}>
+            <p style={{ marginBottom: 'var(--space-4)' }}>
+              Strong design is not decoration. It is structure.
             </p>
           </div>
 
-          {/* Capabilities */}
-          <div className="stack">
-            <span className="accent-label">What We Do</span>
-            <div className="about__capabilities">
-              {capabilities.map((cap) => (
-                <span key={cap} className="about__capability">
-                  {cap}
-                </span>
-              ))}
-            </div>
-            <Link to="/services" className="btn btn--outline" style={{ alignSelf: 'flex-start', marginTop: '8px' }}>
-              View All Services
-            </Link>
+          <div className="about__principles">
+            {principles.map((p) => (
+              <div key={p.title} className="card about__principle-card">
+                <h3 className="h2">{p.title}</h3>
+                <p className="small">{p.body}</p>
+              </div>
+            ))}
           </div>
 
           {/* Divider */}
@@ -154,11 +128,10 @@ export default function About() {
           <div className="card about__cta">
             <div>
               <p className="h2" style={{ margin: 0 }}>
-                Ready to build something?
+                Let's build something with clarity and bite.
               </p>
               <p className="small" style={{ marginTop: "8px" }}>
-                Let us create work that looks sharp, communicates clearly, and
-                performs.
+                Work that looks sharp, communicates clearly, and performs in the real world.
               </p>
             </div>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
