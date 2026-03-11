@@ -157,9 +157,9 @@ export default function Contact() {
                   onChange={handleChange}
                 >
                   <option value="">Select a service…</option>
-                  <option value="brand-design">Brand Design</option>
-                  <option value="graphic-design">Graphic Design</option>
-                  <option value="web-design">Web Design</option>
+                  <option value="brand-systems">Brand Systems</option>
+                  <option value="ui-ux-design">UI/UX Design</option>
+                  <option value="web-development">Web Development</option>
                 </select>
               </div>
 

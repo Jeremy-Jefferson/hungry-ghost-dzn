@@ -3,7 +3,7 @@ import { usePageTitle } from "../hooks/usePageTitle.js";
 
 const services = [
     {
-        title: "Brand Design",
+        title: "Brand Systems",
         accent: "teal",
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -13,13 +13,13 @@ const services = [
             </svg>
         ),
         description:
-            "Identity systems built for recognition, consistency, and long-term growth.",
+            "Distinct identity systems built for recognition, consistency, and long-term growth — from foundational marks to complete visual ecosystems.",
         includes: [
-            "Logo suite & brand marks",
-            "Color palette & typography system",
-            "Brand guidelines document",
-            "Visual identity systems",
-            "Brand strategy & positioning",
+            "Logo systems & brand marks",
+            "Typography & color systems",
+            "Brand guidelines",
+            "Collateral & supporting assets",
+            "Environmental / retail branding",
         ],
         workLink: "/work/brand-design",
         workLabel: "View Brand Work",
@@ -35,13 +35,13 @@ const services = [
             </svg>
         ),
         description:
-            "User-centered interfaces designed for clarity, engagement, and conversion. Every pixel serves a purpose.",
+            "Interfaces and digital experiences designed for clarity, usability, and visual impact. Every decision is made to guide users and strengthen the message.",
         includes: [
-            "User research & personas",
-            "Wireframes & prototypes",
-            "High-fidelity UI designs",
+            "Website UI design",
+            "UX flows & wireframes",
             "Design systems & components",
-            "Usability testing & iteration",
+            "Interaction design",
+            "Interface refinement & iteration",
         ],
         workLink: "/work/web-design",
         workLabel: "View UI/UX Work",
@@ -57,13 +57,13 @@ const services = [
             </svg>
         ),
         description:
-            "Modern websites engineered for speed, scalability, and exceptional user experience.",
+            "Modern websites and front-end systems built for performance, scalability, and real-world usability — designed to look sharp, load fast, and work hard.",
         includes: [
-            "React / Next.js development",
-            "Custom CMS builds",
-            "E-commerce solutions",
+            "Front-end architecture",
+            "Custom React / Vite builds",
+            "Responsive development",
             "Performance optimization",
-            "CMS integration & training",
+            "CMS / content integration",
         ],
         workLink: "/work/web-design",
         workLabel: "View Dev Work",
@@ -82,7 +82,7 @@ export default function Services() {
                         <span className="accent-label">What We Do</span>
                         <h1 className="h1">Services</h1>
                         <p className="page-lead">
-                            Two focused disciplines. One cohesive digital presence.
+                            Three focused capabilities. One sharp, cohesive digital presence.
                         </p>
                     </div>
 
@@ -158,7 +158,7 @@ export default function Services() {
                     <div className="services__cta-card card">
                         <h2 className="h2">Ready to build something sharp?</h2>
                         <p className="services__cta-text">
-                            Whether you need a complete brand overhaul or a standout website, let's talk.
+                            Whether you need a brand system, a stronger interface, or a high-impact website, let's talk.
                         </p>
                         <Link to="/contact" className="btn btn--primary btn--large">
                             Start a Conversation
