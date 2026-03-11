@@ -67,12 +67,12 @@ export default function About() {
               Hungry Ghost DEV was founded by Jeremy E. Jefferson, a UI/UX designer and front-end developer focused on building brand systems and high-performance websites. By combining UI/UX design, frontend architecture, and visual identity systems, the studio connects design clarity with technical execution in a single workflow.
             </p>
             <p style={{ marginTop: 'var(--space-3)' }}>
-              The studio creates brand identities, product interfaces, and custom front-end builds for startups, small businesses, and digital platforms alike.
+              The studio creates brand identities, product interfaces, and custom front-end builds for startups, small businesses, and digital platforms.
             </p>
           </div>
 
           {/* Our Approach - restructured as intro + principles */}
-          <span className="accent-label">Our Approach</span>
+          <span className="accent-label" style={{ marginTop: 'var(--space-5)', display: 'block' }}>Our Approach</span>
 
           <div className="about__copy" style={{ maxWidth: '720px' }}>
             <p style={{ marginBottom: 'var(--space-4)' }}>
