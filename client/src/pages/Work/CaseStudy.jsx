@@ -370,7 +370,7 @@ export default function CaseStudy() {
                                                 padding: 0,
                                                 margin: 0
                                             }}>
-                                                {(item.content.uiux?.userGoals || item.content.uxStrategy?.userGoals).map((goal, idx) => (
+                                                {(item.content.uiux?.userGoals || item.content.uxStrategy?.userGoals || []).map((goal, idx) => (
                                                     <li key={idx} className="small" style={{ display: "flex", alignItems: "center", gap: "var(--space-2)" }}>
                                                         <span style={{ color: "var(--color-accent-teal)" }}>✓</span>
                                                         {goal}
@@ -447,7 +447,7 @@ export default function CaseStudy() {
                                                 padding: 0,
                                                 margin: 0
                                             }}>
-                                                {(item.content.uiux?.components || item.content.interfaceDesign?.components).map((comp, idx) => (
+                                                {(item.content.uiux?.components || item.content.interfaceDesign?.components || []).map((comp, idx) => (
                                                     <li key={idx} className="small" style={{ display: "flex", alignItems: "center", gap: "var(--space-2)" }}>
                                                         <span style={{ color: "var(--color-accent-magenta)" }}>•</span>
                                                         {comp}
