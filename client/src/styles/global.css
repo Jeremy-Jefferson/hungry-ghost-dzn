@@ -1987,6 +1987,8 @@ a:hover {
 
 .about-hero__media {
   justify-self: center;
+  max-width: 320px;
+  width: 100%;
 }
 
 .about-hero__media img {

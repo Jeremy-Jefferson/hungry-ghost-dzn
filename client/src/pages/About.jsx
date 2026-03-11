@@ -20,15 +20,15 @@ const principles = [
 const values = [
   {
     title: "Precision over decoration",
-    body: "We remove the noise and focus on what actually matters — clarity, hierarchy, and intentional design.",
+    body: "Clear structure, strong hierarchy, and intentional design always win over unnecessary decoration.",
   },
   {
     title: "Systems thinking",
-    body: "Everything we design is part of a larger system. Nothing is one-off. Every element is built to scale.",
+    body: "Every project is built as part of a larger system — scalable, consistent, and designed to evolve.",
   },
   {
     title: "Performance-first",
-    body: "Design should perform. We care about clarity, usability, and measurable impact as much as aesthetics.",
+    body: "Design must work in the real world — fast, usable, and measurable.",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function About() {
               <span className="accent-label">About the Studio</span>
               <h1 className="h1">We are Hungry Ghost DEV.</h1>
               <p className="page-lead">
-                A design and development studio focused on intentional brand systems,
+                Hungry Ghost DEV is an independent design and development studio focused on intentional brand systems,
                 sharp visuals, and high-impact websites.
               </p>
             </div>
@@ -59,6 +59,16 @@ export default function About() {
                 height="400"
               />
             </div>
+          </div>
+
+          {/* Founder Context */}
+          <div className="about__copy" style={{ maxWidth: '720px' }}>
+            <p>
+              Hungry Ghost DEV was founded by Jeremy E. Jefferson, a UI/UX designer and front-end developer focused on building brand systems and high-performance websites. By combining UI/UX design, frontend architecture, and visual identity systems, the studio connects design clarity with technical execution in a single workflow.
+            </p>
+            <p style={{ marginTop: 'var(--space-3)' }}>
+              The studio creates brand identities, product interfaces, and custom front-end builds for startups, small businesses, and digital platforms alike.
+            </p>
           </div>
 
           {/* Our Approach - restructured as intro + principles */}
@@ -101,8 +111,7 @@ export default function About() {
               <span className="accent-label">How We Work</span>
               <h2 className="h2" style={{ marginTop: '8px' }}>The Process</h2>
               <p className="small" style={{ marginTop: '12px', maxWidth: '400px' }}>
-                Every project moves through four focused phases — Discovery, Strategy, Design, and Delivery.
-                Clear thinking, intentional decisions, no guesswork.
+                Every project moves through four focused phases — Discovery, Strategy, Design, and Delivery — ensuring clear thinking, intentional decisions, and minimal guesswork.
               </p>
               <Link to="/process" className="btn btn--outline" style={{ marginTop: '20px' }}>
                 Learn About Our Process
