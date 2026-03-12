@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/src/assets/images/HERO.png" />
+    <link rel="icon" type="image/webp" href="/favicon.webp" />
+    <link rel="apple-touch-icon" href="/favicon.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0b0b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,23 +18,33 @@
     <title>Hungry Ghost DEV — UI/UX & Web Development Studio</title>
     <meta name="title" content="Hungry Ghost DEV — UI/UX & Web Development Studio" />
     <meta name="description" content="Hungry Ghost DEV creates intentional brand systems, high-impact websites, and premium UI/UX experiences where clarity, usability, and performance matter." />
+    <meta name="author" content="Hungry Ghost DZN" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hungryghost.dev/" />
     <meta property="og:title" content="Hungry Ghost DEV — UI/UX & Web Development Studio" />
     <meta property="og:description" content="Hungry Ghost DEV creates intentional brand systems, high-impact websites, and premium UI/UX experiences where clarity, usability, and performance matter." />
-    <meta property="og:image" content="/src/assets/images/LOGO.png" />
+    <meta property="og:image" content="https://hungryghost.dev/src/assets/images/LOGO.png" />
+    <meta property="og:image:alt" content="Hungry Ghost DZN Logo" />
+    <meta property="og:site_name" content="Hungry Ghost DEV" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://hungryghost.dev/" />
     <meta property="twitter:title" content="Hungry Ghost DEV — UI/UX & Web Development Studio" />
     <meta property="twitter:description" content="Hungry Ghost DEV creates intentional brand systems, high-impact websites, and premium UI/UX experiences where clarity, usability, and performance matter." />
-    <meta property="twitter:image" content="/src/assets/images/LOGO.png" />
+    <meta property="twitter:image" content="https://hungryghost.dev/src/assets/images/LOGO.png" />
+    <meta property="twitter:image:alt" content="Hungry Ghost DZN Logo" />
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://hungryghost.dev/" />
+    
+    <!-- Performance: Preload critical assets -->
+    <link rel="preload" href="/src/assets/images/HERO.webp" as="image" type="image/webp" />
   </head>
   <body>
     <div id="root"></div>

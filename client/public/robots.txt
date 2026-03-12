@@ -2,5 +2,11 @@
 User-agent: *
 Allow: /
 
+# Crawl-delay for politeness (optional)
+Crawl-delay: 1
+
+# Disallow admin/private areas (if any)
+Disallow: /api/
+
 # Sitemap
-Sitemap: https://hungryghostdev.com/sitemap.xml
+Sitemap: https://hungryghostdev.com/sitemap-index.xml

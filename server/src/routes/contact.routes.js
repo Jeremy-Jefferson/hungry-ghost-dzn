@@ -1,44 +1,21 @@
 import express from "express";
 import nodemailer from "nodemailer";
+import rateLimit from "express-rate-limit";
 
 const router = express.Router();
 
-// Simple in-memory rate limiter (5 requests per IP per minute)
-const rateLimitMap = new Map();
-const RATE_LIMIT = 5;
-const RATE_WINDOW_MS = 60 * 1000; // 1 minute
-
-const checkRateLimit = (ip) => {
-    const now = Date.now();
-    const record = rateLimitMap.get(ip);
-    
-    if (!record) {
-        rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW_MS });
-        return true;
-    }
-    
-    if (now > record.resetTime) {
-        rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW_MS });
-        return true;
-    }
-    
-    if (record.count >= RATE_LIMIT) {
-        return false;
-    }
-    
-    record.count++;
-    return true;
-};
-
-// Cleanup old entries periodically
-setInterval(() => {
-    const now = Date.now();
-    for (const [ip, record] of rateLimitMap.entries()) {
-        if (now > record.resetTime) {
-            rateLimitMap.delete(ip);
-        }
-    }
-}, RATE_WINDOW_MS);
+// Create rate limiter for contact form
+const contactRateLimiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 5, // 5 requests per minute per IP
+  message: {
+    success: false,
+    error: "Too many requests. Please try again later."
+  },
+  standardHeaders: true,
+  legacyHeaders: false,
+  trustProxy: true,
+});
 
 // In a production environment, create a real transporter that sends emails.
 const createProdTransporter = () => {
@@ -82,15 +59,9 @@ const isValidEmail = (email) => {
    Contact Form Submission
 ---------------------------- */
 
-router.post("/contact", async (req, res) => {
-    // Rate limiting check
+router.post("/contact", contactRateLimiter, async (req, res) => {
+    // Rate limiting is now handled by express-rate-limit middleware
     const clientIp = req.ip || req.connection.remoteAddress || 'unknown';
-    if (!checkRateLimit(clientIp)) {
-        return res.status(429).json({
-            success: false,
-            error: "Too many requests. Please try again later."
-        });
-    }
 
     // Use real transporter if SMTP credentials are configured, otherwise use mock
     const hasSmtpCredentials = process.env.SMTP_USER && process.env.SMTP_PASS;
@@ -108,6 +79,21 @@ router.post("/contact", async (req, res) => {
                 error: "Missing required fields: name, email, and message are required"
             });
         }
+
+        // Sanitize inputs to prevent XSS
+        const sanitizeInput = (input) => {
+            if (typeof input !== 'string') return '';
+            return input
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#x27;')
+                .replace(/\//g, '&#x2F;');
+        };
+
+        const sanitizedName = sanitizeInput(name);
+        const sanitizedEmail = sanitizeInput(email);
+        const sanitizedMessage = sanitizeInput(message);
 
         // Validate field lengths to prevent abuse
         if (name.length > 100 || email.length > 254 || message.length > 5000) {

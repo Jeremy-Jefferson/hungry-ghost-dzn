@@ -5,25 +5,39 @@ process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
 import express from "express";
 import cors from "cors";
+import helmet from "helmet";
+import compression from "compression";
 import contactRoutes from "./routes/contact.routes.js";
 
 const app = express();
 
 /* ---------------------------
-   Security Headers
+   Security Headers (Helmet)
+---------------------------- */
+
+// Configure helmet with custom settings
+const helmetOptions = {
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      imgSrc: ["'self'", "data:", "https:"],
+      connectSrc: ["'self'", "https:"],
+      frameAncestors: ["'none'"],
+    },
+  },
+  crossOriginEmbedderPolicy: false,
+};
+
+app.use(helmet(helmetOptions));
+
+/* ---------------------------
+   Custom Security Headers
 ---------------------------- */
 
 app.use((req, res, next) => {
-    // Content Security Policy
-    res.setHeader("Content-Security-Policy", 
-        "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline'; " +
-        "style-src 'self' 'unsafe-inline'; " +
-        "img-src 'self' data: https:; " +
-        "font-src 'self'; " +
-        "connect-src 'self' https:;"
-    );
-    
     // X-Content-Type-Options
     res.setHeader("X-Content-Type-Options", "nosniff");
     
@@ -41,6 +55,12 @@ app.use((req, res, next) => {
     
     next();
 });
+
+/* ---------------------------
+   Compression
+---------------------------- */
+
+app.use(compression());
 
 /* ---------------------------
    Core Middleware

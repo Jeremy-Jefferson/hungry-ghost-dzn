@@ -2,11 +2,22 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import sitemap from 'vite-plugin-sitemap'
+import compression from 'vite-plugin-compression'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    // Gzip compression for production
+    compression({
+      algorithm: 'gzip',
+      ext: '.gz',
+    }),
+    // Brotli compression for better compression ratio
+    compression({
+      algorithm: 'brotliCompress',
+      ext: '.br',
+    }),
     sitemap({
       hostname: 'https://hungryghostdev.com',
       generateRobotsTxt: true,
@@ -100,6 +111,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-components': ['prop-types'],
         },
         // Use content hash for better caching
         entryFileNames: 'assets/[name]-[hash].js',
@@ -114,12 +126,41 @@ export default defineConfig({
     // Disable sourcemaps for production to reduce bundle size
     sourcemap: false,
     // Minify for production
-    minify: 'esbuild',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+      },
+      mangle: {
+        safari10: true,
+      },
+      format: {
+        comments: false,
+      },
+    },
     // Target modern browsers for smaller bundles
     target: 'esnext',
+    // Improve tree shaking
+    treeShaking: true,
+    // Generate report for analyzing bundle
+    reportCompressedSize: true,
+    // Split vendor chunks for better caching
+    vendorChunk: true,
+    // Enable CSS minification
+    cssMinify: true,
   },
   // Optimize dependencies
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
+    // Exclude certain deps from optimization if needed
+    exclude: [],
   },
+  // Define global variables for production
+  define: {
+    'process.env.NODE_ENV': '"production"',
+  },
+  // Improve asset handling
+  assetsInclude: ['**/*.webp', '**/*.avif'],
 })
