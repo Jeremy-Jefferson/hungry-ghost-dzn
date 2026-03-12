@@ -118,7 +118,7 @@ router.post("/contact", async (req, res) => {
         }
 
         // Validate service is one of allowed values
-        const allowedServices = ["", "brand-design", "graphic-design", "web-design"];
+        const allowedServices = ["", "brand-system-identity", "ui-ux-design", "web-development", "brand-website", "not-sure"];
         if (service && !allowedServices.includes(service)) {
             return res.status(400).json({
                 success: false,
@@ -136,9 +136,11 @@ router.post("/contact", async (req, res) => {
 
         // Format the service type for display
         const serviceLabels = {
-            "brand-design": "Brand Design",
-            "graphic-design": "Graphic Design",
-            "web-design": "Web Design"
+            "brand-system-identity": "Brand System / Identity",
+            "ui-ux-design": "UI/UX Design",
+            "web-development": "Web Development",
+            "brand-website": "Brand + Website",
+            "not-sure": "Not sure yet"
         };
         const serviceDisplay = serviceLabels[service] || service || "Not specified";
 

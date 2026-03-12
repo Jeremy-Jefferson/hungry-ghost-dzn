@@ -41,6 +41,24 @@ function NavbarImpl({ scrolled }) {
         return () => { document.body.style.overflow = ""; };
     }, [menuOpen]);
 
+    // Close mobile menu on Escape key press
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (menuOpen && e.key === 'Escape') {
+                setMenuOpen(false);
+                // Return focus to hamburger button for accessibility
+                const hamburger = document.querySelector('.nav__hamburger');
+                if (hamburger) hamburger.focus();
+            }
+        };
+        
+        if (menuOpen) {
+            document.addEventListener('keydown', handleKeyDown);
+        }
+        
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [menuOpen]);
+
     // Check for prefers-reduced-motion
     useEffect(() => {
         const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');

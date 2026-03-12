@@ -1,20 +1,30 @@
-import { useState } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 
 export default function WorkSearch({ work, onFilter }) {
   const [searchQuery, setSearchQuery] = useState('')
 
-  const filteredWork = work.filter((item) => {
+  // Memoize the filtered results to avoid unnecessary recalculations
+  const filteredWork = useMemo(() => {
+    if (!searchQuery.trim()) return work
     const query = searchQuery.toLowerCase()
-    return (
+    return work.filter((item) => 
       item.title?.toLowerCase().includes(query) ||
       item.summary?.toLowerCase().includes(query) ||
       item.tags?.some((tag) => tag.toLowerCase().includes(query))
     )
-  })
+  }, [work, searchQuery])
+
+  // Debounce the filter callback to avoid excessive re-renders
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onFilter(filteredWork)
+    }, 150) // 150ms debounce delay
+
+    return () => clearTimeout(timer)
+  }, [filteredWork, onFilter])
 
   const handleSearch = (e) => {
     setSearchQuery(e.target.value)
-    onFilter(filteredWork)
   }
 
   return (

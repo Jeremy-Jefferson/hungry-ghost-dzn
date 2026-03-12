@@ -1,6 +1,8 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-export default function WorkCard({ item }) {
+function WorkCard({ item }) {
     // Determine tag variant based on category
     const isDevCategory = item.category === "ui-ux-web-dev";
     const tagClass = isDevCategory ? "tag tag--dev" : "tag tag--design";
@@ -83,3 +85,18 @@ export default function WorkCard({ item }) {
         </Link>
     );
 }
+
+export default memo(WorkCard);
+
+WorkCard.propTypes = {
+    item: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        slug: PropTypes.string.isRequired,
+        category: PropTypes.string.isRequired,
+        summary: PropTypes.string,
+        cover: PropTypes.string,
+        tags: PropTypes.arrayOf(PropTypes.string),
+        year: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        featured: PropTypes.bool,
+    }).isRequired,
+};
