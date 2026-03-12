@@ -5,7 +5,7 @@ const DEFAULT_SEO = {
   title: "Hungry Ghost DEV | UI/UX & Web Development Studio",
   description:
     "Hungry Ghost DEV creates intentional brand systems, high-impact websites, and premium UI/UX experiences where clarity, usability, and performance matter.",
-  image: "/images/og-default.png",
+  image: "/images/og-image.webp",
   url: "https://hungryghost.dev",
   siteName: "Hungry Ghost DEV",
   twitterHandle: "@hungryghostdev",
@@ -80,6 +80,8 @@ export default function SEO({
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={description || DEFAULT_SEO.description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content={DEFAULT_SEO.siteName} />
 
       {/* Twitter */}

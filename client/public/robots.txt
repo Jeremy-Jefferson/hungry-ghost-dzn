@@ -2,6 +2,14 @@
 User-agent: *
 Allow: /
 
+# AI Crawlers (uncomment to block specific crawlers)
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: ChatGPT-User
+# Disallow: /
+# User-agent: ClaudeBot
+# Disallow: /
+
 # Crawl-delay for politeness (optional)
 Crawl-delay: 1
 
@@ -9,4 +17,4 @@ Crawl-delay: 1
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://hungryghostdev.com/sitemap-index.xml
+Sitemap: https://hungryghost.dev/sitemap-index.xml

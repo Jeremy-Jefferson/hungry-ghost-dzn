@@ -30,6 +30,8 @@ export default function FeaturedProject({ item }) {
                     <img
                         src={item.cover}
                         alt={`Cover image for ${item.title}`}
+                        loading="lazy"
+                        decoding="async"
                         style={{
                             width: "100%",
                             height: "100%",

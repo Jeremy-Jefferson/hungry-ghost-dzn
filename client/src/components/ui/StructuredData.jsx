@@ -17,7 +17,7 @@ export default function StructuredData() {
         "name": "Hungry Ghost DZN",
         "alternateName": "Hungry Ghost DEV",
         "url": "https://hungryghost.dev",
-        "logo": "https://hungryghost.dev/images/logo.webp",
+        "logo": "https://hungryghost.dev/src/assets/images/LOGO.webp",
         "description": "Hungry Ghost DZN creates intentional brand systems, high-impact websites, and premium UI/UX experiences where clarity, usability, and performance matter.",
         "foundingDate": "2020",
         "numberOfEmployees": {
