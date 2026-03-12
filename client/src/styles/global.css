@@ -1431,6 +1431,90 @@ a:hover {
   filter: brightness(1.04);
 }
 
+/* Hover overlay styles */
+.workCard__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: var(--space-4);
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.5) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.workCard:hover .workCard__overlay {
+  opacity: 1;
+}
+
+.workCard__overlay-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #fff;
+  letter-spacing: -0.01em;
+
+  transform: translateY(8px);
+  transition: transform 0.3s ease;
+}
+
+.workCard:hover .workCard__overlay-title {
+  transform: translateY(0);
+}
+
+.workCard__overlay-summary {
+  font-size: 13px;
+  color: var(--color-text-subtle, #a0a0a0);
+  margin: 0 0 10px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  transform: translateY(8px);
+  transition: transform 0.3s ease 0.05s;
+}
+
+.workCard:hover .workCard__overlay-summary {
+  transform: translateY(0);
+}
+
+.workCard__overlay-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  transform: translateY(8px);
+  transition: transform 0.3s ease 0.1s;
+}
+
+.workCard:hover .workCard__overlay-tags {
+  transform: translateY(0);
+}
+
+.workCard__overlay-tag {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--brand-teal), transparent 80%);
+  color: var(--brand-teal);
+  font-weight: 500;
+}
+
 .workCard__img-placeholder {
   width: 100%;
   height: 100%;
@@ -3663,4 +3747,248 @@ textarea.contact__input {
   transform: translateY(-50%);
   font-size: 16px;
   opacity: 0.5;
+}
+
+/* ========================================
+   CASE STUDY - VISUAL RHYTHM REFINEMENT
+   Lighter containers for strategy/design, stronger for development
+   ======================================== */
+
+/* UX Strategy and Interface Design - Lighter, more editorial */
+.cs-ux-strategy > .card,
+.cs-interface > .card {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+}
+
+.cs-ux-strategy .cs-section,
+.cs-interface .cs-section {
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.cs-ux-strategy .cs-section:last-child,
+.cs-interface .cs-section:last-child {
+  border-bottom: none;
+}
+
+/* Development and Dev Implementation - Stronger containers */
+.cs-development > .card,
+.cs-dev-implementation > .card {
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cs-dev-implementation .cs-dev-subsection .card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: var(--space-4);
+}
+
+/* Section spacing for better rhythm */
+.cs-ux-strategy,
+.cs-interface,
+.cs-development {
+  margin-top: var(--space-7);
+}
+
+.cs-tech-stack {
+  margin-top: var(--space-7);
+}
+
+/* ========================================
+   CASE STUDY - INTERFACE WALkTHROUGH
+   Browser frame styling for screenshots
+======================================== */
+
+.cs-interface-walkthrough {
+  margin-top: var(--space-8);
+}
+
+.cs-interface-walkthrough .cs-walkthrough-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .cs-interface-walkthrough .cs-walkthrough-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cs-interface-walkthrough .cs-walkthrough-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cs-walkthrough-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Browser Window Frame */
+.browser-frame {
+  background: #0a0a0a;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    0 8px 48px rgba(0, 0, 0, 0.2);
+}
+
+.browser-frame__header {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.browser-frame__dots {
+  display: flex;
+  gap: 6px;
+}
+
+.browser-frame__dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.browser-frame__dots span:nth-child(1) {
+  background: #ff5f57;
+}
+
+.browser-frame__dots span:nth-child(2) {
+  background: #febc2e;
+}
+
+.browser-frame__dots span:nth-child(3) {
+  background: #28c840;
+}
+
+.browser-frame__url {
+  flex: 1;
+  margin-left: var(--space-4);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono, monospace);
+  text-align: center;
+}
+
+.browser-frame__content {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+.browser-frame__content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ========================================
+   CASE STUDY - DEVELOPMENT IMPLEMENTATION
+   Code block styling
+======================================== */
+
+.cs-dev-implementation {
+  margin-top: var(--space-6);
+}
+
+.cs-dev-implementation .card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-4);
+}
+
+.cs-dev-implementation .cs-dev-subsection {
+  margin-bottom: var(--space-4);
+}
+
+.cs-dev-implementation .cs-dev-subsection:last-child {
+  margin-bottom: 0;
+}
+
+/* Code Block Styling */
+.code-block {
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  overflow-x: auto;
+  margin: 0;
+  font-family: var(--font-mono, 'SF Mono', 'Fira Code', monospace);
+  font-size: 12px;
+  line-height: 1.5;
+  color: #e4e4e7;
+}
+
+.code-block code {
+  font-family: inherit;
+  white-space: pre;
+}
+
+/* Syntax highlighting colors */
+.code-block .keyword {
+  color: #c792ea;
+}
+
+.code-block .string {
+  color: #c3e88d;
+}
+
+.code-block .function {
+  color: #82aaff;
+}
+
+.code-block .comment {
+  color: #676e95;
+  font-style: italic;
+}
+
+.code-block .number {
+  color: #f78c6c;
+}
+
+.code-block .tag {
+  color: #f07178;
+}
+
+.code-block .attribute {
+  color: #ffcb6b;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+======================================== */
+
+@media (max-width: 768px) {
+  .browser-frame__header {
+    padding: var(--space-2) var(--space-3);
+  }
+  
+  .browser-frame__dots span {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .browser-frame__url {
+    font-size: 10px;
+    padding: var(--space-1) var(--space-2);
+  }
+  
+  .code-block {
+    padding: var(--space-3);
+    font-size: 12px;
+  }
 }

@@ -23,119 +23,291 @@ export const work = [
         category: "ui-ux-web-dev",
         year: 2026,
         featured: true,
-        summary: "Studio brand system and high-impact portfolio built with React + Vite.",
-        tags: ["React", "Vite", "Design System", "Brand Strategy", "Web Development"],
+
+        summary:
+            "Studio website and portfolio platform built with React and Vite to showcase services, case studies, and a scalable brand system.",
+
+        tags: [
+            "React",
+            "Vite",
+            "Design System",
+            "Brand Strategy",
+            "Web Development"
+        ],
+
         cover: "/images/work/WEB/HGDZN.webp",
 
         content: {
-            role: "Brand Direction, UI/UX, Front-End Development",
+
+            role: "Brand Direction, UI/UX Design, Front-End Development",
             client: "Hungry Ghost DEV",
+
             overview:
-                "Hungry Ghost DEV was created as the digital foundation for a development studio focused on intentional brand systems and high-impact websites. The site needed to function as both a brand statement and a scalable portfolio platform — one capable of showcasing services, case studies, and future growth without feeling generic or templated.",
+                "Hungry Ghost DEV was created as the digital foundation for a design and development studio focused on intentional brand systems and high-impact websites. The platform needed to function as both a brand statement and a scalable portfolio system capable of presenting services, case studies, and future studio work without feeling generic or templated.",
+
             challenge:
-                "The core challenge was building a site that felt sharp, aggressive, and premium while still maintaining strong usability, clear hierarchy, and a polished user experience. It needed enough visual personality to stand apart from typical portfolio sites, but enough restraint and structure to remain credible, readable, and conversion-focused.",
+                "The challenge was designing a studio website that felt bold, distinctive, and visually sharp while still maintaining strong usability and structural clarity. Many portfolio sites lean too far toward minimalism or excessive visual experimentation. The goal here was to create a balance — a site with strong personality that still feels credible, readable, and conversion-focused.",
+
             solution:
-                "I designed and developed the site as a modular system using React and Vite, with reusable layout patterns, scalable content structure, and a token-based visual foundation for consistency across typography, spacing, color, and component behavior. Every section was built to support clarity, flexibility, and future expansion, allowing the platform to grow into a more complete studio website without requiring a full redesign.",
+                "The site was designed and developed as a modular React application using Vite for fast development and optimized builds. Reusable layout patterns, scalable content structures, and a token-based visual system ensure consistency across typography, spacing, color, and UI components. Each section was built with flexibility in mind, allowing the platform to grow into a full studio site without requiring structural redesign.",
+
             outcome:
-                "The final result is a strong studio-ready web presence that balances visual impact with usability and structure. It establishes a clear brand point of view, creates a foundation for future case studies and service pages, and positions Hungry Ghost DEV as a serious creative practice rather than just a personal portfolio.",
-            processSteps: ["Strategy", "UX", "UI", "Development", "Launch"],
+                "The finished platform establishes a strong digital presence for the Hungry Ghost DEV studio while serving as a scalable portfolio framework. It supports case studies, services, and future content expansion while maintaining a clear brand voice and structured user experience.",
+
+            processSteps: [
+                "Strategy",
+                "UX",
+                "UI",
+                "Development",
+                "Launch"
+            ],
+
+            interfaceWalkthrough: [
+
+                {
+                    title: "Studio Home",
+                    description:
+                        "The homepage introduces the studio with a bold hero statement, brand visuals, and clear navigation to services and portfolio work.",
+                    image: "/images/work/WEB/HGDEV-WALKTHROUGH-01.webp"
+                },
+
+                {
+                    title: "Services Overview",
+                    description:
+                        "The services section presents the studio’s core offerings through structured cards, helping visitors quickly understand capabilities and areas of expertise.",
+                    image: "/images/work/WEB/HGDEV-WALKTHROUGH-02.webp"
+                },
+
+                {
+                    title: "Work Index",
+                    description:
+                        "The work index organizes portfolio case studies into a clear grid system with filtering and preview cards for easy project exploration.",
+                    image: "/images/work/WEB/HGDEV-WALKTHROUGH-03.webp"
+                }
+
+            ],
 
             uiux: {
+
                 userGoals: [
-                    "Clearly present services and capabilities",
-                    "Showcase portfolio case studies effectively",
-                    "Convert visitors into leads",
-                    "Establish studio credibility and personality"
+                    "Clearly present studio services",
+                    "Showcase portfolio case studies",
+                    "Convert visitors into project inquiries",
+                    "Establish a distinct studio identity"
                 ],
-                navigation: "Clear, intuitive navigation with clear CTAs",
-                informationArchitecture: "Home → Services → Work → About → Contact",
-                visualHierarchy: "Bold typography, strong spacing, strategic use of color to guide attention",
+
+                navigation:
+                    "Clear, structured navigation with prominent calls-to-action guiding visitors toward services and project work.",
+
+                informationArchitecture:
+                    "Home → Services → Work → About → Contact",
+
+                visualHierarchy:
+                    "Bold typography, strong spacing, and accent color usage guide attention toward key actions and content.",
+
                 components: [
-                    "Hero section with brand statement",
+                    "Hero brand statement",
                     "Services grid",
-                    "Featured case studies",
+                    "Featured case study previews",
                     "About section",
                     "Contact form"
                 ],
-                responsive: "Mobile-first responsive design"
+
+                responsive:
+                    "Mobile-first responsive layout designed to maintain clarity and visual impact across screen sizes."
             },
 
-            development: {
-                architecture: "React + Vite with modular component structure",
+            interfaceDesign: {
+
+                visualSystem:
+                    "A high-contrast dark interface paired with bright accent colors reinforces the studio’s bold brand personality while maintaining strong readability.",
+
+                layoutApproach:
+                    "Content sections were structured to guide visitors from brand introduction into services, portfolio work, and contact opportunities.",
+
+                componentStrategy:
+                    "Reusable UI patterns allow new services, case studies, and content sections to be added without disrupting the overall layout.",
+
+                accessibility:
+                    "Clear typography, consistent spacing, and structured section layout help maintain readability and usability."
+            },
+
+            developmentSummary: {
+
+                architecture:
+                    "React front-end architecture powered by Vite, using modular component patterns for scalable UI development.",
+
                 features: [
                     "Component-based architecture",
                     "Custom animations and transitions",
-                    "Performance optimization",
-                    "SEO implementation",
-                    "Accessibility compliance"
+                    "SEO optimization",
+                    "Accessibility considerations",
+                    "Scalable portfolio data structure"
                 ],
-                performance: "Built with Vite for fast builds and optimal page loads"
+
+                performance:
+                    "Vite-powered build pipeline enables fast development, optimized bundling, and strong page-load performance."
             },
 
-            techStack: ["React", "Vite", "JavaScript", "CSS", "Vercel"],
+            techStack: [
+                "React",
+                "Vite",
+                "JavaScript",
+                "CSS",
+                "Vercel"
+            ]
 
-            gallery: ["/images/work/WEB/HGDZN.webp"],
-
-            relatedProjects: []
         }
     },
 
     {
         slug: "portfolio-showcase",
-        title: "Developer Portfolio Platform",
+        title: "Developer Portfolio Site",
         category: "ui-ux-web-dev",
         year: 2023,
         featured: false,
-        summary: "Personal developer portfolio designed for clear project presentation and fast navigation.",
-        tags: ["React", "Portfolio Site", "Responsive UI", "Web Development"],
+        summary:
+            "Personal portfolio site built to present projects, skills, and contact information through a clear single-page experience.",
+        tags: ["React", "Portfolio Website", "Responsive UI", "Front-End Development"],
         cover: "/images/work/WEB/Portfolio.webp",
         liveUrl: "https://jeremy-jefferson-portfolio.vercel.app",
 
         content: {
             role: "UI/UX Design, Front-End Development",
-            client: "Developer Portfolio",
+            client: "Personal Project",
+
             overview:
-                "This project is a personal developer portfolio built to present projects, experience, and contact information in a clear and approachable way. The interface prioritizes readability, quick navigation, and visual hierarchy so visitors can easily explore work samples and understand the developer's skill set.",
+                "This project is a personal developer portfolio designed to present work, technical skills, and contact information in a direct and approachable way. The goal was to create a site that makes it easy for visitors to quickly understand the developer’s background, review selected projects, and navigate the experience without unnecessary friction.",
+
             challenge:
-                "Portfolio websites often become cluttered or overly decorative, which can make it harder for hiring managers or collaborators to quickly understand a developer's work. The challenge was designing a layout that feels visually engaging while remaining clean, structured, and easy to scan.",
+                "Developer portfolios often become visually cluttered or overloaded with information, making it harder for recruiters, collaborators, or potential clients to quickly evaluate the work. The challenge was to design a portfolio experience that felt personal and visually engaging while still remaining structured, readable, and easy to scan.",
+
             solution:
-                "The interface uses a simple responsive layout with strong typographic hierarchy and clear section separation to guide users through projects, background information, and contact details. Consistent spacing, restrained color usage, and predictable navigation patterns keep the experience focused on the work itself rather than visual distractions.",
+                "The interface was built around a simple single-page structure with strong typographic hierarchy, clear section separation, and focused navigation. Projects, background information, and contact details were organized into predictable content blocks so users could move through the site quickly and understand the work without distraction. A restrained visual system and responsive layout helped keep the experience clean across screen sizes.",
+
             outcome:
-                "The final result is a clear and functional developer portfolio that showcases projects while maintaining a smooth browsing experience across devices. The layout can easily expand to support additional projects and case studies while keeping the structure simple and readable.",
+                "The final result is a streamlined portfolio site that showcases projects and developer strengths in a clear, accessible format. The structure supports quick browsing, smooth section-to-section navigation, and future content expansion while keeping the presentation simple and focused.",
+
             processSteps: ["UX Strategy", "UI Design", "Development", "Launch"],
+
+            interfaceWalkthrough: [
+                {
+                    title: "Hero Introduction",
+                    description:
+                        "The hero section establishes identity immediately with a clear name, concise technical summary, and a direct call-to-action that encourages visitors to explore projects.",
+                    image: "/images/work/WEB/Portfolio.webp"
+                },
+                {
+                    title: "Project Showcase",
+                    description:
+                        "Project cards organize featured work into an easy-to-scan section, helping visitors review case studies, technologies used, and supporting links without hunting through dense content.",
+                    image: "/images/work/WEB/Portfolio-WALKTHROUGH-02.webp"
+                },
+                {
+                    title: "About and Contact",
+                    description:
+                        "The lower sections provide background context and contact information in a simple layout that supports trust, readability, and direct outreach.",
+                    image: "/images/work/WEB/Portfolio-WALKTHROUGH-03.webp"
+                }
+            ],
 
             uiux: {
                 userGoals: [
-                    "Quickly understand developer's skills",
-                    "View project samples easily",
+                    "Quickly understand the developer’s skills",
+                    "Review selected projects with minimal friction",
                     "Learn about background and experience",
-                    "Contact the developer"
+                    "Find contact information easily"
                 ],
-                navigation: "Simple single-page scroll with section links",
-                informationArchitecture: "Hero → Projects → About → Contact",
-                visualHierarchy: "Clean typography with clear section separation",
+                navigation:
+                    "Single-page scrolling navigation supported by clear section anchors and predictable layout flow.",
+                informationArchitecture:
+                    "Hero → Projects → About → Contact",
+                visualHierarchy:
+                    "Large headline typography, concise supporting copy, and clear content grouping help visitors scan the page quickly.",
                 components: [
-                    "Hero with intro",
+                    "Hero introduction",
                     "Project cards",
                     "About section",
-                    "Contact information"
+                    "Contact section",
+                    "Section navigation"
                 ],
-                responsive: "Responsive grid layout"
+                responsive:
+                    "Responsive layout designed to preserve readability and section clarity across desktop and smaller screens."
             },
 
-            development: {
-                architecture: "React single-page application",
+            interfaceDesign: {
+                visualSystem:
+                    "The design uses a dark, high-contrast visual style with focused accent color and restrained content blocks to keep attention on the work.",
+                layoutApproach:
+                    "The layout follows a top-to-bottom narrative, guiding visitors from identity and skill summary into project exploration, background context, and contact.",
+                componentStrategy:
+                    "Reusable section patterns and project card structures help keep the experience consistent and easy to expand.",
+                accessibility:
+                    "Typography contrast, spacing, and section separation were used to improve readability and help users navigate content quickly."
+            },
+
+            developmentSummary: {
+                architecture:
+                    "Built as a React single-page application with modular sections for content organization and straightforward maintenance.",
                 features: [
-                    "Responsive grid system",
-                    "Fast page loads",
-                    "Contact information display"
+                    "Single-page portfolio structure",
+                    "Responsive project layout",
+                    "Smooth section navigation",
+                    "Deployed live on Vercel"
                 ],
-                performance: "Optimized for fast loading"
+                performance:
+                    "Kept intentionally lightweight to support quick loading and a fast browsing experience."
             },
 
-            techStack: ["React", "Vercel", "CSS"],
+            developmentImplementation: {
+                architecture: [
+                    {
+                        title: "Section-Based SPA Structure",
+                        description:
+                            "The site was organized as a single-page React application with distinct content sections, allowing visitors to move through the portfolio smoothly without context switching.",
+                        code: `const sections = ["hero", "projects", "about", "contact"];
 
-            gallery: ["/images/work/WEB/Portfolio.webp"],
+sections.map((section) => (
+  <Section id={section} key={section}>
+    {content[section]}
+  </Section>
+));`
+                    }
+                ],
+                dataModel: [
+                    {
+                        title: "Structured Project Data",
+                        description:
+                            "Project content was shaped as reusable data objects so cards could be rendered consistently across the portfolio section.",
+                        code: `const project = {
+  title: "Project Name",
+  description: "Brief overview",
+  technologies: ["React", "CSS"],
+  link: "https://..."
+};`
+                    }
+                ],
+                uiLogic: [
+                    {
+                        title: "Smooth Scroll Navigation",
+                        description:
+                            "Section-based navigation was supported by smooth scrolling behavior to make movement through the page feel direct and intuitive.",
+                        code: `const scrollToSection = (id) => {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth"
+  });
+};`
+                    }
+                ]
+            },
+
+            techStack: ["React", "CSS", "Vercel"],
+
+            gallery: [
+                "/images/work/WEB/Portfolio.webp",
+                "/images/work/WEB/Portfolio-WALKTHROUGH-02.webp",
+                "/images/work/WEB/Portfolio-WALKTHROUGH-03.webp"
+            ],
 
             relatedProjects: []
         }
@@ -143,60 +315,249 @@ export const work = [
 
     {
         slug: "sapphire-site-concept",
-        title: "Sapphire Developments — Web Concept",
+        title: "Sapphire Developments — Luxury Real Estate Platform Concept",
         category: "ui-ux-web-dev",
         year: 2023,
-        featured: false,
-        summary: "Luxury real estate browsing concept designed for discovering high-end homes and vacation properties.",
-        tags: ["Concept", "Luxury Real Estate", "UI Design", "Web Development"],
+        featured: true,
+
+        summary:
+            "Luxury real estate platform concept built to showcase premium property discovery through elegant UI, structured browsing, and responsive front-end development.",
+
+        tags: [
+            "Luxury Real Estate",
+            "Product UI",
+            "React",
+            "Responsive Design",
+            "Front-End Development"
+        ],
+
         cover: "/images/work/WEB/SAPPHIRE.webp",
 
         content: {
+
             role: "UI/UX Design, Front-End Development",
+            client: "Concept Project",
+
             overview:
-                "Sapphire Developments is a luxury real estate web concept created to explore how high-end properties could be discovered, browsed, and evaluated online. The interface focuses on showcasing expansive homes and vacation properties across multiple locations while maintaining a sense of elegance, clarity, and trust.",
+                "Sapphire Developments is a luxury real estate web concept created to explore how high-end properties could be discovered, browsed, and evaluated online. The project focused on designing a browsing experience that feels polished and aspirational while still remaining easy to navigate, structured, and trustworthy.",
+
             challenge:
-                "Luxury real estate platforms must balance aspirational presentation with usability. The challenge was designing a browsing experience that feels premium and immersive without overwhelming users with information or sacrificing navigational clarity.",
+                "Luxury real estate platforms must balance aspirational presentation with practical browsing. Many listing sites either feel visually generic or overload users with dense information, making exploration feel clunky instead of premium. The challenge here was to create an interface that feels elevated and visually immersive without sacrificing clarity, navigation, or usability.",
+
             solution:
-                "The concept emphasizes strong visual hierarchy, large property imagery, and deliberate spacing to give listings room to breathe. A restrained deep-blue palette reinforces a sense of trust and stability, while bold typographic structure helps users quickly scan locations, property highlights, and listing details.",
+                "The interface was designed around strong visual hierarchy, spacious layouts, and image-first presentation. Large property photography helps establish quality and atmosphere immediately, while restrained typography, clean spacing, and clear sectioning support faster scanning. Search, filtering, and listing modules were structured to keep the browsing flow intuitive while reinforcing a polished, high-value brand feel.",
+
             outcome:
-                "The result is a refined interface concept for a luxury property discovery platform. The design demonstrates how clear hierarchy, spacious layouts, and strong imagery can support both exploration and credibility for high-value real estate listings.",
-            processSteps: ["UX Strategy", "UI Design", "Development", "Refinement"],
+                "The result is a refined real estate browsing concept that demonstrates both product thinking and front-end execution. The project shows how thoughtful hierarchy, elegant UI structure, and reusable development patterns can create a premium property discovery experience that feels both credible and easy to use.",
+
+            processSteps: [
+                "UX Strategy",
+                "UI Design",
+                "Development",
+                "Refinement"
+            ],
+
+            interfaceWalkthrough: [
+
+                {
+                    title: "Landing Page Experience",
+                    description:
+                        "The landing page introduces the platform with a prominent hero image, focused headline, and immediate search controls so users can begin browsing high-end properties without friction.",
+                    image: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-01.webp"
+                },
+
+                {
+                    title: "City-Based Property Discovery",
+                    description:
+                        "Featured location cards help users explore listings by destination, making the browsing experience feel curated while supporting quicker decision-making across multiple markets.",
+                    image: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-02.webp"
+                },
+
+                {
+                    title: "Properties Grid View",
+                    description:
+                        "The listings grid was designed for scanability, allowing users to compare imagery, price, location, and property details quickly while maintaining a premium presentation.",
+                    image: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-03.webp"
+                }
+
+            ],
 
             uiux: {
+
                 userGoals: [
                     "Browse luxury property listings",
-                    "View property details and images",
-                    "Filter by location and features",
-                    "Contact agents"
+                    "Compare homes by location, price, and style",
+                    "View property details and imagery",
+                    "Filter by category and browsing intent",
+                    "Contact agents for inquiry"
                 ],
-                navigation: "Browse-focused navigation with search",
-                informationArchitecture: "Home → Listings → Property Details → Contact",
-                visualHierarchy: "Large imagery with clean typographic overlays",
+
+                navigation:
+                    "Browse-first navigation supported by top-level menu structure, category pathways, and prominent search controls.",
+
+                informationArchitecture:
+                    "Home → Search / Browse → Listings Grid → Property Details → Inquiry / Contact",
+
+                visualHierarchy:
+                    "Large photography, bold headings, restrained supporting text, and clean spacing create a premium and highly scannable browsing experience.",
+
                 components: [
-                    "Property cards",
-                    "Search and filter",
-                    "Listing detail pages",
-                    "Contact forms"
+                    "Hero search module",
+                    "Location cards",
+                    "Category cards",
+                    "Property listing cards",
+                    "Inquiry/contact form",
+                    "Footer navigation system"
                 ],
-                responsive: "Responsive design for all devices"
+
+                responsive:
+                    "Responsive layouts were planned so the browsing experience could adapt cleanly across desktop, tablet, and mobile screen sizes."
             },
 
-            development: {
-                architecture: "React prototype",
+            interfaceDesign: {
+
+                visualSystem:
+                    "The visual language uses a restrained deep-blue palette, clean card structures, generous whitespace, and editorial-style imagery to establish trust and sophistication.",
+
+                layoutApproach:
+                    "Sections were organized to alternate between spacious presentation and structured browsing modules, helping users move naturally from discovery into comparison.",
+
+                componentStrategy:
+                    "Repeated UI patterns such as cards, filters, navigation links, and form elements were designed to feel consistent and reusable across the experience.",
+
+                accessibility:
+                    "Typography scale, contrast hierarchy, and clear button structure were considered to improve readability and interaction clarity."
+
+            },
+
+            developmentSummary: {
+
+                architecture:
+                    "Built as a React-based front-end concept using reusable UI sections and listing components to support scalable page construction.",
+
                 features: [
                     "Property browsing interface",
-                    "Responsive layouts",
-                    "Interactive UI elements"
+                    "Responsive layout structure",
+                    "Reusable card-based sections",
+                    "Interactive search and listing patterns"
                 ],
-                performance: "Built for prototype performance"
+
+                performance:
+                    "Structured as a lightweight front-end prototype with modular sections and reusable components for maintainability and future expansion."
+
             },
 
-            techStack: ["React", "Figma"],
+            developmentImplementation: {
 
-            gallery: ["/images/work/WEB/SAPPHIRE.webp"],
+                architecture: [
+
+                    {
+                        title: "Reusable Listing Components",
+
+                        description:
+                            "Property listings were structured as reusable React components so the same UI pattern could scale across landing sections, featured inventory, and listing grids.",
+
+                        code: `function PropertyCard({ property }) {
+  return (
+    <article className="property-card">
+      <img src={property.image} alt={property.title} />
+      <div className="property-card__body">
+        <h3>{property.title}</h3>
+        <p>{property.location}</p>
+        <span>{property.price}</span>
+      </div>
+    </article>
+  );
+}`
+                    },
+
+                    {
+                        title: "Section-Based Page Composition",
+
+                        description:
+                            "The interface was broken into modular page sections such as hero, categories, listings, and contact, making the layout easier to maintain and extend.",
+
+                        code: `<>
+  <HeroSection />
+  <PropertiesByCity />
+  <PropertyCategories />
+  <LatestListings />
+  <ContactSection />
+</>`
+                    }
+
+                ],
+
+                dataModel: [
+
+                    {
+                        title: "Structured Property Data",
+
+                        description:
+                            "Listings were organized as structured objects, making it easier to render consistent cards and scale the inventory system later.",
+
+                        code: `const property = {
+  id: 1,
+  title: "2166 Marlin Ct.",
+  location: "Miami, FL",
+  price: "$2,660,840",
+  bedrooms: 4,
+  bathrooms: 4,
+  sqft: 2096,
+  image: "/images/property-1.jpg"
+};`
+                    }
+
+                ],
+
+                uiLogic: [
+
+                    {
+                        title: "Client-Side Browsing Logic",
+
+                        description:
+                            "Search and category filtering were designed to support fast browsing interactions without forcing users through unnecessary page reloads.",
+
+                        code: `const filteredProperties = properties.filter((property) => {
+  return selectedCity
+    ? property.location.includes(selectedCity)
+    : true;
+});`
+                    },
+
+                    {
+                        title: "Responsive Card Grid Behavior",
+
+                        description:
+                            "Card-based layouts were used to support flexible browsing across screen sizes while keeping content blocks visually consistent.",
+
+                        code: `.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}`
+                    }
+
+                ]
+
+            },
+
+            techStack: [
+                "React",
+                "JavaScript",
+                "CSS",
+                "Responsive Layout System",
+                "Figma"
+            ],
+
+            gallery: [
+                "/images/work/WEB/SAPPHIRE.webp",
+                "/images/work/WEB/SAPPHIRE-LANDING.webp",
+                "/images/work/WEB/SAPPHIRE-PROPERTIES.webp"
+            ],
 
             relatedProjects: []
+
         }
     },
 
@@ -255,6 +616,88 @@ export const work = [
 
             techStack: ["React", "Dictionary API", "CSS"],
 
+            interfaceWalkthrough: [
+                {
+                    title: "Search Interface + Phonetics & Audio",
+                    description:
+                        "Clean search input with instant word lookup, audio pronunciation, phonetic transcription, and syllable breakdown for accurate pronunciation.",
+                    image: "/images/work/WEB/Dictionary-WALKTHROUGH-01.webp"
+                },
+                {
+                    title: "Definition Display",
+                    description:
+                        "Organized definitions with part of speech labels, multiple meanings, and example usage in context.",
+                    image: "/images/work/WEB/Dictionary-WALKTHROUGH-02.webp"
+                },
+                {
+                    title: "Word of the Day",
+                    description:
+                        "Discover a new word each day with its definition, pronunciation, phonetic transcription, and syllable breakdown to expand your vocabulary and improve pronunciation..",
+                    image: "/images/work/WEB/Dictionary-WALKTHROUGH-03.webp"
+                }
+            ],
+
+            developmentImplementation: {
+                architecture: [
+                    {
+                        title: "API Integration Layer",
+                        description:
+                            "Clean separation between API calls and UI rendering with custom hooks for word lookups.",
+                        code: `// Custom hook for dictionary API
+const useDictionary = (word) => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (!word) return;
+    setLoading(true);
+    fetch(
+      'https://api.dictionaryapi.dev/api/v2/entries/en/' + word
+    )
+      .then(res => res.json())
+      .then(setData)
+      .finally(() => setLoading(false));
+  }, [word]);
+
+  return { data, loading };
+};`
+                    }
+                ],
+                dataModel: [
+                    {
+                        title: "Dictionary API Response",
+                        description:
+                            "Parsed API response structure for extracting definitions, phonetics, and meanings.",
+                        code: `const dictionaryEntry = {
+  word: "example",
+  phonetic: "/ɪɡˈzæmpəl/",
+  meanings: [
+    {
+      partOfSpeech: "noun",
+      definitions: [
+        { definition: "...", example: "..." }
+      ]
+    }
+  ]
+};`
+                    }
+                ],
+                uiLogic: [
+                    {
+                        title: "Search Debouncing",
+                        description:
+                            "Optimized search input with debouncing to prevent excessive API calls.",
+                        code: `const debounce = (fn, delay) => {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn(...args), delay);
+  };
+};`
+                    }
+                ]
+            },
+
             gallery: ["/images/work/WEB/Dictionary.webp"],
 
             relatedProjects: []
@@ -267,55 +710,235 @@ export const work = [
         category: "ui-ux-web-dev",
         year: 2022,
         featured: false,
-        summary: "Full-stack eCommerce storefront with product catalog, authentication, and Stripe checkout.",
-        tags: ["React", "PostgreSQL", "Stripe", "eCommerce", "Web Development"],
+
+        summary:
+            "Full-stack eCommerce storefront featuring product catalog browsing, account authentication, and Stripe-powered checkout.",
+
+        tags: [
+            "React",
+            "PostgreSQL",
+            "Stripe",
+            "Node.js",
+            "eCommerce"
+        ],
+
         cover: "/images/work/WEB/STORE.webp",
         liveUrl: "https://stone-and-brier-general-store.vercel.app/Home",
 
         content: {
+
             role: "UI/UX Design, Front-End Development",
+            client: "Capstone Project — Fullstack Academy",
+
             overview:
-                "Stone & Brier General Store is a full-stack eCommerce application built as a capstone project at Fullstack Academy. The platform allows users to browse a categorized product catalog, create accounts, manage shopping carts, and complete purchases through a Stripe-powered checkout flow.",
+                "Stone & Brier General Store is a full-stack eCommerce application developed as a capstone project at Fullstack Academy. The platform enables users to browse a categorized product catalog, create accounts, manage shopping carts, and complete purchases through a Stripe-powered checkout flow. The project focuses on building a complete commerce experience that connects front-end interaction with backend data and payment processing.",
+
             challenge:
-                "Design and build an eCommerce experience that balances product discovery, clear navigation, and secure purchasing flows. The interface needed to handle catalog browsing, authentication, and checkout while remaining visually cohesive and easy to navigate.",
+                "Building a functional eCommerce system requires balancing product discovery, account management, and secure purchasing flows within a cohesive interface. The challenge was to design a storefront that made product browsing intuitive while integrating user authentication, cart persistence, and payment processing without introducing unnecessary friction.",
+
             solution:
-                "The application uses a PostgreSQL database with an Amazon-style product categorization system to organize items and support scalable catalog browsing. The front-end interface was designed with a restrained green color system to create visual consistency across navigation, product cards, and calls to action. User authentication enables account creation and login, while Stripe integration powers the checkout and payment flow.",
+                "The application uses a PostgreSQL database to manage product inventory, categories, and order records while a Node.js API handles product retrieval, cart operations, and order creation. The front-end interface was designed with a focused green color system and product-first layout to emphasize browsing clarity and purchasing actions. User authentication enables account creation and order tracking, while Stripe integration powers the checkout and payment process.",
+
             outcome:
-                "The final product demonstrates a complete eCommerce workflow, from browsing and product discovery to account management and payment processing. The project highlights both UI design decisions and the integration of real-world commerce functionality within a full-stack application.",
-            processSteps: ["UX Research", "UI Design", "Development", "Testing", "Launch"],
+                "The final application demonstrates a complete end-to-end commerce workflow, from product discovery to order creation and payment confirmation. The project highlights both interface design decisions and the integration of real-world commerce functionality within a full-stack architecture.",
+
+            processSteps: [
+                "UX Research",
+                "UI Design",
+                "Development",
+                "Testing",
+                "Launch"
+            ],
+
+            interfaceWalkthrough: [
+
+                {
+                    title: "Product Catalog",
+                    description:
+                        "The catalog interface organizes products into clear categories with a grid layout that allows users to scan items quickly while comparing pricing and product details.",
+                    image: "/images/work/WEB/Store-WALKTHROUGH-01.webp"
+                },
+
+                {
+                    title: "Shopping Cart",
+                    description:
+                        "A persistent cart interface allows users to review selected items, adjust quantities, and view a running order total before proceeding to checkout.",
+                    image: "/images/work/WEB/Store-WALKTHROUGH-02.webp"
+                },
+
+                {
+                    title: "User Authentication",
+                    description:
+                        "Account creation and login forms support secure purchasing, order history tracking, and personalized account access.",
+                    image: "/images/work/WEB/Store-WALKTHROUGH-03.webp"
+                }
+
+            ],
 
             uiux: {
+
                 userGoals: [
                     "Browse product catalog",
                     "Add items to cart",
                     "Complete checkout",
                     "Manage account"
                 ],
-                navigation: "Category-based navigation with cart",
-                informationArchitecture: "Home → Products → Product Details → Cart → Checkout",
-                visualHierarchy: "Product-focused with clear CTAs",
+
+                navigation:
+                    "Category-based navigation supported by persistent cart access and clear checkout pathways.",
+
+                informationArchitecture:
+                    "Home → Products → Product Details → Cart → Checkout",
+
+                visualHierarchy:
+                    "Product imagery and pricing are prioritized to support quick browsing and purchasing decisions.",
+
                 components: [
                     "Product grid",
                     "Shopping cart",
-                    "User authentication",
-                    "Checkout flow"
+                    "User authentication forms",
+                    "Checkout flow",
+                    "Navigation header"
                 ],
-                responsive: "Responsive eCommerce layout"
+
+                responsive:
+                    "Responsive storefront layout designed to support browsing and checkout across multiple screen sizes."
             },
 
-            development: {
-                architecture: "React front-end with PostgreSQL backend",
+            interfaceDesign: {
+
+                visualSystem:
+                    "The interface uses a green-focused color palette with clear call-to-action styling to reinforce purchasing actions and maintain visual consistency across product browsing and checkout.",
+
+                layoutApproach:
+                    "Product listings are presented through a structured card system that allows users to scan items quickly while maintaining visual clarity across the catalog.",
+
+                componentStrategy:
+                    "Reusable product card and cart components were used to maintain consistent interaction patterns across browsing and purchasing flows.",
+
+                accessibility:
+                    "Clear button hierarchy and structured layout help guide users through the purchasing process without confusion."
+            },
+
+            developmentSummary: {
+
+                architecture:
+                    "Full-stack architecture using a React front-end, Node.js API, and PostgreSQL database.",
+
                 features: [
-                    "Product catalog with categories",
-                    "User authentication",
-                    "Shopping cart",
+                    "Product catalog with category filtering",
+                    "User authentication system",
+                    "Persistent shopping cart",
                     "Stripe payment integration",
-                    "RESTful API"
+                    "RESTful API endpoints"
                 ],
-                performance: "Optimized for eCommerce loads"
+
+                performance:
+                    "Structured to support efficient product retrieval and checkout processing for a small commerce system."
             },
 
-            techStack: ["React", "PostgreSQL", "Stripe", "Node.js", "CSS"],
+            techStack: [
+                "React",
+                "Node.js",
+                "PostgreSQL",
+                "Stripe",
+                "CSS"
+            ],
+
+            developmentImplementation: {
+                architecture: [
+                    {
+                        title: "Full-Stack Application Structure",
+                        description:
+                            "React front-end with Express/Node.js backend, RESTful API for product and order management.",
+                        code: `// API route structure
+app.get('/api/products', productController.getAll);
+app.get('/api/products/:id', productController.getOne);
+app.post('/api/orders', orderController.create);
+
+// Frontend API client
+const api = {
+  products: () => fetch('/api/products').then(r => r.json()),
+  createOrder: (data) => fetch('/api/orders', {
+    method: 'POST',
+    body: JSON.stringify(data)
+  })
+};`
+                    }
+                ],
+                dataModel: [
+                    {
+                        title: "Product Schema",
+                        description:
+                            "PostgreSQL product table structure with categories, pricing, inventory, and image associations.",
+                        code: `// Product model
+const Product = {
+  id: 1,
+  name: "Product Name",
+  description: "...",
+  price: 29.99,
+  category: "category-slug",
+  imageUrl: "/images/products/1.jpg",
+  inventory: 100
+};`
+                    },
+                    {
+                        title: "Order Schema",
+                        description:
+                            "Order tracking with user association, line items, shipping status, and payment references.",
+                        code: `const Order = {
+  id: "ord_123",
+  userId: 1,
+  items: [{ productId: 1, qty: 2 }],
+  total: 59.98,
+  status: "pending",
+  stripePaymentId: "pi_..."
+};`
+                    }
+                ],
+                uiLogic: [
+                    {
+                        title: "Cart State Management",
+                        description:
+                            "React Context-based cart state with add, remove, update quantity, and persistence to localStorage.",
+                        code: `// Cart context
+const CartContext = createContext();
+
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
+  
+  const addToCart = (product) => {
+    setCart(prev => {
+      const existing = prev.find(p => p.id === product.id);
+      if (existing) {
+        return prev.map(p => 
+          p.id === product.id 
+            ? { ...p, qty: p.qty + 1 }
+            : p
+        );
+      }
+      return [...prev, { ...product, qty: 1 }];
+    });
+  };
+  
+  return <CartContext.Provider value={{ cart, addToCart }}>
+    {children}
+  </CartContext.Provider>;
+};`
+                    },
+                    {
+                        title: "Stripe Checkout Integration",
+                        description:
+                            "Client-side Stripe Elements for payment entry, server-side payment intent creation.",
+                        code: `// Stripe checkout
+const stripe = await loadStripe('pk_test_...');
+const { error } = await stripe.confirmPayment({
+  elements,
+  confirmParams: { return_url: '...' }
+});`
+                    }
+                ]
+            },
 
             gallery: ["/images/work/WEB/STORE.webp"],
 
@@ -336,68 +959,131 @@ export const work = [
         category: "ui-ux-web-dev",
         year: 2025,
         featured: true,
-        summary: "Promotional storefront website designed to highlight deals, product categories, and store information through a bold retail-focused digital experience.",
-        tags: ["UI/UX Design", "React", "Web Development", "Local Business", "Retail UX"],
+
+        summary:
+            "Retail storefront website built to highlight promotions, product categories, and store information through a bold, mobile-friendly experience.",
+
+        tags: [
+            "UI/UX Design",
+            "React",
+            "Retail Website",
+            "Local Business",
+            "Front-End Development"
+        ],
+
         cover: "/images/work/WEB/little-york-site.webp",
         liveUrl: "https://littleyorksmokeshop.com",
 
         content: {
+
             role: "UI/UX Design, Front-End Development",
             client: "Little York Smoke Shop",
 
             overview:
-                "This website was designed to extend the Little York Smoke Shop brand into a clear, engaging digital storefront. The goal was to create an online experience that reflects the visual energy of the physical location while helping customers quickly find promotions, product categories, hours, and location details.",
-
-            problem:
-                "The business needed a web presence that felt connected to the brand while still functioning as a practical customer tool. The site had to communicate promotions quickly, support easy navigation, and give local users the essential information they need before visiting the store.",
+                "The Little York Smoke Shop website extends the brand’s physical storefront into a clear and engaging digital experience. The goal was to create a site that reflects the visual identity of the shop while helping customers quickly discover promotions, browse product categories, and find essential store information such as hours and location.",
 
             challenge:
-                "Local retail websites need to communicate value immediately. The challenge was designing a high-impact interface that carried the bold visual identity of the brand while staying clear, readable, and conversion-friendly across mobile and desktop devices.",
+                "Local retail websites must communicate value immediately. Customers typically visit to check promotions, confirm store hours, or quickly understand what products are available. The challenge was designing an interface that carried the bold visual style of the brand while remaining simple, readable, and fast to navigate across mobile and desktop devices.",
 
             solution:
-                "The interface was built around strong promotional hierarchy, clear category sections, and direct access to contact and location information. Brand visuals from the identity system were integrated into the UI so the experience felt connected to the storefront, while the layout remained simple enough for customers to scan quickly and act without friction.",
+                "The site structure prioritizes promotions, product categories, and store details within a clear visual hierarchy. Promotional sections highlight current deals while category cards help customers quickly understand what the shop offers. Brand visuals from the identity system were integrated throughout the interface to ensure the online experience felt connected to the physical store environment.",
 
             outcome:
-                "The finished site gives Little York Smoke Shop a stronger digital presence that works like an extension of the physical storefront. It helps customers understand the brand, browse promotions, and find store information quickly, while reinforcing a more complete and professional business presence online.",
+                "The final website gives Little York Smoke Shop a stronger digital storefront that supports local discovery and customer engagement. Visitors can quickly view promotions, browse product categories, and find store information, reinforcing a more complete and professional retail presence online.",
 
-            processSteps: ["UX Strategy", "UI Design", "Development", "Optimization", "Launch"],
+            processSteps: [
+                "UX Strategy",
+                "UI Design",
+                "Development",
+                "Optimization",
+                "Launch"
+            ],
+
+            interfaceWalkthrough: [
+
+                {
+                    title: "Product Categories",
+                    description:
+                        "Product category cards help visitors quickly understand what the store offers, from cannabis products to smoking accessories and glass.",
+                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-01.webp"
+                },
+
+                {
+                    title: "Featured Deals",
+                    description:
+                        "Promotional highlight sections surface current specials and featured products, helping customers immediately see available deals.",
+                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-02.webp"
+                },
+
+                {
+                    title: "Location & Contact",
+                    description:
+                        "Store information is presented clearly with address, hours, phone number, and an embedded Google Maps location for quick navigation.",
+                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-03.webp"
+                }
+
+            ],
 
             uiux: {
+
                 userGoals: [
                     "Quickly find store hours and location",
-                    "View current promotions and featured deals",
+                    "View current promotions and deals",
                     "Browse product categories",
-                    "Contact the shop with minimal friction"
+                    "Contact the shop easily"
                 ],
+
                 navigation:
-                    "Simple, linear navigation prioritizing promotions, products, and store information over unnecessary depth.",
+                    "Simple, linear navigation prioritizing promotions, products, and essential store information.",
+
                 informationArchitecture:
                     "Home → Promotions → Product Categories → About → Contact",
+
                 visualHierarchy:
                     "Promotions and brand imagery lead the experience above the fold, followed by structured category and store information sections.",
+
                 components: [
                     "Hero section with promotional emphasis",
                     "Product category cards",
-                    "Deal highlight blocks",
-                    "Location and contact section",
+                    "Deal highlight sections",
+                    "Location and contact block",
                     "Responsive navigation"
                 ],
+
                 responsive:
-                    "Mobile-first layout designed for fast browsing and easy information access across all screen sizes."
+                    "Mobile-first layout designed for quick browsing and fast access to store information."
             },
 
-            development: {
+            interfaceDesign: {
+
+                visualSystem:
+                    "Brand colors and visual motifs from the Little York identity system were integrated throughout the interface to reinforce brand recognition.",
+
+                layoutApproach:
+                    "Content sections were structured to surface promotions first, followed by product categories and store information for quick customer scanning.",
+
+                componentStrategy:
+                    "Reusable card and promotional modules help keep the layout consistent while allowing the store to update promotions easily.",
+
+                accessibility:
+                    "Clear headings, readable contrast, and simplified layout structure help users quickly find key information."
+            },
+
+            developmentSummary: {
+
                 architecture:
-                    "Built with a modular React component system to keep layouts reusable, consistent, and easy to scale.",
+                    "Built using React with modular UI components to keep the layout flexible and easy to maintain.",
+
                 features: [
                     "Responsive layouts across device sizes",
                     "Structured promotional content sections",
-                    "Google Maps/location integration",
+                    "Google Maps location integration",
                     "SEO-friendly page structure",
-                    "Reusable UI sections for future expansion"
+                    "Reusable UI sections"
                 ],
+
                 performance:
-                    "Built with Vite for fast development, efficient bundling, and strong page-load performance."
+                    "Built with Vite for fast development, optimized bundling, and strong page-load performance."
             },
 
             techStack: [
@@ -406,20 +1092,8 @@ export const work = [
                 "JavaScript",
                 "CSS",
                 "Google Maps API"
-            ],
-
-            gallery: [
-                "/images/work/WEB/little-york-site.webp"
-            ],
-
-            relatedProjects: [
-                {
-                    slug: "little-york-smoke-shop",
-                    title: "Little York Smoke Shop Brand System",
-                    type: "Brand Systems",
-                    cover: "/images/work/BRANDING/LYLOGO.webp"
-                }
             ]
+
         }
     },
 

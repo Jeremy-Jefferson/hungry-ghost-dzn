@@ -532,6 +532,148 @@ export default function CaseStudy() {
                             </div>
                         )}
 
+                        {/* Interface Walkthrough Section - For Web Projects */}
+                        {item.content?.interfaceWalkthrough && item.content.interfaceWalkthrough.length > 0 && (
+                            <div className="cs-interface-walkthrough" style={{ marginTop: "var(--space-7)" }}>
+                                <h3 className="cs-section__title" style={{ 
+                                    fontSize: "var(--text-2xl)",
+                                    marginBottom: "var(--space-5)"
+                                }}>Interface Walkthrough</h3>
+                                
+                                <div className="cs-walkthrough-grid">
+                                    {item.content.interfaceWalkthrough.map((screen, idx) => (
+                                        <div key={idx} className="cs-walkthrough-card">
+                                            {/* Browser Frame */}
+                                            <div className="browser-frame">
+                                                <div className="browser-frame__header">
+                                                    <div className="browser-frame__dots">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                    <div className="browser-frame__url">
+                                                        {item.title.toLowerCase().replace(/\s+/g, '-')}.com
+                                                    </div>
+                                                </div>
+                                                <div className="browser-frame__content">
+                                                    <img 
+                                                        src={screen.image} 
+                                                        alt={screen.title}
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                    />
+                                                </div>
+                                            </div>
+                                            
+                                            {/* Card Details */}
+                                            <div style={{ padding: "var(--space-4) 0" }}>
+                                                <h4 className="h4" style={{ marginBottom: "var(--space-2)" }}>
+                                                    {screen.title}
+                                                </h4>
+                                                <p className="small" style={{ color: "var(--color-text-muted)" }}>
+                                                    {screen.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Development Implementation Section - For Web Projects */}
+                        {item.content?.developmentImplementation && (
+                            <div className="cs-dev-implementation" style={{ marginTop: "var(--space-7)" }}>
+                                <h3 className="cs-section__title" style={{ 
+                                    fontSize: "var(--text-2xl)",
+                                    marginBottom: "var(--space-5)"
+                                }}>Development Implementation</h3>
+                                
+                                {/* Architecture */}
+                                {item.content.developmentImplementation.architecture && item.content.developmentImplementation.architecture.length > 0 && (
+                                    <div style={{ marginBottom: "var(--space-6)" }}>
+                                        <h4 className="h4" style={{ 
+                                            marginBottom: "var(--space-4)",
+                                            color: "var(--color-accent-teal)"
+                                        }}>Architecture</h4>
+                                        
+                                        <div style={{ display: "grid", gap: "var(--space-4)" }}>
+                                            {item.content.developmentImplementation.architecture.map((item, idx) => (
+                                                <div key={idx} className="card" style={{ padding: "var(--space-5)" }}>
+                                                    <h5 className="h5" style={{ marginBottom: "var(--space-2)" }}>
+                                                        {item.title}
+                                                    </h5>
+                                                    <p className="small" style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-3)" }}>
+                                                        {item.description}
+                                                    </p>
+                                                    {item.code && (
+                                                        <pre className="code-block">
+                                                            <code>{item.code}</code>
+                                                        </pre>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                                
+                                {/* Data Model */}
+                                {item.content.developmentImplementation.dataModel && item.content.developmentImplementation.dataModel.length > 0 && (
+                                    <div style={{ marginBottom: "var(--space-6)" }}>
+                                        <h4 className="h4" style={{ 
+                                            marginBottom: "var(--space-4)",
+                                            color: "var(--color-accent-magenta)"
+                                        }}>Data Model</h4>
+                                        
+                                        <div style={{ display: "grid", gap: "var(--space-4)" }}>
+                                            {item.content.developmentImplementation.dataModel.map((item, idx) => (
+                                                <div key={idx} className="card" style={{ padding: "var(--space-5)" }}>
+                                                    <h5 className="h5" style={{ marginBottom: "var(--space-2)" }}>
+                                                        {item.title}
+                                                    </h5>
+                                                    <p className="small" style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-3)" }}>
+                                                        {item.description}
+                                                    </p>
+                                                    {item.code && (
+                                                        <pre className="code-block">
+                                                            <code>{item.code}</code>
+                                                        </pre>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                                
+                                {/* UI Logic */}
+                                {item.content.developmentImplementation.uiLogic && item.content.developmentImplementation.uiLogic.length > 0 && (
+                                    <div>
+                                        <h4 className="h4" style={{ 
+                                            marginBottom: "var(--space-4)",
+                                            color: "var(--color-accent-purple)"
+                                        }}>UI Logic</h4>
+                                        
+                                        <div style={{ display: "grid", gap: "var(--space-4)" }}>
+                                            {item.content.developmentImplementation.uiLogic.map((item, idx) => (
+                                                <div key={idx} className="card" style={{ padding: "var(--space-5)" }}>
+                                                    <h5 className="h5" style={{ marginBottom: "var(--space-2)" }}>
+                                                        {item.title}
+                                                    </h5>
+                                                    <p className="small" style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-3)" }}>
+                                                        {item.description}
+                                                    </p>
+                                                    {item.code && (
+                                                        <pre className="code-block">
+                                                            <code>{item.code}</code>
+                                                        </pre>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        )}
+
                         {/* Tools Section - For Brand Projects / Tech Stack - For Web Projects */}
                         {item.content?.techStack && item.content.techStack.length > 0 && (
                             <div className="cs-tech-stack" style={{ marginTop: "var(--space-6)" }}>

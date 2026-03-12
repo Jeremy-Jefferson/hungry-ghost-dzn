@@ -28,6 +28,23 @@ export default function WorkCard({ item }) {
                 ) : (
                     <div className="workCard__img-placeholder" />
                 )}
+
+                {/* Hover overlay with project info }*/}
+                <div className="workCard__overlay">
+                    <h3 className="workCard__overlay-title">{item.title}</h3>
+                    {item.summary && (
+                        <p className="workCard__overlay-summary">{item.summary}</p>
+                    )}
+                    {!!item.tags?.length && (
+                        <div className="workCard__overlay-tags">
+                            {item.tags.slice(0, 3).map((t) => (
+                                <span className="workCard__overlay-tag" key={t}>
+                                    {t}
+                                </span>
+                            ))}
+                        </div>
+                    )}
+                </div>
             </div>
 
             <div className="workCard__top">
