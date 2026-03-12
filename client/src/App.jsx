@@ -9,6 +9,8 @@ import PageTransition from "./components/ui/PageTransition.jsx";
 import SEO from "./components/ui/SEO.jsx";
 import ErrorBoundary from "./components/ui/ErrorBoundary.jsx";
 import Analytics from "./components/ui/Analytics.jsx";
+import StructuredData from "./components/ui/StructuredData.jsx";
+import CookieConsent from "./components/ui/CookieConsent.jsx";
 
 /* Lazy load pages for better performance */
 const Home = lazy(() => import("./pages/Home.jsx"));
@@ -17,6 +19,8 @@ const Contact = lazy(() => import("./pages/Contact.jsx"));
 const Services = lazy(() => import("./pages/Services.jsx"));
 const Process = lazy(() => import("./pages/Process.jsx"));
 const NotFound = lazy(() => import("./pages/NotFound.jsx"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.jsx"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService.jsx"));
 
 /* Work Section */
 const WorkLayout = lazy(() => import("./pages/Work/WorkLayout.jsx"));
@@ -38,6 +42,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <Analytics />
+      <StructuredData />
       <SEO />
       <a href="#main-content" className="skip-link">Skip to main content</a>
       <div className="site-shell">
@@ -67,8 +72,11 @@ export default function App() {
             <Route path="/process" element={<Process />} />
             <Route path="/contact" element={<Contact />} />
 
+            {/* Legal Pages */}
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+
             {/* 404 */}
-            <Route path="*" element={<NotFound />} />
           </Routes>
           </main>
           </PageTransition>
@@ -76,6 +84,7 @@ export default function App() {
       </div>
 
       <Footer />
+      <CookieConsent />
     </ErrorBoundary>
   );
 }

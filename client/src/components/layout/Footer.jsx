@@ -157,6 +157,10 @@ export default function Footer() {
                     </span>
 
                     <div className="footer__legal">
+                        <Link to="/privacy" className="footer__legal-link">Privacy Policy</Link>
+                        <span style={{ margin: '0 8px' }}>•</span>
+                        <Link to="/terms" className="footer__legal-link">Terms of Service</Link>
+                        <span style={{ margin: '0 8px' }}>•</span>
                         <span className="footer__legal-link">Designed & built by Jeremy E. Jefferson.</span>
                     </div>
                 </div>

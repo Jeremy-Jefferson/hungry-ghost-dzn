@@ -19,7 +19,7 @@ export default defineConfig({
       ext: '.br',
     }),
     sitemap({
-      hostname: 'https://hungryghostdev.com',
+      hostname: 'https://hungryghost.dev',
       generateRobotsTxt: true,
     }),
     VitePWA({
