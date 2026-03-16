@@ -3,11 +3,31 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import sitemap from 'vite-plugin-sitemap'
 import compression from 'vite-plugin-compression'
+import imagemin from 'vite-plugin-imagemin'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    // Image optimization during build
+    imagemin({
+      gifsicle: { optimizationLevel: 7, interlaced: false },
+      optipng: { optimizationLevel: 7 },
+      mozjpeg: { quality: 20 },
+      pngquant: { quality: [0.8, 0.9], speed: 4 },
+      svgo: {
+        plugins: [
+          {
+            name: 'preset-default',
+            params: {
+              overrides: {
+                removeViewBox: false,
+              },
+            },
+          },
+        ],
+      },
+    }),
     // Gzip compression for production
     compression({
       algorithm: 'gzip',
@@ -33,26 +53,24 @@ export default defineConfig({
         background_color: '#0b0b0b',
         display: 'standalone',
         icons: [
-          // PWA icons should be generated and placed in client/public/
-          // Recommended sizes: 192x192, 512x512, and 512x512 for maskable
-          // Generate using: npx pwa-asset-generator client/src/assets/images/logo.png client/public --background "#0b0b0b" --splash-only false
-          // Uncomment after adding icon files:
-          // {
-          //   src: 'pwa-192x192.png',
-          //   sizes: '192x192',
-          //   type: 'image/png'
-          // },
-          // {
-          //   src: 'pwa-512x512.png',
-          //   sizes: '512x512',
-          //   type: 'image/png'
-          // },
-          // {
-          //   src: 'pwa-512x512.png',
-          //   sizes: '512x512',
-          //   type: 'image/png',
-          //   purpose: 'any maskable'
-          // }
+          {
+            src: 'favicon.webp',
+            sizes: '192x192',
+            type: 'image/webp',
+            purpose: 'any'
+          },
+          {
+            src: 'favicon.webp',
+            sizes: '512x512',
+            type: 'image/webp',
+            purpose: 'any'
+          },
+          {
+            src: 'favicon.webp',
+            sizes: '512x512',
+            type: 'image/webp',
+            purpose: 'maskable'
+          }
         ]
       },
       workbox: {
@@ -96,6 +114,7 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './src/test/setup.js',
     include: ['src/**/*.{test,spec}.{js,jsx}'],
+    mode: 'development',
   },
   server: {
     proxy: {
@@ -165,10 +184,7 @@ export default defineConfig({
     // Exclude certain deps from optimization if needed
     exclude: [],
   },
-  // Define global variables for production
-  define: {
-    'process.env.NODE_ENV': '"production"',
-  },
+  // Note: NODE_ENV is automatically set by Vite for tests
   // Improve asset handling
   assetsInclude: ['**/*.webp', '**/*.avif'],
 })

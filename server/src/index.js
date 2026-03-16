@@ -7,7 +7,22 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
+import morgan from "morgan";
+import * as Sentry from "@sentry/node";
 import contactRoutes from "./routes/contact.routes.js";
+
+// Initialize Sentry if DSN is provided
+if (process.env.SENTRY_DSN) {
+    Sentry.init({
+        dsn: process.env.SENTRY_DSN,
+        environment: process.env.SENTRY_ENVIRONMENT || process.env.NODE_ENV,
+        integrations: [
+            Sentry.httpIntegration(),
+        ],
+        // Performance monitoring
+        tracesSampleRate: process.env.NODE_ENV === "production" ? 0.1 : 1.0,
+    });
+}
 
 const app = express();
 
@@ -63,6 +78,17 @@ app.use((req, res, next) => {
 app.use(compression());
 
 /* ---------------------------
+   Request Logging (Morgan)
+---------------------------- */
+
+// Log requests in production, more detailed logs in development
+if (process.env.NODE_ENV === "production") {
+    app.use(morgan("combined"));
+} else {
+    app.use(morgan("dev"));
+}
+
+/* ---------------------------
    Core Middleware
 ---------------------------- */
 
@@ -111,6 +137,18 @@ app.use("/api/*", (req, res) => {
 ---------------------------- */
 
 app.use((err, req, res, next) => {
+    // Log to Sentry if available
+    if (process.env.SENTRY_DSN) {
+        Sentry.captureException(err);
+    }
+    
+    // Log the error for debugging
+    console.error(`[ERROR] ${err.message}`, {
+        method: req.method,
+        path: req.path,
+        stack: process.env.NODE_ENV !== "production" ? err.stack : undefined
+    });
+    
     res.setHeader("Content-Type", "application/json");
     res.status(err.status || 500).json({
         success: false,
@@ -124,10 +162,37 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`
   🚀 Hungry Ghost DZN API
   ➜ Environment: ${process.env.NODE_ENV || "development"}
   ➜ Running on: http://localhost:${PORT}
   `);
 });
+
+/* ---------------------------
+   Graceful Shutdown
+---------------------------- */
+
+const gracefulShutdown = (signal) => {
+    console.log(`\n${signal} received. Starting graceful shutdown...`);
+    
+    server.close((err) => {
+        if (err) {
+            console.error("Error during shutdown:", err);
+            process.exit(1);
+        }
+        
+        console.log("HTTP server closed. Shutting down gracefully.");
+        process.exit(0);
+    });
+    
+    // Force shutdown after 30 seconds if graceful shutdown fails
+    setTimeout(() => {
+        console.error("Forced shutdown after timeout.");
+        process.exit(1);
+    }, 30000);
+};
+
+process.on("SIGTERM", () => gracefulShutdown("SIGTERM"));
+process.on("SIGINT", () => gracefulShutdown("SIGINT"));

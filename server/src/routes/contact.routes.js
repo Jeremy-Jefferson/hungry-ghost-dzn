@@ -27,6 +27,9 @@ const createProdTransporter = () => {
             user: process.env.SMTP_USER,
             pass: process.env.SMTP_PASS,
         },
+        // Add timeout to prevent hanging connections
+        connectionTimeout: 10000,
+        socketTimeout: 10000,
     });
 };
 
@@ -139,14 +142,14 @@ New Project Inquiry
 ==============================
 CONTACT INFORMATION
 ==============================
-Name: ${name}
-Email: ${email}
+Name: ${sanitizedName}
+Email: ${sanitizedEmail}
 Service Interest: ${serviceDisplay}
 
 ==============================
 MESSAGE
 ==============================
-${message}
+${sanitizedMessage}
 
 ==============================
 SUBMITTED: ${new Date().toLocaleString()}
@@ -177,11 +180,11 @@ SUBMITTED: ${new Date().toLocaleString()}
         <div class="content">
             <div class="field">
                 <div class="label">Name</div>
-                <div class="value">${name}</div>
+                <div class="value">${sanitizedName}</div>
             </div>
             <div class="field">
                 <div class="label">Email</div>
-                <div class="value"><a href="mailto:${email}">${email}</a></div>
+                <div class="value"><a href="mailto:${sanitizedEmail}">${sanitizedEmail}</a></div>
             </div>
             <div class="field">
                 <div class="label">Service Interest</div>
@@ -189,7 +192,7 @@ SUBMITTED: ${new Date().toLocaleString()}
             </div>
             <div class="field">
                 <div class="label">Message</div>
-                <div class="message-box">${message.replace(/\n/g, '<br>')}</div>
+                <div class="message-box">${sanitizedMessage.replace(/\n/g, '<br>')}</div>
             </div>
         </div>
         <div class="footer">
@@ -200,12 +203,18 @@ SUBMITTED: ${new Date().toLocaleString()}
 </html>
         `.trim();
 
-        // Send email
-        const recipientEmail = process.env.CONTACT_EMAIL || "therealhungryghost@gmail.com";
+        // Send email - require CONTACT_EMAIL to be configured
+        if (!process.env.CONTACT_EMAIL) {
+            console.error("CONTACT_EMAIL environment variable is not set");
+            return res.status(500).json({
+                success: false,
+                error: "Server configuration error. Please try again later."
+            });
+        }
 
         const info = await transporter.sendMail({
             from: process.env.SMTP_FROM || `"Hungry Ghost DZN" <${process.env.SMTP_USER || 'noreply@hungryghost.design'}>`,
-            to: recipientEmail,
+            to: process.env.CONTACT_EMAIL,
             replyTo: email,
             subject: emailSubject,
             text: emailText,
