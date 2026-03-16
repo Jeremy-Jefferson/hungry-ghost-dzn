@@ -5,25 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
-    "start:pm2": "pm2 start src/index.js --name hungry-ghost-api",
-    "stop:pm2": "pm2 stop hungry-ghost-api",
-    "restart:pm2": "pm2 restart hungry-ghost-api",
-    "logs:pm2": "pm2 logs hungry-ghost-api",
-    "monit:pm2": "pm2 monit"
+    "start": "node src/index.js"
   },
   "dependencies": {
-    "@sentry/node": "^8.55.0",
-    "compression": "^1.8.0",
     "cors": "^2.8.5",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "express-rate-limit": "^7.5.0",
     "helmet": "^8.0.0",
-    "morgan": "^1.10.1",
     "nodemailer": "^8.0.1",
-    "pm2": "^6.0.14",
-    "zod": "^4.3.6"
+    "compression": "^1.8.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

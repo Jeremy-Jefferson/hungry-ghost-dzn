@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/set-state-in-effect */
 import { useState, useEffect, useRef, useCallback, useMemo, useSyncExternalStore } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/LOGO.webp";
@@ -15,18 +14,15 @@ const linkClass = ({ isActive }) =>
 const mobileLinkClass = ({ isActive }) =>
     `nav__mobileLink ${isActive ? "is-active" : ""}`;
 
-// The actual navbar implementation. Uses location to reset state on route changes
-// without requiring a full remount (which is more performant).
-function NavbarImpl({ scrolled, location }) {
+// The actual navbar implementation. It will be re-mounted on route changes,
+// resetting its internal state (e.g., menuOpen, dropdownOpen).
+function NavbarImpl({ scrolled }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [swipeTranslateX, setSwipeTranslateX] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
     const dropdownRef = useRef(null);
-    const currentLocation = useLocation();
-    
-    // Use passed location prop or fall back to useLocation hook (for backward compatibility)
-    void location;
+    const location = useLocation();
 
     // Touch start position
     const touchStartPos = useRef({ x: 0, y: 0 });
@@ -48,14 +44,6 @@ function NavbarImpl({ scrolled, location }) {
         document.body.style.overflow = menuOpen ? "hidden" : "";
         return () => { document.body.style.overflow = ""; };
     }, [menuOpen]);
-
-    // Reset menu and dropdown state on route change (better performance than key-based remount)
-    useEffect(() => {
-        setMenuOpen(false);
-        setDropdownOpen(false);
-        setSwipeTranslateX(0);
-        setIsDragging(false);
-    }, [currentLocation.pathname]);
 
     // Close mobile menu on Escape key press
     useEffect(() => {
@@ -358,7 +346,7 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Pass location to NavbarImpl - it will reset state on route change internally
-    // This is more performant than using key-based remounting
-    return <NavbarImpl scrolled={scrolled} location={location} />;
+    // Use key on NavbarImpl to force re-render on route change
+    // This ensures nav state updates when navigating between pages
+    return <NavbarImpl scrolled={scrolled} key={location.pathname} />;
 }
