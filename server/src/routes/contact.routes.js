@@ -1,8 +1,28 @@
 import express from "express";
 import nodemailer from "nodemailer";
 import rateLimit from "express-rate-limit";
+import { z } from "zod";
 
 const router = express.Router();
+
+// Zod validation schema for contact form
+const contactSchema = z.object({
+    name: z.string()
+        .min(1, "Name is required")
+        .max(100, "Name must be less than 100 characters"),
+    email: z.string()
+        .min(1, "Email is required")
+        .email("Invalid email address"),
+    message: z.string()
+        .min(1, "Message is required")
+        .max(5000, "Message must be less than 5000 characters"),
+    service: z.string()
+        .optional()
+        .refine(
+            (val) => !val || ["", "brand-system-identity", "ui-ux-design", "web-development", "brand-website", "not-sure"].includes(val),
+            { message: "Invalid service selection" }
+        ),
+});
 
 // Create rate limiter for contact form
 const contactRateLimiter = rateLimit({
@@ -73,17 +93,20 @@ router.post("/contact", contactRateLimiter, async (req, res) => {
         : createDevTransporter(req);
 
     try {
-        const { name, email, service, message } = req.body;
-
-        // Validate required fields
-        if (!name || !email || !message) {
+        // Validate request body with Zod
+        const validationResult = contactSchema.safeParse(req.body);
+        
+        if (!validationResult.success) {
+            const errors = validationResult.error.errors.map(e => e.message).join(", ");
             return res.status(400).json({
                 success: false,
-                error: "Missing required fields: name, email, and message are required"
+                error: errors
             });
         }
 
-        // Sanitize inputs to prevent XSS
+        const { name, email, service, message } = validationResult.data;
+
+        // Sanitize inputs to prevent XSS (defense in depth)
         const sanitizeInput = (input) => {
             if (typeof input !== 'string') return '';
             return input
@@ -97,31 +120,6 @@ router.post("/contact", contactRateLimiter, async (req, res) => {
         const sanitizedName = sanitizeInput(name);
         const sanitizedEmail = sanitizeInput(email);
         const sanitizedMessage = sanitizeInput(message);
-
-        // Validate field lengths to prevent abuse
-        if (name.length > 100 || email.length > 254 || message.length > 5000) {
-            return res.status(400).json({
-                success: false,
-                error: "Field length exceeds maximum allowed"
-            });
-        }
-
-        // Validate service is one of allowed values
-        const allowedServices = ["", "brand-system-identity", "ui-ux-design", "web-development", "brand-website", "not-sure"];
-        if (service && !allowedServices.includes(service)) {
-            return res.status(400).json({
-                success: false,
-                error: "Invalid service selection"
-            });
-        }
-
-        // Validate email format
-        if (!isValidEmail(email)) {
-            return res.status(400).json({
-                success: false,
-                error: "Invalid email address"
-            });
-        }
 
         // Format the service type for display
         const serviceLabels = {

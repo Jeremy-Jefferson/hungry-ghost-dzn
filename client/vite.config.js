@@ -27,6 +27,15 @@ export default defineConfig({
           },
         ],
       },
+      // Skip images larger than 2MB to avoid performance issues
+      filter: (file) => {
+        const maxSize = 2 * 1024 * 1024; // 2MB
+        if (file.size > maxSize) {
+          console.warn(`⚠️  Skipping optimization for large image: ${file.path} (${(file.size / 1024 / 1024).toFixed(2)}MB). Consider compressing this image.`);
+          return false;
+        }
+        return true;
+      },
     }),
     // Gzip compression for production
     compression({

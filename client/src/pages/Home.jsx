@@ -1,24 +1,31 @@
 import { Link } from "react-router-dom";
 import hero from "../assets/images/HERO.webp";
-import { work } from "../data/work.mock.js";
-import { WORK_CATEGORIES } from "../data/work.js";
+import { getFeaturedWork, WORK_CATEGORIES } from "../data/work.js";
 import WorkCard from "../components/work/WorkCard.jsx";
 import { usePageTitle } from "../hooks/usePageTitle.js";
 import { useParallax } from "../hooks/useParallax.js";
-
-const featuredWork = work.filter((w) => w.featured).sort((a, b) => {
-    // Put Hungry Ghost DZN site first, then alternate between brand and web
-    if (a.slug === "hungry-ghost-dzn-site") return -1;
-    if (b.slug === "hungry-ghost-dzn-site") return 1;
-    // Then show one of each category for variety
-    if (a.category === "brand-systems" && b.category === "ui-ux-web-dev") return -1;
-    if (a.category === "ui-ux-web-dev" && b.category === "brand-systems") return 1;
-    return 0;
-});
+import { useState, useEffect } from "react";
 
 export default function Home() {
     usePageTitle(null); // "Hungry Ghost DEV"
     const parallaxRef = useParallax({ tealSpeed: 0.3, magentaSpeed: 0.15 });
+    const [featuredWork, setFeaturedWork] = useState([]);
+
+    useEffect(() => {
+        // Load featured work - uses production data in prod, mock data in dev
+        const work = getFeaturedWork();
+        // Sort featured work
+        const sorted = work.filter((w) => w.featured).sort((a, b) => {
+            // Put Hungry Ghost DZN site first, then alternate between brand and web
+            if (a.slug === "hungry-ghost-dzn-site") return -1;
+            if (b.slug === "hungry-ghost-dzn-site") return 1;
+            // Then show one of each category for variety
+            if (a.category === "brand-systems" && b.category === "ui-ux-web-dev") return -1;
+            if (a.category === "ui-ux-web-dev" && b.category === "brand-systems") return 1;
+            return 0;
+        });
+        setFeaturedWork(sorted);
+    }, []);
 
     return (
         <>

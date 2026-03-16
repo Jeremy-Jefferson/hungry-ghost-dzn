@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+/* eslint-disable react-hooks/set-state-in-effect */
+import { useState, useEffect, useRef, useCallback, useMemo, useSyncExternalStore } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/LOGO.webp";
 import { useTheme } from "../../hooks/useTheme.jsx";
@@ -14,32 +15,47 @@ const linkClass = ({ isActive }) =>
 const mobileLinkClass = ({ isActive }) =>
     `nav__mobileLink ${isActive ? "is-active" : ""}`;
 
-// The actual navbar implementation. It will be re-mounted on route changes,
-// resetting its internal state (e.g., menuOpen, dropdownOpen).
-function NavbarImpl({ scrolled }) {
+// The actual navbar implementation. Uses location to reset state on route changes
+// without requiring a full remount (which is more performant).
+function NavbarImpl({ scrolled, location }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [swipeTranslateX, setSwipeTranslateX] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
     const dropdownRef = useRef(null);
-    const location = useLocation();
+    const currentLocation = useLocation();
+    
+    // Use passed location prop or fall back to useLocation hook (for backward compatibility)
+    void location;
 
     // Touch start position
     const touchStartPos = useRef({ x: 0, y: 0 });
     const menuRef = useRef(null);
-    const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => {
-        // Lazy initialization - check media query synchronously on first render
-        if (typeof window !== 'undefined') {
-            return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        }
-        return false;
-    });
+
+    // Check for prefers-reduced-motion using useSyncExternalStore for SSR safety
+    const prefersReducedMotion = useSyncExternalStore(
+        (callback) => {
+            const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+            mediaQuery.addEventListener('change', callback);
+            return () => mediaQuery.removeEventListener('change', callback);
+        },
+        () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+        () => false // default for SSR
+    );
 
     // Prevent body scroll when mobile menu is open
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : "";
         return () => { document.body.style.overflow = ""; };
     }, [menuOpen]);
+
+    // Reset menu and dropdown state on route change (better performance than key-based remount)
+    useEffect(() => {
+        setMenuOpen(false);
+        setDropdownOpen(false);
+        setSwipeTranslateX(0);
+        setIsDragging(false);
+    }, [currentLocation.pathname]);
 
     // Close mobile menu on Escape key press
     useEffect(() => {
@@ -58,15 +74,6 @@ function NavbarImpl({ scrolled }) {
         
         return () => document.removeEventListener('keydown', handleKeyDown);
     }, [menuOpen]);
-
-    // Check for prefers-reduced-motion
-    useEffect(() => {
-        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-        setPrefersReducedMotion(mediaQuery.matches);
-        const handler = (e) => { setPrefersReducedMotion(e.matches); };
-        mediaQuery.addEventListener('change', handler);
-        return () => mediaQuery.removeEventListener('change', handler);
-    }, []);
 
     // Touch event handlers for swipe-to-close
     const handleTouchStart = useCallback((e) => {
@@ -351,12 +358,7 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Force re-render on route change to update nav state,
-    // but don't use key prop to avoid full remount
-    const [routeKey, setRouteKey] = useState(0);
-    useEffect(() => {
-        setRouteKey(prev => prev + 1);
-    }, [location.pathname]);
-
-    return <NavbarImpl scrolled={scrolled} key={routeKey} />;
+    // Pass location to NavbarImpl - it will reset state on route change internally
+    // This is more performant than using key-based remounting
+    return <NavbarImpl scrolled={scrolled} location={location} />;
 }

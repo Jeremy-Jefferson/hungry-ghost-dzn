@@ -22,7 +22,8 @@
     "helmet": "^8.0.0",
     "morgan": "^1.10.1",
     "nodemailer": "^8.0.1",
-    "pm2": "^6.0.14"
+    "pm2": "^6.0.14",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

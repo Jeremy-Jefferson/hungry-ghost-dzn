@@ -124,7 +124,7 @@ app.use("/api", contactRoutes);
    404 Handler (API Only)
 ---------------------------- */
 
-app.use("/api/*", (req, res) => {
+app.use("/api/{*path}", (req, res) => {
     res.setHeader("Content-Type", "application/json");
     res.status(404).json({
         success: false,
@@ -136,18 +136,43 @@ app.use("/api/*", (req, res) => {
    Global Error Handler
 ---------------------------- */
 
+// Structured logging function
+const logError = (err, req) => {
+    const logEntry = {
+        timestamp: new Date().toISOString(),
+        level: 'error',
+        message: err.message,
+        method: req.method,
+        path: req.path,
+        ip: req.ip || req.connection?.remoteAddress,
+        userAgent: req.get('user-agent'),
+        stack: process.env.NODE_ENV !== "production" ? err.stack : undefined,
+        statusCode: err.status || 500
+    };
+    
+    // In production, output as JSON for log aggregation
+    if (process.env.NODE_ENV === "production") {
+        console.error(JSON.stringify(logEntry));
+    } else {
+        // In development, use a more readable format
+        console.error(`[ERROR] ${err.message}`);
+        console.error(`  Method: ${req.method} | Path: ${req.path}`);
+        if (logEntry.stack) {
+            console.error(logEntry.stack);
+        }
+    }
+    
+    return logEntry;
+};
+
 app.use((err, req, res, next) => {
     // Log to Sentry if available
     if (process.env.SENTRY_DSN) {
         Sentry.captureException(err);
     }
     
-    // Log the error for debugging
-    console.error(`[ERROR] ${err.message}`, {
-        method: req.method,
-        path: req.path,
-        stack: process.env.NODE_ENV !== "production" ? err.stack : undefined
-    });
+    // Use structured logging
+    logError(err, req);
     
     res.setHeader("Content-Type", "application/json");
     res.status(err.status || 500).json({

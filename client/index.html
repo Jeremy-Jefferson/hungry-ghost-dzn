@@ -2,6 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Theme flash prevention - must be inline and blocking -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
     <link rel="icon" type="image/webp" href="/favicon.webp" />
     <link rel="apple-touch-icon" href="/favicon.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
