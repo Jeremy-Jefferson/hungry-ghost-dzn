@@ -220,6 +220,7 @@ SUBMITTED: ${new Date().toLocaleString()}
         });
 
     } catch (error) {
+        console.error("Contact form error:", error);
         res.setHeader("Content-Type", "application/json");
         res.status(500).json({
             success: false,
