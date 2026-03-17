@@ -3,6 +3,7 @@ import { usePageTitle } from "../../hooks/usePageTitle.js";
 
 export default function WorkLayout() {
     usePageTitle("Work");
+    
     return (
         <main>
             {/* Optional shared header for all /work pages */}

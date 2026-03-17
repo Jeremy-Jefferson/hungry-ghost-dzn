@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { getWorkByCategory } from "../../data/work.js";
+import { usePageTitle } from "../../hooks/usePageTitle.js";
 
 export default function BrandDesign() {
+    usePageTitle("Brand Design");
     const items = getWorkByCategory("brand-systems");
 
     return (
