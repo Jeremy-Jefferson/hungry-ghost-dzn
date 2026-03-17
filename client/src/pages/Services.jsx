@@ -60,7 +60,7 @@ const services = [
             "Modern websites and front-end systems built for performance, scalability, and real-world usability — designed to look sharp, load fast, and scale cleanly.",
         includes: [
             "Front-end architecture",
-            "Custom React / Vite builds",
+            "Custom React builds",
             "Responsive development",
             "Performance optimization",
             "CMS / content integration",

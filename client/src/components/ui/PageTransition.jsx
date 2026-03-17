@@ -93,7 +93,6 @@ export default function PageTransition({ children }) {
   return (
     <div 
       className={className}
-      key={displayLocation.pathname}
     >
       {children}
     </div>
