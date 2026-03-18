@@ -70,13 +70,13 @@ router.post("/contact", contactRateLimiter, async (req, res) => {
         : createDevTransporter(req);
 
     try {
-        const { name, email, service, message } = req.body;
+        const { name, email, company, website, service, budget, timeline, message } = req.body;
 
         // Validate required fields
-        if (!name || !email || !message) {
+        if (!name || !email || !company || !website || !service || !budget || !timeline || !message) {
             return res.status(400).json({
                 success: false,
-                error: "Missing required fields: name, email, and message are required"
+                error: "Missing required fields: name, email, company, website, service, budget, timeline, and message are required"
             });
         }
 
@@ -93,10 +93,12 @@ router.post("/contact", contactRateLimiter, async (req, res) => {
 
         const sanitizedName = sanitizeInput(name);
         const sanitizedEmail = sanitizeInput(email);
+        const sanitizedCompany = sanitizeInput(company || '');
+        const sanitizedWebsite = sanitizeInput(website || '');
         const sanitizedMessage = sanitizeInput(message);
 
         // Validate field lengths to prevent abuse
-        if (name.length > 100 || email.length > 254 || message.length > 5000) {
+        if (name.length > 100 || email.length > 254 || (company && company.length > 200) || (website && website.length > 300) || message.length > 5000) {
             return res.status(400).json({
                 success: false,
                 error: "Field length exceeds maximum allowed"
@@ -104,11 +106,29 @@ router.post("/contact", contactRateLimiter, async (req, res) => {
         }
 
         // Validate service is one of allowed values
-        const allowedServices = ["", "brand-system-identity", "ui-ux-design", "web-development", "brand-website", "not-sure"];
+        const allowedServices = ["", "brand-system-identity", "ui-ux-design", "web-development", "brand-website", "ongoing-support", "not-sure"];
         if (service && !allowedServices.includes(service)) {
             return res.status(400).json({
                 success: false,
                 error: "Invalid service selection"
+            });
+        }
+
+        // Validate budget is one of allowed values
+        const allowedBudgets = ["", "under-1k", "1k-3k", "3k-7k", "7k-plus", "not-sure"];
+        if (budget && !allowedBudgets.includes(budget)) {
+            return res.status(400).json({
+                success: false,
+                error: "Invalid budget selection"
+            });
+        }
+
+        // Validate timeline is one of allowed values
+        const allowedTimelines = ["", "asap", "2-4-weeks", "1-2-months", "flexible"];
+        if (timeline && !allowedTimelines.includes(timeline)) {
+            return res.status(400).json({
+                success: false,
+                error: "Invalid timeline selection"
             });
         }
 
@@ -126,9 +146,29 @@ router.post("/contact", contactRateLimiter, async (req, res) => {
             "ui-ux-design": "UI/UX Design",
             "web-development": "Web Development",
             "brand-website": "Brand + Website",
+            "ongoing-support": "Ongoing Design / Dev Support",
             "not-sure": "Not sure yet"
         };
         const serviceDisplay = serviceLabels[service] || service || "Not specified";
+
+        // Format budget for display
+        const budgetLabels = {
+            "under-1k": "Under $1,000",
+            "1k-3k": "$1,000 – $3,000",
+            "3k-7k": "$3,000 – $7,000",
+            "7k-plus": "$7,000+",
+            "not-sure": "Not sure yet"
+        };
+        const budgetDisplay = budgetLabels[budget] || budget || "Not specified";
+
+        // Format timeline for display
+        const timelineLabels = {
+            "asap": "ASAP",
+            "2-4-weeks": "2–4 weeks",
+            "1-2-months": "1–2 months",
+            "flexible": "Flexible"
+        };
+        const timelineDisplay = timelineLabels[timeline] || timeline || "Not specified";
 
         // Create formatted email content
         const emailSubject = `New Inquiry from Book/Contact Page`;
@@ -184,8 +224,24 @@ SUBMITTED: ${new Date().toLocaleString()}
                 <div class="value"><a href="mailto:${email}">${email}</a></div>
             </div>
             <div class="field">
+                <div class="label">Company/Brand</div>
+                <div class="value">${company}</div>
+            </div>
+            <div class="field">
+                <div class="label">Website</div>
+                <div class="value"><a href="${website}">${website}</a></div>
+            </div>
+            <div class="field">
                 <div class="label">Service Interest</div>
                 <div class="value">${serviceDisplay}</div>
+            </div>
+            <div class="field">
+                <div class="label">Budget Range</div>
+                <div class="value">${budgetDisplay}</div>
+            </div>
+            <div class="field">
+                <div class="label">Timeline</div>
+                <div class="value">${timelineDisplay}</div>
             </div>
             <div class="field">
                 <div class="label">Message</div>

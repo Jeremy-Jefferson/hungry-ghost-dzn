@@ -4,7 +4,11 @@ import { usePageTitle } from "../hooks/usePageTitle.js";
 const initialForm = {
   name: "",
   email: "",
+  company: "",
+  website: "",
   service: "",
+  budget: "",
+  timeline: "",
   message: "",
 };
 
@@ -21,18 +25,40 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [name]: value }));
   }
 
+  function validateForm() {
+    const requiredFields = [
+      "name",
+      "email",
+      "company",
+      "website",
+      "service",
+      "budget",
+      "timeline",
+      "message",
+    ];
+
+    const hasEmptyRequiredField = requiredFields.some(
+      (field) => !form[field].trim()
+    );
+
+    if (hasEmptyRequiredField) {
+      return "Please fill out all required fields.";
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      return "Please enter a valid email address.";
+    }
+
+    return "";
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (!form.name || !form.email || !form.message) {
-      setError("Please fill out all required fields.");
-      return;
-    }
-
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(form.email)) {
-      setError("Please enter a valid email address.");
+    const validationError = validateForm();
+    if (validationError) {
+      setError(validationError);
       return;
     }
 
@@ -48,7 +74,6 @@ export default function Contact() {
         body: JSON.stringify(form),
       });
 
-      // Check if response has valid JSON
       const contentType = res.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
         throw new Error("Server error: Invalid response. Please try again.");
@@ -72,137 +97,220 @@ export default function Contact() {
 
   return (
     <section className="page-section">
-        <div className="container stack">
-          <section className="contact__intro">
-            <div className="contact__intro-copy">
-              <span className="accent-label">Let's Talk</span>
-              <h1 className="h1">Start a Project</h1>
-              <p className="page-lead">
-                Tell us what you're building — we'll help shape it into something sharp.
-              </p>
-            </div>
+      <div className="container stack">
+        <section className="contact__intro">
+          <div className="contact__intro-copy">
+            <span className="accent-label">Let's Talk</span>
+            <h1 className="h1">Start a Project</h1>
+            <p className="page-lead">
+              Tell us what you're building — we’ll review the details and reach
+              out with the best next step.
+            </p>
+          </div>
 
-            <aside className="contact__intro-details card">
-              <span className="accent-label">What Happens Next</span>
-              <h2 className="h2">Here's how it works.</h2>
-              <ul className="contact__next-list">
-                <li>We'll review your project details</li>
-                <li>You'll hear back within 24–48 hours</li>
-                <li>If it's a good fit, we'll schedule a discovery call to discuss next steps.</li>
-              </ul>
-            </aside>
+          <aside className="contact__intro-details card">
+            <span className="accent-label">What Happens Next</span>
+            <h2 className="h2">Here’s how it works.</h2>
+            <ul className="contact__next-list">
+              <li>We’ll review your project details</li>
+              <li>You’ll hear back within 24–48 hours</li>
+              <li>If it’s a good fit, we’ll move into discovery and next steps</li>
+            </ul>
+          </aside>
+        </section>
+
+        {sent ? (
+          <section className="card contact__success" aria-live="polite">
+            <p className="h2">Message received 👻</p>
+            <p className="small">
+              Thanks for reaching out. We’ll review your inquiry and be in touch
+              shortly.
+            </p>
           </section>
-
-          {sent ? (
-            <section className="card contact__success" aria-live="polite">
-              <p className="h2">Message received 👻</p>
-              <p className="small">
-                Thanks for reaching out. We'll review your project and be in
-                touch shortly.
-              </p>
-            </section>
-          ) : (
-            <form
-              className="contact__form card"
-              onSubmit={handleSubmit}
-              noValidate
-            >
-              <div className="contact__row">
-                <div className="contact__field">
-                  <label className="contact__label small" htmlFor="name">
-                    Name
-                  </label>
-                  <input
-                    className="contact__input"
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    placeholder="Your name"
-                    value={form.name}
-                    onChange={handleChange}
-                    autoComplete="name"
-                    aria-describedby={error ? "contact-error" : undefined}
-                  />
-                </div>
-
-                <div className="contact__field">
-                  <label className="contact__label small" htmlFor="email">
-                    Email
-                  </label>
-                  <input
-                    className="contact__input"
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="you@example.com"
-                    value={form.email}
-                    onChange={handleChange}
-                    autoComplete="email"
-                    aria-describedby={error ? "contact-error" : undefined}
-                  />
-                </div>
+        ) : (
+          <form className="contact__form card" onSubmit={handleSubmit} noValidate>
+            <div className="contact__row">
+              <div className="contact__field">
+                <label className="contact__label small" htmlFor="name">
+                  Name
+                </label>
+                <input
+                  className="contact__input"
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Your name"
+                  value={form.name}
+                  onChange={handleChange}
+                  autoComplete="name"
+                  aria-describedby={error ? "contact-error" : undefined}
+                />
               </div>
 
               <div className="contact__field">
-                <label className="contact__label small" htmlFor="service">
-                  Service
+                <label className="contact__label small" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  className="contact__input"
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="you@example.com"
+                  value={form.email}
+                  onChange={handleChange}
+                  autoComplete="email"
+                  aria-describedby={error ? "contact-error" : undefined}
+                />
+              </div>
+            </div>
+
+            <div className="contact__row">
+              <div className="contact__field">
+                <label className="contact__label small" htmlFor="company">
+                  Company / Brand Name
+                </label>
+                <input
+                  className="contact__input"
+                  id="company"
+                  name="company"
+                  type="text"
+                  required
+                  placeholder="Your business or brand"
+                  value={form.company}
+                  onChange={handleChange}
+                  autoComplete="organization"
+                  aria-describedby={error ? "contact-error" : undefined}
+                />
+              </div>
+
+              <div className="contact__field">
+                <label className="contact__label small" htmlFor="website">
+                  Website or Social Link
+                </label>
+                <input
+                  className="contact__input"
+                  id="website"
+                  name="website"
+                  type="text"
+                  required
+                  placeholder="https://yourbrand.com or Instagram link"
+                  value={form.website}
+                  onChange={handleChange}
+                  aria-describedby={error ? "contact-error" : undefined}
+                />
+              </div>
+            </div>
+
+            <div className="contact__field">
+              <label className="contact__label small" htmlFor="service">
+                Service
+              </label>
+              <select
+                className="contact__input"
+                id="service"
+                name="service"
+                value={form.service}
+                onChange={handleChange}
+                required
+                aria-describedby={error ? "contact-error" : undefined}
+              >
+                <option value="">Select a service…</option>
+                <option value="brand-system-identity">Brand System / Identity</option>
+                <option value="ui-ux-design">UI/UX Design</option>
+                <option value="web-development">Web Development</option>
+                <option value="brand-website">Brand + Website</option>
+                <option value="ongoing-support">Ongoing Design / Dev Support</option>
+                <option value="not-sure">Not Sure Yet</option>
+              </select>
+            </div>
+
+            <div className="contact__row">
+              <div className="contact__field">
+                <label className="contact__label small" htmlFor="budget">
+                  Budget Range
                 </label>
                 <select
                   className="contact__input"
-                  id="service"
-                  name="service"
-                  value={form.service}
+                  id="budget"
+                  name="budget"
+                  value={form.budget}
                   onChange={handleChange}
+                  required
+                  aria-describedby={error ? "contact-error" : undefined}
                 >
-                  <option value="">Select a service…</option>
-                  <option value="brand-system-identity">Brand System / Identity</option>
-                  <option value="ui-ux-design">UI/UX Design</option>
-                  <option value="web-development">Web Development</option>
-                  <option value="brand-website">Brand + Website</option>
+                  <option value="">Select a budget…</option>
+                  <option value="under-1k">Under $1,000</option>
+                  <option value="1k-3k">$1,000 – $3,000</option>
+                  <option value="3k-7k">$3,000 – $7,000</option>
+                  <option value="7k-plus">$7,000+</option>
                   <option value="not-sure">Not sure yet</option>
                 </select>
               </div>
 
               <div className="contact__field">
-                <label className="contact__label small" htmlFor="message">
-                  Tell us about the project
+                <label className="contact__label small" htmlFor="timeline">
+                  Timeline
                 </label>
-                <textarea
+                <select
                   className="contact__input"
-                  id="message"
-                  name="message"
-                  rows={6}
-                  placeholder="Tell us about your project, goals, timeline, or any challenges you're trying to solve."
-                  value={form.message}
+                  id="timeline"
+                  name="timeline"
+                  value={form.timeline}
                   onChange={handleChange}
                   required
                   aria-describedby={error ? "contact-error" : undefined}
-                />
-              </div>
-
-              {error ? (
-                <p className="contact__error small" id="contact-error" role="alert">
-                  {error}
-                </p>
-              ) : null}
-
-              <div className="contact__actions">
-                <button
-                  type="submit"
-                  className="btn btn--primary"
-                  disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Start the Conversation"}
-                </button>
+                  <option value="">Select a timeline…</option>
+                  <option value="asap">ASAP</option>
+                  <option value="2-4-weeks">2–4 weeks</option>
+                  <option value="1-2-months">1–2 months</option>
+                  <option value="flexible">Flexible</option>
+                </select>
               </div>
-              <p className="contact__response-note small">
-                You'll hear back within 24–48 hours.
+            </div>
+
+            <div className="contact__field">
+              <label className="contact__label small" htmlFor="message">
+                Project Summary
+              </label>
+              <textarea
+                className="contact__input"
+                id="message"
+                name="message"
+                rows={6}
+                placeholder="Tell us what you're building, what you need help with, and any goals or challenges involved."
+                value={form.message}
+                onChange={handleChange}
+                required
+                aria-describedby={error ? "contact-error" : undefined}
+              />
+            </div>
+
+            {error ? (
+              <p className="contact__error small" id="contact-error" role="alert">
+                {error}
               </p>
-            </form>
-          )}
-        </div>
+            ) : null}
+
+            <div className="contact__actions">
+              <button
+                type="submit"
+                className="btn btn--primary"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Start the Conversation"}
+              </button>
+            </div>
+
+            <p className="contact__response-note small">
+              You’ll hear back within 24–48 hours.
+            </p>
+          </form>
+        )}
+      </div>
     </section>
   );
 }

@@ -1,8 +1,13 @@
 import { defineConfig } from 'vite'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import sitemap from 'vite-plugin-sitemap'
 import compression from 'vite-plugin-compression'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -33,26 +38,22 @@ export default defineConfig({
         background_color: '#0b0b0b',
         display: 'standalone',
         icons: [
-          // PWA icons should be generated and placed in client/public/
-          // Recommended sizes: 192x192, 512x512, and 512x512 for maskable
-          // Generate using: npx pwa-asset-generator client/src/assets/images/logo.png client/public --background "#0b0b0b" --splash-only false
-          // Uncomment after adding icon files:
-          // {
-          //   src: 'pwa-192x192.png',
-          //   sizes: '192x192',
-          //   type: 'image/png'
-          // },
-          // {
-          //   src: 'pwa-512x512.png',
-          //   sizes: '512x512',
-          //   type: 'image/png'
-          // },
-          // {
-          //   src: 'pwa-512x512.png',
-          //   sizes: '512x512',
-          //   type: 'image/png',
-          //   purpose: 'any maskable'
-          // }
+          {
+            src: 'HGFAVICON.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'HGFAVICON.png',
+            sizes: '512x512',
+            type: 'image/png'
+          },
+          {
+            src: 'HGFAVICON(WHITE).png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable'
+          }
         ]
       },
       workbox: {
