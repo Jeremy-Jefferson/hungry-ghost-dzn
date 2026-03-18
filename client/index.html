@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="/favicon.webp" />
-    <link rel="apple-touch-icon" href="/favicon.webp" />
+    <link rel="icon" type="image/png" href="/HGFAVICON.png" id="favicon" />
+    <link rel="apple-touch-icon" href="/HGFAVICON.png" id="apple-touch" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b0b0b" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -13,6 +13,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    
+    <script>
+      // Theme-aware favicon switching
+      (function() {
+        const favicon = document.getElementById('favicon');
+        const appleTouch = document.getElementById('apple-touch');
+        
+        function updateFavicon() {
+          // Check data-theme attribute first, then fall back to localStorage
+          let theme = document.documentElement.getAttribute('data-theme');
+          if (!theme) {
+            theme = localStorage.getItem('theme') || 
+              (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          }
+          const isDark = theme === 'dark';
+          
+          favicon.href = isDark ? '/HGFAVICON(WHITE).png' : '/HGFAVICON.png';
+          appleTouch.href = isDark ? '/HGFAVICON(WHITE).png' : '/HGFAVICON.png';
+        }
+        
+        // Run immediately
+        updateFavicon();
+        
+        // Listen for theme changes
+        const observer = new MutationObserver(updateFavicon);
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      })();
+    </script>
     
     <!-- Primary Meta Tags -->
     <title>Hungry Ghost DEV — UI/UX & Web Development Studio</title>
