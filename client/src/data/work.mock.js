@@ -161,6 +161,150 @@ export const work = [
     },
 
     {
+        slug: "little-york-smoke-shop-site",
+        title: "Little York Smoke Shop Website",
+        category: "ui-ux-web-dev",
+        year: 2025,
+        featured: true,
+
+        summary:
+            "Retail storefront website built to highlight promotions, product categories, and store information through a bold, mobile-friendly experience.",
+
+        tags: [
+            "UI/UX Design",
+            "React",
+            "Retail Website",
+            "Local Business",
+            "Front-End Development"
+        ],
+
+        cover: "/images/work/WEB/little-york-site.webp",
+        liveUrl: "https://littleyorksmokeshop.com",
+
+        content: {
+
+            role: "UI/UX Design, Front-End Development",
+            client: "Little York Smoke Shop",
+
+            overview:
+                "The Little York Smoke Shop website extends the brand’s physical storefront into a clear and engaging digital experience. The goal was to create a site that reflects the visual identity of the shop while helping customers quickly discover promotions, browse product categories, and find essential store information such as hours and location.",
+
+            challenge:
+                "Local retail websites must communicate value immediately. Customers typically visit to check promotions, confirm store hours, or quickly understand what products are available. The challenge was designing an interface that carried the bold visual style of the brand while remaining simple, readable, and fast to navigate across mobile and desktop devices.",
+
+            solution:
+                "The site structure prioritizes promotions, product categories, and store details within a clear visual hierarchy. Promotional sections highlight current deals while category cards help customers quickly understand what the shop offers. Brand visuals from the identity system were integrated throughout the interface to ensure the online experience felt connected to the physical store environment.",
+
+            outcome:
+                "The final website gives Little York Smoke Shop a stronger digital storefront that supports local discovery and customer engagement. Visitors can quickly view promotions, browse product categories, and find store information, reinforcing a more complete and professional retail presence online.",
+
+            processSteps: [
+                "UX Strategy",
+                "UI Design",
+                "Development",
+                "Optimization",
+                "Launch"
+            ],
+
+            interfaceWalkthrough: [
+
+                {
+                    title: "Product Categories",
+                    description:
+                        "Product category cards help visitors quickly understand what the store offers, from cannabis products to smoking accessories and glass.",
+                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-01.webp"
+                },
+
+                {
+                    title: "Featured Deals",
+                    description:
+                        "Promotional highlight sections surface current specials and featured products, helping customers immediately see available deals.",
+                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-02.webp"
+                },
+
+                {
+                    title: "Location & Contact",
+                    description:
+                        "Store information is presented clearly with address, hours, phone number, and an embedded Google Maps location for quick navigation.",
+                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-03.webp"
+                }
+
+            ],
+
+            uiux: {
+
+                userGoals: [
+                    "Quickly find store hours and location",
+                    "View current promotions and deals",
+                    "Browse product categories",
+                    "Contact the shop easily"
+                ],
+
+                navigation:
+                    "Simple, linear navigation prioritizing promotions, products, and essential store information.",
+
+                informationArchitecture:
+                    "Home → Promotions → Product Categories → About → Contact",
+
+                visualHierarchy:
+                    "Promotions and brand imagery lead the experience above the fold, followed by structured category and store information sections.",
+
+                components: [
+                    "Hero section with promotional emphasis",
+                    "Product category cards",
+                    "Deal highlight sections",
+                    "Location and contact block",
+                    "Responsive navigation"
+                ],
+
+                responsive:
+                    "Mobile-first layout designed for quick browsing and fast access to store information."
+            },
+
+            interfaceDesign: {
+
+                visualSystem:
+                    "Brand colors and visual motifs from the Little York identity system were integrated throughout the interface to reinforce brand recognition.",
+
+                layoutApproach:
+                    "Content sections were structured to surface promotions first, followed by product categories and store information for quick customer scanning.",
+
+                componentStrategy:
+                    "Reusable card and promotional modules help keep the layout consistent while allowing the store to update promotions easily.",
+
+                accessibility:
+                    "Clear headings, readable contrast, and simplified layout structure help users quickly find key information."
+            },
+
+            developmentSummary: {
+
+                architecture:
+                    "Built using React with modular UI components to keep the layout flexible and easy to maintain.",
+
+                features: [
+                    "Responsive layouts across device sizes",
+                    "Structured promotional content sections",
+                    "Google Maps location integration",
+                    "SEO-friendly page structure",
+                    "Reusable UI sections"
+                ],
+
+                performance:
+                    "Built with Vite for fast development, optimized bundling, and strong page-load performance."
+            },
+
+            techStack: [
+                "React",
+                "Vite",
+                "JavaScript",
+                "CSS",
+                "Google Maps API"
+            ]
+
+        }
+    },
+
+    {
         slug: "portfolio-showcase",
         title: "Developer Portfolio Site",
         category: "ui-ux-web-dev",
@@ -950,150 +1094,6 @@ const { error } = await stripe.confirmPayment({
                     cover: "/images/work/BRANDING/S&B.webp"
                 }
             ]
-        }
-    },
-
-    {
-        slug: "little-york-smoke-shop-site",
-        title: "Little York Smoke Shop Website",
-        category: "ui-ux-web-dev",
-        year: 2025,
-        featured: true,
-
-        summary:
-            "Retail storefront website built to highlight promotions, product categories, and store information through a bold, mobile-friendly experience.",
-
-        tags: [
-            "UI/UX Design",
-            "React",
-            "Retail Website",
-            "Local Business",
-            "Front-End Development"
-        ],
-
-        cover: "/images/work/WEB/little-york-site.webp",
-        liveUrl: "https://littleyorksmokeshop.com",
-
-        content: {
-
-            role: "UI/UX Design, Front-End Development",
-            client: "Little York Smoke Shop",
-
-            overview:
-                "The Little York Smoke Shop website extends the brand’s physical storefront into a clear and engaging digital experience. The goal was to create a site that reflects the visual identity of the shop while helping customers quickly discover promotions, browse product categories, and find essential store information such as hours and location.",
-
-            challenge:
-                "Local retail websites must communicate value immediately. Customers typically visit to check promotions, confirm store hours, or quickly understand what products are available. The challenge was designing an interface that carried the bold visual style of the brand while remaining simple, readable, and fast to navigate across mobile and desktop devices.",
-
-            solution:
-                "The site structure prioritizes promotions, product categories, and store details within a clear visual hierarchy. Promotional sections highlight current deals while category cards help customers quickly understand what the shop offers. Brand visuals from the identity system were integrated throughout the interface to ensure the online experience felt connected to the physical store environment.",
-
-            outcome:
-                "The final website gives Little York Smoke Shop a stronger digital storefront that supports local discovery and customer engagement. Visitors can quickly view promotions, browse product categories, and find store information, reinforcing a more complete and professional retail presence online.",
-
-            processSteps: [
-                "UX Strategy",
-                "UI Design",
-                "Development",
-                "Optimization",
-                "Launch"
-            ],
-
-            interfaceWalkthrough: [
-
-                {
-                    title: "Product Categories",
-                    description:
-                        "Product category cards help visitors quickly understand what the store offers, from cannabis products to smoking accessories and glass.",
-                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-01.webp"
-                },
-
-                {
-                    title: "Featured Deals",
-                    description:
-                        "Promotional highlight sections surface current specials and featured products, helping customers immediately see available deals.",
-                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-02.webp"
-                },
-
-                {
-                    title: "Location & Contact",
-                    description:
-                        "Store information is presented clearly with address, hours, phone number, and an embedded Google Maps location for quick navigation.",
-                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-03.webp"
-                }
-
-            ],
-
-            uiux: {
-
-                userGoals: [
-                    "Quickly find store hours and location",
-                    "View current promotions and deals",
-                    "Browse product categories",
-                    "Contact the shop easily"
-                ],
-
-                navigation:
-                    "Simple, linear navigation prioritizing promotions, products, and essential store information.",
-
-                informationArchitecture:
-                    "Home → Promotions → Product Categories → About → Contact",
-
-                visualHierarchy:
-                    "Promotions and brand imagery lead the experience above the fold, followed by structured category and store information sections.",
-
-                components: [
-                    "Hero section with promotional emphasis",
-                    "Product category cards",
-                    "Deal highlight sections",
-                    "Location and contact block",
-                    "Responsive navigation"
-                ],
-
-                responsive:
-                    "Mobile-first layout designed for quick browsing and fast access to store information."
-            },
-
-            interfaceDesign: {
-
-                visualSystem:
-                    "Brand colors and visual motifs from the Little York identity system were integrated throughout the interface to reinforce brand recognition.",
-
-                layoutApproach:
-                    "Content sections were structured to surface promotions first, followed by product categories and store information for quick customer scanning.",
-
-                componentStrategy:
-                    "Reusable card and promotional modules help keep the layout consistent while allowing the store to update promotions easily.",
-
-                accessibility:
-                    "Clear headings, readable contrast, and simplified layout structure help users quickly find key information."
-            },
-
-            developmentSummary: {
-
-                architecture:
-                    "Built using React with modular UI components to keep the layout flexible and easy to maintain.",
-
-                features: [
-                    "Responsive layouts across device sizes",
-                    "Structured promotional content sections",
-                    "Google Maps location integration",
-                    "SEO-friendly page structure",
-                    "Reusable UI sections"
-                ],
-
-                performance:
-                    "Built with Vite for fast development, optimized bundling, and strong page-load performance."
-            },
-
-            techStack: [
-                "React",
-                "Vite",
-                "JavaScript",
-                "CSS",
-                "Google Maps API"
-            ]
-
         }
     },
 
