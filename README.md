@@ -1,15 +1,3 @@
-Absolutely, MÜGEN Sama. Here’s a full **drop-in README** with a stronger GitHub header, badges, cleaner hierarchy, and a more polished overall presentation.
-
-Couple quick notes before you paste it in:
-
-- I used your live domain directly.
-- I kept the preview image you already had.
-- I included a **Getting Started** section because repos look naked without one.
-- I kept the tone sharp and studio-focused, not bloated recruiter-bait nonsense.
-
-Paste this whole thing over your current README:
-
-````md
 # Hungry Ghost DEV — Studio Website
 
 <p align="center">
