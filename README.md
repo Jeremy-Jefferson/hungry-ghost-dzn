@@ -1,124 +1,167 @@
+Absolutely, MÜGEN Sama. Here’s a full **drop-in README** with a stronger GitHub header, badges, cleaner hierarchy, and a more polished overall presentation.
+
+Couple quick notes before you paste it in:
+
+- I used your live domain directly.
+- I kept the preview image you already had.
+- I included a **Getting Started** section because repos look naked without one.
+- I kept the tone sharp and studio-focused, not bloated recruiter-bait nonsense.
+
+Paste this whole thing over your current README:
+
+````md
 # Hungry Ghost DEV — Studio Website
 
-Hungry Ghost DEV is a design and development studio focused on **intentional brand systems, striking visuals, and high-impact websites built for performance**.
+<p align="center">
+  <img width="1920" height="1200" alt="Hungry Ghost DEV Preview" src="https://github.com/user-attachments/assets/3f67847c-4926-4983-aea5-1f49cfefb1e0" />
+</p>
 
-This repository contains the **official studio website and portfolio**, built using a modern React architecture and designed to showcase brand identity work, graphic design, and web projects.
+<p align="center">
+  <strong>Intentional brand systems. High-impact websites. Frontend development built to perform.</strong>
+</p>
 
-The site combines **visual design thinking with technical implementation**, emphasizing clarity, usability, and scalable frontend structure.
+<p align="center">
+  The official studio website and portfolio for Hungry Ghost DEV — built to showcase brand, UI/UX, and frontend work through a modern, performance-focused React architecture.
+</p>
+
+<p align="center">
+  <a href="https://hungryghost.dev" target="_blank" rel="noopener noreferrer">Live Site</a>
+  ·
+  <a href="#overview">Overview</a>
+  ·
+  <a href="#tech-stack">Tech Stack</a>
+  ·
+  <a href="#getting-started">Getting Started</a>
+</p>
+
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-18-111111?logo=react" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-Frontend-111111?logo=vite" />
+  <img alt="React Router" src="https://img.shields.io/badge/React_Router-Routing-111111?logo=reactrouter" />
+  <img alt="Status" src="https://img.shields.io/badge/Status-Live-111111" />
+  <img alt="Deployment" src="https://img.shields.io/badge/Deployment-Vercel-111111?logo=vercel" />
+  <img alt="License" src="https://img.shields.io/badge/License-Proprietary-111111" />
+</p>
 
 ---
 
-# Live Site
+## Overview
 
-Coming soon.
+Hungry Ghost DEV is a design and development studio focused on building **intentional brand systems and high-impact websites designed for clarity, usability, and real-world performance**.
 
-*(Replace with your deployed URL when ready)*
+This repository contains the **official studio website and portfolio**, created to serve as:
 
----
+- a **studio presence** for potential clients
+- a **portfolio platform** for selected work
+- a **technical demonstration** of modern frontend architecture
+- a **conversion-focused contact experience** for new project inquiries
 
-# Overview
-
-The Hungry Ghost DEV website serves as both:
-
-• A **studio presence** for potential clients
-• A **portfolio platform** showcasing design and development work
-• A **technical demonstration** of modern frontend architecture
-
-The site was designed and built with a focus on:
-
-* Strong visual hierarchy
-* Performance-focused frontend architecture
-* Modular component design
-* Scalable project structure
-* Clean UI systems
+The project reflects a hybrid approach that combines **visual design thinking with scalable frontend engineering**.
 
 ---
 
-# Core Features
+## Live Site
 
-### Studio Landing Experience
+**Website:** [hungryghost.dev](https://hungryghost.dev)
 
-A visually striking hero section introduces the studio's focus on **brand systems, design clarity, and web performance**.
+---
 
-### Featured Work
+## Core Features
 
-A curated set of selected projects highlighting multiple disciplines:
+### Hero Experience
 
-* Brand identity
-* Web design and development
-* Environmental graphics
-* Visual systems
+A bold, high-contrast landing experience introduces the studio’s focus on:
+
+- brand clarity
+- visual strength
+- performance-driven web development
+
+### Selected Work
+
+A curated set of featured projects across multiple disciplines, including:
+
+- brand systems
+- UI/UX design
+- web design and development
+- visual and environmental graphics
+
+Each project is structured for **fast scanning, strong hierarchy, and visual impact**.
 
 ### Services Section
 
-Three core disciplines are highlighted:
+The site positions Hungry Ghost DEV around core studio offerings:
 
-* **Brand Design**
-* **Graphic Design**
-* **Web Design**
+- **Brand Systems**
+- **UI/UX Design**
+- **Frontend Development**
 
-Each service emphasizes systems thinking and design consistency across mediums.
+Each service is framed through **systems thinking**, not one-off decoration.
 
 ### Process Page
 
-A four-phase process explains how projects move from discovery to delivery:
+A structured four-phase process communicates how projects move from idea to delivery:
 
 1. Discovery
 2. Strategy
 3. Design
 4. Delivery
 
+This helps establish clarity, confidence, and professionalism for prospective clients.
+
 ### Case Study Architecture
 
-Projects are organized into structured categories:
+The routing and content structure support scalable project organization across:
 
-* Brand Design
-* Graphic Design
-* Web Design
+- brand-focused work
+- web and frontend work
+- UI/UX projects
 
-The routing system supports scalable expansion into deeper **case studies and project documentation**.
+This architecture is designed to grow into deeper **case study storytelling and documentation** over time.
 
-### Contact and Conversion
+### Contact + Conversion Flow
 
-Clear call-to-action flows encourage potential clients to:
+The site includes a more structured inquiry experience built for lead quality, not just message collection.
 
-* Start a project
-* Book a consultation
-* Explore the design process
+Current intake flow includes:
 
----
+- project inquiry form
+- service selection
+- budget filtering
+- timeline filtering
+- auto-response email system
 
-# Technology Stack
-
-The site is built using modern frontend tools designed for performance and scalability.
-
-**Frontend**
-
-* React
-* React Router
-* Vite
-
-**Styling**
-
-* Modular CSS architecture
-* Design token system
-* Custom layout utilities
-* CSS Grid and Flexbox
-
-**Design System Concepts**
-
-* Consistent spacing scale
-* Reusable card components
-* Typography hierarchy
-* Color system and accent palette
+This creates a stronger foundation for future client onboarding and project brief workflows.
 
 ---
 
-# Project Structure
+## Tech Stack
 
-The project follows a modular React architecture.
+### Frontend
 
-```
+- React
+- React Router
+- Vite
+
+### Styling & UI System
+
+- Modular CSS architecture
+- Design tokens for spacing, color, and typography
+- CSS Grid and Flexbox
+- Reusable layout and card components
+
+### Architecture Concepts
+
+- Component-driven structure
+- Scalable route organization
+- Clean separation of concerns
+- Reusable layout primitives
+- Performance-minded frontend setup
+
+---
+
+## Project Structure
+
+```text
 client/
 │
 ├── components/
@@ -137,7 +180,6 @@ client/
 │       ├── WorkLayout
 │       ├── WorkIndex
 │       ├── BrandDesign
-│       ├── GraphicDesign
 │       ├── WebDesign
 │       └── CaseStudy
 │
@@ -149,128 +191,165 @@ client/
 │
 └── App.jsx
 ```
+````
 
-This structure supports **scalable growth as additional case studies and projects are added**.
-
----
-
-# Design Philosophy
-
-Hungry Ghost DEV focuses on **clarity through systems**.
-
-Every project prioritizes:
-
-* Visual hierarchy
-* Intentional typography
-* Strong composition
-* Consistent brand language
-* Usability and performance
-
-Rather than isolated visuals, the studio builds **cohesive brand systems that scale across touchpoints**.
+This structure supports **scalable growth as additional projects, services, and case studies are added**.
 
 ---
 
-# Key UI Patterns
+## Design Philosophy
 
-Some reusable patterns implemented in the project include:
+Hungry Ghost DEV is built around one core idea:
 
-**Work Cards**
+> **Clarity through systems.**
 
-Reusable card components that display:
+Every design decision prioritizes:
 
-* Project imagery
-* Tags and categories
-* Summaries
-* Hover interactions
+- visual hierarchy
+- intentional typography
+- strong composition
+- consistent brand language
+- usability and performance
 
-**Section Framework**
-
-Pages are structured around consistent layout primitives:
-
-* Container
-* Stack spacing utilities
-* Card components
-* CTA blocks
-
-**Navigation System**
-
-The navigation supports:
-
-* Top-level routing
-* Dropdown service categories
-* active-state highlighting
-* sticky positioning with blur backdrop
+The goal is not just to create something visually striking, but to build **cohesive systems that scale across real-world touchpoints**.
 
 ---
 
-# Performance Goals
+## Key UI Patterns
 
-The site prioritizes:
+### Work Cards
 
-* Lightweight bundles via Vite
-* Minimal dependencies
-* Efficient routing with React Router
-* Optimized images and asset loading
+Reusable content cards designed to present:
 
-The result is a **fast, responsive portfolio experience**.
+- project imagery
+- tags and categories
+- concise summaries
+- hover interactions
+
+### Layout System
+
+The site uses consistent structural primitives, including:
+
+- container widths
+- stack spacing utilities
+- card sections
+- CTA blocks
+
+### Navigation
+
+The main navigation supports:
+
+- top-level routing
+- dropdown navigation
+- active-state styling
+- sticky positioning with backdrop blur
 
 ---
 
-# Future Enhancements
+## Performance Focus
+
+The site is built with performance in mind through:
+
+- Vite-powered bundling
+- minimal dependencies
+- efficient client-side routing
+- lightweight component structure
+- optimized asset usage
+
+The result is a **fast, responsive, production-ready studio site**.
+
+---
+
+## Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Jeremy-Jefferson/hungry-ghost-dev.git
+cd hungry-ghost-dev
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview the production build
+
+```bash
+npm run preview
+```
+
+---
+
+## Future Enhancements
 
 Planned improvements include:
 
-* Expanded case studies with deeper design breakdowns
-* Motion enhancements and micro-interactions
-* CMS or JSON-driven project content
-* Blog or insights section
-* Advanced project filtering
+- expanded case studies with deeper project breakdowns
+- motion design and micro-interactions
+- more advanced filtering and project navigation
+- CMS or data-driven content structure
+- blog / insights section
+- fuller client onboarding and project brief workflow
+- continued refinement of conversion and lead intake systems
 
 ---
 
-# About Hungry Ghost DEV
+## About Hungry Ghost DEV
 
-Hungry Ghost DEV is a studio focused on building **intentional brand systems and high-impact digital experiences**.
+Hungry Ghost DEV is a studio focused on building:
 
-The studio combines:
+- brand systems
+- UI/UX interfaces
+- high-performance websites
 
-* Graphic design
-* Brand identity
-* Illustration
-* Frontend development
-* UX thinking
+It combines:
 
-The goal is to produce work that is **visually striking, structurally sound, and built to perform in real environments**.
+- design
+- development
+- strategy
+
+to create work that is:
+
+> **Visually sharp. Structurally sound. Built to perform.**
 
 ---
 
-# Author
+## Author
 
-Jeremy
+**Jeremy Jefferson**
 Founder — Hungry Ghost DEV
 
-Front-End Developer, Designer, and Illustrator specializing in **brand systems, UI design, and scalable frontend architecture**.
+Front-End Developer, Designer, and Illustrator specializing in:
+
+- brand systems
+- UI/UX design
+- scalable frontend architecture
 
 ---
 
-# License
+## License
 
-This repository contains the source code for the Hungry Ghost DEV website and portfolio.
+This repository contains proprietary source code, branding, and design work.
 
-All design work and branding contained in this repository are the intellectual property of **Hungry Ghost DEV**.
-
----
-
-# Closing
-
-Clarity. Precision. Systems that work.
+All visual assets, branding elements, and original design systems contained in this repository are the intellectual property of **Hungry Ghost DEV**.
 
 ---
 
-If you want, Lord MÜGEN, I can also give you **three GitHub upgrades that will make this repo look significantly more professional to recruiters**:
+## Closing
 
-* Shields / badges at the top
-* a clean preview image banner
-* a polished GitHub repo header section
-
-Those make a **huge difference visually on GitHub.**
+**Clarity. Precision. Systems that work.**
