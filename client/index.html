@@ -15,31 +15,8 @@
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     
     <script>
-      // Theme-aware favicon switching
-      (function() {
-        const favicon = document.getElementById('favicon');
-        const appleTouch = document.getElementById('apple-touch');
-        
-        function updateFavicon() {
-          // Check data-theme attribute first, then fall back to localStorage
-          let theme = document.documentElement.getAttribute('data-theme');
-          if (!theme) {
-            theme = localStorage.getItem('theme') || 
-              (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-          }
-          const isDark = theme === 'dark';
-          
-          favicon.href = isDark ? '/HGFAVICON(WHITE).png' : '/HGFAVICON.png';
-          appleTouch.href = isDark ? '/HGFAVICON(WHITE).png' : '/HGFAVICON.png';
-        }
-        
-        // Run immediately
-        updateFavicon();
-        
-        // Listen for theme changes
-        const observer = new MutationObserver(updateFavicon);
-        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-      })();
+      // Set dark theme immediately (dark mode only)
+      document.documentElement.setAttribute('data-theme', 'dark');
     </script>
     
     <!-- Primary Meta Tags -->

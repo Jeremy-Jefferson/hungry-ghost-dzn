@@ -1,24 +1,17 @@
-import { useState, useEffect, createContext, useContext } from "react";
+import { useEffect, createContext, useContext } from "react";
 
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(() => {
-    // Check localStorage first, then system preference
-    if (typeof window === 'undefined') return 'light';
-    const stored = localStorage.getItem("theme");
-    if (stored) return stored;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  });
+  // Site is dark-mode only - no theme switching
+  const theme = 'dark';
 
   useEffect(() => {
-    // Update document class and localStorage when theme changes
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+    document.documentElement.setAttribute("data-theme", 'dark');
+  }, []);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    // Theme toggle disabled - dark mode only
   };
 
   return (
