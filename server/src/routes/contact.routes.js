@@ -55,6 +55,200 @@ const isValidEmail = (email) => {
     return emailRegex.test(email);
 };
 
+// Send auto-response email to client
+const sendAutoResponse = async (transporter, clientEmail, clientName) => {
+    const fromEmail = process.env.SMTP_FROM || `"Hungry Ghost DEV" <noreply@hungryghost.design}>`;
+    const websiteUrl = process.env.CLIENT_ORIGIN?.replace(/^https?:\/\//, '') || 'hungryghost.design';
+
+    const autoResponseSubject = `We received your inquiry – Hungry Ghost DEV`;
+
+    const autoResponseText = `Hi ${clientName},
+
+Thank you for reaching out to Hungry Ghost DEV!
+
+We've received your message and we're reviewing your project details. Here's what happens next:
+
+1. We'll review your inquiry within 24-48 hours
+2. If it's a good fit, we'll reach out to schedule a discovery call
+3. From there, we'll discuss your project scope and timeline
+
+In the meantime, feel free to learn more about our work:
+${process.env.CLIENT_ORIGIN || 'https://hungryghost.design'}/work
+
+Looking forward to potentially working together!
+
+— The Hungry Ghost DEV Team
+
+---
+Hungry Ghost DEV
+${websiteUrl}`
+    .trim();
+
+    const autoResponseHtml = `
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you for your inquiry</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #0a0a0a;
+            line-height: 1.6;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            background-color: #0a0a0a;
+        }
+        .header { 
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%); 
+            padding: 40px 30px; 
+            text-align: center;
+            border-bottom: 2px solid #00a8a8;
+        }
+        .logo { 
+            font-size: 28px; 
+            font-weight: 700; 
+            color: #ffffff;
+            letter-spacing: 2px;
+        }
+        .logo-accent {
+            color: #00a8a8;
+        }
+        .content { 
+            padding: 40px 30px; 
+            background-color: #111111;
+        }
+        .greeting {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .message {
+            color: #b0b0b0;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+        .steps {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .steps-title {
+            color: #00a8a8;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+        .step-number {
+            background: #00a8a8;
+            color: #0a0a0a;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .step-text {
+            font-size: 14px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #00a8a8;
+            color: #0a0a0a;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 20px;
+            transition: background-color 0.2s ease;
+        }
+        .cta-button:hover {
+            background-color: #00c4c4;
+        }
+        .footer { 
+            text-align: center; 
+            padding: 30px;
+            color: #666666;
+            font-size: 12px;
+            border-top: 1px solid #222222;
+        }
+        .footer-link {
+            color: #00a8a8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">HUNGRY <span class="logo-accent">GHOST</span> DEV</div>
+        </div>
+        <div class="content">
+            <div class="greeting">Thanks for reaching out, ${clientName}!</div>
+            <div class="message">
+                We've received your message and we're excited to learn more about your project. Our team reviews every inquiry personally, so you'll hear back from us within 24-48 hours.
+            </div>
+            
+            <div class="steps">
+                <div class="steps-title">What happens next</div>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <span class="step-text">We'll review your project details and determine if we're a good fit</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-text">If it's a match, we'll reach out to schedule a discovery call</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-text">We'll discuss your vision, scope, and timeline</span>
+                </div>
+            </div>
+
+            <a href="${process.env.CLIENT_ORIGIN || 'https://hungryghost.design'}/work" class="cta-button">
+                View Our Work
+            </a>
+        </div>
+        <div class="footer">
+            <p>— The Hungry Ghost DEV Team</p>
+            <p>
+                <a href="${process.env.CLIENT_ORIGIN || 'https://hungryghost.design'}" class="footer-link">hungryghost.design</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>`.trim();
+
+    await transporter.sendMail({
+        from: fromEmail,
+        to: clientEmail,
+        subject: autoResponseSubject,
+        text: autoResponseText,
+        html: autoResponseHtml,
+    });
+};
+
 /* ---------------------------
    Contact Form Submission
 ---------------------------- */
@@ -267,6 +461,14 @@ SUBMITTED: ${new Date().toLocaleString()}
             text: emailText,
             html: emailHtml,
         });
+
+        // Send auto-response email to client
+        try {
+            await sendAutoResponse(transporter, sanitizedEmail, sanitizedName);
+        } catch (autoResponseError) {
+            // Log but don't fail the request if auto-response fails
+            console.error("Auto-response email error:", autoResponseError);
+        }
 
         res.setHeader("Content-Type", "application/json");
         res.status(200).json({
