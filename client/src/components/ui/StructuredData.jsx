@@ -15,7 +15,7 @@ export default function StructuredData() {
         "@type": "Organization",
         "@id": "https://hungryghost.dev/#organization",
         "name": "Hungry Ghost DEV",
-        "alternateName": "Hungry Ghost DZN",
+        "alternateName": "Hungry Ghost DEV",
         "url": "https://hungryghost.dev",
         "logo": "https://hungryghost.dev/src/assets/images/LOGO.webp",
         "description": "Hungry Ghost DEV creates intentional brand systems, high-impact websites, and premium UI/UX experiences where clarity, usability, and performance matter.",
