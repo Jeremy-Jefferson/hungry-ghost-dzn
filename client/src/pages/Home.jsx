@@ -7,7 +7,7 @@ import { usePageTitle } from "../hooks/usePageTitle.js";
 import { useParallax } from "../hooks/useParallax.js";
 
 const featuredWork = work.filter((w) => w.featured).sort((a, b) => {
-    // Put Hungry Ghost DZN site first, then alternate between brand and web
+    // Put Hungry Ghost DEV site first, then alternate between brand and web
     if (a.slug === "hungry-ghost-dzn-site") return -1;
     if (b.slug === "hungry-ghost-dzn-site") return 1;
     // Then show one of each category for variety

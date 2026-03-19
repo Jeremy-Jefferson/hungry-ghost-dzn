@@ -14,11 +14,11 @@ export default function StructuredData() {
       {
         "@type": "Organization",
         "@id": "https://hungryghost.dev/#organization",
-        "name": "Hungry Ghost DZN",
-        "alternateName": "Hungry Ghost DEV",
+        "name": "Hungry Ghost DEV",
+        "alternateName": "Hungry Ghost DZN",
         "url": "https://hungryghost.dev",
         "logo": "https://hungryghost.dev/src/assets/images/LOGO.webp",
-        "description": "Hungry Ghost DZN creates intentional brand systems, high-impact websites, and premium UI/UX experiences where clarity, usability, and performance matter.",
+        "description": "Hungry Ghost DEV creates intentional brand systems, high-impact websites, and premium UI/UX experiences where clarity, usability, and performance matter.",
         "foundingDate": "2020",
         "numberOfEmployees": {
           "@type": "QuantitativeValue",
@@ -50,7 +50,7 @@ export default function StructuredData() {
         "@type": "WebSite",
         "@id": "https://hungryghost.dev/#website",
         "url": "https://hungryghost.dev",
-        "name": "Hungry Ghost DZN",
+        "name": "Hungry Ghost DEV",
         "publisher": {
           "@id": "https://hungryghost.dev/#organization"
         },
@@ -90,23 +90,23 @@ export default function StructuredData() {
 // Helper function to get page-specific titles
 function getPageTitle(pathname) {
   const titles = {
-    "/": "Hungry Ghost DZN — UI/UX & Web Development Studio",
-    "/work": "Our Work — Hungry Ghost DZN",
-    "/services": "Services — Hungry Ghost DZN",
-    "/about": "About — Hungry Ghost DZN",
-    "/process": "Our Process — Hungry Ghost DZN",
-    "/contact": "Contact — Hungry Ghost DZN",
-    "/privacy": "Privacy Policy — Hungry Ghost DZN",
-    "/terms": "Terms of Service — Hungry Ghost DZN"
+    "/": "Hungry Ghost DEV — UI/UX & Web Development Studio",
+    "/work": "Our Work — Hungry Ghost DEV",
+    "/services": "Services — Hungry Ghost DEV",
+    "/about": "About — Hungry Ghost DEV",
+    "/process": "Our Process — Hungry Ghost DEV",
+    "/contact": "Contact — Hungry Ghost DEV",
+    "/privacy": "Privacy Policy — Hungry Ghost DEV",
+    "/terms": "Terms of Service — Hungry Ghost DEV"
   };
 
   // Check for work category pages
   if (pathname.startsWith("/work/brand-systems")) {
-    return "Brand Systems & Identity Design — Hungry Ghost DZN";
+    return "Brand Systems & Identity Design — Hungry Ghost DEV";
   }
   if (pathname.startsWith("/work/ui-ux-web-dev")) {
-    return "Web Development & UI/UX Design — Hungry Ghost DZN";
+    return "Web Development & UI/UX Design — Hungry Ghost DEV";
   }
 
-  return titles[pathname] || "Hungry Ghost DZN — UI/UX & Web Development Studio";
+  return titles[pathname] || "Hungry Ghost DEV — UI/UX & Web Development Studio";
 }

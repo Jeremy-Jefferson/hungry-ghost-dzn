@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
               1. Introduction
             </h2>
             <p>
-              Hungry Ghost DZN ("we," "our," or "us") operates the website hungryghost.dev. 
+              Hungry Ghost DEV ("we," "our," or "us") operates the website hungryghost.dev. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your 
               information when you visit our website.
             </p>

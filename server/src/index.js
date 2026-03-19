@@ -126,7 +126,7 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
     console.log(`
-  🚀 Hungry Ghost DZN API
+  🚀 Hungry Ghost DEV API
   ➜ Environment: ${process.env.NODE_ENV || "development"}
   ➜ Running on: http://localhost:${PORT}
   `);

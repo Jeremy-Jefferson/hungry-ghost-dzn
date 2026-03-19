@@ -31,7 +31,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'Hungry Ghost DZN',
+        name: 'Hungry Ghost DEV',
         short_name: 'Hungry Ghost',
         description: 'Brand, Web & Graphic Design Studio',
         theme_color: '#0b0b0b',

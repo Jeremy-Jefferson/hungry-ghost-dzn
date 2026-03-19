@@ -50,7 +50,7 @@ export default function TermsOfService() {
               2. Description of Service
             </h2>
             <p style={{ marginBottom: '12px' }}>
-              Hungry Ghost DZN is a creative design and development studio offering:
+              Hungry Ghost DEV is a creative design and development studio offering:
             </p>
             <ul style={{ paddingLeft: '24px', marginBottom: '16px' }}>
               <li>Brand identity and design systems</li>
@@ -190,7 +190,7 @@ export default function TermsOfService() {
               8. Indemnification
             </h2>
             <p>
-              You agree to indemnify, defend, and hold harmless Hungry Ghost DZN and its 
+              You agree to indemnify, defend, and hold harmless Hungry Ghost DEV and its 
               officers, directors, employees, agents, and affiliates from and against any 
               and all claims, damages, losses, costs, and expenses (including reasonable 
               attorneys' fees) arising out of or relating to your use of this Website or 
@@ -209,7 +209,7 @@ export default function TermsOfService() {
             </h2>
             <p>
               Our Website may contain links to third-party websites that are not owned or 
-              controlled by Hungry Ghost DZN. We have no control over and assume no 
+              controlled by Hungry Ghost DEV. We have no control over and assume no 
               responsibility for the content, privacy policies, or practices of any 
               third-party websites. You access such links at your own risk.
             </p>
@@ -226,7 +226,7 @@ export default function TermsOfService() {
             </h2>
             <p>
               These Terms shall be governed by and construed in accordance with the laws of 
-              the jurisdiction in which Hungry Ghost DZN operates, without regard to its 
+              the jurisdiction in which Hungry Ghost DEV operates, without regard to its 
               conflict of law provisions.
             </p>
           </section>
@@ -257,7 +257,7 @@ export default function TermsOfService() {
               12. Entire Agreement
             </h2>
             <p>
-              These Terms constitute the entire agreement between you and Hungry Ghost DZN 
+              These Terms constitute the entire agreement between you and Hungry Ghost DEV 
               regarding the use of this Website and supersede all prior or contemporaneous 
               agreements, representations, warranties, and understandings.
             </p>

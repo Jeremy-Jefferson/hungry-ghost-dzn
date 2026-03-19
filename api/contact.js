@@ -287,7 +287,7 @@ SUBMITTED: ${new Date().toLocaleString()}
     const recipientEmail = process.env.CONTACT_EMAIL || 'therealhungryghost@gmail.com';
     
     const info = await transporter.sendMail({
-      from: process.env.SMTP_FROM || `"Hungry Ghost DZN" <${process.env.SMTP_USER || 'noreply@hungryghost.design'}>`,
+      from: process.env.SMTP_FROM || `"Hungry Ghost DEV" <${process.env.SMTP_USER || 'noreply@hungryghost.dev'}>`,
       to: recipientEmail,
       replyTo: sanitizedEmail,
       subject: 'New Inquiry from Book/Contact Page',

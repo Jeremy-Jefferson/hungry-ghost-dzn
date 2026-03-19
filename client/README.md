@@ -1,6 +1,6 @@
-# Hungry Ghost DZN — Studio Website
+# Hungry Ghost DEV — Studio Website
 
-Hungry Ghost DZN is a design and development studio focused on **intentional brand systems, striking visuals, and high-impact websites built for performance**.
+Hungry Ghost DEV is a design and development studio focused on **intentional brand systems, striking visuals, and high-impact websites built for performance**.
 
 This repository contains the **official studio website and portfolio**, built using a modern React architecture and designed to showcase brand identity work, graphic design, and web projects.
 
@@ -18,7 +18,7 @@ Coming soon.
 
 # Overview
 
-The Hungry Ghost DZN website serves as both:
+The Hungry Ghost DEV website serves as both:
 
 • A **studio presence** for potential clients
 • A **portfolio platform** showcasing design and development work
@@ -156,7 +156,7 @@ This structure supports **scalable growth as additional case studies and project
 
 # Design Philosophy
 
-Hungry Ghost DZN focuses on **clarity through systems**.
+Hungry Ghost DEV focuses on **clarity through systems**.
 
 Every project prioritizes:
 
@@ -228,9 +228,9 @@ Planned improvements include:
 
 ---
 
-# About Hungry Ghost DZN
+# About Hungry Ghost DEV
 
-Hungry Ghost DZN is a studio focused on building **intentional brand systems and high-impact digital experiences**.
+Hungry Ghost DEV is a studio focused on building **intentional brand systems and high-impact digital experiences**.
 
 The studio combines:
 
@@ -247,7 +247,7 @@ The goal is to produce work that is **visually striking, structurally sound, and
 # Author
 
 Jeremy
-Founder — Hungry Ghost DZN
+Founder — Hungry Ghost DEV
 
 Front-End Developer, Designer, and Illustrator specializing in **brand systems, UI design, and scalable frontend architecture**.
 
@@ -255,9 +255,9 @@ Front-End Developer, Designer, and Illustrator specializing in **brand systems, 
 
 # License
 
-This repository contains the source code for the Hungry Ghost DZN website and portfolio.
+This repository contains the source code for the Hungry Ghost DEV website and portfolio.
 
-All design work and branding contained in this repository are the intellectual property of **Hungry Ghost DZN**.
+All design work and branding contained in this repository are the intellectual property of **Hungry Ghost DEV**.
 
 ---
 
