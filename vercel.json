@@ -3,7 +3,7 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "client/dist",
-  "installCommand": "npm install",
+"installCommand": "pnpm install --frozen-lockfile"
   "devCommand": "npm run dev",
   "github": {
     "enabled": true,
