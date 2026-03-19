@@ -1159,7 +1159,7 @@ a:hover {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--color-text);
+  background: var(--color-text-primary);
   border-radius: 2px;
   transition:
     transform 0.3s ease,
@@ -1264,15 +1264,48 @@ a:hover {
     order: -1;
     animation: ghostFloat 8s ease-in-out infinite;
     will-change: transform;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    text-align: center;
   }
 
   .hero__media img {
-    max-width: 320px;
+    max-width: 252px; /* 10% smaller than 280px */
+    width: 100%;
+    height: auto;
     margin: 0 auto;
+    display: block;
   }
 
   .hero__cta {
     justify-content: center;
+  }
+}
+
+/* Ensure hero image is visible on tablet portrait */
+@media (min-width: 600px) and (max-width: 900px) {
+  .hero__media {
+    text-align: center;
+  }
+  .hero__media img {
+    max-width: 324px; /* 10% smaller than 360px */
+    margin: 0 auto;
+  }
+}
+
+/* Mobile hero adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-6) var(--space-4);
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .hero::before,
+  .hero::after {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -1324,7 +1357,7 @@ a:hover {
 
 .hero__media img {
   width: 100%;
-  max-width: 560px;
+  max-width: 504px; /* 10% smaller than 560px */
   height: auto;
   display: block;
   filter: drop-shadow(0 0 30px var(--brand-teal));
