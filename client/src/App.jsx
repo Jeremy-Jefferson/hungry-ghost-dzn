@@ -29,7 +29,6 @@ const BrandDesign = lazy(() => import("./pages/Work/BrandDesign.jsx"));
 const WebDesign = lazy(() => import("./pages/Work/WebDesign.jsx"));
 const CaseStudy = lazy(() => import("./pages/Work/CaseStudy.jsx"));
 
-/* Loading fallback component */
 function PageLoader() {
   return (
     <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
@@ -54,30 +53,24 @@ export default function App() {
           <PageTransition>
             <main id="main-content" className="page-main" tabIndex="-1">
               <Routes>
-                {/* Home */}
                 <Route path="/" element={<Home />} />
 
-                {/* Work — category listing pages */}
                 <Route path="/work" element={<WorkLayout />}>
                   <Route index element={<WorkIndex />} />
                   <Route path="brand-systems" element={<BrandDesign />} />
                   <Route path="ui-ux-web-dev" element={<WebDesign />} />
                 </Route>
 
-                {/* Case Study — standalone */}
                 <Route path="/work/:category/:slug" element={<CaseStudy />} />
 
-                {/* Standalone Pages */}
                 <Route path="/services" element={<Services />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/process" element={<Process />} />
                 <Route path="/contact" element={<Contact />} />
 
-                {/* Legal Pages */}
                 <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="/terms" element={<TermsOfService />} />
 
-                {/* 404 */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
