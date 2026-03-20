@@ -134,7 +134,7 @@ export default defineConfig({
     // Disable sourcemaps for production to reduce bundle size
     sourcemap: true,
     // Minify for production (using esbuild which is faster and more reliable)
-    minify: 'esbuild',
+    minify: false, // Disable for prod debug (re-enable after fix)
     esbuild: {
       target: 'es2022'
     },

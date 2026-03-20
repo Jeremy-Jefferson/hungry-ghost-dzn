@@ -25,7 +25,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // Determine if we should use StrictMode (disable in production for performance)
-const useStrictMode = import.meta.env.DEV;
+const useStrictMode = true; // Enable in prod to catch hook races
 
 // Wait for DOM fully ready before rendering (PWA safety)
 if (document.readyState === 'loading') {
