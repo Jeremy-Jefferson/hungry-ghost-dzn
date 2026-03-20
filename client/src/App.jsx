@@ -31,11 +31,11 @@ const CaseStudy = lazy(() => import("./pages/Work/CaseStudy.jsx"));
 
 /* Loading fallback component */
 function PageLoader() {
-    return (
-        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-            <SkeletonHero />
-        </div>
-    );
+  return (
+    <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+      <SkeletonHero />
+    </div>
+  );
 }
 
 export default function App() {
@@ -45,6 +45,7 @@ export default function App() {
       <StructuredData />
       <SEO />
       <a href="#main-content" className="skip-link">Skip to main content</a>
+
       <div className="site-shell">
         <ScrollToTop />
         <Navbar />
@@ -53,32 +54,33 @@ export default function App() {
           <PageTransition>
             <main id="main-content" className="page-main" tabIndex="-1">
               <Routes>
-            {/* Home */}
-            <Route path="/" element={<Home />} />
+                {/* Home */}
+                <Route path="/" element={<Home />} />
 
-            {/* Work — category listing pages */}
-            <Route path="/work" element={<WorkLayout />}>
-              <Route index element={<WorkIndex />} />
-              <Route path="brand-systems" element={<BrandDesign />} />
-              <Route path="ui-ux-web-dev" element={<WebDesign />} />
-            </Route>
+                {/* Work — category listing pages */}
+                <Route path="/work" element={<WorkLayout />}>
+                  <Route index element={<WorkIndex />} />
+                  <Route path="brand-systems" element={<BrandDesign />} />
+                  <Route path="ui-ux-web-dev" element={<WebDesign />} />
+                </Route>
 
-            {/* Case Study — standalone (no WorkLayout header) */}
-            <Route path="/work/:category/:slug" element={<CaseStudy />} />
+                {/* Case Study — standalone */}
+                <Route path="/work/:category/:slug" element={<CaseStudy />} />
 
-            {/* Standalone Pages */}
-            <Route path="/services" element={<Services />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/process" element={<Process />} />
-            <Route path="/contact" element={<Contact />} />
+                {/* Standalone Pages */}
+                <Route path="/services" element={<Services />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/process" element={<Process />} />
+                <Route path="/contact" element={<Contact />} />
 
-            {/* Legal Pages */}
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<TermsOfService />} />
+                {/* Legal Pages */}
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<TermsOfService />} />
 
-            {/* 404 */}
-          </Routes>
-          </main>
+                {/* 404 */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
           </PageTransition>
         </Suspense>
       </div>
