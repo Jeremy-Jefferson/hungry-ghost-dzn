@@ -1,16 +1,15 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
-  "installCommand": "cd client && npm install",
-  "buildCommand": "cd client && npm run build",
+"installCommand":"cd client && pnpm install",
+"buildCommand":"cd client && pnpm run build",
   "outputDirectory": "client/dist",
-  "devCommand": "cd client && npm run dev",
-  "functions": {
-    "api/contact.js": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
+"devCommand":"cd client && pnpm run dev",
+    "functions": {
+      "api/contact.js": {
+        "maxDuration": 10
+      }
+    },
   "rewrites": [
     {
       "source": "/api/(.*)",

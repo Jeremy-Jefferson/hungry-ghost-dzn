@@ -1,19 +1,18 @@
-## TODO: Fix Vercel Deployment
+# TODO: Fix React useRef null error & black screen in production build
 
-## TODO: Fix Vercel Deployment
+## Steps:
 
-## TODO: Fix Vercel Deployment
-
-## TODO: Fix Vercel Deployment
-
-✅ **Step 1**: Create TODO.md with task list.
-
-✅ **Step 2**: Update vercel.json installCommand to "pnpm install --frozen-lockfile".
-
-✅ **Step 3**: Run `pnpm install` in root.
-
-✅ **Step 4**: Commit changes: `git add . && git commit -m "fix: use pnpm for Vercel deploy" && git push`.
-
-✅ **Step 5**: Redeploy on Vercel (automatic on push).
-
-**Step 6**: Verify build succeeds, attempt_completion.
+1. ✅ Step 1: Update vite.config.js with React-safe production build settings
+   - target: 'es2020'
+   - Mild esbuild (remove aggressive drops)
+   - sourcemap: true
+   
+2. ✅ Update main.jsx with root safety check
+   
+ 3. ⏭️ Skipped: Minor Navbar safety (not needed)
+   
+ 4. ✅ Test: Local build & preview passed (no errors, content renders)
+   
+ 5. ✅ Deploy Vercel --prod complete
+   Production URL: https://hungry-ghost-dzn-client-8vfa6sx54-jeremy-e-jeffersons-projects.vercel.app
+   Test: Hard refresh (Ctrl+Shift+R), unregister SW in DevTools > Application > Service Workers

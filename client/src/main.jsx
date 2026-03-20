@@ -27,20 +27,35 @@ if ('serviceWorker' in navigator) {
 // Determine if we should use StrictMode (disable in production for performance)
 const useStrictMode = import.meta.env.DEV;
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  useStrictMode ? (
-    <React.StrictMode>
+// Wait for DOM fully ready before rendering (PWA safety)
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderApp);
+} else {
+  renderApp();
+}
+
+function renderApp() {
+  const rootElement = document.getElementById('root');
+  if (!rootElement) {
+    console.error('Root element #root not found');
+    return;
+  }
+
+  ReactDOM.createRoot(rootElement).render(
+    useStrictMode ? (
+      <React.StrictMode>
+        <BrowserRouter>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </BrowserRouter>
+      </React.StrictMode>
+    ) : (
       <BrowserRouter>
         <ThemeProvider>
           <App />
         </ThemeProvider>
       </BrowserRouter>
-    </React.StrictMode>
-  ) : (
-    <BrowserRouter>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </BrowserRouter>
-  )
-);
+    )
+  );
+}

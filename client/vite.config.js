@@ -132,24 +132,14 @@ export default defineConfig({
     // Optimize chunk size
     chunkSizeWarningLimit: 500,
     // Disable sourcemaps for production to reduce bundle size
-    sourcemap: false,
+    sourcemap: true,
     // Minify for production (using esbuild which is faster and more reliable)
     minify: 'esbuild',
-    esbuildOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-      },
-      mangle: {
-        safari10: true,
-      },
-      format: {
-        comments: false,
-      },
+    esbuild: {
+      target: 'es2022'
     },
     // Target modern browsers for smaller bundles
-    target: 'esnext',
+    target: 'es2020',
     // Improve tree shaking
     treeShaking: true,
     // Generate report for analyzing bundle
