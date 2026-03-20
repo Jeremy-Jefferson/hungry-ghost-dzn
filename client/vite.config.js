@@ -29,7 +29,7 @@ export default defineConfig({
     }),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
+      includeAssets: ['HGFAVICON(WHITE).png', 'robots.txt'],
       manifest: {
         name: 'Hungry Ghost DEV',
         short_name: 'Hungry Ghost',
@@ -39,12 +39,12 @@ export default defineConfig({
         display: 'standalone',
         icons: [
           {
-            src: 'HGFAVICON.png',
+            src: 'HGFAVICON(WHITE).png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'HGFAVICON.png',
+            src: 'HGFAVICON(WHITE).png',
             sizes: '512x512',
             type: 'image/png'
           },
@@ -132,12 +132,9 @@ export default defineConfig({
     // Optimize chunk size
     chunkSizeWarningLimit: 500,
     // Disable sourcemaps for production to reduce bundle size
-    sourcemap: true,
-    // Minify for production (using esbuild which is faster and more reliable)
-    minify: false, // Disable for prod debug (re-enable after fix)
-    esbuild: {
-      target: 'es2022'
-    },
+    sourcemap: false,
+    // Minify for production
+    minify: 'esbuild',
     // Target modern browsers for smaller bundles
     target: 'es2020',
     // Improve tree shaking
