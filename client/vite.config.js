@@ -133,9 +133,9 @@ export default defineConfig({
     chunkSizeWarningLimit: 500,
     // Disable sourcemaps for production to reduce bundle size
     sourcemap: false,
-    // Minify for production
-    minify: 'terser',
-    terserOptions: {
+    // Minify for production (using esbuild which is faster and more reliable)
+    minify: 'esbuild',
+    esbuildOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
