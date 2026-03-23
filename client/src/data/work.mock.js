@@ -179,7 +179,7 @@ export const work = [
         ],
 
         cover: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-01.webp",
-        liveUrl: "https://littleyorksmokeshop.com",
+        liveUrl: "https://sapphire-developments-mim5lo542-jeremy-e-jeffersons-projects.vercel.app/",
 
         content: {
 
