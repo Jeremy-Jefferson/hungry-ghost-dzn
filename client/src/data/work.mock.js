@@ -179,6 +179,7 @@ export const work = [
         ],
 
         cover: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-01.webp",
+        liveUrl: "https://littleyorksmokeshop.com",
 
         content: {
 
