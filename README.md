@@ -50,7 +50,7 @@ The project reflects a hybrid approach that combines **visual design thinking wi
 
 ## Live Site
 
-**Website:** [hungryghost.dev](https://hungryghost.dev)
+**Website:** https://www.hungryghost.dev/
 
 ---
 
