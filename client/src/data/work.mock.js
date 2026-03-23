@@ -161,6 +161,256 @@ export const work = [
     },
 
     {
+        slug: "sapphire-site-concept",
+        title: "Sapphire Developments — Luxury Real Estate Platform Concept",
+        category: "ui-ux-web-dev",
+        year: 2023,
+        featured: true,
+
+        summary:
+            "Luxury real estate platform concept built to showcase premium property discovery through elegant UI, structured browsing, and responsive front-end development.",
+
+        tags: [
+            "Luxury Real Estate",
+            "Product UI",
+            "React",
+            "Responsive Design",
+            "Front-End Development"
+        ],
+
+        cover: "/images/work/WEB/SAPPHIRE.webp",
+
+        content: {
+
+            role: "UI/UX Design, Front-End Development",
+            client: "Concept Project",
+
+            overview:
+                "Sapphire Developments is a luxury real estate web concept created to explore how high-end properties could be discovered, browsed, and evaluated online. The project focused on designing a browsing experience that feels polished and aspirational while still remaining easy to navigate, structured, and trustworthy.",
+
+            challenge:
+                "Luxury real estate platforms must balance aspirational presentation with practical browsing. Many listing sites either feel visually generic or overload users with dense information, making exploration feel clunky instead of premium. The challenge here was to create an interface that feels elevated and visually immersive without sacrificing clarity, navigation, or usability.",
+
+            solution:
+                "The interface was designed around strong visual hierarchy, spacious layouts, and image-first presentation. Large property photography helps establish quality and atmosphere immediately, while restrained typography, clean spacing, and clear sectioning support faster scanning. Search, filtering, and listing modules were structured to keep the browsing flow intuitive while reinforcing a polished, high-value brand feel.",
+
+            outcome:
+                "The result is a refined real estate browsing concept that demonstrates both product thinking and front-end execution. The project shows how thoughtful hierarchy, elegant UI structure, and reusable development patterns can create a premium property discovery experience that feels both credible and easy to use.",
+
+            processSteps: [
+                "UX Strategy",
+                "UI Design",
+                "Development",
+                "Refinement"
+            ],
+
+            interfaceWalkthrough: [
+
+                {
+                    title: "Landing Page Experience",
+                    description:
+                        "The landing page introduces the platform with a prominent hero image, focused headline, and immediate search controls so users can begin browsing high-end properties without friction.",
+                    image: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-01.webp"
+                },
+
+                {
+                    title: "Properties Grid View",
+                    description:
+                        "The listings grid was designed for scanability, allowing users to compare imagery, price, location, and property details quickly while maintaining a premium presentation.",
+                    image: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-03.webp"
+                },
+
+                {
+                    title: "Contact Page",
+                    description:
+                        "The contact experience was designed to feel clean, direct, and trustworthy, giving users a clear path to inquire without friction while reinforcing the brand’s credibility through structured layout and supporting details.",
+                    image: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-02.webp"
+                },
+
+
+
+            ],
+
+            uiux: {
+
+                userGoals: [
+                    "Browse luxury property listings",
+                    "Compare homes by location, price, and style",
+                    "View property details and imagery",
+                    "Filter by category and browsing intent",
+                    "Contact agents for inquiry"
+                ],
+
+                navigation:
+                    "Browse-first navigation supported by top-level menu structure, category pathways, and prominent search controls.",
+
+                informationArchitecture:
+                    "Home → Search / Browse → Listings Grid → Property Details → Inquiry / Contact",
+
+                visualHierarchy:
+                    "Large photography, bold headings, restrained supporting text, and clean spacing create a premium and highly scannable browsing experience.",
+
+                components: [
+                    "Hero search module",
+                    "Location cards",
+                    "Category cards",
+                    "Property listing cards",
+                    "Inquiry/contact form",
+                    "Footer navigation system"
+                ],
+
+                responsive:
+                    "Responsive layouts were planned so the browsing experience could adapt cleanly across desktop, tablet, and mobile screen sizes."
+            },
+
+            interfaceDesign: {
+
+                visualSystem:
+                    "The visual language uses a restrained deep-blue palette, clean card structures, generous whitespace, and editorial-style imagery to establish trust and sophistication.",
+
+                layoutApproach:
+                    "Sections were organized to alternate between spacious presentation and structured browsing modules, helping users move naturally from discovery into comparison.",
+
+                componentStrategy:
+                    "Repeated UI patterns such as cards, filters, navigation links, and form elements were designed to feel consistent and reusable across the experience.",
+
+                accessibility:
+                    "Typography scale, contrast hierarchy, and clear button structure were considered to improve readability and interaction clarity."
+
+            },
+
+            developmentSummary: {
+
+                architecture:
+                    "Built as a React-based front-end concept using reusable UI sections and listing components to support scalable page construction.",
+
+                features: [
+                    "Property browsing interface",
+                    "Responsive layout structure",
+                    "Reusable card-based sections",
+                    "Interactive search and listing patterns"
+                ],
+
+                performance:
+                    "Structured as a lightweight front-end prototype with modular sections and reusable components for maintainability and future expansion."
+
+            },
+
+            developmentImplementation: {
+
+                architecture: [
+
+                    {
+                        title: "Reusable Listing Components",
+
+                        description:
+                            "Property listings were structured as reusable React components so the same UI pattern could scale across landing sections, featured inventory, and listing grids.",
+
+                        code: `function PropertyCard({ property }) {
+  return (
+    <article className="property-card">
+      <img src={property.image} alt={property.title} />
+      <div className="property-card__body">
+        <h3>{property.title}</h3>
+        <p>{property.location}</p>
+        <span>{property.price}</span>
+      </div>
+    </article>
+  );
+}`
+                    },
+
+                    {
+                        title: "Section-Based Page Composition",
+
+                        description:
+                            "The interface was broken into modular page sections such as hero, categories, listings, and contact, making the layout easier to maintain and extend.",
+
+                        code: `<>
+  <HeroSection />
+  <PropertiesByCity />
+  <PropertyCategories />
+  <LatestListings />
+  <ContactSection />
+</>`
+                    }
+
+                ],
+
+                dataModel: [
+
+                    {
+                        title: "Structured Property Data",
+
+                        description:
+                            "Listings were organized as structured objects, making it easier to render consistent cards and scale the inventory system later.",
+
+                        code: `const property = {
+  id: 1,
+  title: "2166 Marlin Ct.",
+  location: "Miami, FL",
+  price: "$2,660,840",
+  bedrooms: 4,
+  bathrooms: 4,
+  sqft: 2096,
+  image: "/images/property-1.jpg"
+};`
+                    }
+
+                ],
+
+                uiLogic: [
+
+                    {
+                        title: "Client-Side Browsing Logic",
+
+                        description:
+                            "Search and category filtering were designed to support fast browsing interactions without forcing users through unnecessary page reloads.",
+
+                        code: `const filteredProperties = properties.filter((property) => {
+  return selectedCity
+    ? property.location.includes(selectedCity)
+    : true;
+});`
+                    },
+
+                    {
+                        title: "Responsive Card Grid Behavior",
+
+                        description:
+                            "Card-based layouts were used to support flexible browsing across screen sizes while keeping content blocks visually consistent.",
+
+                        code: `.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}`
+                    }
+
+                ]
+
+            },
+
+            techStack: [
+                "React",
+                "JavaScript",
+                "CSS",
+                "Responsive Layout System",
+                "Figma"
+            ],
+
+            gallery: [
+                "/images/work/WEB/SAPPHIRE.webp",
+                "/images/work/WEB/SAPPHIRE-LANDING.webp",
+                "/images/work/WEB/SAPPHIRE-PROPERTIES.webp"
+            ],
+
+            relatedProjects: []
+
+        }
+    },
+
+    {
         slug: "little-york-smoke-shop-site",
         title: "Little York Smoke Shop Website",
         category: "ui-ux-web-dev",
@@ -457,253 +707,7 @@ sections.map((section) => (
         }
     },
 
-    {
-        slug: "sapphire-site-concept",
-        title: "Sapphire Developments — Luxury Real Estate Platform Concept",
-        category: "ui-ux-web-dev",
-        year: 2023,
-        featured: true,
 
-        summary:
-            "Luxury real estate platform concept built to showcase premium property discovery through elegant UI, structured browsing, and responsive front-end development.",
-
-        tags: [
-            "Luxury Real Estate",
-            "Product UI",
-            "React",
-            "Responsive Design",
-            "Front-End Development"
-        ],
-
-        cover: "/images/work/WEB/SAPPHIRE.webp",
-
-        content: {
-
-            role: "UI/UX Design, Front-End Development",
-            client: "Concept Project",
-
-            overview:
-                "Sapphire Developments is a luxury real estate web concept created to explore how high-end properties could be discovered, browsed, and evaluated online. The project focused on designing a browsing experience that feels polished and aspirational while still remaining easy to navigate, structured, and trustworthy.",
-
-            challenge:
-                "Luxury real estate platforms must balance aspirational presentation with practical browsing. Many listing sites either feel visually generic or overload users with dense information, making exploration feel clunky instead of premium. The challenge here was to create an interface that feels elevated and visually immersive without sacrificing clarity, navigation, or usability.",
-
-            solution:
-                "The interface was designed around strong visual hierarchy, spacious layouts, and image-first presentation. Large property photography helps establish quality and atmosphere immediately, while restrained typography, clean spacing, and clear sectioning support faster scanning. Search, filtering, and listing modules were structured to keep the browsing flow intuitive while reinforcing a polished, high-value brand feel.",
-
-            outcome:
-                "The result is a refined real estate browsing concept that demonstrates both product thinking and front-end execution. The project shows how thoughtful hierarchy, elegant UI structure, and reusable development patterns can create a premium property discovery experience that feels both credible and easy to use.",
-
-            processSteps: [
-                "UX Strategy",
-                "UI Design",
-                "Development",
-                "Refinement"
-            ],
-
-            interfaceWalkthrough: [
-
-                {
-                    title: "Landing Page Experience",
-                    description:
-                        "The landing page introduces the platform with a prominent hero image, focused headline, and immediate search controls so users can begin browsing high-end properties without friction.",
-                    image: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-01.webp"
-                },
-
-                {
-                    title: "City-Based Property Discovery",
-                    description:
-                        "Featured location cards help users explore listings by destination, making the browsing experience feel curated while supporting quicker decision-making across multiple markets.",
-                    image: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-02.webp"
-                },
-
-                {
-                    title: "Properties Grid View",
-                    description:
-                        "The listings grid was designed for scanability, allowing users to compare imagery, price, location, and property details quickly while maintaining a premium presentation.",
-                    image: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-03.webp"
-                }
-
-            ],
-
-            uiux: {
-
-                userGoals: [
-                    "Browse luxury property listings",
-                    "Compare homes by location, price, and style",
-                    "View property details and imagery",
-                    "Filter by category and browsing intent",
-                    "Contact agents for inquiry"
-                ],
-
-                navigation:
-                    "Browse-first navigation supported by top-level menu structure, category pathways, and prominent search controls.",
-
-                informationArchitecture:
-                    "Home → Search / Browse → Listings Grid → Property Details → Inquiry / Contact",
-
-                visualHierarchy:
-                    "Large photography, bold headings, restrained supporting text, and clean spacing create a premium and highly scannable browsing experience.",
-
-                components: [
-                    "Hero search module",
-                    "Location cards",
-                    "Category cards",
-                    "Property listing cards",
-                    "Inquiry/contact form",
-                    "Footer navigation system"
-                ],
-
-                responsive:
-                    "Responsive layouts were planned so the browsing experience could adapt cleanly across desktop, tablet, and mobile screen sizes."
-            },
-
-            interfaceDesign: {
-
-                visualSystem:
-                    "The visual language uses a restrained deep-blue palette, clean card structures, generous whitespace, and editorial-style imagery to establish trust and sophistication.",
-
-                layoutApproach:
-                    "Sections were organized to alternate between spacious presentation and structured browsing modules, helping users move naturally from discovery into comparison.",
-
-                componentStrategy:
-                    "Repeated UI patterns such as cards, filters, navigation links, and form elements were designed to feel consistent and reusable across the experience.",
-
-                accessibility:
-                    "Typography scale, contrast hierarchy, and clear button structure were considered to improve readability and interaction clarity."
-
-            },
-
-            developmentSummary: {
-
-                architecture:
-                    "Built as a React-based front-end concept using reusable UI sections and listing components to support scalable page construction.",
-
-                features: [
-                    "Property browsing interface",
-                    "Responsive layout structure",
-                    "Reusable card-based sections",
-                    "Interactive search and listing patterns"
-                ],
-
-                performance:
-                    "Structured as a lightweight front-end prototype with modular sections and reusable components for maintainability and future expansion."
-
-            },
-
-            developmentImplementation: {
-
-                architecture: [
-
-                    {
-                        title: "Reusable Listing Components",
-
-                        description:
-                            "Property listings were structured as reusable React components so the same UI pattern could scale across landing sections, featured inventory, and listing grids.",
-
-                        code: `function PropertyCard({ property }) {
-  return (
-    <article className="property-card">
-      <img src={property.image} alt={property.title} />
-      <div className="property-card__body">
-        <h3>{property.title}</h3>
-        <p>{property.location}</p>
-        <span>{property.price}</span>
-      </div>
-    </article>
-  );
-}`
-                    },
-
-                    {
-                        title: "Section-Based Page Composition",
-
-                        description:
-                            "The interface was broken into modular page sections such as hero, categories, listings, and contact, making the layout easier to maintain and extend.",
-
-                        code: `<>
-  <HeroSection />
-  <PropertiesByCity />
-  <PropertyCategories />
-  <LatestListings />
-  <ContactSection />
-</>`
-                    }
-
-                ],
-
-                dataModel: [
-
-                    {
-                        title: "Structured Property Data",
-
-                        description:
-                            "Listings were organized as structured objects, making it easier to render consistent cards and scale the inventory system later.",
-
-                        code: `const property = {
-  id: 1,
-  title: "2166 Marlin Ct.",
-  location: "Miami, FL",
-  price: "$2,660,840",
-  bedrooms: 4,
-  bathrooms: 4,
-  sqft: 2096,
-  image: "/images/property-1.jpg"
-};`
-                    }
-
-                ],
-
-                uiLogic: [
-
-                    {
-                        title: "Client-Side Browsing Logic",
-
-                        description:
-                            "Search and category filtering were designed to support fast browsing interactions without forcing users through unnecessary page reloads.",
-
-                        code: `const filteredProperties = properties.filter((property) => {
-  return selectedCity
-    ? property.location.includes(selectedCity)
-    : true;
-});`
-                    },
-
-                    {
-                        title: "Responsive Card Grid Behavior",
-
-                        description:
-                            "Card-based layouts were used to support flexible browsing across screen sizes while keeping content blocks visually consistent.",
-
-                        code: `.properties-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}`
-                    }
-
-                ]
-
-            },
-
-            techStack: [
-                "React",
-                "JavaScript",
-                "CSS",
-                "Responsive Layout System",
-                "Figma"
-            ],
-
-            gallery: [
-                "/images/work/WEB/SAPPHIRE.webp",
-                "/images/work/WEB/SAPPHIRE-LANDING.webp",
-                "/images/work/WEB/SAPPHIRE-PROPERTIES.webp"
-            ],
-
-            relatedProjects: []
-
-        }
-    },
 
     {
         slug: "dictionary-ui",
