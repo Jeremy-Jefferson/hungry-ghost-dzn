@@ -178,7 +178,7 @@ export const work = [
             "Front-End Development"
         ],
 
-        cover: "/images/work/WEB/SAPPHIRE.webp",
+        cover: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-01.webp",
 
         content: {
 
