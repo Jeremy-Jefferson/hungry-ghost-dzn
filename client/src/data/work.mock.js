@@ -220,7 +220,7 @@ export const work = [
                     title: "Services Structure",
                     description:
                         "Service sections are presented through clean, structured layouts that prioritize readability and strategic clarity, helping users quickly understand offerings without unnecessary visual complexity.",
-                    image: "/images/work/WEB/NEO-WALKTHROUGH-02.webp.webp"
+                    image: "/images/work/WEB/NEO-WALKTHROUGH-02.webp"
                 },
 
                 {
