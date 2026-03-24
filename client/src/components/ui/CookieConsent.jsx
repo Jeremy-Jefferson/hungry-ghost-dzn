@@ -62,7 +62,7 @@ export default function CookieConsent() {
             bottom: 0,
             left: 0,
             right: 0,
-            backgroundColor: "var(--bg-primary)",
+            backgroundColor: "var(--color-surface-1)",
             borderTop: "1px solid var(--border-color)",
             padding: "24px",
             zIndex: 9999,
