@@ -161,6 +161,166 @@ export const work = [
     },
 
     {
+        slug: "neo-unlimited-site",
+        title: "Neo Unlimited — Consultancy Website",
+        category: "ui-ux-web-dev",
+        year: 2026,
+        featured: true,
+
+        summary:
+            "Premium consultancy website built to emphasize strategic clarity, restrained UI, and typography-led design through a custom React architecture.",
+
+        tags: [
+            "React",
+            "Vite",
+            "Consultancy Website",
+            "Design System",
+            "UI/UX",
+            "Front-End Development"
+        ],
+
+        cover: "/images/work/WEB/NEO-WALKTHROUGH-01.webp",
+        liveUrl: "https://neo-unlimited-9u3tvj5g4-jeremy-e-jeffersons-projects.vercel.app/",
+
+        content: {
+
+            role: "Brand Direction, UI/UX Design, Front-End Development",
+            client: "Neo Unlimited",
+
+            overview:
+                "Neo Unlimited was developed as a premium consultancy website designed to position the brand as a high-end strategic partner rather than a typical agency. The project focused on building a digital experience that communicates clarity, confidence, and restraint — allowing typography, spacing, and composition to carry the experience instead of relying on visual noise or template-driven patterns.",
+
+            challenge:
+                "Many consultancy and agency websites rely on familiar layouts, excessive UI components, and over-designed sections that dilute the brand’s authority. The challenge was to create a site that feels premium and intentional while remaining minimal, structured, and conversion-focused. The interface needed to establish trust immediately while avoiding anything that felt generic, cluttered, or over-produced.",
+
+            solution:
+                "The site was designed around a typography-first approach supported by a strict layout system and minimal UI layer. A custom component architecture built with React and Vite ensures scalability while maintaining design consistency. Brand presence is applied selectively through logo placement and supporting visual elements rather than dominating the interface, allowing content, hierarchy, and spacing to define the experience.",
+
+            outcome:
+                "The final result is a refined consultancy website that communicates authority through restraint. The platform positions Neo Unlimited as a strategic partner, supports clear service communication, and establishes a scalable foundation for future case studies and client work while maintaining a clean, premium digital presence.",
+
+            processSteps: [
+                "Strategy",
+                "UX",
+                "UI",
+                "Development",
+                "Refinement"
+            ],
+
+            interfaceWalkthrough: [
+
+                {
+                    title: "Hero Composition",
+                    description:
+                        "The hero section is built around a typography-led layout, using strong headline hierarchy, controlled spacing, and minimal supporting elements to establish immediate clarity and brand positioning.",
+                    image: "/images/work/WEB/NEO-WALKTHROUGH-01.webp"
+                },
+
+                {
+                    title: "Services Structure",
+                    description:
+                        "Service sections are presented through clean, structured layouts that prioritize readability and strategic clarity, helping users quickly understand offerings without unnecessary visual complexity.",
+                    image: "/images/work/WEB/NEO-WALKTHROUGH-02.webp"
+                },
+
+                {
+                    title: "Contact Experience",
+                    description:
+                        "The contact section provides a direct, frictionless path for inquiries, reinforcing the site’s conversion focus while maintaining the same restrained visual language.",
+                    image: "/images/work/WEB/NEO-WALKTHROUGH-03.webp"
+                }
+
+            ],
+
+            uiux: {
+
+                userGoals: [
+                    "Understand consultancy services quickly",
+                    "Evaluate brand credibility and positioning",
+                    "Navigate content without friction",
+                    "Initiate contact or inquiry"
+                ],
+
+                navigation:
+                    "Simple top-level navigation supported by clear hierarchy and direct pathways to services, work, and contact.",
+
+                informationArchitecture:
+                    "Home → Services → Work → About → Contact",
+
+                visualHierarchy:
+                    "Large-scale typography, controlled spacing, and minimal UI elements guide attention toward key messaging and calls-to-action.",
+
+                components: [
+                    "Typography-led hero section",
+                    "Service content blocks",
+                    "Minimal navigation system",
+                    "Call-to-action modules",
+                    "Footer brand anchor"
+                ],
+
+                responsive:
+                    "Responsive layout system designed to preserve hierarchy, spacing, and readability across desktop and mobile devices."
+            },
+
+            interfaceDesign: {
+
+                visualSystem:
+                    "A restrained dark interface paired with neutral tones and minimal accent usage creates a premium, editorial-style presentation that reinforces clarity and focus.",
+
+                layoutApproach:
+                    "Centered container systems and controlled content widths create a consistent rhythm across sections while maintaining strong negative space.",
+
+                componentStrategy:
+                    "Lightweight, reusable primitives such as containers, sections, and stacks ensure consistency while allowing flexible composition across pages.",
+
+                accessibility:
+                    "Clear typography scale, high contrast, and predictable layout structure improve readability and support usability across different contexts."
+            },
+
+            developmentSummary: {
+
+                architecture:
+                    "Built as a modular React application using Vite, with a focus on composable layout primitives and scalable content structure.",
+
+                features: [
+                    "Component-based architecture",
+                    "Custom layout system (Container, Section, Stack)",
+                    "Responsive design system",
+                    "SEO-friendly structure",
+                    "Minimal dependency footprint"
+                ],
+
+                performance:
+                    "Optimized through Vite’s build pipeline, ensuring fast load times, efficient bundling, and smooth navigation performance."
+            },
+
+            techStack: [
+                "React",
+                "Vite",
+                "JavaScript",
+                "CSS Modules",
+                "Vercel"
+            ],
+
+            gallery: [
+                "/images/work/WEB/NEO-WALKTHROUGH-01.webp",
+                "/images/work/WEB/NEO-WALKTHROUGH-02.webp",
+                "/images/work/WEB/NEO-WALKTHROUGH-03.webp"
+            ],
+
+            relatedProjects: [
+                {
+                    slug: "neo-seal-logo",
+                    title: "NEO Unlimited Brand Identity",
+                    type: "Brand Systems",
+                    cover: "/images/work/BRANDING/NEO Seal.webp"
+                }
+            ]
+
+        }
+    },
+
+    {
         slug: "sapphire-site-concept",
         title: "Sapphire Developments — Luxury Real Estate Platform Concept",
         category: "ui-ux-web-dev",
@@ -850,255 +1010,6 @@ const useDictionary = (word) => {
             gallery: ["/images/work/WEB/Dictionary.webp"],
 
             relatedProjects: []
-        }
-    },
-
-    {
-        slug: "storefront-ui",
-        title: "Stone & Brier General Store",
-        category: "ui-ux-web-dev",
-        year: 2022,
-        featured: false,
-
-        summary:
-            "Full-stack eCommerce storefront featuring product catalog browsing, account authentication, and Stripe-powered checkout.",
-
-        tags: [
-            "React",
-            "PostgreSQL",
-            "Stripe",
-            "Node.js",
-            "eCommerce"
-        ],
-
-        cover: "/images/work/WEB/STORE.webp",
-        liveUrl: "https://stone-and-brier-general-store.vercel.app/Home",
-
-        content: {
-
-            role: "UI/UX Design, Front-End Development",
-            client: "Capstone Project — Fullstack Academy",
-
-            overview:
-                "Stone & Brier General Store is a full-stack eCommerce application developed as a capstone project at Fullstack Academy. The platform enables users to browse a categorized product catalog, create accounts, manage shopping carts, and complete purchases through a Stripe-powered checkout flow. The project focuses on building a complete commerce experience that connects front-end interaction with backend data and payment processing.",
-
-            challenge:
-                "Building a functional eCommerce system requires balancing product discovery, account management, and secure purchasing flows within a cohesive interface. The challenge was to design a storefront that made product browsing intuitive while integrating user authentication, cart persistence, and payment processing without introducing unnecessary friction.",
-
-            solution:
-                "The application uses a PostgreSQL database to manage product inventory, categories, and order records while a Node.js API handles product retrieval, cart operations, and order creation. The front-end interface was designed with a focused green color system and product-first layout to emphasize browsing clarity and purchasing actions. User authentication enables account creation and order tracking, while Stripe integration powers the checkout and payment process.",
-
-            outcome:
-                "The final application demonstrates a complete end-to-end commerce workflow, from product discovery to order creation and payment confirmation. The project highlights both interface design decisions and the integration of real-world commerce functionality within a full-stack architecture.",
-
-            processSteps: [
-                "UX Research",
-                "UI Design",
-                "Development",
-                "Testing",
-                "Launch"
-            ],
-
-            interfaceWalkthrough: [
-
-                {
-                    title: "Product Catalog",
-                    description:
-                        "The catalog interface organizes products into clear categories with a grid layout that allows users to scan items quickly while comparing pricing and product details.",
-                    image: "/images/work/WEB/Store-WALKTHROUGH-01.webp"
-                },
-
-                {
-                    title: "Shopping Cart",
-                    description:
-                        "A persistent cart interface allows users to review selected items, adjust quantities, and view a running order total before proceeding to checkout.",
-                    image: "/images/work/WEB/Store-WALKTHROUGH-02.webp"
-                },
-
-                {
-                    title: "User Authentication",
-                    description:
-                        "Account creation and login forms support secure purchasing, order history tracking, and personalized account access.",
-                    image: "/images/work/WEB/Store-WALKTHROUGH-03.webp"
-                }
-
-            ],
-
-            uiux: {
-
-                userGoals: [
-                    "Browse product catalog",
-                    "Add items to cart",
-                    "Complete checkout",
-                    "Manage account"
-                ],
-
-                navigation:
-                    "Category-based navigation supported by persistent cart access and clear checkout pathways.",
-
-                informationArchitecture:
-                    "Home → Products → Product Details → Cart → Checkout",
-
-                visualHierarchy:
-                    "Product imagery and pricing are prioritized to support quick browsing and purchasing decisions.",
-
-                components: [
-                    "Product grid",
-                    "Shopping cart",
-                    "User authentication forms",
-                    "Checkout flow",
-                    "Navigation header"
-                ],
-
-                responsive:
-                    "Responsive storefront layout designed to support browsing and checkout across multiple screen sizes."
-            },
-
-            interfaceDesign: {
-
-                visualSystem:
-                    "The interface uses a green-focused color palette with clear call-to-action styling to reinforce purchasing actions and maintain visual consistency across product browsing and checkout.",
-
-                layoutApproach:
-                    "Product listings are presented through a structured card system that allows users to scan items quickly while maintaining visual clarity across the catalog.",
-
-                componentStrategy:
-                    "Reusable product card and cart components were used to maintain consistent interaction patterns across browsing and purchasing flows.",
-
-                accessibility:
-                    "Clear button hierarchy and structured layout help guide users through the purchasing process without confusion."
-            },
-
-            developmentSummary: {
-
-                architecture:
-                    "Full-stack architecture using a React front-end, Node.js API, and PostgreSQL database.",
-
-                features: [
-                    "Product catalog with category filtering",
-                    "User authentication system",
-                    "Persistent shopping cart",
-                    "Stripe payment integration",
-                    "RESTful API endpoints"
-                ],
-
-                performance:
-                    "Structured to support efficient product retrieval and checkout processing for a small commerce system."
-            },
-
-            techStack: [
-                "React",
-                "Node.js",
-                "PostgreSQL",
-                "Stripe",
-                "CSS"
-            ],
-
-            developmentImplementation: {
-                architecture: [
-                    {
-                        title: "Full-Stack Application Structure",
-                        description:
-                            "React front-end with Express/Node.js backend, RESTful API for product and order management.",
-                        code: `// API route structure
-app.get('/api/products', productController.getAll);
-app.get('/api/products/:id', productController.getOne);
-app.post('/api/orders', orderController.create);
-
-// Frontend API client
-const api = {
-  products: () => fetch('/api/products').then(r => r.json()),
-  createOrder: (data) => fetch('/api/orders', {
-    method: 'POST',
-    body: JSON.stringify(data)
-  })
-};`
-                    }
-                ],
-                dataModel: [
-                    {
-                        title: "Product Schema",
-                        description:
-                            "PostgreSQL product table structure with categories, pricing, inventory, and image associations.",
-                        code: `// Product model
-const Product = {
-  id: 1,
-  name: "Product Name",
-  description: "...",
-  price: 29.99,
-  category: "category-slug",
-  imageUrl: "/images/products/1.jpg",
-  inventory: 100
-};`
-                    },
-                    {
-                        title: "Order Schema",
-                        description:
-                            "Order tracking with user association, line items, shipping status, and payment references.",
-                        code: `const Order = {
-  id: "ord_123",
-  userId: 1,
-  items: [{ productId: 1, qty: 2 }],
-  total: 59.98,
-  status: "pending",
-  stripePaymentId: "pi_..."
-};`
-                    }
-                ],
-                uiLogic: [
-                    {
-                        title: "Cart State Management",
-                        description:
-                            "React Context-based cart state with add, remove, update quantity, and persistence to localStorage.",
-                        code: `// Cart context
-const CartContext = createContext();
-
-export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
-  
-  const addToCart = (product) => {
-    setCart(prev => {
-      const existing = prev.find(p => p.id === product.id);
-      if (existing) {
-        return prev.map(p => 
-          p.id === product.id 
-            ? { ...p, qty: p.qty + 1 }
-            : p
-        );
-      }
-      return [...prev, { ...product, qty: 1 }];
-    });
-  };
-  
-  return <CartContext.Provider value={{ cart, addToCart }}>
-    {children}
-  </CartContext.Provider>;
-};`
-                    },
-                    {
-                        title: "Stripe Checkout Integration",
-                        description:
-                            "Client-side Stripe Elements for payment entry, server-side payment intent creation.",
-                        code: `// Stripe checkout
-const stripe = await loadStripe('pk_test_...');
-const { error } = await stripe.confirmPayment({
-  elements,
-  confirmParams: { return_url: '...' }
-});`
-                    }
-                ]
-            },
-
-            gallery: ["/images/work/WEB/STORE.webp"],
-
-            relatedProjects: [
-                {
-                    slug: "stone-and-brier-logo",
-                    title: "Stone & Brier Logo",
-                    type: "Brand Systems",
-                    cover: "/images/work/BRANDING/S&B.webp"
-                }
-            ]
         }
     },
 
