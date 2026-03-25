@@ -180,7 +180,7 @@ export const work = [
         ],
 
         cover: "/images/work/WEB/NEO-WALKTHROUGH-01.webp",
-        liveUrl: "https://neo-unlimited-9u3tvj5g4-jeremy-e-jeffersons-projects.vercel.app/",
+        liveUrl: "https://neo-unlimited.vercel.app/",
 
         content: {
 
