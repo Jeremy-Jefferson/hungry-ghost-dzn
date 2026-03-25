@@ -339,7 +339,7 @@ export const work = [
         ],
 
         cover: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-01.webp",
-        liveUrl: "https://sapphire-developments-mim5lo542-jeremy-e-jeffersons-projects.vercel.app/",
+        liveUrl: "https://sapphire-developments.vercel.app/",
 
         content: {
 
