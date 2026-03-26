@@ -848,6 +848,264 @@ export default function CaseStudy() {
                             </div>
                         )}
 
+                        {/* Live Variants Section - For projects with alternate versions */}
+                        {item.content?.liveVariants && item.content.liveVariants.length > 0 && (
+                            <div className="cs-live-variants" style={{ marginTop: "var(--space-7)" }}>
+                                <h3 className="cs-section__title" style={{ 
+                                    fontSize: "var(--text-2xl)",
+                                    marginBottom: "var(--space-5)"
+                                }}>Live Variants</h3>
+                                
+                                <div style={{ 
+                                    display: "grid", 
+                                    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                                    gap: "var(--space-4)"
+                                }}>
+                                    {item.content.liveVariants.map((variant, idx) => (
+                                        <a
+                                            key={idx}
+                                            href={variant.url}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="card"
+                                            style={{ 
+                                                padding: "var(--space-5)",
+                                                textDecoration: "none",
+                                                color: "inherit",
+                                                display: "block",
+                                                transition: "transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
+                                                border: "1px solid var(--color-border)",
+                                                background: "var(--color-surface)"
+                                            }}
+                                        >
+                                            <div style={{ 
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "space-between",
+                                                marginBottom: "var(--space-3)"
+                                            }}>
+                                                <span style={{ 
+                                                    fontSize: "var(--text-xs)",
+                                                    fontWeight: "var(--font-bold)",
+                                                    color: "var(--color-accent-teal)",
+                                                    textTransform: "uppercase",
+                                                    letterSpacing: "0.1em"
+                                                }}>
+                                                    {idx === 0 ? "Primary" : `Variant ${idx + 1}`}
+                                                </span>
+                                                <span style={{ 
+                                                    color: "var(--color-text-muted)",
+                                                    fontSize: "var(--text-sm)"
+                                                }}>↗</span>
+                                            </div>
+                                            <h4 className="h4" style={{ marginBottom: "var(--space-2)" }}>
+                                                {variant.label}
+                                            </h4>
+                                            <p className="small" style={{ color: "var(--color-text-muted)" }}>
+                                                {variant.description}
+                                            </p>
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Key Differences Section - For projects comparing variants */}
+                        {item.content?.keyDifferences && item.content.keyDifferences.length > 0 && (
+                            <div className="cs-key-differences" style={{ marginTop: "var(--space-7)" }}>
+                                <h3 className="cs-section__title" style={{ 
+                                    fontSize: "var(--text-2xl)",
+                                    marginBottom: "var(--space-5)"
+                                }}>Key Differences</h3>
+                                
+                                <div style={{ 
+                                    display: "grid", 
+                                    gap: "var(--space-4)"
+                                }}>
+                                    {item.content.keyDifferences.map((diff, idx) => (
+                                        <div 
+                                            key={idx} 
+                                            className="card"
+                                            style={{ 
+                                                padding: "var(--space-5)",
+                                                border: "1px solid var(--color-border)"
+                                            }}
+                                        >
+                                            <div style={{ 
+                                                fontSize: "var(--text-sm)",
+                                                fontWeight: "var(--font-bold)",
+                                                color: "var(--color-accent-teal)",
+                                                textTransform: "uppercase",
+                                                letterSpacing: "0.1em",
+                                                marginBottom: "var(--space-3)"
+                                            }}>
+                                                {diff.area}
+                                            </div>
+                                            <div style={{ 
+                                                display: "grid",
+                                                gridTemplateColumns: "1fr",
+                                                gap: "var(--space-4)"
+                                            }}>
+                                                <div>
+                                                    <span className="small" style={{ 
+                                                        fontWeight: "var(--font-bold)",
+                                                        display: "block",
+                                                        marginBottom: "var(--space-1)",
+                                                        color: "var(--color-text-muted)"
+                                                    }}>Original</span>
+                                                    <p className="small" style={{ margin: 0 }}>{diff.original}</p>
+                                                </div>
+                                                <div>
+                                                    <span className="small" style={{ 
+                                                        fontWeight: "var(--font-bold)",
+                                                        display: "block",
+                                                        marginBottom: "var(--space-1)",
+                                                        color: "var(--color-text-muted)"
+                                                    }}>Variant</span>
+                                                    <p className="small" style={{ margin: 0 }}>{diff.variant}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Related Projects Section */}
+                        {item.content?.relatedProjects && item.content.relatedProjects.length > 0 && (
+                            <div className="cs-related-projects" style={{ marginTop: "var(--space-7)" }}>
+                                <h3 className="cs-section__title" style={{ 
+                                    fontSize: "var(--text-2xl)",
+                                    marginBottom: "var(--space-5)"
+                                }}>Related Projects</h3>
+                                
+                                <div style={{ 
+                                    display: "grid", 
+                                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                                    gap: "var(--space-4)"
+                                }}>
+                                    {item.content.relatedProjects.map((project, idx) => {
+                                        // Try to get the related project data for the category
+                                        const allWork = getAllWork();
+                                        const relatedProject = allWork.find(w => w.slug === project.slug);
+                                        const projectCategory = relatedProject?.category || 'ui-ux-web-dev';
+                                        
+                                        // Media presentation options (optional, defaults to web screenshot behavior)
+                                        const isBrandMedia = project.mediaType === 'brand' || project.imageFit === 'contain';
+                                        const imageFit = project.imageFit || 'cover';
+                                        const imagePosition = project.imagePosition || 'center';
+                                        
+                                        return (
+                                            <Link
+                                                key={idx}
+                                                to={`/work/${projectCategory}/${project.slug}`}
+                                                className="card"
+                                                style={{ 
+                                                    padding: 0,
+                                                    overflow: "hidden",
+                                                    textDecoration: "none",
+                                                    color: "inherit",
+                                                    transition: "transform 0.2s ease, box-shadow 0.2s ease"
+                                                }}
+                                            >
+                                                {/* Media Wrapper - Different handling for brand vs web */}
+                                                {isBrandMedia ? (
+                                                    /* Brand/Logo Showcase Layout - Compact specimen-style */
+                                                    <div style={{ 
+                                                        position: "relative", 
+                                                        height: "120px", 
+                                                        overflow: "hidden", 
+                                                        background: "#050505"
+                                                    }}>
+                                                        {/* Inner showcase stage - compact centered tile */}
+                                                        <div style={{ 
+                                                            position: "absolute",
+                                                            top: "50%",
+                                                            left: "50%",
+                                                            transform: "translate(-50%, -50%)",
+                                                            width: "240px",
+                                                            height: "110px",
+                                                            display: "flex",
+                                                            alignItems: "center",
+                                                            justifyContent: "center",
+                                                            background: "#0d0d0d",
+                                                            borderRadius: "var(--radius-md)",
+                                                            border: "1px solid #1a1a1a"
+                                                        }}>
+                                                            {project.cover ? (
+                                                                <img 
+                                                                    src={project.cover} 
+                                                                    alt={project.title}
+                                                                    style={{ 
+                                                                        maxWidth: "95%", 
+                                                                        maxHeight: "95%", 
+                                                                        objectFit: "contain",
+                                                                        objectPosition: "center"
+                                                                    }}
+                                                                />
+                                                            ) : (
+                                                                <div style={{ 
+                                                                    color: "var(--color-text-muted)"
+                                                                }}>
+                                                                    No Image
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                ) : (
+                                                    /* Standard Web Screenshot Layout */
+                                                    <div style={{ 
+                                                        position: "relative", 
+                                                        height: "180px", 
+                                                        overflow: "hidden", 
+                                                        background: "var(--color-surface)" 
+                                                    }}>
+                                                        {project.cover ? (
+                                                            <img 
+                                                                src={project.cover} 
+                                                                alt={project.title}
+                                                                style={{ 
+                                                                    width: "100%", 
+                                                                    height: "100%", 
+                                                                    objectFit: imageFit,
+                                                                    objectPosition: imagePosition,
+                                                                    display: "block"
+                                                                }}
+                                                            />
+                                                        ) : (
+                                                            <div style={{ 
+                                                                width: "100%", 
+                                                                height: "100%", 
+                                                                display: "flex",
+                                                                alignItems: "center",
+                                                                justifyContent: "center",
+                                                                color: "var(--color-text-muted)"
+                                                            }}>
+                                                                No Image
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                )}
+                                                <div style={{ padding: "var(--space-4)" }}>
+                                                    <div style={{ 
+                                                        fontSize: "var(--text-xs)",
+                                                        fontWeight: "var(--font-bold)",
+                                                        color: "var(--color-accent-teal)",
+                                                        textTransform: "uppercase",
+                                                        letterSpacing: "0.1em",
+                                                        marginBottom: "var(--space-2)"
+                                                    }}>
+                                                        {project.type || 'Project'}
+                                                    </div>
+                                                    <h4 className="h4" style={{ margin: 0 }}>{project.title}</h4>
+                                                </div>
+                                            </Link>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        )}
+
                         {/* Footer nav */}
                         <div style={{ paddingTop: "var(--space-5)" }}>
                             <Link className="btn" to={backPath}>← Back to {categoryLabel}</Link>

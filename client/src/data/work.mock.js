@@ -168,7 +168,7 @@ export const work = [
         featured: true,
 
         summary:
-            "Premium consultancy website built to emphasize strategic clarity, restrained UI, and typography-led design through a custom React architecture.",
+            "Premium consultancy website built to emphasize strategic clarity, restrained UI, and typography-led design through a custom React architecture. The project also explores an alternate visual direction to compare tone, hierarchy, and conversion strategy.",
 
         tags: [
             "React",
@@ -176,14 +176,15 @@ export const work = [
             "Consultancy Website",
             "Design System",
             "UI/UX",
-            "Front-End Development"
+            "Front-End Development",
+            "Case Study",
+            "Design Exploration"
         ],
 
         cover: "/images/work/WEB/NEO-WALKTHROUGH-01.webp",
         liveUrl: "https://neo-unlimited.vercel.app/",
 
         content: {
-
             role: "Brand Direction, UI/UX Design, Front-End Development",
             client: "Neo Unlimited",
 
@@ -194,10 +195,10 @@ export const work = [
                 "Many consultancy and agency websites rely on familiar layouts, excessive UI components, and over-designed sections that dilute the brand’s authority. The challenge was to create a site that feels premium and intentional while remaining minimal, structured, and conversion-focused. The interface needed to establish trust immediately while avoiding anything that felt generic, cluttered, or over-produced.",
 
             solution:
-                "The site was designed around a typography-first approach supported by a strict layout system and minimal UI layer. A custom component architecture built with React and Vite ensures scalability while maintaining design consistency. Brand presence is applied selectively through logo placement and supporting visual elements rather than dominating the interface, allowing content, hierarchy, and spacing to define the experience.",
+                "The site was designed around a typography-first approach supported by a strict layout system and minimal UI layer. A custom component architecture built with React and Vite ensures scalability while maintaining design consistency. Brand presence is applied selectively through logo placement and supporting visual elements rather than dominating the interface, allowing content, hierarchy, and spacing to define the experience. A second visual variant was also explored to test a more elevated and expressive direction while preserving the same core brand principles.",
 
             outcome:
-                "The final result is a refined consultancy website that communicates authority through restraint. The platform positions Neo Unlimited as a strategic partner, supports clear service communication, and establishes a scalable foundation for future case studies and client work while maintaining a clean, premium digital presence.",
+                "The result is a refined consultancy website system that communicates authority through restraint while also demonstrating how alternate visual direction can change perception, pacing, and emotional impact. Together, both versions show a flexible brand and UX foundation capable of supporting different tones without losing clarity or strategic focus.",
 
             processSteps: [
                 "Strategy",
@@ -207,38 +208,95 @@ export const work = [
                 "Refinement"
             ],
 
-            interfaceWalkthrough: [
+            liveVariants: [
+                {
+                    label: "View Original Site",
+                    url: "https://neo-unlimited.vercel.app/",
+                    description:
+                        "The original consultancy direction focused on restraint, structure, and typographic clarity."
+                },
+                {
+                    label: "View Variant 2",
+                    url: "https://neo-unlimited-2.vercel.app/",
+                    description:
+                        "An alternate direction with stronger visual emphasis, expanded brand presence, and a more expressive hero system."
+                }
+            ],
 
+            keyDifferences: [
+                {
+                    area: "Tone",
+                    original: "Minimal, restrained, and corporate-premium",
+                    variant: "More elevated, expressive, and visually assertive"
+                },
+                {
+                    area: "Hero Design",
+                    original: "Typography-first with reduced visual intensity",
+                    variant: "Stronger visual presence with more immediate brand personality"
+                },
+                {
+                    area: "Brand Presence",
+                    original: "Applied selectively and quietly",
+                    variant: "More present within the page composition and supporting assets"
+                },
+                {
+                    area: "Layout Feel",
+                    original: "Structured and editorial",
+                    variant: "More dynamic while still controlled"
+                },
+                {
+                    area: "User Perception",
+                    original: "Strategic partner with calm authority",
+                    variant: "Premium consultancy with stronger emotional impact"
+                }
+            ],
+
+            interfaceWalkthrough: [
                 {
                     title: "Hero Composition",
                     description:
                         "The hero section is built around a typography-led layout, using strong headline hierarchy, controlled spacing, and minimal supporting elements to establish immediate clarity and brand positioning.",
                     image: "/images/work/WEB/NEO-WALKTHROUGH-01.webp"
                 },
-
                 {
                     title: "Services Structure",
                     description:
                         "Service sections are presented through clean, structured layouts that prioritize readability and strategic clarity, helping users quickly understand offerings without unnecessary visual complexity.",
                     image: "/images/work/WEB/NEO-WALKTHROUGH-02.webp"
                 },
-
                 {
                     title: "Contact Experience",
                     description:
                         "The contact section provides a direct, frictionless path for inquiries, reinforcing the site’s conversion focus while maintaining the same restrained visual language.",
                     image: "/images/work/WEB/NEO-WALKTHROUGH-03.webp"
+                },
+                {
+                    title: "Variant Hero Direction",
+                    description:
+                        "The alternate version introduces a more visually assertive hero composition, increasing brand presence and giving the site a stronger first impression while preserving clarity.",
+                    image: "/images/work/WEB/NEO2-WALKTHROUGH-01.webp"
+                },
+                {
+                    title: "Variant Mid-Page Flow",
+                    description:
+                        "Section pacing in the second version feels more curated and immersive, using spacing, visual rhythm, and composition to create a more elevated experience.",
+                    image: "/images/work/WEB/NEO2-WALKTHROUGH-02.webp"
+                },
+                {
+                    title: "Variant Conversion Layer",
+                    description:
+                        "The alternate contact and CTA treatment feels more intentional and premium, pushing the site closer to a polished client-facing presentation rather than a purely informational layout.",
+                    image: "/images/work/WEB/NEO2-WALKTHROUGH-03.webp"
                 }
-
             ],
 
             uiux: {
-
                 userGoals: [
                     "Understand consultancy services quickly",
                     "Evaluate brand credibility and positioning",
                     "Navigate content without friction",
-                    "Initiate contact or inquiry"
+                    "Initiate contact or inquiry",
+                    "Compare alternate design directions within the same brand system"
                 ],
 
                 navigation:
@@ -248,50 +306,51 @@ export const work = [
                     "Home → Services → Work → About → Contact",
 
                 visualHierarchy:
-                    "Large-scale typography, controlled spacing, and minimal UI elements guide attention toward key messaging and calls-to-action.",
+                    "Large-scale typography, controlled spacing, and minimal UI elements guide attention toward key messaging and calls-to-action. In the alternate version, visual hierarchy is pushed further through stronger hero composition and more overt brand integration.",
 
                 components: [
                     "Typography-led hero section",
                     "Service content blocks",
                     "Minimal navigation system",
                     "Call-to-action modules",
-                    "Footer brand anchor"
+                    "Footer brand anchor",
+                    "Variant comparison section",
+                    "Dual live-site access"
                 ],
 
                 responsive:
-                    "Responsive layout system designed to preserve hierarchy, spacing, and readability across desktop and mobile devices."
+                    "Responsive layout system designed to preserve hierarchy, spacing, and readability across desktop and mobile devices in both variants."
             },
 
             interfaceDesign: {
-
                 visualSystem:
-                    "A restrained dark interface paired with neutral tones and minimal accent usage creates a premium, editorial-style presentation that reinforces clarity and focus.",
+                    "A restrained dark interface paired with neutral tones and minimal accent usage creates a premium, editorial-style presentation that reinforces clarity and focus. The second direction expands this system with a more expressive composition while preserving cohesion.",
 
                 layoutApproach:
-                    "Centered container systems and controlled content widths create a consistent rhythm across sections while maintaining strong negative space.",
+                    "Centered container systems and controlled content widths create a consistent rhythm across sections while maintaining strong negative space. The alternate version explores a slightly more dramatic balance between content and visual assets.",
 
                 componentStrategy:
-                    "Lightweight, reusable primitives such as containers, sections, and stacks ensure consistency while allowing flexible composition across pages.",
+                    "Lightweight, reusable primitives such as containers, sections, stacks, and CTA blocks ensure consistency while allowing flexible composition across pages and design directions.",
 
                 accessibility:
                     "Clear typography scale, high contrast, and predictable layout structure improve readability and support usability across different contexts."
             },
 
             developmentSummary: {
-
                 architecture:
-                    "Built as a modular React application using Vite, with a focus on composable layout primitives and scalable content structure.",
+                    "Built as a modular React application using Vite, with a focus on composable layout primitives and scalable content structure across both versions of the site.",
 
                 features: [
                     "Component-based architecture",
                     "Custom layout system (Container, Section, Stack)",
                     "Responsive design system",
                     "SEO-friendly structure",
-                    "Minimal dependency footprint"
+                    "Minimal dependency footprint",
+                    "Variant-ready content approach"
                 ],
 
                 performance:
-                    "Optimized through Vite’s build pipeline, ensuring fast load times, efficient bundling, and smooth navigation performance."
+                    "Optimized through Vite’s build pipeline, ensuring fast load times, efficient bundling, and smooth navigation performance across both versions."
             },
 
             techStack: [
@@ -305,7 +364,10 @@ export const work = [
             gallery: [
                 "/images/work/WEB/NEO-WALKTHROUGH-01.webp",
                 "/images/work/WEB/NEO-WALKTHROUGH-02.webp",
-                "/images/work/WEB/NEO-WALKTHROUGH-03.webp"
+                "/images/work/WEB/NEO-WALKTHROUGH-03.webp",
+                "/images/work/WEB/NEO2-WALKTHROUGH-01.webp",
+                "/images/work/WEB/NEO2-WALKTHROUGH-02.webp",
+                "/images/work/WEB/NEO2-WALKTHROUGH-03.webp"
             ],
 
             relatedProjects: [
@@ -313,13 +375,14 @@ export const work = [
                     slug: "neo-seal-logo",
                     title: "NEO Unlimited Brand Identity",
                     type: "Brand Systems",
-                    cover: "/images/work/BRANDING/NEO Seal.webp"
+                    cover: "/images/work/BRANDING/NEO Seal.webp",
+                    mediaType: "brand",
+                    imageFit: "contain",
+                    imagePosition: "center"
                 }
             ]
-
-        }
+        }   
     },
-
     {
         slug: "sapphire-site-concept",
         title: "Sapphire Developments — Luxury Real Estate Platform Concept",

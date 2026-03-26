@@ -7,10 +7,10 @@ import { usePageTitle } from "../hooks/usePageTitle.js";
 import { useParallax } from "../hooks/useParallax.js";
 
 const featuredWork = work.filter((w) => w.featured).sort((a, b) => {
-    // Put Hungry Ghost DEV site first, then alternate between brand and web
-    if (a.slug === "hungry-ghost-dzn-site") return -1;
-    if (b.slug === "hungry-ghost-dzn-site") return 1;
-    // Then show one of each category for variety
+    // Put Neo Unlimited site first
+    if (a.slug === "neo-unlimited-site") return -1;
+    if (b.slug === "neo-unlimited-site") return 1;
+    // Then sort by category
     if (a.category === "brand-systems" && b.category === "ui-ux-web-dev") return -1;
     if (a.category === "ui-ux-web-dev" && b.category === "brand-systems") return 1;
     return 0;
