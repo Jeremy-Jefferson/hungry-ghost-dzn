@@ -2,6 +2,117 @@ import { useParams, Link } from "react-router-dom";
 import { getWorkBySlug, getAllWork } from "../../data/work.js";
 import { usePageTitle } from "../../hooks/usePageTitle.js";
 
+// Reusable logo components
+function BrandColorSwatches({ colors }) {
+    if (!colors || colors.length === 0) return null;
+    
+    return (
+        <div style={{ marginBottom: "var(--space-3)" }}>
+            <span className="small" style={{ fontWeight: "var(--font-bold)", display: "block", marginBottom: "var(--space-2)" }}>Color System:</span>
+            <div style={{ display: "flex", gap: "var(--space-3)", flexWrap: "wrap" }}>
+                {Array.isArray(colors) 
+                    ? colors.map((color, idx) => (
+                        <div key={idx} style={{ display: "flex", alignItems: "center", gap: "var(--space-2)" }}>
+                            <span style={{
+                                width: "24px",
+                                height: "24px",
+                                borderRadius: "var(--radius-sm)",
+                                background: color.value,
+                                border: color.name === "White" ? "1px solid var(--color-border)" : "none"
+                            }}></span>
+                            <span className="small">{color.name} — {color.value}</span>
+                        </div>
+                    ))
+                    : Object.entries(colors).map(([key, value]) => (
+                        <div key={key} style={{ display: "flex", alignItems: "center", gap: "var(--space-2)" }}>
+                            <span style={{
+                                width: "24px",
+                                height: "24px",
+                                borderRadius: "var(--radius-sm)",
+                                background: key === 'primary' ? '#6B4C9A' : key === 'secondary' ? '#4CAF50' : key === 'accent' ? '#FFFFFF' : '#1A1A1A',
+                                border: key === 'accent' ? '1px solid var(--color-border)' : 'none'
+                            }}></span>
+                            <span className="small">{value}</span>
+                        </div>
+                    ))}
+            </div>
+        </div>
+    );
+}
+
+function LogoPrimarySection({ logo }) {
+    if (!logo) return null;
+    
+    return (
+        <div className="cs-brand-subsection" style={{ marginBottom: "var(--space-5)" }}>
+            <div className="card" style={{ padding: "var(--space-5)" }}>
+                <h4 className="h4" style={{ marginBottom: "var(--space-2)" }}>
+                    {logo.title}
+                </h4>
+                <p className="small" style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-4)" }}>
+                    {logo.description}
+                </p>
+                <BrandColorSwatches colors={logo.colors} />
+                {logo.cover && (
+                    <img 
+                        src={logo.cover} 
+                        alt="Logo Identity"
+                        style={{ 
+                            width: "100%", 
+                            maxWidth: "300px", 
+                            marginTop: "var(--space-3)",
+                            borderRadius: "var(--radius-md)"
+                        }}
+                    />
+                )}
+            </div>
+        </div>
+    );
+}
+
+function LogoVariantCard({ variant }) {
+    return (
+        <div className="card" style={{ padding: "var(--space-5)" }}>
+            <h4 className="h4" style={{ marginBottom: "var(--space-2)" }}>
+                {variant.title}
+            </h4>
+            <p className="small" style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-3)" }}>
+                {variant.description}
+            </p>
+            {variant.cover && (
+                <img 
+                    src={variant.cover} 
+                    alt={variant.title}
+                    style={{ 
+                        width: "100%", 
+                        borderRadius: "var(--radius-md)",
+                        objectFit: "contain"
+                    }}
+                />
+            )}
+        </div>
+    );
+}
+
+function LogoVariantGrid({ variants }) {
+    if (!variants || variants.length === 0) return null;
+    
+    return (
+        <div className="cs-brand-subsection" style={{ marginBottom: "var(--space-5)" }}>
+            <h4 className="h4" style={{ marginBottom: "var(--space-4)" }}>Logo Variants</h4>
+            <div style={{ 
+                display: "grid", 
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "var(--space-4)"
+            }}>
+                {variants.map((variant, idx) => (
+                    <LogoVariantCard key={idx} variant={variant} />
+                ))}
+            </div>
+        </div>
+    );
+}
+
 export default function CaseStudy() {
     const { category, slug } = useParams();
     const item = getWorkBySlug(slug);
@@ -209,63 +320,23 @@ export default function CaseStudy() {
                                     marginBottom: "var(--space-5)"
                                 }}>Brand System</h3>
                                 
-                                {/* Logo Identity */}
-                                {item.content.brandSystem.logo && (
-                                    <div className="cs-brand-subsection" style={{ marginBottom: "var(--space-5)" }}>
-                                        <div className="card" style={{ padding: "var(--space-5)" }}>
-                                            <h4 className="h4" style={{ marginBottom: "var(--space-2)" }}>
-                                                {item.content.brandSystem.logo.title}
-                                            </h4>
-                                            <p className="small" style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-4)" }}>
-                                                {item.content.brandSystem.logo.description}
-                                            </p>
-                                            {item.content.brandSystem.logo.colors && (
-                                                <div style={{ marginBottom: "var(--space-3)" }}>
-                                                    <span className="small" style={{ fontWeight: "var(--font-bold)", display: "block", marginBottom: "var(--space-2)" }}>Color System:</span>
-                                                    <div style={{ display: "flex", gap: "var(--space-3)", flexWrap: "wrap" }}>
-                                                        {Array.isArray(item.content.brandSystem.logo.colors) 
-                                                            ? item.content.brandSystem.logo.colors.map((color, idx) => (
-                                                                <div key={idx} style={{ display: "flex", alignItems: "center", gap: "var(--space-2)" }}>
-                                                                    <span style={{
-                                                                        width: "24px",
-                                                                        height: "24px",
-                                                                        borderRadius: "var(--radius-sm)",
-                                                                        background: color.value,
-                                                                        border: color.name === "White" ? "1px solid var(--color-border)" : "none"
-                                                                    }}></span>
-                                                                    <span className="small">{color.name} — {color.value}</span>
-                                                                </div>
-                                                            ))
-                                                            : Object.entries(item.content.brandSystem.logo.colors).map(([key, value]) => (
-                                                                <div key={key} style={{ display: "flex", alignItems: "center", gap: "var(--space-2)" }}>
-                                                                    <span style={{
-                                                                        width: "24px",
-                                                                        height: "24px",
-                                                                        borderRadius: "var(--radius-sm)",
-                                                                        background: key === 'primary' ? '#6B4C9A' : key === 'secondary' ? '#4CAF50' : key === 'accent' ? '#FFFFFF' : '#1A1A1A',
-                                                                        border: key === 'accent' ? '1px solid var(--color-border)' : 'none'
-                                                                    }}></span>
-                                                                    <span className="small">{value}</span>
-                                                                </div>
-                                                            ))}
-                                                    </div>
-                                                </div>
-                                            )}
-                                            {item.content.brandSystem.logo.cover && (
-                                                <img 
-                                                    src={item.content.brandSystem.logo.cover} 
-                                                    alt="Logo Identity"
-                                                    style={{ 
-                                                        width: "100%", 
-                                                        maxWidth: "300px", 
-                                                        marginTop: "var(--space-3)",
-                                                        borderRadius: "var(--radius-md)"
-                                                    }}
-                                                />
-                                            )}
-                                        </div>
-                                    </div>
-                                )}
+                                {/* Logo Identity - Normalize data for new and old shapes */}
+                                {(() => {
+                                    const rawLogo = item.content.brandSystem?.logo;
+                                    const primaryLogo =
+                                        rawLogo?.primary ??
+                                        (rawLogo?.title || rawLogo?.description || rawLogo?.cover || rawLogo?.colors
+                                          ? rawLogo
+                                          : null);
+                                    const logoVariants = Array.isArray(rawLogo?.variants) ? rawLogo.variants : [];
+                                    
+                                    return (
+                                        <>
+                                            <LogoPrimarySection logo={primaryLogo} />
+                                            <LogoVariantGrid variants={logoVariants} />
+                                        </>
+                                    );
+                                })()}
 
                                 {/* Typography */}
                                 {item.content.brandSystem.typography && (

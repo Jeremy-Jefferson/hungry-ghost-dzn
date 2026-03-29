@@ -18,149 +18,6 @@ export const work = [
     =============================== */
 
     {
-        slug: "hungry-ghost-dev-site",
-        title: "Hungry Ghost DEV",
-        category: "ui-ux-web-dev",
-        year: 2026,
-        featured: true,
-
-        summary:
-            "Studio website and portfolio platform built with React and Vite to showcase services, case studies, and a scalable brand system.",
-
-        tags: [
-            "React",
-            "Vite",
-            "Design System",
-            "Brand Strategy",
-            "Web Development"
-        ],
-
-        cover: "/images/work/WEB/HGDZN.webp",
-
-        content: {
-
-            role: "Brand Direction, UI/UX Design, Front-End Development",
-            client: "Hungry Ghost DEV",
-
-            overview:
-                "Hungry Ghost DEV was created as the digital foundation for a design and development studio focused on intentional brand systems and high-impact websites. The platform needed to function as both a brand statement and a scalable portfolio system capable of presenting services, case studies, and future studio work without feeling generic or templated.",
-
-            challenge:
-                "The challenge was designing a studio website that felt bold, distinctive, and visually sharp while still maintaining strong usability and structural clarity. Many portfolio sites lean too far toward minimalism or excessive visual experimentation. The goal here was to create a balance — a site with strong personality that still feels credible, readable, and conversion-focused.",
-
-            solution:
-                "The site was designed and developed as a modular React application using Vite for fast development and optimized builds. Reusable layout patterns, scalable content structures, and a token-based visual system ensure consistency across typography, spacing, color, and UI components. Each section was built with flexibility in mind, allowing the platform to grow into a full studio site without requiring structural redesign.",
-
-            outcome:
-                "The finished platform establishes a strong digital presence for the Hungry Ghost DEV studio while serving as a scalable portfolio framework. It supports case studies, services, and future content expansion while maintaining a clear brand voice and structured user experience.",
-
-            processSteps: [
-                "Strategy",
-                "UX",
-                "UI",
-                "Development",
-                "Launch"
-            ],
-
-            interfaceWalkthrough: [
-
-                {
-                    title: "Studio Home",
-                    description:
-                        "The homepage introduces the studio with a bold hero statement, brand visuals, and clear navigation to services and portfolio work.",
-                    image: "/images/work/WEB/HGDEV-WALKTHROUGH-01.webp"
-                },
-
-                {
-                    title: "Services Overview",
-                    description:
-                        "The services section presents the studio’s core offerings through structured cards, helping visitors quickly understand capabilities and areas of expertise.",
-                    image: "/images/work/WEB/HGDEV-WALKTHROUGH-02.webp"
-                },
-
-                {
-                    title: "Work Index",
-                    description:
-                        "The work index organizes portfolio case studies into a clear grid system with filtering and preview cards for easy project exploration.",
-                    image: "/images/work/WEB/HGDEV-WALKTHROUGH-03.webp"
-                }
-
-            ],
-
-            uiux: {
-
-                userGoals: [
-                    "Clearly present studio services",
-                    "Showcase portfolio case studies",
-                    "Convert visitors into project inquiries",
-                    "Establish a distinct studio identity"
-                ],
-
-                navigation:
-                    "Clear, structured navigation with prominent calls-to-action guiding visitors toward services and project work.",
-
-                informationArchitecture:
-                    "Home → Services → Work → About → Contact",
-
-                visualHierarchy:
-                    "Bold typography, strong spacing, and accent color usage guide attention toward key actions and content.",
-
-                components: [
-                    "Hero brand statement",
-                    "Services grid",
-                    "Featured case study previews",
-                    "About section",
-                    "Contact form"
-                ],
-
-                responsive:
-                    "Mobile-first responsive layout designed to maintain clarity and visual impact across screen sizes."
-            },
-
-            interfaceDesign: {
-
-                visualSystem:
-                    "A high-contrast dark interface paired with bright accent colors reinforces the studio’s bold brand personality while maintaining strong readability.",
-
-                layoutApproach:
-                    "Content sections were structured to guide visitors from brand introduction into services, portfolio work, and contact opportunities.",
-
-                componentStrategy:
-                    "Reusable UI patterns allow new services, case studies, and content sections to be added without disrupting the overall layout.",
-
-                accessibility:
-                    "Clear typography, consistent spacing, and structured section layout help maintain readability and usability."
-            },
-
-            developmentSummary: {
-
-                architecture:
-                    "React front-end architecture powered by Vite, using modular component patterns for scalable UI development.",
-
-                features: [
-                    "Component-based architecture",
-                    "Custom animations and transitions",
-                    "SEO optimization",
-                    "Accessibility considerations",
-                    "Scalable portfolio data structure"
-                ],
-
-                performance:
-                    "Vite-powered build pipeline enables fast development, optimized bundling, and strong page-load performance."
-            },
-
-            techStack: [
-                "React",
-                "Vite",
-                "JavaScript",
-                "CSS",
-                "Vercel"
-            ]
-
-        }
-    },
-
-    {
         slug: "neo-unlimited-site",
         title: "Neo Unlimited — Consultancy Website",
         category: "ui-ux-web-dev",
@@ -381,8 +238,167 @@ export const work = [
                     imagePosition: "center"
                 }
             ]
-        }   
+        }
     },
+
+    {
+        slug: "body-spoils-site",
+        title: "Body Spoils — Massage Therapy Website",
+        category: "ui-ux-web-dev",
+        year: 2026,
+        featured: true,
+
+        summary:
+            "Massage therapy website designed to present services clearly, build trust quickly, and create a calm, premium path from discovery to booking.",
+
+        tags: [
+            "React",
+            "Vite",
+            "Wellness Website",
+            "Massage Therapy",
+            "UI/UX Design",
+            "Front-End Development",
+            "Responsive Design",
+            "Conversion-Focused Design"
+        ],
+
+        cover: "/images/work/WEB/BODY SPOILS-WALKTHROUGH-01.webp",
+        liveUrl: "https://bodyspoils.netlify.app/",
+
+        content: {
+            role: "Brand Direction, UI/UX Design, Front-End Development",
+            client: "Body Spoils",
+
+            overview:
+                "Body Spoils was created as a digital presence for a massage therapy business focused on relaxation, restoration, and accessible self-care. The site needed to feel calm and elevated while helping visitors quickly understand the available services, pricing structure, and next steps for booking.",
+
+            challenge:
+                "Massage therapy websites often feel either overly generic, visually cluttered, or too clinical. The challenge was to create a digital experience that feels warm, polished, and trustworthy while still making service information easy to scan and the booking path easy to follow across devices.",
+
+            solution:
+                "The site was designed around a clear service hierarchy, calming visual presentation, and mobile-friendly structure that reduces friction between discovery and booking. Typography, spacing, and brand styling were used to reinforce trust and relaxation while keeping the interface structured, readable, and conversion-focused.",
+
+            outcome:
+                "The final website gives Body Spoils a stronger digital presence that supports both credibility and client action. Visitors can quickly understand services, pricing, and contact pathways, while the overall experience reinforces a calm, premium brand impression that feels intentional rather than templated.",
+
+            processSteps: [
+                "Strategy",
+                "UX",
+                "UI",
+                "Development",
+                "Launch"
+            ],
+
+            interfaceWalkthrough: [
+                {
+                    title: "Homepage Hero",
+                    description:
+                        "The homepage introduces the brand through a calm visual tone, clear value proposition, and direct calls-to-action that encourage visitors to explore services or book.",
+                    image: "/images/work/WEB/BODY SPOILS-WALKTHROUGH-01.webp"
+                },
+                {
+                    title: "Service Presentation",
+                    description:
+                        "Service cards and treatment sections were structured to help users quickly compare offerings, understand benefits, and evaluate which massage experience best fits their needs.",
+                    image: "/images/work/WEB/BODY SPOILS-WALKTHROUGH-02.webp"
+                },
+                {
+                    title: "Booking & Contact Path",
+                    description:
+                        "The contact and booking flow was designed to feel direct and low-friction, giving potential clients a clear path to inquire or schedule without feeling overwhelmed.",
+                    image: "/images/work/WEB/BODY SPOILS-WALKTHROUGH-03.webp"
+                }
+            ],
+
+            uiux: {
+                userGoals: [
+                    "Understand massage services quickly",
+                    "Evaluate pricing and session options",
+                    "Build trust in the therapist and brand",
+                    "Find a clear path to booking or inquiry",
+                    "Browse easily on mobile devices"
+                ],
+
+                navigation:
+                    "Simple top-level navigation guides visitors through services, about information, and booking/contact without unnecessary complexity.",
+
+                informationArchitecture:
+                    "Home → Services → About → Contact / Booking",
+
+                visualHierarchy:
+                    "Large headlines, soft supporting visuals, and structured service cards guide attention from brand introduction into treatment details and calls-to-action.",
+
+                components: [
+                    "Hero section",
+                    "Service cards",
+                    "Benefits / value content blocks",
+                    "About / trust-building section",
+                    "Booking and contact CTA modules"
+                ],
+
+                responsive:
+                    "Responsive layout system designed to preserve readability, spacing, and CTA clarity across desktop, tablet, and mobile."
+            },
+
+            interfaceDesign: {
+                visualSystem:
+                    "A soft, premium visual language balances warmth and clarity through restrained color usage, clean typography, and generous spacing.",
+
+                layoutApproach:
+                    "Sections were arranged to move visitors from brand introduction into service understanding, credibility-building content, and a clear conversion path.",
+
+                componentStrategy:
+                    "Reusable section blocks and card patterns support scalability while keeping the presentation visually cohesive across the site.",
+
+                accessibility:
+                    "Clear typography, readable spacing, and structured content hierarchy improve scanability and make key actions easier to identify."
+            },
+
+            developmentSummary: {
+                architecture:
+                    "Built as a modular React application using Vite, with reusable UI sections and scalable content structure to support future updates and service expansion.",
+
+                features: [
+                    "Component-based architecture",
+                    "Responsive service layouts",
+                    "Clear CTA integration",
+                    "Scalable content structure",
+                    "SEO-friendly page structure",
+                    "Accessible visual hierarchy"
+                ],
+
+                performance:
+                    "Built on Vite for fast development, optimized bundling, and a lightweight front-end experience that supports smooth browsing across devices."
+            },
+
+            techStack: [
+                "React",
+                "Vite",
+                "JavaScript",
+                "CSS",
+                "Netlify"
+            ],
+
+            gallery: [
+                "/images/work/WEB/BODY-SPOILS-WALKTHROUGH-01.webp",
+                "/images/work/WEB/BODY-SPOILS-WALKTHROUGH-02.webp",
+                "/images/work/WEB/BODY-SPOILS-WALKTHROUGH-03.webp"
+            ],
+
+            relatedProjects: [
+                {
+                    slug: "body-spoils-brand-identity",
+                    title: "Body Spoils Brand Identity",
+                    type: "Brand Systems",
+                    cover: "/images/work/BRANDING/BodySpoils.webp",
+                    mediaType: "brand",
+                    imageFit: "contain",
+                    imagePosition: "center"
+                }
+            ]
+        }
+    },
+
     {
         slug: "sapphire-site-concept",
         title: "Sapphire Developments — Luxury Real Estate Platform Concept",
@@ -449,9 +465,7 @@ export const work = [
                     description:
                         "The contact experience was designed to feel clean, direct, and trustworthy, giving users a clear path to inquire without friction while reinforcing the brand’s credibility through structured layout and supporting details.",
                     image: "/images/work/WEB/SAPPHIRE-WALKTHROUGH-02.webp"
-                },
-
-
+                }
 
             ],
 
@@ -931,8 +945,6 @@ sections.map((section) => (
         }
     },
 
-
-
     {
         slug: "dictionary-ui",
         title: "Dictionary UI Micro-App",
@@ -1076,7 +1088,6 @@ const useDictionary = (word) => {
         }
     },
 
-
     /* ===============================
        BRAND SYSTEMS
     =============================== */
@@ -1124,15 +1135,19 @@ const useDictionary = (word) => {
 
             brandSystem: {
                 logo: {
-                    title: "Logo Identity",
-                    description:
-                        "Bold dispensary emblem combining retail badge structure with clean cannabis iconography. The circular form creates a strong storefront-ready silhouette while the inner sunburst geometry focuses attention around the central symbol.",
-                    colors: [
-                        { name: "Deep Indigo", value: "#2A2F6C" },
-                        { name: "Vibrant Green", value: "#1ED760" },
-                        { name: "Clean White", value: "#FFFFFF" }
-                    ],
-                    cover: "/images/work/BRANDING/LYLOGO.webp"
+                    primary: {
+                        title: "Logo Identity",
+                        description:
+                            "Bold dispensary emblem combining retail badge structure with clean cannabis iconography. The circular form creates a strong storefront-ready silhouette while the inner sunburst geometry focuses attention around the central symbol.",
+                        colors: [
+                            { name: "Deep Indigo", value: "#2A2F6C" },
+                            { name: "Vibrant Green", value: "#1ED760" },
+                            { name: "Clean White", value: "#FFFFFF" }
+                        ],
+                        cover: "/images/work/BRANDING/LYLOGO.webp"
+                    },
+
+                    variants: []
                 },
 
                 typography: {
@@ -1181,6 +1196,59 @@ const useDictionary = (word) => {
     },
 
     {
+        slug: "infinitely-fw-branding",
+        title: "Infinite Floating World",
+        category: "brand-systems",
+        year: 2024,
+        featured: true,
+        summary:
+            "Symbolic emblem built from recursive geometry to express infinity, depth, and layered identity.",
+        tags: ["Symbol Design", "Visual Identity", "Emblem Design"],
+        cover: "/images/work/BRANDING/InfinitelyFW.webp",
+        content: {
+            role: "Creator, Visual Identity",
+
+            overview:
+                "Infinite Floating World (Mugen ni Ukiyo) is the creative moniker for a body of illustration, painting, and narrative worldbuilding work. The identity is anchored by a symbolic emblem designed to express the idea of an infinite, layered universe through structure rather than literal imagery.",
+
+            challenge:
+                "Develop a visual symbol that conveys infinity, recursion, and dimensional depth without relying on obvious infinity motifs, cliché metaphors, or literal symbolism.",
+
+            solution:
+                "The mark was built from interlocking geometric forms arranged in recursive layers to suggest both expansion and compression at once. The result is a symbol with a strong central pull that functions more like an emblem or sigil than a conventional logo.",
+
+            outcome:
+                "The final mark serves as a central identifier for Infinite Floating World, providing a recognizable symbol that can extend across artwork signatures, digital platforms, and future creative applications tied to the broader identity.",
+
+            processSteps: ["Concept", "Geometry", "Refine"],
+
+            brandSystem: {
+                logo: {
+                    primary: {
+                        title: "Symbolic Emblem",
+                        description:
+                            "Interlocking geometric forms arranged in recursive layers to create the impression of an infinite center.",
+                        colors: [
+                            { name: "Black", value: "#000000" },
+                            { name: "White", value: "#FFFFFF" },
+                            { name: "Red", value: "#DC143C" }
+                        ],
+                        cover: "/images/work/BRANDING/InfinitelyFW.webp"
+                    },
+
+                    variants: []
+                }
+            },
+
+            techStack: ["Illustrator", "Photoshop"],
+
+            gallery: ["/images/work/BRANDING/InfinitelyFW.webp"],
+
+            relatedProjects: []
+        }
+    },
+
+    {
         slug: "eb-cmd-branding",
         title: "E&B Correa Mobile Detailing Identity",
         category: "brand-systems",
@@ -1214,16 +1282,21 @@ const useDictionary = (word) => {
 
             brandSystem: {
                 logo: {
-                    title: "Logo Identity",
-                    description:
-                        "Custom illustrated Cadillac SUV silhouette framed within a triangular badge emblem.",
-                    colors: [
-                        { name: "Black", value: "#1A1A1A" },
-                        { name: "Teal", value: "#00897B" },
-                        { name: "White", value: "#FFFFFF" }
-                    ],
-                    cover: "/images/work/BRANDING/E&B CMD.webp"
+                    primary: {
+                        title: "Logo Identity",
+                        description:
+                            "Custom illustrated Cadillac SUV silhouette framed within a triangular badge emblem.",
+                        colors: [
+                            { name: "Black", value: "#1A1A1A" },
+                            { name: "Teal", value: "#00897B" },
+                            { name: "White", value: "#FFFFFF" }
+                        ],
+                        cover: "/images/work/BRANDING/E&B CMD.webp"
+                    },
+
+                    variants: []
                 },
+
                 typography: {
                     title: "Typography",
                     description:
@@ -1242,51 +1315,97 @@ const useDictionary = (word) => {
     },
 
     {
-        slug: "infinitely-fw-branding",
-        title: "Infinite Floating World",
+        slug: "body-spoils-brand-identity",
+        title: "Body Spoils Brand Identity",
         category: "brand-systems",
-        year: 2024,
-        featured: true,
+        year: 2020,
+        featured: false,
+
         summary:
-            "Symbolic emblem built from recursive geometry to express infinity, depth, and layered identity.",
-        tags: ["Symbol Design", "Visual Identity", "Emblem Design"],
-        cover: "/images/work/BRANDING/InfinitelyFW.webp",
+            "Wellness-focused brand identity designed to feel soft, premium, and restorative while maintaining clarity across digital and physical applications.",
+
+        tags: [
+            "Brand Identity",
+            "Wellness Branding",
+            "Logo Design",
+            "Visual Identity"
+        ],
+
+        cover: "/images/work/BRANDING/BodySpoils.webp",
+
         content: {
-            role: "Creator, Visual Identity",
+            role: "Brand Direction, Logo Design, Visual Identity",
+            client: "Body Spoils",
 
             overview:
-                "Infinite Floating World (Mugen ni Ukiyo) is the creative moniker for a body of illustration, painting, and narrative worldbuilding work. The identity is anchored by a symbolic emblem designed to express the idea of an infinite, layered universe through structure rather than literal imagery.",
+                "Body Spoils is a massage therapy business focused on relaxation, restoration, and self-care. The identity was designed to create a sense of calm confidence while positioning the brand as premium and trustworthy.",
 
             challenge:
-                "Develop a visual symbol that conveys infinity, recursion, and dimensional depth without relying on obvious infinity motifs, cliché metaphors, or literal symbolism.",
+                "Wellness brands often fall into generic spa aesthetics or overly decorative visuals that reduce clarity and professionalism. The challenge was to create a distinctive identity that feels soft and inviting while remaining clean, modern, and versatile across applications.",
 
             solution:
-                "The mark was built from interlocking geometric forms arranged in recursive layers to suggest both expansion and compression at once. The result is a symbol with a strong central pull that functions more like an emblem or sigil than a conventional logo.",
+                "The identity was built around a refined typographic mark supported by a restrained color palette and balanced spacing. The system prioritizes clarity and adaptability, allowing the brand to function consistently across website interfaces, promotional materials, and future business touchpoints.",
 
             outcome:
-                "The final mark serves as a central identifier for Infinite Floating World, providing a recognizable symbol that can extend across artwork signatures, digital platforms, and future creative applications tied to the broader identity.",
+                "The final identity gives Body Spoils a cohesive and professional visual presence that supports both client trust and brand recognition. The system translates cleanly across digital and physical environments, reinforcing a consistent and calming brand experience.",
 
-            processSteps: ["Concept", "Geometry", "Refine"],
+            processSteps: ["Strategy", "Concept", "Design", "Refinement"],
+
+            deliverables: [
+                "Primary Logo",
+                "Logo Variants",
+                "Color System",
+                "Typography Direction"
+            ],
 
             brandSystem: {
                 logo: {
-                    title: "Symbolic Emblem",
+                    primary: {
+                        title: "Primary Logo",
+                        description:
+                            "Clean typographic mark designed to communicate calm, confidence, and professionalism.",
+                        colors: [
+                            { name: "Vibrant Pink", value: "#F985B1" },
+                            { name: "Light Pink", value: "#FCBAD3" },
+                            { name: "Warm Neutral", value: "#EDEDED" }
+                        ],
+                        cover: "/images/work/BRANDING/BodySpoils.webp"
+                    },
+
+                    variants: [
+
+                        {
+                            title: "Alternate Lockup",
+                            description:
+                                "Secondary logo arrangement for flexible placement across layouts and constrained spaces.",
+                            cover: "/images/work/BRANDING/BodySpoilsLock.webp"
+                        }
+                    ]
+                },
+
+                typography: {
+                    title: "Typography",
                     description:
-                        "Interlocking geometric forms arranged in recursive layers to create the impression of an infinite center.",
-                    colors: [
-                        { name: "Black", value: "#000000" },
-                        { name: "White", value: "#FFFFFF" },
-                        { name: "Red", value: "#DC143C" }
-                    ],
-                    cover: "/images/work/BRANDING/InfinitelyFW.webp"
+                        "Clean, modern typography reinforces the calm and professional tone of the brand while maintaining readability across digital and print applications.",
+                    headings: "Brandon Grotesque Bold",
+                    body: "Brandon Grotesque Regular"
                 }
             },
 
             techStack: ["Illustrator", "Photoshop"],
 
-            gallery: ["/images/work/BRANDING/InfinitelyFW.webp"],
+            gallery: [
+                "/images/work/BRANDING/BODY-SPOILS-LOGO.webp"
+            ],
 
-            relatedProjects: []
+            relatedProjects: [
+                {
+                    slug: "body-spoils-site",
+                    title: "Body Spoils Website",
+                    type: "UI/UX Design & Web Development",
+                    cover: "/images/work/WEB/BODY-SPOILS-WALKTHROUGH-01.webp"
+                }
+            ]
         }
     },
 
@@ -1320,14 +1439,26 @@ const useDictionary = (word) => {
 
             brandSystem: {
                 logo: {
-                    title: "Corporate Seal",
-                    description:
-                        "Modernized corporate seal featuring infinity motifs and clean contemporary typography.",
-                    colors: [
-                        { name: "Black", value: "#1A1A1A" },
-                        { name: "White", value: "#FFFFFF" }
-                    ],
-                    cover: "/images/work/BRANDING/NEO Seal.webp"
+                    primary: {
+                        title: "Corporate Seal",
+                        description:
+                            "Modernized corporate seal featuring infinity motifs and clean contemporary typography.",
+                        colors: [
+                            { name: "Black", value: "#1A1A1A" },
+                            { name: "White", value: "#FFFFFF" }
+                        ],
+                        cover: "/images/work/BRANDING/NEO Seal.webp"
+                    },
+
+                    variants: [
+                        {
+                            title: "Alternate Lockup",
+                            description:
+                                "Secondary logo arrangement for flexible placement across layouts and constrained spaces.",
+                            cover: "/images/work/BRANDING/NEO Lock.webp"
+                        }
+
+                    ]
                 },
 
                 typography: {
@@ -1377,14 +1508,18 @@ const useDictionary = (word) => {
 
             brandSystem: {
                 logo: {
-                    title: "Lounge Emblem",
-                    description:
-                        "Stylized hookah illustration framed within a circular emblem supported by ornamental hospitality lettering.",
-                    colors: [
-                        { name: "Black", value: "#1A1A1A" },
-                        { name: "White", value: "#FFFFFF" }
-                    ],
-                    cover: "/images/work/BRANDING/LV1.webp"
+                    primary: {
+                        title: "Lounge Emblem",
+                        description:
+                            "Stylized hookah illustration framed within a circular emblem supported by ornamental hospitality lettering.",
+                        colors: [
+                            { name: "Black", value: "#1A1A1A" },
+                            { name: "White", value: "#FFFFFF" }
+                        ],
+                        cover: "/images/work/BRANDING/LV1.webp"
+                    },
+
+                    variants: []
                 },
 
                 typography: {
@@ -1434,15 +1569,20 @@ const useDictionary = (word) => {
 
             brandSystem: {
                 logo: {
-                    title: "Monogram",
-                    description:
-                        "Custom S&B monogram built within a circular emblem and anchored by a triangular core.",
-                    colors: [
-                        { name: "Black", value: "#1A1A1A" },
-                        { name: "White", value: "#FFFFFF" }
-                    ],
-                    cover: "/images/work/BRANDING/S&B.webp"
+                    primary: {
+                        title: "Monogram",
+                        description:
+                            "Custom S&B monogram built within a circular emblem and anchored by a triangular core.",
+                        colors: [
+                            { name: "Black", value: "#1A1A1A" },
+                            { name: "White", value: "#FFFFFF" }
+                        ],
+                        cover: "/images/work/BRANDING/S&B.webp"
+                    },
+
+                    variants: []
                 },
+
                 typography: {
                     title: "Typography",
                     description:
@@ -1457,13 +1597,13 @@ const useDictionary = (word) => {
             gallery: ["/images/work/BRANDING/S&B.webp"],
 
             relatedProjects: [
-                {
-                    slug: "storefront-ui",
-                    title: "Stone & Brier General Store Website",
-                    type: "UI/UX & Web Development",
-                    cover: "/images/work/WEB/STORE.webp"
-                }
+                // {
+                //     slug: "storefront-ui",
+                //     title: "Stone & Brier General Store Website",
+                //     type: "UI/UX & Web Development",
+                //     cover: "/images/work/WEB/STORE.webp"
+                // }
             ]
         }
-    },
+    }
 ];
