@@ -18,6 +18,157 @@ export const work = [
     =============================== */
 
     {
+        slug: "command-center-dashboard",
+        title: "Command Center — SaaS Dashboard",
+        category: "ui-ux-web-dev",
+        year: 2026,
+        featured: true,
+
+        summary:
+            "Premium SaaS dashboard built to simulate a modern internal product environment through scalable UI systems, data-driven interfaces, and a modular React architecture.",
+
+        tags: [
+            "React",
+            "Vite",
+            "Dashboard UI",
+            "SaaS Product",
+            "UI/UX Design",
+            "Front-End Development",
+            "Design System",
+            "Data Visualization"
+        ],
+
+        cover: "/images/work/WEB/COMMANDCENTER-WALKTHROUGH-01.webp",
+        liveUrl: "https://command-center-beta-hazel.vercel.app",
+
+        content: {
+            role: "UI/UX Design, Front-End Development",
+            client: "Concept Product",
+
+            overview:
+                "Command Center was created as a product-focused dashboard experience designed to simulate how modern SaaS platforms and internal tools are structured and used. The goal was to build an interface that feels production-ready, balancing clarity, data density, and usability within a refined dark UI system.",
+
+            challenge:
+                "Dashboards often struggle to balance complexity and clarity. Too much information leads to visual noise, while overly simplified interfaces fail to communicate meaningful insights. The challenge was to design a system that supports real-world workflows — analytics, project tracking, and team management — while maintaining strong hierarchy, readability, and performance.",
+
+            solution:
+                "The dashboard was designed using a component-driven system supported by a structured layout architecture. Data visualization, tables, and UI modules were built as reusable primitives, allowing consistent behavior across pages. A restrained dark visual system with layered surfaces, subtle borders, and controlled accent usage reinforces hierarchy while keeping the interface clean and scannable.",
+
+            outcome:
+                "The result is a scalable dashboard system that demonstrates how modern SaaS products are designed and built. The interface supports multiple workflows while maintaining clarity, consistency, and usability, making it suitable as both a portfolio showcase and a foundation for future product expansion.",
+
+            processSteps: [
+                "Product Thinking",
+                "UX Structure",
+                "UI System Design",
+                "Development",
+                "Refinement"
+            ],
+
+            interfaceWalkthrough: [
+                {
+                    title: "Dashboard Overview",
+                    description:
+                        "The main dashboard presents key metrics, recent activity, and system status through structured cards and data blocks, allowing users to quickly understand performance and priorities at a glance.",
+                    image: "/images/work/WEB/COMMANDCENTER-WALKTHROUGH-01.webp"
+                },
+                {
+                    title: "Analytics Interface",
+                    description:
+                        "Analytics views focus on data visualization and trend analysis, using charts and structured layouts to help users interpret performance metrics without overwhelming the interface.",
+                    image: "/images/work/WEB/COMMANDCENTER-WALKTHROUGH-02.webp"
+                },
+                {
+                    title: "Projects Management",
+                    description:
+                        "The projects section introduces table-based workflows and detail views, allowing users to track progress, view status, and manage structured data through a clean and scalable UI system.",
+                    image: "/images/work/WEB/COMMANDCENTER-WALKTHROUGH-03.webp"
+                }
+            ],
+
+            uiux: {
+                userGoals: [
+                    "Monitor key metrics and performance",
+                    "Analyze data trends and insights",
+                    "Track project status and progress",
+                    "Manage team and operational workflows",
+                    "Navigate complex information without friction"
+                ],
+
+                navigation:
+                    "Sidebar-driven navigation system with clear section grouping, allowing users to move between dashboard, analytics, projects, team, and settings efficiently.",
+
+                informationArchitecture:
+                    "Dashboard → Analytics → Projects → Project Detail → Team → Billing → Settings",
+
+                visualHierarchy:
+                    "Layered card surfaces, consistent spacing, and controlled accent color guide attention across data points while maintaining clarity within dense information layouts.",
+
+                components: [
+                    "Dashboard metric cards",
+                    "Analytics charts",
+                    "Data tables",
+                    "Status badges",
+                    "Tabs and filters",
+                    "Search input",
+                    "Toast notifications",
+                    "Skeleton loading states"
+                ],
+
+                responsive:
+                    "Responsive layout system designed to preserve structure and usability across desktop and smaller screen sizes while maintaining data readability."
+            },
+
+            interfaceDesign: {
+                visualSystem:
+                    "A dark, premium SaaS visual system built around layered surfaces, subtle borders, and restrained accent color usage to create depth without visual clutter.",
+
+                layoutApproach:
+                    "Grid-based layout system with consistent containers and spacing ensures alignment and rhythm across all dashboard views.",
+
+                componentStrategy:
+                    "Reusable UI primitives such as cards, tables, tabs, and inputs allow consistent behavior and scalable interface composition across multiple pages.",
+
+                accessibility:
+                    "High contrast, clear typography, and structured layouts improve readability and support efficient data scanning."
+            },
+
+            developmentSummary: {
+                architecture:
+                    "Built as a modular React application using Vite, with a focus on reusable components, structured data models, and scalable page composition.",
+
+                features: [
+                    "Component-based architecture",
+                    "Dynamic routing with detail views",
+                    "Reusable UI system",
+                    "Structured mock data modeling",
+                    "Responsive dashboard layouts",
+                    "Scalable page structure"
+                ],
+
+                performance:
+                    "Optimized through Vite’s build system for fast load times, efficient bundling, and smooth client-side navigation."
+            },
+
+            techStack: [
+                "React",
+                "Vite",
+                "JavaScript",
+                "Tailwind CSS",
+                "Vercel"
+            ],
+
+            gallery: [
+                "/images/work/WEB/COMMANDCENTER-WALKTHROUGH-01.webp",
+                "/images/work/WEB/COMMANDCENTER-WALKTHROUGH-02.webp",
+                "/images/work/WEB/COMMANDCENTER-WALKTHROUGH-03.webp"
+            ],
+
+            relatedProjects: []
+        }
+    },
+
+    {
         slug: "neo-unlimited-site",
         title: "Neo Unlimited — Consultancy Website",
         category: "ui-ux-web-dev",
@@ -653,7 +804,7 @@ export const work = [
         title: "Little York Smoke Shop Website",
         category: "ui-ux-web-dev",
         year: 2025,
-        featured: true,
+        featured: false,
 
         summary:
             "Retail storefront website built to highlight promotions, product categories, and store information through a bold, mobile-friendly experience.",
@@ -945,148 +1096,7 @@ sections.map((section) => (
         }
     },
 
-    {
-        slug: "dictionary-ui",
-        title: "Dictionary UI Micro-App",
-        category: "ui-ux-web-dev",
-        year: 2023,
-        featured: false,
-        summary: "React-powered dictionary micro-app with real-time word search and clean reading-focused UI.",
-        tags: ["React", "Micro-App", "UI Design", "Web Development"],
-        cover: "/images/work/WEB/Dictionary.webp",
-        liveUrl: "https://dictionary-react-app-rho.vercel.app/",
 
-        content: {
-            role: "UI/UX Design, Front-End Development",
-            overview:
-                "This project explores a lightweight dictionary interface built with React, designed for fast word lookups and distraction-free reading. The goal was to create a compact application where users can quickly search for any term and immediately view definitions in a clean, structured layout.",
-            challenge:
-                "Dictionary interfaces often present dense linguistic information that can feel overwhelming. The challenge was designing a UI that keeps the interaction simple while presenting definitions, meanings, and related information in a way that remains easy to scan and visually organized.",
-            solution:
-                "The application was built as a small React micro-app with a responsive search interface and dynamic word lookup functionality. Results are displayed using clear typographic hierarchy, grouped content blocks, and accessible color contrast to make definitions easy to read and navigate. Keyboard-friendly input flows allow users to quickly search and iterate through terms without unnecessary interaction steps.",
-            outcome:
-                "The final result is a fast, minimal dictionary interface that demonstrates how thoughtful UI structure and lightweight React architecture can turn a simple lookup task into a smooth and efficient experience.",
-            processSteps: ["UX Research", "UI Design", "Development", "Testing"],
-
-            uiux: {
-                userGoals: [
-                    "Quickly search for word definitions",
-                    "Read definitions without distraction",
-                    "Access phonetic pronunciations",
-                    "View multiple meanings"
-                ],
-                navigation: "Single-page search interface",
-                informationArchitecture: "Search → Results → Definitions",
-                visualHierarchy: "Clean typography focused on readability",
-                components: [
-                    "Search input",
-                    "Definition cards",
-                    "Phonetic display",
-                    "Part of speech labels"
-                ],
-                responsive: "Mobile-friendly interface"
-            },
-
-            development: {
-                architecture: "React micro-app with API integration",
-                features: [
-                    "Real-time search",
-                    "Dictionary API integration",
-                    "Keyboard navigation",
-                    "State management"
-                ],
-                performance: "Lightweight and fast"
-            },
-
-            techStack: ["React", "Dictionary API", "CSS"],
-
-            interfaceWalkthrough: [
-                {
-                    title: "Search Interface + Phonetics & Audio",
-                    description:
-                        "Clean search input with instant word lookup, audio pronunciation, phonetic transcription, and syllable breakdown for accurate pronunciation.",
-                    image: "/images/work/WEB/Dictionary-WALKTHROUGH-01.webp"
-                },
-                {
-                    title: "Definition Display",
-                    description:
-                        "Organized definitions with part of speech labels, multiple meanings, and example usage in context.",
-                    image: "/images/work/WEB/Dictionary-WALKTHROUGH-02.webp"
-                },
-                {
-                    title: "Word of the Day",
-                    description:
-                        "Discover a new word each day with its definition, pronunciation, phonetic transcription, and syllable breakdown to expand your vocabulary and improve pronunciation..",
-                    image: "/images/work/WEB/Dictionary-WALKTHROUGH-03.webp"
-                }
-            ],
-
-            developmentImplementation: {
-                architecture: [
-                    {
-                        title: "API Integration Layer",
-                        description:
-                            "Clean separation between API calls and UI rendering with custom hooks for word lookups.",
-                        code: `// Custom hook for dictionary API
-const useDictionary = (word) => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    if (!word) return;
-    setLoading(true);
-    fetch(
-      'https://api.dictionaryapi.dev/api/v2/entries/en/' + word
-    )
-      .then(res => res.json())
-      .then(setData)
-      .finally(() => setLoading(false));
-  }, [word]);
-
-  return { data, loading };
-};`
-                    }
-                ],
-                dataModel: [
-                    {
-                        title: "Dictionary API Response",
-                        description:
-                            "Parsed API response structure for extracting definitions, phonetics, and meanings.",
-                        code: `const dictionaryEntry = {
-  word: "example",
-  phonetic: "/ɪɡˈzæmpəl/",
-  meanings: [
-    {
-      partOfSpeech: "noun",
-      definitions: [
-        { definition: "...", example: "..." }
-      ]
-    }
-  ]
-};`
-                    }
-                ],
-                uiLogic: [
-                    {
-                        title: "Search Debouncing",
-                        description:
-                            "Optimized search input with debouncing to prevent excessive API calls.",
-                        code: `const debounce = (fn, delay) => {
-  let timeoutId;
-  return (...args) => {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => fn(...args), delay);
-  };
-};`
-                    }
-                ]
-            },
-
-            gallery: ["/images/work/WEB/Dictionary.webp"],
-
-            relatedProjects: []
-        }
-    },
 
     /* ===============================
        BRAND SYSTEMS
@@ -1097,7 +1107,7 @@ const useDictionary = (word) => {
         title: "Little York Smoke Shop",
         category: "brand-systems",
         year: 2025,
-        featured: true,
+        featured: false,
 
         summary:
             "Complete retail brand system spanning logo identity, storefront graphics, and digital brand integration.",
@@ -1403,7 +1413,10 @@ const useDictionary = (word) => {
                     slug: "body-spoils-site",
                     title: "Body Spoils Website",
                     type: "UI/UX Design & Web Development",
-                    cover: "/images/work/WEB/BODY-SPOILS-WALKTHROUGH-01.webp"
+                    cover: "/images/work/WEB/BODY SPOILS-WALKTHROUGH-01.webp",
+                    mediaType: "web",
+                    imageFit: "contain",
+                    imagePosition: "center"
                 }
             ]
         }
@@ -1474,7 +1487,18 @@ const useDictionary = (word) => {
 
             gallery: ["/images/work/BRANDING/NEO Seal.webp"],
 
-            relatedProjects: []
+            relatedProjects: [
+
+                {
+                    slug: "neo-unlimited-site",
+                    title: "Neo Unlimited — Consultancy Website",
+                    type: "ui-ux-web-dev",
+                    cover: "/images/work/WEB/NEO-WALKTHROUGH-01.webp",
+                    mediaType: "web",
+                    imageFit: "contain",
+                    imagePosition: "center"
+                }
+            ]
         }
     },
 
