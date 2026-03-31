@@ -7,13 +7,17 @@ import { usePageTitle } from "../hooks/usePageTitle.js";
 import { useParallax } from "../hooks/useParallax.js";
 
 const featuredWork = work.filter((w) => w.featured).sort((a, b) => {
-    // Put Neo Unlimited site first
-    if (a.slug === "neo-unlimited-site") return -1;
-    if (b.slug === "neo-unlimited-site") return 1;
-    // Then sort by category
-    if (a.category === "brand-systems" && b.category === "ui-ux-web-dev") return -1;
-    if (a.category === "ui-ux-web-dev" && b.category === "brand-systems") return 1;
-    return 0;
+    // Custom order: Creator Stack first, Command Center second, NEO Unlimited last
+    const order = {
+        "creator-stack": 1,
+        "command-center-dashboard": 2,
+        "neo-unlimited-site": 3
+    };
+    
+    const aOrder = order[a.slug] || 4;
+    const bOrder = order[b.slug] || 4;
+    
+    return aOrder - bOrder;
 });
 
 export default function Home() {

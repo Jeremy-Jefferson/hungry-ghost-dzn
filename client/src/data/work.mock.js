@@ -16,6 +16,163 @@ export const work = [
     /* ===============================
        UI/UX & WEB DEVELOPMENT
     =============================== */
+{
+  slug: "creator-stack",
+  title: "Creator Stack",
+  category: "ui-ux-web-dev",
+  year: "2026",
+  featured: true,
+
+  summary:
+    "A modern SaaS platform designed for creators to sell digital products, prints, and merchandise through a unified storefront and dashboard system.",
+
+  tags: [
+    "React",
+    "Vite",
+    "SaaS Product",
+    "Dashboard UI",
+    "UI/UX Design",
+    "Front-End Development",
+    "Ecommerce",
+    "Design System"
+  ],
+
+  cover: "/images/work/WEB/CREATOR-STACK-HOME.webp",
+  liveUrl: "https://creatorstack-beige.vercel.app/",
+
+  content: {
+    role: "UI/UX Design, Front-End Development",
+    client: "Concept Product",
+
+    overview:
+      "Creator Stack is a product-focused commerce platform designed to help independent creators sell digital products, prints, and merchandise through a unified system. The platform combines storefront creation, product management, analytics, and order tracking into a cohesive experience built for clarity and scalability.",
+
+    problem:
+      "Creators often rely on multiple disconnected tools to manage storefronts, analytics, and product delivery. This fragmentation creates friction, limits visibility into performance, and complicates workflows—especially for non-technical users.",
+
+    challenge:
+      "Design a platform that feels simple and approachable for beginners while remaining powerful enough for serious creators. The system needed to balance marketing, product management, and analytics without overwhelming the user.",
+
+    solution:
+      "A unified SaaS platform structured around two core layers: a marketing experience for onboarding and conversion, and a product-focused dashboard for managing content, tracking performance, and handling operations. The interface uses a modular component system to ensure consistency and scalability across features.",
+
+    outcome:
+      "A cohesive product experience that streamlines creator workflows, improves visibility into performance, and demonstrates how modern creator commerce platforms can be structured through a clean, scalable UI system.",
+
+    processSteps: [
+      "Product Strategy",
+      "UX Structure",
+      "UI System Design",
+      "Development",
+      "Refinement"
+    ],
+
+    interfaceWalkthrough: [
+      {
+        title: "Home Page — Positioning & Conversion",
+        description:
+          "A typography-driven hero with strong visual hierarchy and clear calls to action. The dashboard preview reinforces product value early and supports conversion.",
+        image: "/images/work/WEB/CREATOR-STACK-HOME.webp"
+      },
+      {
+        title: "Pricing — Product Clarity",
+        description:
+          "A structured pricing system with clearly defined tiers and feature scaling, guiding users toward upgrades through subtle visual emphasis.",
+        image: "/images/work/WEB/CREATOR-STACK-PRICING.webp"
+      },
+      {
+        title: "Dashboard — Product Experience",
+        description:
+          "A modular dashboard interface featuring analytics, recent activity, and quick actions, designed for clarity, usability, and scalable growth.",
+        image: "/images/work/WEB/CREATOR-STACK-DASHBOARD.webp"
+      }
+    ],
+
+    uiux: {
+      userGoals: [
+        "Sell digital products and merchandise",
+        "Track revenue and performance metrics",
+        "Manage products and storefront content",
+        "Monitor orders and customer activity",
+        "Navigate workflows with minimal friction"
+      ],
+
+      navigation:
+        "A structured navigation system separating marketing pages from the authenticated dashboard, allowing clear transitions between discovery and product usage.",
+
+      informationArchitecture:
+        "Home → Pricing → Authentication → Dashboard → Products → Orders → Analytics → Settings",
+
+      visualHierarchy:
+        "Typography-first layouts, consistent spacing, and controlled accent usage guide user attention across both marketing and dashboard environments.",
+
+      components: [
+        "Metric cards",
+        "Analytics charts",
+        "Product tables",
+        "Order lists",
+        "Status indicators",
+        "Buttons and CTAs",
+        "Forms and inputs",
+        "Navigation sidebar"
+      ],
+
+      responsive:
+        "Responsive layout system designed to maintain usability and readability across desktop and smaller devices, particularly within dashboard views."
+    },
+
+    interfaceDesign: {
+      visualSystem:
+        "A modern SaaS visual system combining dark UI with subtle gradients and restrained accent colors to create depth while maintaining clarity.",
+
+      layoutApproach:
+        "Grid-based layout system with consistent containers and spacing, ensuring alignment and rhythm across marketing pages and dashboard interfaces.",
+
+      componentStrategy:
+        "Reusable UI components built as modular primitives, enabling scalable interface construction across multiple features and views.",
+
+      accessibility:
+        "High contrast text, clear hierarchy, and structured layouts improve readability and support efficient data scanning."
+    },
+
+    developmentSummary: {
+      architecture:
+        "Built as a modular React application using Vite, focusing on reusable components, scalable structure, and clean separation between marketing and application layers.",
+
+      features: [
+        "Component-based architecture",
+        "Structured dashboard system",
+        "Reusable UI components",
+        "Dynamic routing",
+        "Scalable page composition",
+        "Responsive layouts"
+      ],
+
+      performance:
+        "Optimized using Vite for fast builds, efficient bundling, and smooth client-side navigation."
+    },
+
+    techStack: [
+      "React",
+      "Vite",
+      "JavaScript",
+      "Tailwind CSS",
+      "Vercel"
+    ],
+
+    gallery: [
+      "/images/work/WEB/CREATOR-STACK-HOME.webp",
+      "/images/work/WEB/CREATOR-STACK-PRICING.webp",
+      "/images/work/WEB/CREATOR-STACK-DASHBOARD.webp"
+    ],
+
+    relatedProjects: []
+  }
+},
+
+
+
+
 
     {
         slug: "command-center-dashboard",
@@ -943,160 +1100,6 @@ export const work = [
         }
     },
 
-    {
-        slug: "portfolio-showcase",
-        title: "Developer Portfolio Site",
-        category: "ui-ux-web-dev",
-        year: 2023,
-        featured: false,
-        summary:
-            "Personal portfolio site built to present projects, skills, and contact information through a clear single-page experience.",
-        tags: ["React", "Portfolio Website", "Responsive UI", "Front-End Development"],
-        cover: "/images/work/WEB/Portfolio.webp",
-        liveUrl: "https://jeremy-jefferson-portfolio.vercel.app",
-
-        content: {
-            role: "UI/UX Design, Front-End Development",
-            client: "Personal Project",
-
-            overview:
-                "This project is a personal developer portfolio designed to present work, technical skills, and contact information in a direct and approachable way. The goal was to create a site that makes it easy for visitors to quickly understand the developer’s background, review selected projects, and navigate the experience without unnecessary friction.",
-
-            challenge:
-                "Developer portfolios often become visually cluttered or overloaded with information, making it harder for recruiters, collaborators, or potential clients to quickly evaluate the work. The challenge was to design a portfolio experience that felt personal and visually engaging while still remaining structured, readable, and easy to scan.",
-
-            solution:
-                "The interface was built around a simple single-page structure with strong typographic hierarchy, clear section separation, and focused navigation. Projects, background information, and contact details were organized into predictable content blocks so users could move through the site quickly and understand the work without distraction. A restrained visual system and responsive layout helped keep the experience clean across screen sizes.",
-
-            outcome:
-                "The final result is a streamlined portfolio site that showcases projects and developer strengths in a clear, accessible format. The structure supports quick browsing, smooth section-to-section navigation, and future content expansion while keeping the presentation simple and focused.",
-
-            processSteps: ["UX Strategy", "UI Design", "Development", "Launch"],
-
-            interfaceWalkthrough: [
-                {
-                    title: "Hero Introduction",
-                    description:
-                        "The hero section establishes identity immediately with a clear name, concise technical summary, and a direct call-to-action that encourages visitors to explore projects.",
-                    image: "/images/work/WEB/Portfolio.webp"
-                },
-                {
-                    title: "Project Showcase",
-                    description:
-                        "Project cards organize featured work into an easy-to-scan section, helping visitors review case studies, technologies used, and supporting links without hunting through dense content.",
-                    image: "/images/work/WEB/Portfolio-WALKTHROUGH-02.webp"
-                },
-                {
-                    title: "About and Contact",
-                    description:
-                        "The lower sections provide background context and contact information in a simple layout that supports trust, readability, and direct outreach.",
-                    image: "/images/work/WEB/Portfolio-WALKTHROUGH-03.webp"
-                }
-            ],
-
-            uiux: {
-                userGoals: [
-                    "Quickly understand the developer’s skills",
-                    "Review selected projects with minimal friction",
-                    "Learn about background and experience",
-                    "Find contact information easily"
-                ],
-                navigation:
-                    "Single-page scrolling navigation supported by clear section anchors and predictable layout flow.",
-                informationArchitecture:
-                    "Hero → Projects → About → Contact",
-                visualHierarchy:
-                    "Large headline typography, concise supporting copy, and clear content grouping help visitors scan the page quickly.",
-                components: [
-                    "Hero introduction",
-                    "Project cards",
-                    "About section",
-                    "Contact section",
-                    "Section navigation"
-                ],
-                responsive:
-                    "Responsive layout designed to preserve readability and section clarity across desktop and smaller screens."
-            },
-
-            interfaceDesign: {
-                visualSystem:
-                    "The design uses a dark, high-contrast visual style with focused accent color and restrained content blocks to keep attention on the work.",
-                layoutApproach:
-                    "The layout follows a top-to-bottom narrative, guiding visitors from identity and skill summary into project exploration, background context, and contact.",
-                componentStrategy:
-                    "Reusable section patterns and project card structures help keep the experience consistent and easy to expand.",
-                accessibility:
-                    "Typography contrast, spacing, and section separation were used to improve readability and help users navigate content quickly."
-            },
-
-            developmentSummary: {
-                architecture:
-                    "Built as a React single-page application with modular sections for content organization and straightforward maintenance.",
-                features: [
-                    "Single-page portfolio structure",
-                    "Responsive project layout",
-                    "Smooth section navigation",
-                    "Deployed live on Vercel"
-                ],
-                performance:
-                    "Kept intentionally lightweight to support quick loading and a fast browsing experience."
-            },
-
-            developmentImplementation: {
-                architecture: [
-                    {
-                        title: "Section-Based SPA Structure",
-                        description:
-                            "The site was organized as a single-page React application with distinct content sections, allowing visitors to move through the portfolio smoothly without context switching.",
-                        code: `const sections = ["hero", "projects", "about", "contact"];
-
-sections.map((section) => (
-  <Section id={section} key={section}>
-    {content[section]}
-  </Section>
-));`
-                    }
-                ],
-                dataModel: [
-                    {
-                        title: "Structured Project Data",
-                        description:
-                            "Project content was shaped as reusable data objects so cards could be rendered consistently across the portfolio section.",
-                        code: `const project = {
-  title: "Project Name",
-  description: "Brief overview",
-  technologies: ["React", "CSS"],
-  link: "https://..."
-};`
-                    }
-                ],
-                uiLogic: [
-                    {
-                        title: "Smooth Scroll Navigation",
-                        description:
-                            "Section-based navigation was supported by smooth scrolling behavior to make movement through the page feel direct and intuitive.",
-                        code: `const scrollToSection = (id) => {
-  document.getElementById(id)?.scrollIntoView({
-    behavior: "smooth"
-  });
-};`
-                    }
-                ]
-            },
-
-            techStack: ["React", "CSS", "Vercel"],
-
-            gallery: [
-                "/images/work/WEB/Portfolio.webp",
-                "/images/work/WEB/Portfolio-WALKTHROUGH-02.webp",
-                "/images/work/WEB/Portfolio-WALKTHROUGH-03.webp"
-            ],
-
-            relatedProjects: []
-        }
-    },
-
-
 
     /* ===============================
        BRAND SYSTEMS
@@ -1210,7 +1213,7 @@ sections.map((section) => (
         title: "Infinite Floating World",
         category: "brand-systems",
         year: 2024,
-        featured: true,
+        featured: false,
         summary:
             "Symbolic emblem built from recursive geometry to express infinity, depth, and layered identity.",
         tags: ["Symbol Design", "Visual Identity", "Emblem Design"],
