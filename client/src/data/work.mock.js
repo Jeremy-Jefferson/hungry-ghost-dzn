@@ -16,159 +16,169 @@ export const work = [
     /* ===============================
        UI/UX & WEB DEVELOPMENT
     =============================== */
-{
-  slug: "creator-stack",
-  title: "Creator Stack",
-  category: "ui-ux-web-dev",
-  year: "2026",
-  featured: true,
+    {
+        slug: "creator-stack",
+        title: "Creator Stack",
+        category: "ui-ux-web-dev",
+        year: "2026",
+        featured: true,
 
-  summary:
-    "A modern SaaS platform designed for creators to sell digital products, prints, and merchandise through a unified storefront and dashboard system.",
+        summary:
+            "A modern SaaS platform designed for creators to sell digital products, prints, and merchandise through a unified storefront and dashboard system.",
 
-  tags: [
-    "React",
-    "Vite",
-    "SaaS Product",
-    "Dashboard UI",
-    "UI/UX Design",
-    "Front-End Development",
-    "Ecommerce",
-    "Design System"
-  ],
+        tags: [
+            "React",
+            "Vite",
+            "SaaS Product",
+            "Dashboard UI",
+            "UI/UX Design",
+            "Front-End Development",
+            "Ecommerce",
+            "Design System"
+        ],
 
-  cover: "/images/work/WEB/CREATOR-STACK-HOME.webp",
-  liveUrl: "https://creatorstack-beige.vercel.app/",
+        cover: "/images/work/WEB/CREATOR-STACK-HOME.webp",
+        liveUrl: "https://creatorstack-beige.vercel.app/",
 
-  content: {
-    role: "UI/UX Design, Front-End Development",
-    client: "Concept Product",
+        content: {
+            role: "UI/UX Design, Front-End Development",
+            client: "Concept Product",
 
-    overview:
-      "Creator Stack is a product-focused commerce platform designed to help independent creators sell digital products, prints, and merchandise through a unified system. The platform combines storefront creation, product management, analytics, and order tracking into a cohesive experience built for clarity and scalability.",
+            overview:
+                "Creator Stack is a product-focused commerce platform designed to help independent creators sell digital products, prints, and merchandise through a unified system. The platform combines storefront creation, product management, analytics, and order tracking into a cohesive experience built for clarity and scalability.",
 
-    problem:
-      "Creators often rely on multiple disconnected tools to manage storefronts, analytics, and product delivery. This fragmentation creates friction, limits visibility into performance, and complicates workflows—especially for non-technical users.",
+            problem:
+                "Creators often rely on multiple disconnected tools to manage storefronts, analytics, and product delivery. This fragmentation creates friction, limits visibility into performance, and complicates workflows—especially for non-technical users.",
 
-    challenge:
-      "Design a platform that feels simple and approachable for beginners while remaining powerful enough for serious creators. The system needed to balance marketing, product management, and analytics without overwhelming the user.",
+            challenge:
+                "Design a platform that feels simple and approachable for beginners while remaining powerful enough for serious creators. The system needed to balance marketing, product management, and analytics without overwhelming the user.",
 
-    solution:
-      "A unified SaaS platform structured around two core layers: a marketing experience for onboarding and conversion, and a product-focused dashboard for managing content, tracking performance, and handling operations. The interface uses a modular component system to ensure consistency and scalability across features.",
+            solution:
+                "A unified SaaS platform structured around two core layers: a marketing experience for onboarding and conversion, and a product-focused dashboard for managing content, tracking performance, and handling operations. The interface uses a modular component system to ensure consistency and scalability across features.",
 
-    outcome:
-      "A cohesive product experience that streamlines creator workflows, improves visibility into performance, and demonstrates how modern creator commerce platforms can be structured through a clean, scalable UI system.",
+            outcome:
+                "A cohesive product experience that streamlines creator workflows, improves visibility into performance, and demonstrates how modern creator commerce platforms can be structured through a clean, scalable UI system.",
 
-    processSteps: [
-      "Product Strategy",
-      "UX Structure",
-      "UI System Design",
-      "Development",
-      "Refinement"
-    ],
+            processSteps: [
+                "Product Strategy",
+                "UX Structure",
+                "UI System Design",
+                "Development",
+                "Refinement"
+            ],
 
-    interfaceWalkthrough: [
-      {
-        title: "Home Page — Positioning & Conversion",
-        description:
-          "A typography-driven hero with strong visual hierarchy and clear calls to action. The dashboard preview reinforces product value early and supports conversion.",
-        image: "/images/work/WEB/CREATOR-STACK-HOME.webp"
-      },
-      {
-        title: "Pricing — Product Clarity",
-        description:
-          "A structured pricing system with clearly defined tiers and feature scaling, guiding users toward upgrades through subtle visual emphasis.",
-        image: "/images/work/WEB/CREATOR-STACK-PRICING.webp"
-      },
-      {
-        title: "Dashboard — Product Experience",
-        description:
-          "A modular dashboard interface featuring analytics, recent activity, and quick actions, designed for clarity, usability, and scalable growth.",
-        image: "/images/work/WEB/CREATOR-STACK-DASHBOARD.webp"
-      }
-    ],
+            interfaceWalkthrough: [
+                {
+                    title: "Home Page — Positioning & Conversion",
+                    description:
+                        "A typography-driven hero with strong visual hierarchy and clear calls to action. The dashboard preview reinforces product value early and supports conversion.",
+                    image: "/images/work/WEB/CREATOR-STACK-HOME.webp"
+                },
+                {
+                    title: "Pricing — Product Clarity",
+                    description:
+                        "A structured pricing system with clearly defined tiers and feature scaling, guiding users toward upgrades through subtle visual emphasis.",
+                    image: "/images/work/WEB/CREATOR-STACK-PRICING.webp"
+                },
+                {
+                    title: "Dashboard — Product Experience",
+                    description:
+                        "A modular dashboard interface featuring analytics, recent activity, and quick actions, designed for clarity, usability, and scalable growth.",
+                    image: "/images/work/WEB/CREATOR-STACK-DASHBOARD.webp"
+                }
+            ],
 
-    uiux: {
-      userGoals: [
-        "Sell digital products and merchandise",
-        "Track revenue and performance metrics",
-        "Manage products and storefront content",
-        "Monitor orders and customer activity",
-        "Navigate workflows with minimal friction"
-      ],
+            uiux: {
+                userGoals: [
+                    "Sell digital products and merchandise",
+                    "Track revenue and performance metrics",
+                    "Manage products and storefront content",
+                    "Monitor orders and customer activity",
+                    "Navigate workflows with minimal friction"
+                ],
 
-      navigation:
-        "A structured navigation system separating marketing pages from the authenticated dashboard, allowing clear transitions between discovery and product usage.",
+                navigation:
+                    "A structured navigation system separating marketing pages from the authenticated dashboard, allowing clear transitions between discovery and product usage.",
 
-      informationArchitecture:
-        "Home → Pricing → Authentication → Dashboard → Products → Orders → Analytics → Settings",
+                informationArchitecture:
+                    "Home → Pricing → Authentication → Dashboard → Products → Orders → Analytics → Settings",
 
-      visualHierarchy:
-        "Typography-first layouts, consistent spacing, and controlled accent usage guide user attention across both marketing and dashboard environments.",
+                visualHierarchy:
+                    "Typography-first layouts, consistent spacing, and controlled accent usage guide user attention across both marketing and dashboard environments.",
 
-      components: [
-        "Metric cards",
-        "Analytics charts",
-        "Product tables",
-        "Order lists",
-        "Status indicators",
-        "Buttons and CTAs",
-        "Forms and inputs",
-        "Navigation sidebar"
-      ],
+                components: [
+                    "Metric cards",
+                    "Analytics charts",
+                    "Product tables",
+                    "Order lists",
+                    "Status indicators",
+                    "Buttons and CTAs",
+                    "Forms and inputs",
+                    "Navigation sidebar"
+                ],
 
-      responsive:
-        "Responsive layout system designed to maintain usability and readability across desktop and smaller devices, particularly within dashboard views."
+                responsive:
+                    "Responsive layout system designed to maintain usability and readability across desktop and smaller devices, particularly within dashboard views."
+            },
+
+            interfaceDesign: {
+                visualSystem:
+                    "A modern SaaS visual system combining dark UI with subtle gradients and restrained accent colors to create depth while maintaining clarity.",
+
+                layoutApproach:
+                    "Grid-based layout system with consistent containers and spacing, ensuring alignment and rhythm across marketing pages and dashboard interfaces.",
+
+                componentStrategy:
+                    "Reusable UI components built as modular primitives, enabling scalable interface construction across multiple features and views.",
+
+                accessibility:
+                    "High contrast text, clear hierarchy, and structured layouts improve readability and support efficient data scanning."
+            },
+
+            developmentSummary: {
+                architecture:
+                    "Built as a modular React application using Vite, focusing on reusable components, scalable structure, and clean separation between marketing and application layers.",
+
+                features: [
+                    "Component-based architecture",
+                    "Structured dashboard system",
+                    "Reusable UI components",
+                    "Dynamic routing",
+                    "Scalable page composition",
+                    "Responsive layouts"
+                ],
+
+                performance:
+                    "Optimized using Vite for fast builds, efficient bundling, and smooth client-side navigation."
+            },
+
+            techStack: [
+                "React",
+                "Vite",
+                "JavaScript",
+                "Tailwind CSS",
+                "Vercel"
+            ],
+
+            gallery: [
+                "/images/work/WEB/CREATOR-STACK-HOME.webp",
+                "/images/work/WEB/CREATOR-STACK-PRICING.webp",
+                "/images/work/WEB/CREATOR-STACK-DASHBOARD.webp"
+            ],
+
+            relatedProjects: [
+                {
+                    slug: "creator-stack-brand-identity",
+                    title: "Creator Stack Brand Identity",
+                    type: "Brand Identity & Visual System",
+                    cover: "/images/work/WEB/CREATOR-STACK-HOME.webp",
+                    mediaType: "brand",
+                    imageFit: "contain",
+                    imagePosition: "center"
+                }
+            ]
+        }
     },
-
-    interfaceDesign: {
-      visualSystem:
-        "A modern SaaS visual system combining dark UI with subtle gradients and restrained accent colors to create depth while maintaining clarity.",
-
-      layoutApproach:
-        "Grid-based layout system with consistent containers and spacing, ensuring alignment and rhythm across marketing pages and dashboard interfaces.",
-
-      componentStrategy:
-        "Reusable UI components built as modular primitives, enabling scalable interface construction across multiple features and views.",
-
-      accessibility:
-        "High contrast text, clear hierarchy, and structured layouts improve readability and support efficient data scanning."
-    },
-
-    developmentSummary: {
-      architecture:
-        "Built as a modular React application using Vite, focusing on reusable components, scalable structure, and clean separation between marketing and application layers.",
-
-      features: [
-        "Component-based architecture",
-        "Structured dashboard system",
-        "Reusable UI components",
-        "Dynamic routing",
-        "Scalable page composition",
-        "Responsive layouts"
-      ],
-
-      performance:
-        "Optimized using Vite for fast builds, efficient bundling, and smooth client-side navigation."
-    },
-
-    techStack: [
-      "React",
-      "Vite",
-      "JavaScript",
-      "Tailwind CSS",
-      "Vercel"
-    ],
-
-    gallery: [
-      "/images/work/WEB/CREATOR-STACK-HOME.webp",
-      "/images/work/WEB/CREATOR-STACK-PRICING.webp",
-      "/images/work/WEB/CREATOR-STACK-DASHBOARD.webp"
-    ],
-
-    relatedProjects: []
-  }
-},
 
 
 
@@ -708,6 +718,175 @@ export const work = [
     },
 
     {
+        slug: "little-york-smoke-shop-site",
+        title: "Little York Smoke Shop — Retail Website",
+        category: "ui-ux-web-dev",
+        year: 2026,
+        featured: true,
+
+        summary:
+            "A bold retail website redesign built to help Little York Smoke Shop communicate value fast, showcase product categories and featured inventory, and drive real-world visits through a stronger digital storefront experience.",
+
+        tags: [
+            "React",
+            "Vite",
+            "Retail Website",
+            "UI/UX Design",
+            "Front-End Development",
+            "Local Business",
+            "Product Browsing",
+            "Conversion-Focused Design"
+        ],
+
+        cover: "/images/work/WEB/LITTLE-YORK-WALKTHROUGH-01.webp",
+        liveUrl: "https://little-york.vercel.app/",
+
+        content: {
+            role: "UI/UX Design, Front-End Development",
+            client: "Little York Smoke Shop",
+
+            overview:
+                "Little York Smoke Shop needed a stronger digital presence that felt more aligned with the energy of the storefront while making the site more useful for actual customers. The updated experience was designed to function like a modern retail landing page: clear value proposition up front, fast access to products and deals, strong location visibility, and direct paths to call or get directions.",
+
+            problem:
+                "Many local retail sites stop at basic information and never evolve into a real customer-facing experience. That creates friction for visitors who want to quickly understand what a shop carries, whether it is open, what the deals look like, and how to get there.",
+
+            challenge:
+                "The challenge was to create a site that feels visually bold and brand-specific without becoming chaotic. It needed to balance marketing energy with practical usability, giving customers fast access to promotions, product categories, inventory-style browsing, reviews, hours, directions, and contact pathways across both desktop and mobile.",
+
+            solution:
+                "The redesigned site was structured as a high-impact digital storefront. A strong hero immediately communicates the brand promise, while supporting sections move users through featured deals, product categories, searchable product browsing, trust-building content, store details, email capture, and direct contact actions. The visual system carries the Little York identity through dark surfaces, neon green accents, bold type, and a clear retail-focused hierarchy.",
+
+            outcome:
+                "The final result is a much more complete retail website experience that feels intentional, current, and conversion-driven. Instead of acting like a static information page, the site now works as an extension of the storefront itself—helping customers browse, evaluate, and take action quickly.",
+
+            processSteps: [
+                "UX Strategy",
+                "Content Structure",
+                "UI System Design",
+                "Development",
+                "Refinement"
+            ],
+
+            interfaceWalkthrough: [
+                {
+                    title: "Hero Section — Brand Positioning & Immediate Action",
+                    description:
+                        "The landing experience combines bold messaging, operating status, and direct calls-to-action to establish value immediately. The large-scale hero creates a stronger first impression while pushing high-intent actions like directions and phone calls above the fold.",
+                    image: "/images/work/WEB/LITTLE-YORK-WALKTHROUGH-01.webp"
+                },
+                {
+                    title: "Product Browsing — Search, Categories, and Featured Inventory",
+                    description:
+                        "A more structured product discovery layer gives visitors a clearer sense of what the shop carries. Category blocks, search controls, and merchandised product cards help the site feel more like a real retail environment instead of a static promo page.",
+                    image: "/images/work/WEB/LITTLE-YORK-WALKTHROUGH-02.webp"
+                },
+                {
+                    title: "Visit & Contact Experience",
+                    description:
+                        "Store hours, address, embedded map, contact details, newsletter signup, and direct inquiry form were grouped into a stronger destination section so customers can move from interest to action without friction.",
+                    image: "/images/work/WEB/LITTLE-YORK-WALKTHROUGH-03.webp"
+                }
+            ],
+
+            uiux: {
+                userGoals: [
+                    "See if the shop is open",
+                    "Understand what products are available",
+                    "Check featured deals and promotions",
+                    "Get directions quickly",
+                    "Call or contact the shop easily",
+                    "Build confidence before visiting"
+                ],
+
+                navigation:
+                    "Top-level navigation was simplified around the customer journey: home, deals, products, about, and visit/contact. Utility actions like directions and call now sit in stronger high-visibility positions.",
+
+                informationArchitecture:
+                    "Home → Deals → Products → About → Visit Us → Contact",
+
+                visualHierarchy:
+                    "The updated hierarchy is led by a strong hero statement, supported by retail utility signals such as open status, category access, featured product blocks, and high-contrast calls-to-action. Supporting sections then reinforce trust, location, and contact pathways.",
+
+                components: [
+                    "Status pill / store-hours indicator",
+                    "Hero CTA group",
+                    "Featured deal cards",
+                    "Product category cards",
+                    "Search and category filter bar",
+                    "Product grid cards",
+                    "Customer testimonial blocks",
+                    "Visit/location card",
+                    "Contact form",
+                    "Newsletter signup"
+                ],
+
+                responsive:
+                    "The interface was designed to preserve strong CTA visibility and fast information access across screen sizes, with special emphasis on mobile usability for directions, phone calls, and quick browsing."
+            },
+
+            interfaceDesign: {
+                visualSystem:
+                    "The visual system extends the Little York identity through dark indigo surfaces, bright green accent color, soft glow treatments, and bold typography. The result feels more immersive and branded while still keeping content readable and action-oriented.",
+
+                layoutApproach:
+                    "The page is structured like a retail funnel: strong introduction, proof of value, product visibility, trust-building, and a clear visit/contact close. Each section was designed to feel distinct without breaking overall cohesion.",
+
+                componentStrategy:
+                    "Card-based modules and reusable content patterns make it easier to scale deals, product categories, product cards, testimonials, and location content over time without redesigning the entire experience.",
+
+                accessibility:
+                    "High-contrast text, large tap targets, clear section headings, and predictable content grouping improve scanability and make the site easier to use across different devices."
+            },
+
+            developmentSummary: {
+                architecture:
+                    "Built as a modular React application using Vite, with reusable data-driven sections for featured deals, product browsing, store details, testimonials, and contact flows.",
+
+                features: [
+                    "Component-based architecture",
+                    "Hero with business status messaging",
+                    "Searchable product browsing UI",
+                    "Category filtering structure",
+                    "Google Maps embed integration",
+                    "Newsletter signup section",
+                    "Contact form flow",
+                    "Responsive retail layout system"
+                ],
+
+                performance:
+                    "The site was structured for fast front-end performance, lean rendering, and a smoother browsing experience while still supporting more visual personality than the previous version."
+            },
+
+            techStack: [
+                "React",
+                "Vite",
+                "JavaScript",
+                "CSS",
+                "Google Maps Embed"
+            ],
+
+            gallery: [
+                "/images/work/WEB/LITTLE-YORK-WALKTHROUGH-01.webp",
+                "/images/work/WEB/LITTLE-YORK-WALKTHROUGH-02.webp",
+                "/images/work/WEB/LITTLE-YORK-WALKTHROUGH-03.webp"
+            ],
+
+            relatedProjects: [
+                {
+                    slug: "little-york-smoke-shop",
+                    title: "Little York Smoke Shop Brand Identity",
+                    type: "Brand Systems",
+                    cover: "/images/work/BRANDING/LYLOGO.webp",
+                    mediaType: "brand",
+                    imageFit: "contain",
+                    imagePosition: "center"
+                }
+            ]
+        }
+    },
+
+    {
         slug: "sapphire-site-concept",
         title: "Sapphire Developments — Luxury Real Estate Platform Concept",
         category: "ui-ux-web-dev",
@@ -956,257 +1135,12 @@ export const work = [
         }
     },
 
-    {
-        slug: "little-york-smoke-shop-site",
-        title: "Little York Smoke Shop Website",
-        category: "ui-ux-web-dev",
-        year: 2025,
-        featured: false,
-
-        summary:
-            "Retail storefront website built to highlight promotions, product categories, and store information through a bold, mobile-friendly experience.",
-
-        tags: [
-            "UI/UX Design",
-            "React",
-            "Retail Website",
-            "Local Business",
-            "Front-End Development"
-        ],
-
-        cover: "/images/work/WEB/little-york-site.webp",
-        liveUrl: "https://littleyorksmokeshop.com",
-
-        content: {
-
-            role: "UI/UX Design, Front-End Development",
-            client: "Little York Smoke Shop",
-
-            overview:
-                "The Little York Smoke Shop website extends the brand’s physical storefront into a clear and engaging digital experience. The goal was to create a site that reflects the visual identity of the shop while helping customers quickly discover promotions, browse product categories, and find essential store information such as hours and location.",
-
-            challenge:
-                "Local retail websites must communicate value immediately. Customers typically visit to check promotions, confirm store hours, or quickly understand what products are available. The challenge was designing an interface that carried the bold visual style of the brand while remaining simple, readable, and fast to navigate across mobile and desktop devices.",
-
-            solution:
-                "The site structure prioritizes promotions, product categories, and store details within a clear visual hierarchy. Promotional sections highlight current deals while category cards help customers quickly understand what the shop offers. Brand visuals from the identity system were integrated throughout the interface to ensure the online experience felt connected to the physical store environment.",
-
-            outcome:
-                "The final website gives Little York Smoke Shop a stronger digital storefront that supports local discovery and customer engagement. Visitors can quickly view promotions, browse product categories, and find store information, reinforcing a more complete and professional retail presence online.",
-
-            processSteps: [
-                "UX Strategy",
-                "UI Design",
-                "Development",
-                "Optimization",
-                "Launch"
-            ],
-
-            interfaceWalkthrough: [
-
-                {
-                    title: "Product Categories",
-                    description:
-                        "Product category cards help visitors quickly understand what the store offers, from cannabis products to smoking accessories and glass.",
-                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-01.webp"
-                },
-
-                {
-                    title: "Featured Deals",
-                    description:
-                        "Promotional highlight sections surface current specials and featured products, helping customers immediately see available deals.",
-                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-02.webp"
-                },
-
-                {
-                    title: "Location & Contact",
-                    description:
-                        "Store information is presented clearly with address, hours, phone number, and an embedded Google Maps location for quick navigation.",
-                    image: "/images/work/WEB/SMOKE-WALKTHROUGH-03.webp"
-                }
-
-            ],
-
-            uiux: {
-
-                userGoals: [
-                    "Quickly find store hours and location",
-                    "View current promotions and deals",
-                    "Browse product categories",
-                    "Contact the shop easily"
-                ],
-
-                navigation:
-                    "Simple, linear navigation prioritizing promotions, products, and essential store information.",
-
-                informationArchitecture:
-                    "Home → Promotions → Product Categories → About → Contact",
-
-                visualHierarchy:
-                    "Promotions and brand imagery lead the experience above the fold, followed by structured category and store information sections.",
-
-                components: [
-                    "Hero section with promotional emphasis",
-                    "Product category cards",
-                    "Deal highlight sections",
-                    "Location and contact block",
-                    "Responsive navigation"
-                ],
-
-                responsive:
-                    "Mobile-first layout designed for quick browsing and fast access to store information."
-            },
-
-            interfaceDesign: {
-
-                visualSystem:
-                    "Brand colors and visual motifs from the Little York identity system were integrated throughout the interface to reinforce brand recognition.",
-
-                layoutApproach:
-                    "Content sections were structured to surface promotions first, followed by product categories and store information for quick customer scanning.",
-
-                componentStrategy:
-                    "Reusable card and promotional modules help keep the layout consistent while allowing the store to update promotions easily.",
-
-                accessibility:
-                    "Clear headings, readable contrast, and simplified layout structure help users quickly find key information."
-            },
-
-            developmentSummary: {
-
-                architecture:
-                    "Built using React with modular UI components to keep the layout flexible and easy to maintain.",
-
-                features: [
-                    "Responsive layouts across device sizes",
-                    "Structured promotional content sections",
-                    "Google Maps location integration",
-                    "SEO-friendly page structure",
-                    "Reusable UI sections"
-                ],
-
-                performance:
-                    "Built with Vite for fast development, optimized bundling, and strong page-load performance."
-            },
-
-            techStack: [
-                "React",
-                "Vite",
-                "JavaScript",
-                "CSS",
-                "Google Maps API"
-            ]
-
-        }
-    },
-
 
     /* ===============================
        BRAND SYSTEMS
     =============================== */
 
-    {
-        slug: "little-york-smoke-shop",
-        title: "Little York Smoke Shop",
-        category: "brand-systems",
-        year: 2025,
-        featured: false,
 
-        summary:
-            "Complete retail brand system spanning logo identity, storefront graphics, and digital brand integration.",
-
-        tags: ["Brand System", "Environmental Design", "Retail Branding", "Brand Strategy"],
-
-        cover: "/images/work/BRANDING/LYLOGO.webp",
-        liveUrl: "https://littleyorksmokeshop.com",
-
-        content: {
-            role: "Brand Direction, Logo Design, Environmental Graphics",
-            client: "Little York Smoke Shop",
-
-            overview:
-                "Little York Smoke Shop needed a brand identity capable of unifying the business across physical and digital touchpoints. The project focused on building a cohesive retail brand system that performs across storefront signage, promotional surfaces, and digital platforms while remaining bold, clean, and immediately recognizable.",
-
-            challenge:
-                "Design a flexible retail identity system that performs at multiple scales. The mark needed to read clearly from a distance on storefront signage, remain recognizable in digital use, and support promotional applications like large-format window graphics without becoming visually inconsistent.",
-
-            solution:
-                "The system was built around a circular emblem with strong outer typography, radiating internal geometry, and a central cannabis leaf icon that anchors the mark. Supporting environmental graphics extended the identity into the storefront through a modular layout that distributes promotional messaging across multiple window panes while maintaining visual consistency.",
-
-            outcome:
-                "The final system gives Little York Smoke Shop a cohesive brand presence across identity, environmental graphics, and digital touchpoints. The logo delivers instant recognition, the storefront graphics increase street visibility, and the brand now feels unified across customer-facing experiences.",
-
-            processSteps: ["Strategy", "Identity Design", "Application", "Refinement"],
-
-            deliverables: [
-                "Logo Identity",
-                "Color System",
-                "Typography Direction",
-                "Window Wrap",
-                "Brand Integration for Web"
-            ],
-
-            brandSystem: {
-                logo: {
-                    primary: {
-                        title: "Logo Identity",
-                        description:
-                            "Bold dispensary emblem combining retail badge structure with clean cannabis iconography. The circular form creates a strong storefront-ready silhouette while the inner sunburst geometry focuses attention around the central symbol.",
-                        colors: [
-                            { name: "Deep Indigo", value: "#2A2F6C" },
-                            { name: "Vibrant Green", value: "#1ED760" },
-                            { name: "Clean White", value: "#FFFFFF" }
-                        ],
-                        cover: "/images/work/BRANDING/LYLOGO.webp"
-                    },
-
-                    variants: []
-                },
-
-                typography: {
-                    title: "Typography",
-                    description:
-                        "Bold, highly legible typography supports strong recognition at storefront scale while maintaining clarity in digital applications.",
-                    headings: "Brandon Grotesque Bold",
-                    body: "Brandon Grotesque Regular"
-                },
-
-                applications: [
-                    {
-                        title: "Window Wrap",
-                        type: "Environmental Graphics",
-                        description:
-                            "Large-format storefront graphics designed to communicate promotions, product categories, and brand identity to passing foot and vehicle traffic. The layout uses modular information blocks and layered textures to balance clarity with visual impact.",
-                        cover: "/images/work/BRANDING/WindowWrappp.webp"
-                    },
-                    {
-                        title: "Space Motion Menu",
-                        type: "Digital Menu",
-                        description:
-                            "Animated digital menu system featuring motion graphics and dynamic content display designed to support the in-store customer experience.",
-                        cover: "/images/work/BRANDING/Space.webp"
-                    }
-                ]
-            },
-
-            techStack: ["Illustrator", "Photoshop", "Figma"],
-
-            gallery: [
-                "/images/work/BRANDING/LYLOGO.webp",
-                "/images/work/BRANDING/WindowWrappp.webp",
-                "/images/work/BRANDING/Space.webp"
-            ],
-
-            relatedProjects: [
-                {
-                    slug: "little-york-smoke-shop-site",
-                    title: "Little York Smoke Shop Website",
-                    type: "UI/UX Design & Web Development",
-                    cover: "/images/work/WEB/little-york-site.webp"
-                }
-            ]
-        }
-    },
 
     {
         slug: "infinitely-fw-branding",
@@ -1328,6 +1262,103 @@ export const work = [
     },
 
     {
+        slug: "little-york-smoke-shop",
+        title: "Little York Smoke Shop",
+        category: "brand-systems",
+        year: 2025,
+        featured: false,
+
+        summary:
+            "Retail brand identity built around a bold circular emblem system designed to translate cleanly across storefront, digital, and promotional touchpoints.",
+
+        tags: [
+            "Brand System",
+            "Retail Branding",
+            "Logo Identity",
+            "Visual Identity",
+            "Brand Strategy"
+        ],
+
+        cover: "/images/work/BRANDING/LYLOGO.webp",
+        // liveUrl: "https://little-york.vercel.app/",
+
+        content: {
+            role: "Brand Direction, Logo Design, Visual Identity",
+            client: "Little York Smoke Shop",
+
+            overview:
+                "Little York Smoke Shop needed a brand identity that could unify the business across physical and digital customer touchpoints. The goal was to create a recognizable retail mark that feels bold, immediate, and adaptable enough to work on storefront signage, online branding, and promotional materials.",
+
+            challenge:
+                "The identity needed to read clearly at multiple sizes while maintaining enough personality to stand out in a competitive retail category. It had to feel recognizable from the street, usable online, and visually consistent across customer-facing applications.",
+
+            solution:
+                "The system was built around a circular emblem with strong outer typography, internal radial geometry, and a centered cannabis leaf motif. This structure gives the mark a compact, highly recognizable silhouette while also providing a visual language that can extend naturally into digital applications such as the website.",
+
+            outcome:
+                "The final identity gives Little York Smoke Shop a more cohesive and recognizable presence across branding and digital touchpoints. The mark functions well as a storefront-facing identifier while also adapting effectively to web and promotional use.",
+
+            processSteps: [
+                "Strategy",
+                "Identity Design",
+                "Application",
+                "Refinement"
+            ],
+
+            deliverables: [
+                "Primary Logo",
+                "Color System",
+                "Typography Direction",
+                "Digital Brand Integration"
+            ],
+
+            brandSystem: {
+                logo: {
+                    primary: {
+                        title: "Logo Identity",
+                        description:
+                            "A retail-focused circular emblem designed for strong recognition across signage, digital platforms, and promotional use.",
+                        colors: [
+                            { name: "Deep Indigo", value: "#2A2F6C" },
+                            { name: "Vibrant Green", value: "#1ED760" },
+                            { name: "Clean White", value: "#FFFFFF" }
+                        ],
+                        cover: "/images/work/BRANDING/LYLOGO.webp"
+                    },
+
+                    variants: []
+                },
+
+                typography: {
+                    title: "Typography",
+                    description:
+                        "Bold, highly legible typography supports strong recognition at storefront scale while remaining clear in digital use.",
+                    headings: "Brandon Grotesque Bold",
+                    body: "Brandon Grotesque Regular"
+                }
+            },
+
+            techStack: ["Illustrator", "Photoshop", "Figma"],
+
+            gallery: [
+                "/images/work/BRANDING/LYLOGO.webp"
+            ],
+
+            relatedProjects: [
+                {
+                    slug: "little-york-smoke-shop-site",
+                    title: "Little York Smoke Shop — Retail Website",
+                    type: "UI/UX Design & Web Development",
+                    cover: "/images/work/WEB/LITTLE-YORK-WALKTHROUGH-01.webp",
+                    mediaType: "web",
+                    imageFit: "cover",
+                    imagePosition: "center"
+                }
+            ]
+        }
+    },
+
+    {
         slug: "body-spoils-brand-identity",
         title: "Body Spoils Brand Identity",
         category: "brand-systems",
@@ -1418,7 +1449,7 @@ export const work = [
                     type: "UI/UX Design & Web Development",
                     cover: "/images/work/WEB/BODY SPOILS-WALKTHROUGH-01.webp",
                     mediaType: "web",
-                    imageFit: "contain",
+                    imageFit: "cover",
                     imagePosition: "center"
                 }
             ]
@@ -1498,7 +1529,7 @@ export const work = [
                     type: "ui-ux-web-dev",
                     cover: "/images/work/WEB/NEO-WALKTHROUGH-01.webp",
                     mediaType: "web",
-                    imageFit: "contain",
+                    imageFit: "cover",
                     imagePosition: "center"
                 }
             ]
@@ -1630,6 +1661,113 @@ export const work = [
                 //     type: "UI/UX & Web Development",
                 //     cover: "/images/work/WEB/STORE.webp"
                 // }
+            ]
+        }
+    },
+
+    {
+        slug: "creator-stack-brand-identity",
+        title: "Creator Stack Brand Identity",
+        category: "brand-systems",
+        year: 2025,
+        featured: false,
+
+        summary:
+            "A modern SaaS identity system designed to express clarity, modularity, and creator-focused momentum across product and brand touchpoints.",
+
+        tags: [
+            "Brand Identity",
+            "SaaS",
+            "UI/UX",
+            "Product Branding",
+            "Illustrator"
+        ],
+
+        cover: "/images/work/BRANDING/CreatorStack.webp",
+        // liveUrl: "https://creatorstack-beige.vercel.app/",
+
+        content: {
+            role: "Brand Direction, Visual Identity, Product Branding",
+            client: "Creator Stack",
+
+            overview:
+                "Creator Stack required a brand identity that could unify a modern SaaS platform across marketing, product interface, and digital touchpoints. The goal was to create a system that communicates clarity, modularity, and creator-first momentum while maintaining the sophistication expected of a premium digital product.",
+
+            challenge:
+                "The identity needed to bridge brand presence and product experience without feeling disconnected or generic. It had to function as both a standalone brand mark and an integrated part of the product UI, supporting scalability across features, pages, and future expansion.",
+
+            solution:
+                "The system was built around a modular visual language that emphasizes structure, clarity, and forward motion. Typography, spacing, and a restrained color system work together to create a cohesive identity that translates seamlessly from brand collateral to product interface, reinforcing the platform's core values of simplicity and creator empowerment.",
+
+            outcome:
+                "The final identity gives Creator Stack a distinctive and scalable brand presence that strengthens both external marketing and internal product experience. The system supports the platform's positioning as a modern, creator-focused SaaS solution while maintaining visual consistency across all touchpoints.",
+
+            processSteps: [
+                "Strategy",
+                "Identity Design",
+                "Product Integration",
+                "Refinement"
+            ],
+
+            deliverables: [
+                "Brand Identity System",
+                "Visual Language",
+                "Product Brand Integration",
+                "Digital Brand Guidelines"
+            ],
+
+            brandSystem: {
+                logo: {
+                    primary: {
+                        title: "Brand Identity",
+                        description:
+                            "A modular identity system built for clarity and scalability, designed to unify brand presence across marketing and product touchpoints.",
+                        colors: [
+                            { name: "Clean White", value: "#FFFFFF" },
+                            { name: "Bright Teal", value: "#02EBB9" },
+                            { name: "Electric Blue", value: "#05B1E7" }
+                        ],
+                        cover: "/images/work/BRANDING/CreatorStack.webp"
+                    },
+
+                    variants: [
+
+                        {
+                            title: "Alternate Lockup",
+                            description:
+                                "Secondary logo arrangement for flexible placement across layouts and constrained spaces.",
+                            cover: "/images/work/BRANDING/CreatorStackLock.webp"
+                        }
+                    ]
+                },
+
+                typography: {
+                    title: "Typography",
+                    description:
+                        "Modern, highly legible typography supports the brand's clarity-first approach while maintaining strong hierarchy across digital applications.",
+                    headings: "Inter Bold",
+                    body: "Inter Regular"
+                }
+            },
+
+            techStack: ["Illustrator", "Figma", "Photoshop"],
+
+            gallery: [
+                "/images/work/WEB/CREATOR-STACK-HOME.webp",
+                "/images/work/WEB/CREATOR-STACK-PRICING.webp",
+                "/images/work/WEB/CREATOR-STACK-DASHBOARD.webp"
+            ],
+
+            relatedProjects: [
+                {
+                    slug: "creator-stack",
+                    title: "Creator Stack — SaaS Platform",
+                    type: "UI/UX Design & Web Development",
+                    cover: "/images/work/WEB/CREATOR-STACK-HOME.webp",
+                    mediaType: "web",
+                    imageFit: "cover",
+                    imagePosition: "center"
+                }
             ]
         }
     }
